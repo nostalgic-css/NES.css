@@ -108,6 +108,15 @@ a {
   text-decoration: none;
 }
 
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 .title {
   font-weight: 700;
   word-break: break-word;
@@ -290,6 +299,51 @@ a {
   font-size: 2em;
 }
 
+.radios {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.radios:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.radios > label {
+  display: flex;
+  cursor: pointer;
+}
+
+.radios > label:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.radios > label > .radio[type="radio"] {
+  margin-right: 0.3rem;
+  vertical-align: middle;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.radios > label > .radio[type="radio"]::before {
+  visibility: visible;
+  content: "";
+  animation: blink 1s infinite steps(1);
+}
+
+.radios > label > .radio[type="radio"]:checked::before {
+  content: "\203A";
+}
+
+.radios.-columns {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.radios.-columns > label:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
 .container {
   position: relative;
   padding: 1.5rem 2rem;
@@ -361,5 +415,4 @@ a {
   color: #f7f7f7;
   background-color: #333;
 }
-
 /*# sourceMappingURL=nes.css.map */
