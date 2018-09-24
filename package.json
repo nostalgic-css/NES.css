@@ -1,0 +1,66 @@
+{
+  "name": "nes.css",
+  "version": "0.0.1",
+  "description": "NES.css is NES-style CSS Framework.",
+  "scripts": {
+    "build": "npm run build:clean && npm run build:stylelint && npm run build:sass && npm run build:autoprefix && npm run build:cleancss",
+    "stylelint": "stylelint scss/**/*.scss",
+    "build:stylelint": "npm run stylelint -- --fix",
+    "build:clean": "rimraf css",
+    "build:sass": "node-sass --output-style expanded --source-map true scss/nes.scss css/nes.css",
+    "build:autoprefix": "postcss --use autoprefixer --map false --output css/nes.css css/nes.css",
+    "build:cleancss": "cleancss -o css/nes.min.css css/nes.css",
+    "deploy": "npm run build"
+  },
+  "lint-staged": {
+    "*.scss": [
+      "build:stylelint",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BcRikko/NES.css.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "nes",
+    "framework"
+  ],
+  "author": "BcRikko (https://github.com/Bcrikko)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BcRikko/NES.css/issues"
+  },
+  "homepage": "https://github.com/BcRikko/NES.css#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.1.5",
+    "clean-css-cli": "^4.2.1",
+    "husky": "^1.0.0-rc.15",
+    "lint-staged": "^7.3.0",
+    "node-sass": "^4.9.3",
+    "postcss-cli": "^6.0.0",
+    "prettier-stylelint": "^0.4.2",
+    "rimraf": "^2.6.2",
+    "stylelint": "^9.5.0",
+    "stylelint-config-recess-order": "^2.0.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.3.1"
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-recess-order",
+      "./node_modules/prettier-stylelint/config.js"
+    ]
+  },
+  "browserslist": [
+    "> 1%"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
