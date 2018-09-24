@@ -1,0 +1,41 @@
+// Font
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+$font-family: "Press Start 2P" !default;
+
+// Sizes
+$font-size: 16px !default;
+
+$h1-font-size: $font-size * 3 !default;
+$h2-font-size: $font-size * 2.5 !default;
+$h3-font-size: $font-size * 2 !default;
+$h4-font-size: $font-size * 1.5 !default;
+$h5-font-size: $font-size * 1.25 !default;
+$h6-font-size: $font-size !default;
+
+$small-font-size: 0.6em;
+$medium-font-size: 1em;
+$large-font-size: 2em;
+
+// Colors
+$black: #333 !default;
+$white: #f7f7f7 !default;
+
+$background-color: $white !default;
+$hover-background-color: #e7e7e7 !default;
+$shadow-color: #adafbc !default;
+
+$primary-background-color: #92cc41 !default;
+$primary-hover-background-color: #76c442 !default;
+$primary-shadow-color: #4aa52e !default;
+
+$success-background-color: #209cee !default;
+$success-hover-background-color: #108de0 !default;
+$success-shadow-color: #006bb3 !default;
+
+$warning-background-color: #f7d51d !default;
+$warning-hover-background-color: #f2c409 !default;
+$warning-shadow-color: #e59400 !default;
+
+$error-background-color: #e76e55 !default;
+$error-hover-background-color: #ce372b !default;
+$error-shadow-color: #8c2022 !default;

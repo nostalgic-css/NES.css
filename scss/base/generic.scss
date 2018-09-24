@@ -1,0 +1,22 @@
+// Define
+html {
+  font-size: $font-size;
+  color: $black;
+  background-color: $white;
+}
+
+body,
+button,
+input,
+textarea,
+select,
+pre,
+code {
+  font-family: $font-family;
+  font-size: $font-size;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+}
