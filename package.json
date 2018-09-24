@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "NES.css is NES-style CSS Framework.",
   "scripts": {
+    "watch": "npm run build:sass -- --watch",
     "build": "npm run build:clean && npm run build:stylelint && npm run build:sass && npm run build:autoprefix && npm run build:cleancss",
     "stylelint": "stylelint scss/**/*.scss",
     "build:stylelint": "npm run stylelint -- --fix",
@@ -48,19 +49,27 @@
     "stylelint-config-standard": "^18.2.0",
     "stylelint-scss": "^3.3.1"
   },
-  "stylelint": {
-    "extends": [
-      "stylelint-config-standard",
-      "stylelint-config-recess-order",
-      "./node_modules/prettier-stylelint/config.js"
-    ]
-  },
   "browserslist": [
     "> 1%"
   ],
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
+    }
+  },
+  "stylelint": {
+    "plugins": [
+      "stylelint-scss"
+    ],
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-recess-order",
+      "./node_modules/prettier-stylelint/config.js"
+    ],
+    "rules": {
+      "string-quotes": "double",
+      "at-rule-no-unknown": null,
+      "scss/at-rule-no-unknown": true
     }
   }
 }
