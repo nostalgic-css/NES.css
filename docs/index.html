@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NES.css - NES-style CSS Framework</title>
+  <link href="https://rawgit.com/BcRikko/NES.css/master/css/nes.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="title -is-1">NES.css</h1>
+    <p class="subtitle -is-6">NES-style CSS Framework.</p>
+  </header>
+
+  <main>
+    <section class="container">
+      <h2 class="title -is-3">Buttons</h2>
+      <h3 class="title -is-4">sizes</h3>
+      <a class="button -small">small</a>
+      <a class="button">normal</a>
+      <a class="button -medium">medium</a>
+      <a class="button -large">large</a>
+
+      <h3 class="title -is-4">colors</h3>
+      <a class="button -primary">primary</a>
+      <a class="button -success">success</a>
+      <a class="button -warning">warning</a>
+      <a class="button -error">error</a>
+    </section>
+    <section class="container">
+      <h2 class="title -is-3">Container</h2>
+      <h3 class="title -is-4">normal</h3>
+      <section class="container">
+        <p>Good morning. Thou hast had a good night's sleep I hope.</p>
+      </section>
+
+      <h3 class="title -is-4">dark theme</h3>
+      <section class="container -dark">
+        <p>Good morning. Thou hast had a good night's sleep I hope.</p>
+      </section>
+
+      <h3 class="title -is-4">with title</h3>
+      <section class="container -dark -with-title">
+        <label class="title">Command</label>
+        <p>Good morning. Thou hast had a good night's sleep I hope.</p>
+      </section>
+
+      <h3 class="title -is-4">align <code>(-center, -right)</code></h3>
+      <section class="container -dark -with-title -center">
+        <label class="title">Command</label>
+        <p>Good morning. Thou hast had a good night's sleep I hope.</p>
+      </section>
+    </section>
+  </main>
+</body>
+
+</html>

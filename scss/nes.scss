@@ -1,11 +1,8 @@
-/*!
- * NES.css v0.0.1(alpha)
- */
-$color: #fff;
+@charset "utf-8";
 
-body {
-  color: $color;
-display: flex;
-  color: $color;
-  background-color: #111;
-}
+/*!
+* NES.css v0.0.1(alpha)
+*/
+
+@import "base/_index.scss";
+@import "elements/_index.scss";
