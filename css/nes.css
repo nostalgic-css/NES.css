@@ -301,6 +301,7 @@ a {
 
 .radios {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
 }
@@ -414,5 +415,29 @@ a {
 .container.-dark > .title {
   color: #f7f7f7;
   background-color: #333;
+}
+
+.checkbox[type="checkbox"] {
+  position: relative;
+  margin-right: 1rem;
+  vertical-align: middle;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.checkbox[type="checkbox"]::before {
+  position: absolute;
+  top: -10px;
+  left: -6px;
+  width: 2px;
+  height: 2px;
+  visibility: visible;
+  content: "";
+  background-color: transparent;
+  box-shadow: 6px 6px 0 #333, 8px 6px 0 #333, 10px 6px 0 #333, 12px 6px 0 #333, 14px 6px 0 #333, 16px 6px 0 #333, 18px 6px 0 #333, 20px 6px 0 #333, 6px 8px 0 #333, 20px 8px 0 #333, 6px 10px 0 #333, 20px 10px 0 #333, 6px 12px 0 #333, 20px 12px 0 #333, 6px 14px 0 #333, 20px 14px 0 #333, 6px 16px 0 #333, 20px 16px 0 #333, 6px 18px 0 #333, 20px 18px 0 #333, 6px 20px 0 #333, 8px 20px 0 #333, 10px 20px 0 #333, 12px 20px 0 #333, 14px 20px 0 #333, 16px 20px 0 #333, 18px 20px 0 #333, 20px 20px 0 #333;
+}
+
+.checkbox[type="checkbox"]:checked::before {
+  box-shadow: 6px 6px 0 #333, 8px 6px 0 #333, 10px 6px 0 #333, 12px 6px 0 #333, 14px 6px 0 #333, 16px 6px 0 #333, 18px 6px 0 #333, 22px 6px 0 #333, 24px 6px 0 #333, 6px 8px 0 #333, 20px 8px 0 #333, 22px 8px 0 #333, 24px 8px 0 #333, 6px 10px 0 #333, 18px 10px 0 #333, 20px 10px 0 #333, 6px 12px 0 #333, 8px 12px 0 #333, 16px 12px 0 #333, 18px 12px 0 #333, 6px 14px 0 #333, 8px 14px 0 #333, 10px 14px 0 #333, 14px 14px 0 #333, 16px 14px 0 #333, 20px 14px 0 #333, 6px 16px 0 #333, 10px 16px 0 #333, 12px 16px 0 #333, 14px 16px 0 #333, 20px 16px 0 #333, 6px 18px 0 #333, 12px 18px 0 #333, 20px 18px 0 #333, 6px 20px 0 #333, 8px 20px 0 #333, 10px 20px 0 #333, 12px 20px 0 #333, 14px 20px 0 #333, 16px 20px 0 #333, 18px 20px 0 #333, 20px 20px 0 #333;
 }
 /*# sourceMappingURL=nes.css.map */

@@ -1,0 +1,96 @@
+.checkbox[type="checkbox"] {
+  position: relative;
+  margin-right: 1rem;
+  vertical-align: middle;
+  cursor: pointer;
+  visibility: hidden;
+
+  &::before {
+    position: absolute;
+    top: -10px;
+    left: -6px;
+    width: 2px;
+    height: 2px;
+    visibility: visible;
+    content: "";
+    background-color: transparent;
+
+    // prettier-ignore
+    box-shadow:
+      6px 6px 0 $black,
+      8px 6px 0 $black,
+      10px 6px 0 $black,
+      12px 6px 0 $black,
+      14px 6px 0 $black,
+      16px 6px 0 $black,
+      18px 6px 0 $black,
+      20px 6px 0 $black,
+      6px 8px 0 $black,
+      20px 8px 0 $black,
+      6px 10px 0 $black,
+      20px 10px 0 $black,
+      6px 12px 0 $black,
+      20px 12px 0 $black,
+      6px 14px 0 $black,
+      20px 14px 0 $black,
+      6px 16px 0 $black,
+      20px 16px 0 $black,
+      6px 18px 0 $black,
+      20px 18px 0 $black,
+      6px 20px 0 $black,
+      8px 20px 0 $black,
+      10px 20px 0 $black,
+      12px 20px 0 $black,
+      14px 20px 0 $black,
+      16px 20px 0 $black,
+      18px 20px 0 $black,
+      20px 20px 0 $black;
+  }
+
+  &:checked::before {
+    // prettier-ignore
+    box-shadow:
+      6px 6px 0 $black,
+      8px 6px 0 $black,
+      10px 6px 0 $black,
+      12px 6px 0 $black,
+      14px 6px 0 $black,
+      16px 6px 0 $black,
+      18px 6px 0 $black,
+      22px 6px 0 $black,
+      24px 6px 0 $black,
+      6px 8px 0 $black,
+      20px 8px 0 $black,
+      22px 8px 0 $black,
+      24px 8px 0 $black,
+      6px 10px 0 $black,
+      18px 10px 0 $black,
+      20px 10px 0 $black,
+      6px 12px 0 $black,
+      8px 12px 0 $black,
+      16px 12px 0 $black,
+      18px 12px 0 $black,
+      6px 14px 0 $black,
+      8px 14px 0 $black,
+      10px 14px 0 $black,
+      14px 14px 0 $black,
+      16px 14px 0 $black,
+      20px 14px 0 $black,
+      6px 16px 0 $black,
+      10px 16px 0 $black,
+      12px 16px 0 $black,
+      14px 16px 0 $black,
+      20px 16px 0 $black,
+      6px 18px 0 $black,
+      12px 18px 0 $black,
+      20px 18px 0 $black,
+      6px 20px 0 $black,
+      8px 20px 0 $black,
+      10px 20px 0 $black,
+      12px 20px 0 $black,
+      14px 20px 0 $black,
+      16px 20px 0 $black,
+      18px 20px 0 $black,
+      20px 20px 0 $black;
+  }
+}
