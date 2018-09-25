@@ -54,7 +54,8 @@
   "lint-staged": {
     "scss/**/*.scss": [
       "npm run build",
-      "git add ."
+      "git add ./css",
+      "git add"
     ]
   },
   "stylelint": {
