@@ -1,0 +1,17 @@
+.description {
+  width: 100%;
+
+  > dt {
+    position: relative;
+    float: left;
+    margin-right: 1.5rem;
+
+    &.-colon::after {
+      position: absolute;
+      top: 0;
+      right: -1.5rem;
+      z-index: -1;
+      content: ":";
+    }
+  }
+}

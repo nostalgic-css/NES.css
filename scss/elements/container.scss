@@ -1,6 +1,7 @@
 .container {
   position: relative;
   padding: 1.5rem 2rem;
+  margin: auto;
 
   &::before,
   &::after {
@@ -57,11 +58,15 @@
     }
   }
 
-  &.-dark {
+  &._dark {
     color: $white;
 
     &::before {
       background-color: $black;
+    }
+
+    &::after {
+      border-color: $white;
     }
 
     > .title {

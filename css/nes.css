@@ -117,6 +117,14 @@ a {
   }
 }
 
+._dark {
+  color: #f7f7f7;
+}
+
+._right {
+  text-align: right;
+}
+
 .title {
   font-weight: 700;
   word-break: break-word;
@@ -348,6 +356,7 @@ a {
 .container {
   position: relative;
   padding: 1.5rem 2rem;
+  margin: auto;
 }
 
 .container::before, .container::after {
@@ -404,15 +413,19 @@ a {
   background-color: #f7f7f7;
 }
 
-.container.-dark {
+.container._dark {
   color: #f7f7f7;
 }
 
-.container.-dark::before {
+.container._dark::before {
   background-color: #333;
 }
 
-.container.-dark > .title {
+.container._dark::after {
+  border-color: #f7f7f7;
+}
+
+.container._dark > .title {
   color: #f7f7f7;
   background-color: #333;
 }
@@ -439,5 +452,23 @@ a {
 
 .checkbox[type="checkbox"]:checked::before {
   box-shadow: 6px 6px 0 #333, 8px 6px 0 #333, 10px 6px 0 #333, 12px 6px 0 #333, 14px 6px 0 #333, 16px 6px 0 #333, 18px 6px 0 #333, 22px 6px 0 #333, 24px 6px 0 #333, 6px 8px 0 #333, 20px 8px 0 #333, 22px 8px 0 #333, 24px 8px 0 #333, 6px 10px 0 #333, 18px 10px 0 #333, 20px 10px 0 #333, 6px 12px 0 #333, 8px 12px 0 #333, 16px 12px 0 #333, 18px 12px 0 #333, 6px 14px 0 #333, 8px 14px 0 #333, 10px 14px 0 #333, 14px 14px 0 #333, 16px 14px 0 #333, 20px 14px 0 #333, 6px 16px 0 #333, 10px 16px 0 #333, 12px 16px 0 #333, 14px 16px 0 #333, 20px 16px 0 #333, 6px 18px 0 #333, 12px 18px 0 #333, 20px 18px 0 #333, 6px 20px 0 #333, 8px 20px 0 #333, 10px 20px 0 #333, 12px 20px 0 #333, 14px 20px 0 #333, 16px 20px 0 #333, 18px 20px 0 #333, 20px 20px 0 #333;
+}
+
+.description {
+  width: 100%;
+}
+
+.description > dt {
+  position: relative;
+  float: left;
+  margin-right: 1.5rem;
+}
+
+.description > dt.-colon::after {
+  position: absolute;
+  top: 0;
+  right: -1.5rem;
+  z-index: -1;
+  content: ":";
 }
 /*# sourceMappingURL=nes.css.map */
