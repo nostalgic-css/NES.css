@@ -13,12 +13,6 @@
     "build:cleancss": "cleancss -o css/nes.min.css css/nes.css",
     "deploy": "npm run build"
   },
-  "lint-staged": {
-    "*.scss": [
-      "build:stylelint",
-      "git add"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BcRikko/NES.css.git"
@@ -56,6 +50,12 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "scss/**/*.scss": [
+      "npm run build",
+      "git add ."
+    ]
   },
   "stylelint": {
     "plugins": [
