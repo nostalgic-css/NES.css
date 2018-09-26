@@ -1,10 +1,16 @@
-.description {
-  width: 100%;
+dl.description {
+  display: grid;
+  grid-template: auto / 15rem 1fr;
+  grid-gap: 0.8rem 2rem;
+
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
 
   > dt {
     position: relative;
+    grid-column: 1;
     float: left;
-    margin-right: 1.5rem;
 
     &.-colon::after {
       position: absolute;
@@ -13,5 +19,9 @@
       z-index: -1;
       content: ":";
     }
+  }
+
+  > dd {
+    grid-column: 2;
   }
 }

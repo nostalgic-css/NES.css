@@ -1,7 +1,6 @@
 .container {
   position: relative;
   padding: 1.5rem 2rem;
-  margin: auto;
 
   &::before,
   &::after {
@@ -36,10 +35,12 @@
 
   &.-with-title {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     padding-top: 2rem;
 
     &.-center {
+      align-items: center;
       justify-content: center;
     }
 

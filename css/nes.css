@@ -108,6 +108,10 @@ a {
   text-decoration: none;
 }
 
+p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
 @keyframes blink {
   0% {
     opacity: 1;
@@ -356,7 +360,6 @@ a {
 .container {
   position: relative;
   padding: 1.5rem 2rem;
-  margin: auto;
 }
 
 .container::before, .container::after {
@@ -391,11 +394,13 @@ a {
 
 .container.-with-title {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   padding-top: 2rem;
 }
 
 .container.-with-title.-center {
+  align-items: center;
   justify-content: center;
 }
 
@@ -454,21 +459,31 @@ a {
   box-shadow: 6px 6px 0 #333, 8px 6px 0 #333, 10px 6px 0 #333, 12px 6px 0 #333, 14px 6px 0 #333, 16px 6px 0 #333, 18px 6px 0 #333, 22px 6px 0 #333, 24px 6px 0 #333, 6px 8px 0 #333, 20px 8px 0 #333, 22px 8px 0 #333, 24px 8px 0 #333, 6px 10px 0 #333, 18px 10px 0 #333, 20px 10px 0 #333, 6px 12px 0 #333, 8px 12px 0 #333, 16px 12px 0 #333, 18px 12px 0 #333, 6px 14px 0 #333, 8px 14px 0 #333, 10px 14px 0 #333, 14px 14px 0 #333, 16px 14px 0 #333, 20px 14px 0 #333, 6px 16px 0 #333, 10px 16px 0 #333, 12px 16px 0 #333, 14px 16px 0 #333, 20px 16px 0 #333, 6px 18px 0 #333, 12px 18px 0 #333, 20px 18px 0 #333, 6px 20px 0 #333, 8px 20px 0 #333, 10px 20px 0 #333, 12px 20px 0 #333, 14px 20px 0 #333, 16px 20px 0 #333, 18px 20px 0 #333, 20px 20px 0 #333;
 }
 
-.description {
-  width: 100%;
+dl.description {
+  display: grid;
+  grid-template: auto / 15rem 1fr;
+  grid-gap: 0.8rem 2rem;
 }
 
-.description > dt {
+dl.description:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+dl.description > dt {
   position: relative;
+  grid-column: 1;
   float: left;
-  margin-right: 1.5rem;
 }
 
-.description > dt.-colon::after {
+dl.description > dt.-colon::after {
   position: absolute;
   top: 0;
   right: -1.5rem;
   z-index: -1;
   content: ":";
+}
+
+dl.description > dd {
+  grid-column: 2;
 }
 /*# sourceMappingURL=nes.css.map */
