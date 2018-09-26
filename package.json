@@ -32,7 +32,7 @@
   "devDependencies": {
     "autoprefixer": "^9.1.5",
     "clean-css-cli": "^4.2.1",
-    "husky": "^1.0.0-rc.15",
+    "husky": "^1.0.0",
     "lint-staged": "^7.3.0",
     "node-sass": "^4.9.3",
     "postcss-cli": "^6.0.0",
