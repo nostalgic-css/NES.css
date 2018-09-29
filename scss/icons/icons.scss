@@ -3,6 +3,7 @@
 @import "facebook.scss";
 @import "heart.scss";
 @import "star.scss";
+@import "github.scss";
 
 @mixin setup($pixel) {
   $size: $pixel * 16;
@@ -23,6 +24,10 @@
 
   &.-facebook::before {
     @include pixelize($facebook, $pixel, #4566ae);
+  }
+
+  &.-github::before {
+    @include pixelize($github, $pixel, #333333);
   }
 
   &.-heart::before {
