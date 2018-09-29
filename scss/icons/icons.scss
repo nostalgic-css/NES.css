@@ -5,6 +5,7 @@
 @import "youtube.scss";
 @import "heart.scss";
 @import "star.scss";
+@import "like.scss";
 
 @mixin setup($pixel) {
   $size: $pixel * 16;
@@ -41,6 +42,10 @@
 
   &.-star::before {
     @include pixelize($star, $pixel, #f7de4e);
+  }
+
+  &.-like::before {
+    @include pixelize($like, $pixel, #1e77be);
   }
 }
 
