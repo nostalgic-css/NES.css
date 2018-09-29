@@ -1,0 +1,43 @@
+@import "pixelize.scss";
+@import "twitter.scss";
+
+@mixin setup($pixel) {
+  $size: $pixel * 16;
+
+  width: $size;
+  height: $size;
+
+  &::before {
+    top: $pixel * -1;
+    left: $pixel * -1;
+    width: $pixel;
+    height: $pixel;
+  }
+
+  &.-twitter::before {
+    @include pixelize($twitter, $pixel, #1c9ceb);
+  }
+}
+
+.icon {
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    background: transparent;
+  }
+
+  // -default
+  @include setup(2px);
+
+  &.-medium {
+    @include setup(3px);
+  }
+
+  &.-large {
+    @include setup(4px);
+  }
+}
