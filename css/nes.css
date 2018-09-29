@@ -134,6 +134,10 @@ p:not(:last-child) {
   word-break: break-word;
 }
 
+.title:not(:first-child) {
+  margin-top: 1rem;
+}
+
 .title:not(:last-child) {
   margin-bottom: 1rem;
 }

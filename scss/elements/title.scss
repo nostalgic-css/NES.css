@@ -2,6 +2,10 @@
   font-weight: 700;
   word-break: break-word;
 
+  &:not(:first-child) {
+    margin-top: 1rem;
+  }
+
   &:not(:last-child) {
     margin-bottom: 1rem;
   }
