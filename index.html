@@ -48,41 +48,92 @@
 
   <main>
     <section class="container">
-      <h2 class="title -is-3">Buttons</h2>
-      <h3 class="title -is-4">sizes</h3>
-      <a class="button -small">small</a>
-      <a class="button">normal</a>
-      <a class="button -medium">medium</a>
-      <a class="button -large">large</a>
+      <h2 class="title -is-3">Form</h2>
+      <section class="container">
+        <h3 class="title -is-4">Buttons</h3>
+        <h4 class="title -is-5">sizes</h4>
+        <a class="button -small">small</a>
+        <a class="button">normal</a>
+        <a class="button -medium">medium</a>
+        <a class="button -large">large</a>
 
-      <h3 class="title -is-4">colors</h3>
-      <a class="button -primary">primary</a>
-      <a class="button -success">success</a>
-      <a class="button -warning">warning</a>
-      <a class="button -error">error</a>
-    </section>
+        <h4 class="title -is-5">colors</h4>
+        <a class="button -primary">primary</a>
+        <a class="button -success">success</a>
+        <a class="button -warning">warning</a>
+        <a class="button -error">error</a>
+      </section>
 
-    <section class="container">
-      <h2 class="title -is-3">Radios</h2>
-      <h3 class="title -is-4">rows</h3>
-      <div class="radios">
-        <label><input class="radio" type="radio" name="radios1" checked>FIGHT</label>
-        <label><input class="radio" type="radio" name="radios1">SPELL</label>
-        <label><input class="radio" type="radio" name="radios1">ITEM</label>
-        <label><input class="radio" type="radio" name="radios1">RUN</label>
-      </div>
-      <h3 class="title -is-4">columns</h3>
-      <div class="radios -columns">
-        <label><input class="radio" type="radio" name="radios2" checked>FIGHT</label>
-        <label><input class="radio" type="radio" name="radios2">SPELL</label>
-        <label><input class="radio" type="radio" name="radios2">ITEM</label>
-        <label><input class="radio" type="radio" name="radios2">RUN</label>
-      </div>
-    </section>
+      <section class="container">
+        <h3 class="title -is-4">Radios</h3>
+        <h4 class="title -is-5">rows</h4>
+        <div class="radios">
+          <label><input class="radio" type="radio" name="radios1" checked>FIGHT</label>
+          <label><input class="radio" type="radio" name="radios1">SPELL</label>
+          <label><input class="radio" type="radio" name="radios1">ITEM</label>
+          <label><input class="radio" type="radio" name="radios1">RUN</label>
+        </div>
+        <h4 class="title -is-5">columns</h4>
+        <div class="radios -columns">
+          <label><input class="radio" type="radio" name="radios2" checked>FIGHT</label>
+          <label><input class="radio" type="radio" name="radios2">SPELL</label>
+          <label><input class="radio" type="radio" name="radios2">ITEM</label>
+          <label><input class="radio" type="radio" name="radios2">RUN</label>
+        </div>
+      </section>
 
-    <section class="container">
-      <h2 class="title -is-3">Checkbox</h2>
-      <label><input class="checkbox" type="checkbox" checked>agree</label>
+      <section class="container">
+        <h3 class="title -is-4">Checkbox</h3>
+        <label><input class="checkbox" type="checkbox" checked>agree</label>
+      </section>
+
+      <section class="container">
+        <h3 class="title -is-4">Input</h3>
+        <h4 class="title -is-5">field</h4>
+        <div class="field">
+          <label class="label">field</label>
+          <input class="input" type="text" placeholder="hello nes">
+        </div>
+
+        <h4 class="title -is-5">inline field</h4>
+        <div class="field -inline">
+          <label class="label">inline field</label>
+          <input class="input" type="text" placeholder="hello nes">
+        </div>
+        <div class="field -inline">
+          <label class="label">success</label>
+          <input class="input -success" type="text" placeholder="hello nes" value="good">
+        </div>
+        <div class="field -inline">
+          <label class="label">warning</label>
+          <input class="input -warning" type="text" placeholder="hello nes" value="warn...">
+        </div>
+        <div class="field -inline">
+          <label class="label">error</label>
+          <input class="input -error" type="text" placeholder="hello nes" value="error...">
+        </div>
+      </section>
+
+      <section class="container">
+        <h3 class="title -is-4">Action group</h3>
+        <h4 class="title -is-5">default</h4>
+        <div class="group">
+          <button type="button" class="button -primary">submit</button>
+          <button type="button" class="button">cancel</button>
+        </div>
+
+        <h4 class="title -is-5">center</h4>
+        <div class="group -center">
+          <button type="button" class="button -primary">submit</button>
+          <button type="button" class="button">cancel</button>
+        </div>
+
+        <h4 class="title -is-5">right</h4>
+        <div class="group -right">
+          <button type="button" class="button -primary">submit</button>
+          <button type="button" class="button">cancel</button>
+        </div>
+      </section>
     </section>
 
     <section class="container">
@@ -193,47 +244,6 @@
       <div class="balloon -left">
         <p>Hello NES.css</p>
       </div>
-    </section>
-
-    <section class="container">
-      <h2 class="title -is-3">Form</h2>
-      <form>
-        <h3 class="title -is-4">input</h3>
-        <div class="field">
-          <label class="label">field</label>
-          <input class="input" type="text" placeholder="hello nes">
-        </div>
-        <div class="field -inline">
-          <label class="label">inline field</label>
-          <input class="input" type="text" placeholder="hello nes">
-        </div>
-        <div class="field -inline">
-          <label class="label">success</label>
-          <input class="input -success" type="text" placeholder="hello nes" value="good">
-        </div>
-        <div class="field -inline">
-          <label class="label">warning</label>
-          <input class="input -warning" type="text" placeholder="hello nes" value="warn...">
-        </div>
-        <div class="field -inline">
-          <label class="label">error</label>
-          <input class="input -error" type="text" placeholder="hello nes" value="error...">
-        </div>
-
-        <h3 class="title -is-4">action group</h3>
-        <div class="group">
-          <button type="button" class="button -primary">submit</button>
-          <button type="button" class="button">cancel</button>
-        </div>
-        <div class="group -center">
-          <button type="button" class="button -primary">submit</button>
-          <button type="button" class="button">cancel</button>
-        </div>
-        <div class="group -right">
-          <button type="button" class="button -primary">submit</button>
-          <button type="button" class="button">cancel</button>
-        </div>
-      </form>
     </section>
 
     <section class="container">
