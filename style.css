@@ -44,6 +44,31 @@ body {
   margin-top: 1rem;
 }
 
+.conversation {
+  display: grid;
+
+  /* prettier-ignore */
+  grid-template:
+    ".... message ....."
+    "left message right"
+    "left message right"
+    "left ....... right"
+    / 100px 1fr 100px;
+  grid-gap: 2rem;
+}
+
+.conversation > .avatar.-left {
+  grid-area: left;
+}
+
+.conversation > .avatar.-right {
+  grid-area: right;
+}
+
+.conversation > .balloon {
+  grid-area: message;
+}
+
 .github-link {
   position: fixed;
   top: 10px;

@@ -570,16 +570,6 @@ dl.description > dd {
   border: 4px solid #333;
 }
 
-.field .input:-ms-input-placeholder {
-  font-weight: lighter;
-  color: rgba(51, 51, 51, 0.3);
-}
-
-.field .input::-ms-input-placeholder {
-  font-weight: lighter;
-  color: rgba(51, 51, 51, 0.3);
-}
-
 .field .input::placeholder {
   font-weight: lighter;
   color: rgba(51, 51, 51, 0.3);
@@ -754,4 +744,5 @@ dl.description > dd {
 .icon.-large.-like::before {
   box-shadow: 32px 4px 0 #1e77be,36px 4px 0 #1e77be,32px 8px 0 #1e77be,40px 8px 0 #1e77be,32px 12px 0 #1e77be,40px 12px 0 #1e77be,28px 16px 0 #1e77be,40px 16px 0 #1e77be,28px 20px 0 #1e77be,36px 20px 0 #1e77be,24px 24px 0 #1e77be,36px 24px 0 #1e77be,24px 28px 0 #1e77be,36px 28px 0 #1e77be,4px 32px 0 #1e77be,8px 32px 0 #1e77be,12px 32px 0 #1e77be,20px 32px 0 #1e77be,40px 32px 0 #1e77be,44px 32px 0 #1e77be,48px 32px 0 #1e77be,52px 32px 0 #1e77be,56px 32px 0 #1e77be,60px 32px 0 #1e77be,4px 36px 0 #1e77be,8px 36px 0 #1e77be,12px 36px 0 #1e77be,20px 36px 0 #1e77be,64px 36px 0 #1e77be,4px 40px 0 #1e77be,8px 40px 0 #1e77be,12px 40px 0 #1e77be,20px 40px 0 #1e77be,64px 40px 0 #1e77be,4px 44px 0 #1e77be,8px 44px 0 #1e77be,12px 44px 0 #1e77be,20px 44px 0 #1e77be,60px 44px 0 #1e77be,4px 48px 0 #1e77be,8px 48px 0 #1e77be,12px 48px 0 #1e77be,20px 48px 0 #1e77be,64px 48px 0 #1e77be,4px 52px 0 #1e77be,8px 52px 0 #1e77be,12px 52px 0 #1e77be,20px 52px 0 #1e77be,64px 52px 0 #1e77be,4px 56px 0 #1e77be,8px 56px 0 #1e77be,12px 56px 0 #1e77be,20px 56px 0 #1e77be,60px 56px 0 #1e77be,4px 60px 0 #1e77be,8px 60px 0 #1e77be,12px 60px 0 #1e77be,20px 60px 0 #1e77be,60px 60px 0 #1e77be,4px 64px 0 #1e77be,8px 64px 0 #1e77be,12px 64px 0 #1e77be,20px 64px 0 #1e77be,24px 64px 0 #1e77be,28px 64px 0 #1e77be,32px 64px 0 #1e77be,36px 64px 0 #1e77be,40px 64px 0 #1e77be,44px 64px 0 #1e77be,48px 64px 0 #1e77be,52px 64px 0 #1e77be,56px 64px 0 #1e77be;;
 }
+
 /*# sourceMappingURL=nes.css.map */
