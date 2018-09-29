@@ -1,6 +1,7 @@
 @import "pixelize.scss";
 @import "twitter.scss";
 @import "facebook.scss";
+@import "heart.scss";
 
 @mixin setup($pixel) {
   $size: $pixel * 16;
@@ -21,6 +22,10 @@
 
   &.-facebook::before {
     @include pixelize($facebook, $pixel, #4566ae);
+  }
+
+  &.-heart::before {
+    @include pixelize($heart, $pixel, #f11416);
   }
 }
 
