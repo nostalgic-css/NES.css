@@ -486,4 +486,62 @@ dl.description > dt.-colon::after {
 dl.description > dd {
   grid-column: 2;
 }
+
+.balloon {
+  position: relative;
+  display: inline-block;
+  padding: 1rem;
+  margin-bottom: 26px;
+  box-shadow: 0 -4px #f7f7f7, 0 -8px #333, 4px 0 #f7f7f7, 4px -4px #333, 8px 0 #333, 0 4px #f7f7f7, 0 8px #333, -4px 0 #f7f7f7, -4px 4px #333, -8px 0 #333, -4px -4px #333, 4px 4px #333;
+}
+
+.balloon::before, .balloon::after {
+  position: absolute;
+  display: block;
+  content: "";
+}
+
+.balloon.-right::before, .balloon.-right::after {
+  right: 2rem;
+}
+
+.balloon.-right::before {
+  bottom: -14px;
+  width: 26px;
+  height: 10px;
+  background-color: #f7f7f7;
+  border-right: 4px solid #333;
+  border-left: 4px solid #333;
+}
+
+.balloon.-right::after {
+  bottom: -18px;
+  width: 18px;
+  height: 3px;
+  margin-left: 8px;
+  background-color: #f7f7f7;
+  box-shadow: -4px 0 #333, 4px 0 #333, 4px 4px #f7f7f7, 0 4px #333, 8px 4px #333, 4px 8px #333, 8px 8px #333;
+}
+
+.balloon.-left::before, .balloon.-left::after {
+  left: 2rem;
+}
+
+.balloon.-left::before {
+  bottom: -14px;
+  width: 26px;
+  height: 10px;
+  background-color: #f7f7f7;
+  border-right: 4px solid #333;
+  border-left: 4px solid #333;
+}
+
+.balloon.-left::after {
+  bottom: -18px;
+  width: 18px;
+  height: 3px;
+  margin-right: 8px;
+  background-color: #f7f7f7;
+  box-shadow: -4px 0 #333, 4px 0 #333, -4px 4px #f7f7f7, 0 4px #333, -8px 4px #333, -4px 8px #333, -8px 8px #333;
+}
 /*# sourceMappingURL=nes.css.map */

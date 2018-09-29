@@ -65,17 +65,17 @@ body {
   /* prettier-ignore */
   box-shadow:
     0 -3px #f7f7f7,
-    0 -6px #000,
+    0 -6px #333,
     3px 0 #f7f7f7,
-    3px -3px #000,
-    6px 0 #000,
+    3px -3px #333,
+    6px 0 #333,
     0 3px #f7f7f7,
-    0 6px #000,
+    0 6px #333,
     -3px 0 #f7f7f7,
-    -3px 3px #000,
-    -6px 0 #000,
-    -3px -3px #000,
-    3px 3px #000;
+    -3px 3px #333,
+    -6px 0 #333,
+    -3px -3px #333,
+    3px 3px #333;
 }
 
 .github-link .balloon::before,
