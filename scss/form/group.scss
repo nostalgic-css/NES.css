@@ -1,0 +1,14 @@
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 1rem 0;
+
+  &.-center {
+    justify-content: center;
+  }
+
+  &.-right {
+    justify-content: flex-end;
+  }
+}

@@ -20,6 +20,10 @@ $border-size: 6px;
     box-shadow: inset 4px 4px 0 0 $shadow-color;
   }
 
+  & + & {
+    margin-left: 1rem;
+  }
+
   // border
   &::before,
   &::after {

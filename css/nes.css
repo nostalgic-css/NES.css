@@ -219,6 +219,10 @@ p:not(:last-child) {
   box-shadow: inset 4px 4px 0 0 #adafbc;
 }
 
+.button + .button {
+  margin-left: 1rem;
+}
+
 .button::before, .button::after {
   position: absolute;
   box-sizing: content-box;
@@ -605,6 +609,21 @@ dl.description > dd {
   margin: 0;
   margin-right: 1rem;
   text-align: right;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 1rem 0;
+}
+
+.group.-center {
+  justify-content: center;
+}
+
+.group.-right {
+  justify-content: flex-end;
 }
 
 .icon {
