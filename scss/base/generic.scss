@@ -1,0 +1,16 @@
+// Override reboot.scss
+
+html,
+body,
+pre,
+code,
+kbd,
+samp {
+  font-family: $font-family;
+}
+
+body {
+  font-size: $font-size;
+  color: $base-color;
+  background-color: $background-color;
+}
