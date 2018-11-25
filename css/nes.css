@@ -356,6 +356,13 @@ body {
   background-color: #fff;
 }
 
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: none;
+}
+
 .btn {
   position: relative;
   display: inline-block;

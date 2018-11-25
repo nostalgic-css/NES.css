@@ -26,7 +26,6 @@
   cursor: pointer;
   user-select: none;
 
-  // FIXME: Chromeでwhite, #fff, #ffffffを指定したときボタンのbackground-colorが正しく反映されない
   @include btn-style($base-color, #fff, #e7e7e7, #adafbc);
 
   &::before,
