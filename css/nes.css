@@ -357,6 +357,117 @@ body {
 }
 
 .btn {
-  color: black;
+  position: relative;
+  display: inline-block;
+  padding: 10px 12px;
+  margin: 4px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #212529;
+  background-color: #fff;
+  box-shadow: inset -4px -4px #adafbc;
+}
+
+.btn:hover {
+  background-color: #e7e7e7;
+  box-shadow: inset -6px -6px #adafbc;
+}
+
+.btn:active {
+  box-shadow: inset 4px 4px #adafbc;
+}
+
+.btn::before, .btn::after {
+  position: absolute;
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  content: "";
+  border-color: #212529;
+  border-style: solid;
+  border-width: 4px;
+}
+
+.btn::before {
+  top: -4px;
+  left: 0;
+  border-right: 2px;
+  border-left: 2px;
+}
+
+.btn::after {
+  top: 0;
+  left: -4px;
+  border-top: 2px;
+  border-bottom: 2px;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn.is-primary {
+  color: #fff;
+  background-color: #92cc41;
+  box-shadow: inset -4px -4px #4aa52e;
+}
+
+.btn.is-primary:hover {
+  background-color: #76c442;
+  box-shadow: inset -6px -6px #4aa52e;
+}
+
+.btn.is-primary:active {
+  box-shadow: inset 4px 4px #4aa52e;
+}
+
+.btn.is-success {
+  color: #fff;
+  background-color: #209cee;
+  box-shadow: inset -4px -4px #006bb3;
+}
+
+.btn.is-success:hover {
+  background-color: #108de0;
+  box-shadow: inset -6px -6px #006bb3;
+}
+
+.btn.is-success:active {
+  box-shadow: inset 4px 4px #006bb3;
+}
+
+.btn.is-warning {
+  color: #212529;
+  background-color: #f7d51d;
+  box-shadow: inset -4px -4px #e59400;
+}
+
+.btn.is-warning:hover {
+  background-color: #f2c409;
+  box-shadow: inset -6px -6px #e59400;
+}
+
+.btn.is-warning:active {
+  box-shadow: inset 4px 4px #e59400;
+}
+
+.btn.is-error {
+  color: #fff;
+  background-color: #e76e55;
+  box-shadow: inset -4px -4px #8c2022;
+}
+
+.btn.is-error:hover {
+  background-color: #ce372b;
+  box-shadow: inset -6px -6px #8c2022;
+}
+
+.btn.is-error:active {
+  box-shadow: inset 4px 4px #8c2022;
 }
 /*# sourceMappingURL=nes.css.map */
