@@ -13,6 +13,7 @@
 
   margin-right: 20px;
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 
   & + span {
@@ -24,9 +25,8 @@
     top: -2px;
     left: -20px;
     content: "";
+    animation: blink 1s infinite steps(1);
 
     @include pixelize($radio, $colors, 2px);
-
-    animation: blink 1s infinite steps(1);
   }
 }
