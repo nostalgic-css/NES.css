@@ -698,6 +698,51 @@ button,
   box-shadow: -4px 0 #212529, 4px 0 #212529, 4px 4px #fff, 0 4px #212529, 8px 4px #212529, 4px 8px #212529, 8px 8px #212529;
 }
 
+.input {
+  padding: 0.5rem 1rem;
+  margin: 4px;
+  border: none;
+  box-shadow: 0 4px #212529, 0 -4px #212529, 4px 0 #212529, -4px 0 #212529;
+}
+
+.input.is-success {
+  box-shadow: 0 4px #209cee, 0 -4px #209cee, 4px 0 #209cee, -4px 0 #209cee;
+}
+
+.input.is-warning {
+  box-shadow: 0 4px #f7d51d, 0 -4px #f7d51d, 4px 0 #f7d51d, -4px 0 #f7d51d;
+}
+
+.input.is-error {
+  box-shadow: 0 4px #e76e55, 0 -4px #e76e55, 4px 0 #e76e55, -4px 0 #e76e55;
+}
+
+.field > label {
+  display: block;
+}
+
+.field .input {
+  display: block;
+}
+
+.field.is-inline {
+  display: flex;
+  align-items: center;
+}
+
+.field.is-inline > label {
+  flex-basis: 0;
+  flex-grow: 1;
+  margin: 0;
+  margin-right: 1.5rem;
+  text-align: right;
+}
+
+.field.is-inline .input {
+  flex-basis: 0;
+  flex-grow: 5;
+}
+
 .icon {
   position: relative;
   display: inline-block;
