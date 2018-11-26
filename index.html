@@ -45,6 +45,11 @@
       <p>NES-style CSS Framework.</p>
     </header>
 
+    <a class="github-link" href="https://github.com/BcRikko/NES.css" target="_blank">
+      <p class="balloon from-right">Fork me<br />on GitHub</p>
+      <i class="octocat"></i>
+    </a>
+
     <button type="button" class="btn">Normal</button>
     <button type="button" class="btn is-primary">Primary</button>
     <button type="button" class="btn is-success">Success</button>
@@ -95,5 +100,17 @@
 
     <i class="icon github"></i> <i class="icon github is-medium"></i>
     <i class="icon github is-large"></i>
+
+    <i class="octocat animate"></i>
   </body>
+  <script>
+    var link = document.querySelector("a.github-link");
+    var octocat = document.querySelector("a.github-link > i.octocat");
+    link.addEventListener("mouseover", function() {
+      octocat.classList.add("animate");
+    });
+    link.addEventListener("mouseout", function() {
+      octocat.classList.remove("animate");
+    });
+  </script>
 </html>
