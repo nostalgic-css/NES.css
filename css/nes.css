@@ -574,4 +574,36 @@ button,
   box-shadow: 2px 2px #212529,4px 2px #212529,2px 4px #212529,4px 4px #212529,6px 4px #212529,8px 4px #212529,2px 6px #212529,4px 6px #212529,6px 6px #212529,8px 6px #212529,10px 6px #212529,2px 8px #212529,4px 8px #212529,6px 8px #212529,8px 8px #212529,10px 8px #212529,12px 8px #212529,2px 10px #212529,4px 10px #212529,6px 10px #212529,8px 10px #212529,10px 10px #212529,2px 12px #212529,4px 12px #212529,6px 12px #212529,8px 12px #212529,2px 14px #212529,4px 14px #212529;;
   animation: blink 1s infinite steps(1);
 }
+
+.checkbox {
+  margin-left: 28px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+
+.checkbox + span {
+  position: relative;
+}
+
+.checkbox + span::before,
+.checkbox:checked + span::before {
+  position: absolute;
+  top: -3px;
+  left: -28px;
+  content: "";
+}
+
+.checkbox + span::before {
+  /* stylelint-disable-line no-descending-specificity */
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 2px #212529,4px 2px #212529,6px 2px #212529,8px 2px #212529,10px 2px #212529,12px 2px #212529,14px 2px #212529,16px 2px #212529,2px 4px #212529,16px 4px #212529,2px 6px #212529,16px 6px #212529,2px 8px #212529,16px 8px #212529,2px 10px #212529,16px 10px #212529,2px 12px #212529,16px 12px #212529,2px 14px #212529,16px 14px #212529,2px 16px #212529,4px 16px #212529,6px 16px #212529,8px 16px #212529,10px 16px #212529,12px 16px #212529,14px 16px #212529,16px 16px #212529;;
+}
+
+.checkbox:checked + span::before {
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 2px #212529,4px 2px #212529,6px 2px #212529,8px 2px #212529,10px 2px #212529,12px 2px #212529,14px 2px #212529,18px 2px #212529,20px 2px #212529,2px 4px #212529,16px 4px #212529,18px 4px #212529,20px 4px #212529,2px 6px #212529,14px 6px #212529,16px 6px #212529,2px 8px #212529,4px 8px #212529,12px 8px #212529,14px 8px #212529,2px 10px #212529,4px 10px #212529,6px 10px #212529,10px 10px #212529,12px 10px #212529,16px 10px #212529,2px 12px #212529,6px 12px #212529,8px 12px #212529,10px 12px #212529,16px 12px #212529,2px 14px #212529,8px 14px #212529,16px 14px #212529,2px 16px #212529,4px 16px #212529,6px 16px #212529,8px 16px #212529,10px 16px #212529,12px 16px #212529,14px 16px #212529,16px 16px #212529;;
+}
 /*# sourceMappingURL=nes.css.map */
