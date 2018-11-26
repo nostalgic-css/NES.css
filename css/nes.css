@@ -492,6 +492,10 @@ button,
   padding: 1.5rem 2rem;
 }
 
+.container > :last-child {
+  margin-bottom: 0;
+}
+
 .container::before, .container::after {
   position: absolute;
   z-index: -1;
@@ -605,5 +609,70 @@ button,
   width: 2px;
   height: 2px;
   box-shadow: 2px 2px #212529,4px 2px #212529,6px 2px #212529,8px 2px #212529,10px 2px #212529,12px 2px #212529,14px 2px #212529,18px 2px #212529,20px 2px #212529,2px 4px #212529,16px 4px #212529,18px 4px #212529,20px 4px #212529,2px 6px #212529,14px 6px #212529,16px 6px #212529,2px 8px #212529,4px 8px #212529,12px 8px #212529,14px 8px #212529,2px 10px #212529,4px 10px #212529,6px 10px #212529,10px 10px #212529,12px 10px #212529,16px 10px #212529,2px 12px #212529,6px 12px #212529,8px 12px #212529,10px 12px #212529,16px 12px #212529,2px 14px #212529,8px 14px #212529,16px 14px #212529,2px 16px #212529,4px 16px #212529,6px 16px #212529,8px 16px #212529,10px 16px #212529,12px 16px #212529,14px 16px #212529,16px 16px #212529;;
+}
+
+.balloon {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  margin: 8px;
+  box-shadow: 0 -4px #fff, 0 -8px #212529, 4px 0 #fff, 4px -4px #212529, 8px 0 #212529, 0 4px #fff, 0 8px #212529, -4px 0 #fff, -4px 4px #212529, -8px 0 #212529, -4px -4px #212529, 4px 4px #212529;
+}
+
+.balloon > :last-child {
+  margin-bottom: 0;
+}
+
+.balloon::before, .balloon::after {
+  position: absolute;
+  content: "";
+}
+
+.balloon.from-left {
+  margin-bottom: 30px;
+}
+
+.balloon.from-left::before, .balloon.from-left::after {
+  left: 2rem;
+}
+
+.balloon.from-left::before {
+  bottom: -14px;
+  width: 26px;
+  height: 10px;
+  background-color: #fff;
+  border-right: 4px solid #212529;
+  border-left: 4px solid #212529;
+}
+
+.balloon.from-left::after {
+  bottom: -18px;
+  width: 18px;
+  height: 3px;
+  margin-right: 8px;
+  background-color: #fff;
+  box-shadow: -4px 0 #212529, 4px 0 #212529, -4px 4px #fff, 0 4px #212529, -8px 4px #212529, -4px 8px #212529, -8px 8px #212529;
+}
+
+.balloon.from-right::before, .balloon.from-right::after {
+  right: 2rem;
+}
+
+.balloon.from-right::before {
+  bottom: -14px;
+  width: 26px;
+  height: 10px;
+  background-color: #fff;
+  border-right: 4px solid #212529;
+  border-left: 4px solid #212529;
+}
+
+.balloon.from-right::after {
+  bottom: -18px;
+  width: 18px;
+  height: 3px;
+  margin-left: 8px;
+  background-color: #fff;
+  box-shadow: -4px 0 #212529, 4px 0 #212529, 4px 4px #fff, 0 4px #212529, 8px 4px #212529, 4px 8px #212529, 8px 8px #212529;
 }
 /*# sourceMappingURL=nes.css.map */

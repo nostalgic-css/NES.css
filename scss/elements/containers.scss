@@ -2,6 +2,10 @@
   position: relative;
   padding: 1.5rem 2rem;
 
+  > :last-child {
+    margin-bottom: 0;
+  }
+
   &::before,
   &::after {
     position: absolute;
