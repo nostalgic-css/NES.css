@@ -68,12 +68,7 @@
 
   @each $type in $types {
     &.is-#{nth($type, 1)} {
-      @include btn-style(
-        nth($type, 2),
-        nth($type, 3),
-        nth($type, 4),
-        nth($type, 5)
-      );
+      @include btn-style(nth($type, 2), nth($type, 3), nth($type, 4), nth($type, 5));
     }
   }
 }
