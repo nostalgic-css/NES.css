@@ -363,6 +363,15 @@ button,
   -webkit-appearance: none;
 }
 
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 .btn {
   position: relative;
   display: inline-block;
@@ -542,5 +551,27 @@ button,
 .container.is-dark > .title {
   color: #fff;
   background-color: #212529;
+}
+
+.radio {
+  margin-right: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+
+.radio + span {
+  position: relative;
+}
+
+.radio:checked + span::before {
+  position: absolute;
+  top: -2px;
+  left: -20px;
+  content: "";
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 2px #212529,4px 2px #212529,2px 4px #212529,4px 4px #212529,6px 4px #212529,8px 4px #212529,2px 6px #212529,4px 6px #212529,6px 6px #212529,8px 6px #212529,10px 6px #212529,2px 8px #212529,4px 8px #212529,6px 8px #212529,8px 8px #212529,10px 8px #212529,12px 8px #212529,2px 10px #212529,4px 10px #212529,6px 10px #212529,8px 10px #212529,10px 10px #212529,2px 12px #212529,4px 12px #212529,6px 12px #212529,8px 12px #212529,2px 14px #212529,4px 14px #212529;;
+  animation: blink 1s infinite steps(1);
 }
 /*# sourceMappingURL=nes.css.map */

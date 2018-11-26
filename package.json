@@ -58,6 +58,9 @@
       "git add"
     ]
   },
+  "prettier": {
+    "printWidth": 100
+  },
   "stylelint": {
     "plugins": [
       "stylelint-scss"
