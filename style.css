@@ -2,73 +2,6 @@ body {
   margin: 2rem;
 }
 
-.dq-like-grid {
-  display: grid;
-
-  /* prettier-ignore */
-  grid-template:
-    "overview status"
-    "equipment status"
-    / 210px auto;
-  width: 640px;
-}
-
-.dq-like-grid > .overview {
-  grid-area: overview;
-  margin-bottom: 0;
-}
-
-.dq-like-grid > .overview .description {
-  grid-template: auto / 2rem 1fr;
-  width: 70%;
-}
-
-.dq-like-grid > .equipment {
-  grid-area: equipment;
-  height: 100%;
-  margin-bottom: 0;
-}
-
-.dq-like-grid > .equipment .description {
-  grid-template: auto / 1rem 1fr;
-}
-
-.dq-like-grid > .status {
-  grid-area: status;
-  height: 100%;
-  margin-bottom: 0;
-}
-
-.dq-like-grid > .status .description {
-  grid-template: auto / 13rem 1fr;
-  margin-top: 1rem;
-}
-
-.conversation {
-  display: grid;
-
-  /* prettier-ignore */
-  grid-template:
-    ".... message ....."
-    "left message right"
-    "left message right"
-    "left ....... right"
-    / 100px 1fr 100px;
-  grid-gap: 2rem;
-}
-
-.conversation > .avatar.-left {
-  grid-area: left;
-}
-
-.conversation > .avatar.-right {
-  grid-area: right;
-}
-
-.conversation > .balloon {
-  grid-area: message;
-}
-
 .github-link {
   position: fixed;
   top: 10px;
@@ -82,7 +15,6 @@ body {
 .github-link:hover {
   text-decoration: none;
 }
-
 .github-link > p.balloon {
   align-self: flex-start;
   padding: 0.2rem 0.5rem;
