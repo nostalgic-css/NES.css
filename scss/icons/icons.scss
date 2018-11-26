@@ -1,0 +1,67 @@
+// reaction
+@import "heart.scss";
+@import "star.scss";
+@import "like.scss";
+
+// sns
+@import "twitter.scss";
+@import "facebook.scss";
+@import "github.scss";
+
+.icon {
+  position: relative;
+  display: inline-block;
+
+  @mixin setup($px) {
+    $size: $px * 16;
+
+    width: $size;
+    height: $size;
+
+    &::before {
+      position: absolute;
+      top: $px * -1;
+      left: $px * -1;
+      display: block;
+      width: $size;
+      height: $size;
+      content: "";
+      background: transparent;
+    }
+
+    &.heart::before {
+      @include pixelize($icon-heart, $icon-heart-colors, $px);
+    }
+
+    &.star::before {
+      @include pixelize($icon-star, $icon-star-colors, $px);
+    }
+
+    &.like::before {
+      @include pixelize($icon-like, $icon-like-colors, $px);
+    }
+
+    &.twitter::before {
+      @include pixelize($icon-twitter, $icon-twitter-colors, $px);
+    }
+
+    &.facebook::before {
+      @include pixelize($icon-facebook, $icon-facebook-colors, $px);
+    }
+
+    &.github::before {
+      @include pixelize($icon-github, $icon-github-colors, $px);
+    }
+  }
+
+  // default
+  @include setup(2px);
+
+  &.is-medium {
+    @include setup(3px);
+  }
+
+  &.is-large {
+    @include setup(4px);
+  }
+}
