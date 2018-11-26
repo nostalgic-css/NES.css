@@ -641,6 +641,7 @@ button,
   padding: 1rem 1.5rem;
   margin: 8px;
   margin-bottom: 30px;
+  background-color: #fff;
   box-shadow: 0 -4px #fff, 0 -8px #212529, 4px 0 #fff, 4px -4px #212529, 8px 0 #212529, 0 4px #fff, 0 8px #212529, -4px 0 #fff, -4px 4px #212529, -8px 0 #212529, -4px -4px #212529, 4px 4px #212529;
 }
 
