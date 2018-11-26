@@ -520,6 +520,30 @@ button,
   border-radius: 4px;
 }
 
+.container.is-rounded {
+  padding: 1rem 1.5rem;
+  margin: 14px 8px;
+}
+
+.container.is-rounded::after {
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 -4px #fff, 0 -8px #212529, 4px 0 #fff, 4px -4px #212529, 8px 0 #212529, 0 4px #fff, 0 8px #212529, -4px 0 #fff, -4px 4px #212529, -8px 0 #212529, -4px -4px #212529, 4px 4px #212529;
+}
+
+.container.is-rounded.is-dark::after {
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 -4px #212529, 0 -8px #fff, 4px 0 #212529, 4px -4px #fff, 8px 0 #fff, 0 4px #212529, 0 8px #fff, -4px 0 #212529, -4px 4px #fff, -8px 0 #fff, -4px -4px #fff, 4px 4px #fff;
+}
+
+.container.is-rounded.is-dark::before {
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+}
+
 .container.with-title {
   display: flex;
   flex-direction: column;

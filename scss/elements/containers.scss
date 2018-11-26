@@ -31,6 +31,47 @@
     border-radius: 4px;
   }
 
+  @mixin rounded($base, $background) {
+    border: none;
+    border-radius: 0;
+    // prettier-ignore
+    box-shadow:
+      0 -4px $background,
+      0 -8px $base,
+      4px 0 $background,
+      4px -4px $base,
+      8px 0 $base,
+      0 4px $background,
+      0 8px $base,
+      -4px 0 $background,
+      -4px 4px $base,
+      -8px 0 $base,
+      -4px -4px $base,
+      4px 4px $base;
+  }
+
+  &.is-rounded {
+    padding: 1rem 1.5rem;
+    margin: 14px 8px;
+
+    &::after {
+      @include rounded($base-color, $background-color);
+    }
+
+    &.is-dark {
+      &::after {
+        @include rounded($background-color, $base-color);
+      }
+
+      &::before {
+        top: -8px;
+        right: -8px;
+        bottom: -8px;
+        left: -8px;
+      }
+    }
+  }
+
   &.with-title {
     display: flex;
     flex-direction: column;
