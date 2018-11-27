@@ -8,6 +8,9 @@
 @import "facebook.scss";
 @import "github.scss";
 
+// others
+@import "close.scss";
+
 .icon {
   position: relative;
   display: inline-block;
@@ -51,6 +54,10 @@
 
     &.github::before {
       @include pixelize($icon-github, $icon-github-colors, $px);
+    }
+
+    &.close::before {
+      @include pixelize($icon-close, $icon-close-colors, $px);
     }
   }
 
