@@ -1,0 +1,74 @@
+@mixin btn-style($color, $background, $hover-background, $shadow) {
+  color: $color;
+  background-color: $background;
+  box-shadow: inset -4px -4px $shadow;
+
+  &:hover {
+    background-color: $hover-background;
+    box-shadow: inset -6px -6px $shadow;
+  }
+
+  &:active {
+    box-shadow: inset 4px 4px $shadow;
+  }
+}
+
+// Default style
+.btn {
+  $border-size: 4px;
+
+  position: relative;
+  display: inline-block;
+  padding: 10px 12px;
+  margin: $border-size;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+
+  @include btn-style($base-color, #fff, #e7e7e7, #adafbc);
+
+  &::before,
+  &::after {
+    position: absolute;
+    box-sizing: content-box;
+    width: 100%;
+    height: 100%;
+    content: "";
+    border-color: $base-color;
+    border-style: solid;
+    border-width: $border-size;
+  }
+
+  &::before {
+    top: $border-size * -1;
+    left: 0;
+    border-right: $border-size / 2;
+    border-left: $border-size / 2;
+  }
+
+  &::after {
+    top: 0;
+    left: $border-size * -1;
+    border-top: $border-size / 2;
+    border-bottom: $border-size / 2;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  // Other styles
+  // prettier-ignore
+  $types:
+    "primary" #fff #92cc41 #76c442 #4aa52e,
+    "success" #fff #209cee #108de0 #006bb3,
+    "warning" $base-color #f7d51d #f2c409 #e59400,
+    "error" #fff #e76e55 #ce372b #8c2022;
+
+  @each $type in $types {
+    &.is-#{nth($type, 1)} {
+      @include btn-style(nth($type, 2), nth($type, 3), nth($type, 4), nth($type, 5));
+    }
+  }
+}

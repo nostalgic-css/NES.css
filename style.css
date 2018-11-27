@@ -1,72 +1,53 @@
 body {
+  padding: 0 2rem;
   margin: 2rem;
 }
 
-.dq-like-grid {
-  display: grid;
-
-  /* prettier-ignore */
-  grid-template:
-    "overview status"
-    "equipment status"
-    / 210px auto;
-  width: 640px;
+.container:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
-.dq-like-grid > .overview {
-  grid-area: overview;
-  margin-bottom: 0;
+i.brand {
+  margin-right: 1rem;
 }
 
-.dq-like-grid > .overview .description {
-  grid-template: auto / 2rem 1fr;
-  width: 70%;
+div.containers > .container {
+  display: inline-block;
+  max-width: 400px;
 }
 
-.dq-like-grid > .equipment {
-  grid-area: equipment;
-  height: 100%;
-  margin-bottom: 0;
+.balloon.container .balloon {
+  max-width: 600px;
+  margin: 2rem 2rem;
 }
 
-.dq-like-grid > .equipment .description {
-  grid-template: auto / 1rem 1fr;
+.balloon.container .messages {
+  display: flex;
+  flex-direction: column;
+}
+.balloon.container .message {
+  display: flex;
+}
+.balloon.container .message i {
+  align-self: flex-end;
+}
+.balloon.container .message.-left {
+  align-self: flex-start;
+}
+.balloon.container .message.-right {
+  align-self: flex-end;
 }
 
-.dq-like-grid > .status {
-  grid-area: status;
-  height: 100%;
-  margin-bottom: 0;
+.form.container > .field:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
-.dq-like-grid > .status .description {
-  grid-template: auto / 13rem 1fr;
-  margin-top: 1rem;
+.footer {
+  text-align: center;
 }
-
-.conversation {
-  display: grid;
-
-  /* prettier-ignore */
-  grid-template:
-    ".... message ....."
-    "left message right"
-    "left message right"
-    "left ....... right"
-    / 100px 1fr 100px;
-  grid-gap: 2rem;
-}
-
-.conversation > .avatar.-left {
-  grid-area: left;
-}
-
-.conversation > .avatar.-right {
-  grid-area: right;
-}
-
-.conversation > .balloon {
-  grid-area: message;
+.footer a {
+  color: #333;
+  text-decoration: none;
 }
 
 .github-link {
@@ -75,214 +56,19 @@ body {
   right: 10px;
   z-index: 999;
   display: flex;
-  justify-content: space-around;
-  height: 96px;
+  height: 100px;
+  color: #333;
+  text-decoration: none;
 }
-
 .github-link:hover {
-  opacity: 0.7;
+  text-decoration: none;
 }
-
-.github-link .balloon {
-  position: relative;
-  height: 50px;
-  padding: 2px 5px;
-  background-color: #f7f7f7;
-
-  /* prettier-ignore */
-  box-shadow:
-    0 -3px #f7f7f7,
-    0 -6px #333,
-    3px 0 #f7f7f7,
-    3px -3px #333,
-    6px 0 #333,
-    0 3px #f7f7f7,
-    0 6px #333,
-    -3px 0 #f7f7f7,
-    -3px 3px #333,
-    -6px 0 #333,
-    -3px -3px #333,
-    3px 3px #333;
+.github-link > p.balloon {
+  align-self: flex-start;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  color: #333;
 }
-
-.github-link .balloon::before,
-.github-link .balloon::after {
-  position: absolute;
-  right: 15px;
-  box-sizing: border-box;
-  display: block;
-  content: "";
-}
-
-.github-link .balloon::after {
-  bottom: -14px;
-  width: 9px;
-  height: 3px;
-  margin-left: 6px;
-  background: #f7f7f7;
-
-  /* prettier-ignore */
-  box-shadow:
-    -3px 0 #333,
-    3px 0 #333,
-    3px 3px #f7f7f7,
-    0 3px #333,
-    6px 3px #333,
-    3px 6px #333,
-    6px 6px #333;
-}
-
-.github-link .balloon::before {
-  bottom: -11px;
-  width: 15px;
-  height: 8px;
-  background: #f7f7f7;
-  border-right: 3px solid #333;
-  border-left: 3px solid #333;
-}
-
-.github-link .octocat {
-  position: relative;
-  width: 84px;
-}
-
-.github-link .octocat::after {
-  position: absolute;
-  top: -6px;
-  left: -6px;
-  width: 6px;
-  height: 6px;
-  content: "";
-  background: transparent;
-
-  /* prettier-ignore */
-  box-shadow:
-    24px 6px 0 #333,
-    78px 6px 0 #333,
-    24px 12px 0 #333,
-    30px 12px 0 #333,
-    72px 12px 0 #333,
-    78px 12px 0 #333,
-    24px 18px 0 #333,
-    30px 18px 0 #333,
-    36px 18px 0 #333,
-    42px 18px 0 #333,
-    48px 18px 0 #333,
-    54px 18px 0 #333,
-    60px 18px 0 #333,
-    66px 18px 0 #333,
-    72px 18px 0 #333,
-    78px 18px 0 #333,
-    18px 24px 0 #333,
-    24px 24px 0 #333,
-    30px 24px 0 #333,
-    36px 24px 0 #333,
-    42px 24px 0 #333,
-    48px 24px 0 #333,
-    54px 24px 0 #333,
-    60px 24px 0 #333,
-    66px 24px 0 #333,
-    72px 24px 0 #333,
-    78px 24px 0 #333,
-    84px 24px 0 #333,
-    18px 30px 0 #333,
-    24px 30px 0 #333,
-    30px 30px 0 #333,
-    36px 30px 0 #333,
-    42px 30px 0 #333,
-    48px 30px 0 #333,
-    54px 30px 0 #333,
-    60px 30px 0 #333,
-    66px 30px 0 #333,
-    72px 30px 0 #333,
-    78px 30px 0 #333,
-    84px 30px 0 #333,
-    18px 36px 0 #333,
-    24px 36px 0 #333,
-    30px 36px 0 #333,
-    36px 36px 0 #ffdec4,
-    42px 36px 0 #ffdec4,
-    48px 36px 0 #ffdec4,
-    54px 36px 0 #ffdec4,
-    60px 36px 0 #ffdec4,
-    66px 36px 0 #ffdec4,
-    72px 36px 0 #333,
-    78px 36px 0 #333,
-    84px 36px 0 #333,
-    18px 42px 0 #333,
-    24px 42px 0 #333,
-    30px 42px 0 #ffdec4,
-    36px 42px 0 #cb7066,
-    42px 42px 0 #ffdec4,
-    48px 42px 0 #ffdec4,
-    54px 42px 0 #ffdec4,
-    60px 42px 0 #ffdec4,
-    66px 42px 0 #cb7066,
-    72px 42px 0 #ffdec4,
-    78px 42px 0 #333,
-    84px 42px 0 #333,
-    18px 48px 0 #333,
-    24px 48px 0 #333,
-    30px 48px 0 #ffdec4,
-    36px 48px 0 #cb7066,
-    42px 48px 0 #ffdec4,
-    48px 48px 0 #ffdec4,
-    54px 48px 0 #ffdec4,
-    60px 48px 0 #ffdec4,
-    66px 48px 0 #cb7066,
-    72px 48px 0 #ffdec4,
-    78px 48px 0 #333,
-    84px 48px 0 #333,
-    24px 54px 0 #333,
-    30px 54px 0 #333,
-    36px 54px 0 #ffdec4,
-    42px 54px 0 #ffdec4,
-    48px 54px 0 #cb7066,
-    54px 54px 0 #cb7066,
-    60px 54px 0 #ffdec4,
-    66px 54px 0 #ffdec4,
-    72px 54px 0 #333,
-    78px 54px 0 #333,
-    30px 60px 0 #333,
-    36px 60px 0 #333,
-    42px 60px 0 #333,
-    48px 60px 0 #333,
-    54px 60px 0 #333,
-    60px 60px 0 #333,
-    66px 60px 0 #333,
-    72px 60px 0 #333,
-    6px 66px 0 #333,
-    12px 66px 0 #333,
-    42px 66px 0 #333,
-    48px 66px 0 #333,
-    54px 66px 0 #333,
-    60px 66px 0 #333,
-    18px 72px 0 #333,
-    24px 72px 0 #333,
-    36px 72px 0 #333,
-    42px 72px 0 #333,
-    48px 72px 0 #333,
-    54px 72px 0 #333,
-    60px 72px 0 #333,
-    66px 72px 0 #333,
-    24px 78px 0 #333,
-    30px 78px 0 #333,
-    36px 78px 0 #333,
-    42px 78px 0 #333,
-    48px 78px 0 #333,
-    54px 78px 0 #333,
-    60px 78px 0 #333,
-    66px 78px 0 #333,
-    36px 84px 0 #333,
-    48px 84px 0 #333,
-    54px 84px 0 #333,
-    66px 84px 0 #333,
-    36px 90px 0 #333,
-    48px 90px 0 #333,
-    54px 90px 0 #333,
-    66px 90px 0 #333,
-    30px 96px 0 #333,
-    42px 96px 0 #333,
-    60px 96px 0 #333,
-    72px 96px 0 #333;
+.github-link > i.octocat {
+  align-self: flex-end;
 }

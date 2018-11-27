@@ -1,26 +1,23 @@
-// Define
-html {
-  font-size: $font-size;
-  color: $black;
-  background-color: $white;
-}
+// Override reboot.scss
 
+html,
 body,
-button,
-input,
-textarea,
-select,
 pre,
-code {
+code,
+kbd,
+samp {
   font-family: $font-family;
+}
+
+body {
   font-size: $font-size;
+  color: $base-color;
+  background-color: $background-color;
 }
 
-a {
-  color: $black;
-  text-decoration: none;
-}
-
-p:not(:last-child) {
-  margin-bottom: 1rem;
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: none;
 }

@@ -1,73 +1,74 @@
-@import "pixelize.scss";
-@import "twitter.scss";
-@import "facebook.scss";
-@import "github.scss";
-@import "youtube.scss";
+// reaction
 @import "heart.scss";
 @import "star.scss";
 @import "like.scss";
 
-@mixin setup($pixel) {
-  $size: $pixel * 16;
+// sns
+@import "twitter.scss";
+@import "facebook.scss";
+@import "github.scss";
 
-  width: $size;
-  height: $size;
-
-  &::before {
-    top: $pixel * -1;
-    left: $pixel * -1;
-    width: $pixel;
-    height: $pixel;
-  }
-
-  &.-twitter::before {
-    @include pixelize($twitter, $pixel, #1c9ceb);
-  }
-
-  &.-facebook::before {
-    @include pixelize($facebook, $pixel, #4566ae);
-  }
-
-  &.-github::before {
-    @include pixelize($github, $pixel, #333333);
-  }
-
-  &.-youtube::before {
-    @include pixelize($youtube, $pixel, #ff0100);
-  }
-
-  &.-heart::before {
-    @include pixelize($heart, $pixel, #f11416);
-  }
-
-  &.-star::before {
-    @include pixelize($star, $pixel, #f7de4e);
-  }
-
-  &.-like::before {
-    @include pixelize($like, $pixel, #1e77be);
-  }
-}
+// others
+@import "close.scss";
 
 .icon {
   position: relative;
   display: inline-block;
 
-  &::before {
-    position: absolute;
-    display: block;
-    content: "";
-    background: transparent;
+  @mixin setup($px) {
+    $size: $px * 16;
+
+    width: $size;
+    height: $size;
+
+    &::before {
+      position: absolute;
+      top: $px * -1;
+      left: $px * -1;
+      display: block;
+      width: $size;
+      height: $size;
+      content: "";
+      background: transparent;
+    }
+
+    &.heart::before {
+      @include pixelize($icon-heart, $icon-heart-colors, $px);
+    }
+
+    &.star::before {
+      @include pixelize($icon-star, $icon-star-colors, $px);
+    }
+
+    &.like::before {
+      @include pixelize($icon-like, $icon-like-colors, $px);
+    }
+
+    &.twitter::before {
+      @include pixelize($icon-twitter, $icon-twitter-colors, $px);
+    }
+
+    &.facebook::before {
+      @include pixelize($icon-facebook, $icon-facebook-colors, $px);
+    }
+
+    &.github::before {
+      @include pixelize($icon-github, $icon-github-colors, $px);
+    }
+
+    &.close::before {
+      @include pixelize($icon-close, $icon-close-colors, $px);
+    }
   }
 
-  // -default
+  // default
   @include setup(2px);
 
-  &.-medium {
+  &.is-medium {
     @include setup(3px);
   }
 
-  &.-large {
+  &.is-large {
     @include setup(4px);
   }
 }

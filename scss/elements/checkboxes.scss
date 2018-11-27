@@ -1,0 +1,52 @@
+.checkbox {
+  // prettier-ignore
+  $checkbox: (
+    (1,1,1,1,1,1,1,1,0,0),
+    (1,0,0,0,0,0,0,1,0,0),
+    (1,0,0,0,0,0,0,1,0,0),
+    (1,0,0,0,0,0,0,1,0,0),
+    (1,0,0,0,0,0,0,1,0,0),
+    (1,0,0,0,0,0,0,1,0,0),
+    (1,0,0,0,0,0,0,1,0,0),
+    (1,1,1,1,1,1,1,1,0,0),
+  );
+
+  // prettier-ignore
+  $checkbox-checked: (
+    (1,1,1,1,1,1,1,0,1,1),
+    (1,0,0,0,0,0,0,1,1,1),
+    (1,0,0,0,0,0,1,1,0,0),
+    (1,1,0,0,0,1,1,0,0,0),
+    (1,1,1,0,1,1,0,1,0,0),
+    (1,0,1,1,1,0,0,1,0,0),
+    (1,0,0,1,0,0,0,1,0,0),
+    (1,1,1,1,1,1,1,1,0,0)
+  );
+  $colors: ($base-color);
+
+  margin-left: 28px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  & + span {
+    position: relative;
+  }
+
+  & + span::before,
+  &:checked + span::before {
+    position: absolute;
+    top: -3px;
+    left: -28px;
+    content: "";
+  }
+
+  // prettier-ignore
+  & + span::before { /* stylelint-disable-line no-descending-specificity */
+    @include pixelize($checkbox, $colors, 2px);
+  }
+
+  &:checked + span::before {
+    @include pixelize($checkbox-checked, $colors, 2px);
+  }
+}

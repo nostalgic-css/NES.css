@@ -1,6 +1,6 @@
 {
   "name": "nes.css",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "NES.css is NES-style CSS Framework.",
   "scripts": {
     "watch": "npm run build:sass -- --watch",
@@ -36,11 +36,13 @@
     "lint-staged": "^7.3.0",
     "node-sass": "^4.9.3",
     "postcss-cli": "^6.0.0",
-    "prettier-stylelint": "^0.4.2",
+    "prettier": "^1.15.2",
     "rimraf": "^2.6.2",
     "stylelint": "^9.5.0",
+    "stylelint-config-prettier": "^4.0.0",
     "stylelint-config-recess-order": "^2.0.0",
     "stylelint-config-standard": "^18.2.0",
+    "stylelint-prettier": "^1.0.5",
     "stylelint-scss": "^3.3.1"
   },
   "browserslist": [
@@ -58,16 +60,21 @@
       "git add"
     ]
   },
+  "prettier": {
+    "printWidth": 100
+  },
   "stylelint": {
     "plugins": [
-      "stylelint-scss"
+      "stylelint-scss",
+      "stylelint-prettier"
     ],
     "extends": [
       "stylelint-config-standard",
       "stylelint-config-recess-order",
-      "./node_modules/prettier-stylelint/config.js"
+      "stylelint-prettier/recommended"
     ],
     "rules": {
+      "prettier/prettier": true,
       "string-quotes": "double",
       "at-rule-no-unknown": null,
       "scss/at-rule-no-unknown": true

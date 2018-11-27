@@ -1,0 +1,99 @@
+.balloon {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  margin: 8px;
+  margin-bottom: 30px;
+  background-color: $background-color;
+
+  // prettier-ignore
+  box-shadow:
+    0 -4px $background-color,
+    0 -8px $base-color,
+    4px 0 $background-color,
+    4px -4px $base-color,
+    8px 0 $base-color,
+    0 4px $background-color,
+    0 8px $base-color,
+    -4px 0 $background-color,
+    -4px 4px $base-color,
+    -8px 0 $base-color,
+    -4px -4px $base-color,
+    4px 4px $base-color;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+  }
+
+  &.from-left {
+    &::before,
+    &::after {
+      left: 2rem;
+    }
+
+    &::before {
+      bottom: -14px;
+      width: 26px;
+      height: 10px;
+      background-color: $background-color;
+      border-right: 4px solid $base-color;
+      border-left: 4px solid $base-color;
+    }
+
+    &::after {
+      bottom: -18px;
+      width: 18px;
+      height: 3px;
+      margin-right: 8px;
+      background-color: $background-color;
+      // prettier-ignore
+      box-shadow:
+        -4px 0 $base-color,
+        4px 0 $base-color,
+        -4px 4px $background-color,
+        0 4px $base-color,
+        -8px 4px $base-color,
+        -4px 8px $base-color,
+        -8px 8px $base-color;
+    }
+  }
+
+  &.from-right {
+    &::before,
+    &::after {
+      right: 2rem;
+    }
+
+    &::before {
+      bottom: -14px;
+      width: 26px;
+      height: 10px;
+      background-color: $background-color;
+      border-right: 4px solid $base-color;
+      border-left: 4px solid $base-color;
+    }
+
+    &::after {
+      bottom: -18px;
+      width: 18px;
+      height: 3px;
+      margin-left: 8px;
+      background-color: $background-color;
+      // prettier-ignore
+      box-shadow:
+        -4px 0 $base-color,
+        4px 0 $base-color,
+        4px 4px $background-color,
+        0 4px $base-color,
+        8px 4px $base-color,
+        4px 8px $base-color,
+        8px 8px $base-color;
+    }
+  }
+}

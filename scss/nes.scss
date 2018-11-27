@@ -1,10 +1,12 @@
 @charset "utf-8";
 
 /*!
-* NES.css v0.0.1(alpha)
+* NES.css v0.0.2(alpha)
 */
 
 @import "base/_index.scss";
+@import "utilities/_index.scss";
 @import "elements/_index.scss";
 @import "form/_index.scss";
 @import "icons/_index.scss";
+@import "pixel-arts/_index.scss";

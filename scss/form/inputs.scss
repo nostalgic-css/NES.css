@@ -1,0 +1,52 @@
+.input {
+  @mixin border-style($color) {
+    // prettier-ignore
+    box-shadow:
+    0 4px $color,
+    0 -4px $color,
+    4px 0 $color,
+    -4px 0 $color;
+  }
+
+  padding: 0.5rem 1rem;
+  margin: 4px;
+  border: none;
+  @include border-style($base-color);
+
+  &.is-success {
+    @include border-style(#209cee);
+  }
+  &.is-warning {
+    @include border-style(#f7d51d);
+  }
+  &.is-error {
+    @include border-style(#e76e55);
+  }
+}
+
+.field {
+  > label {
+    display: block;
+  }
+  .input {
+    display: block;
+  }
+
+  &.is-inline {
+    display: flex;
+    align-items: center;
+
+    > label {
+      flex-basis: 0;
+      flex-grow: 1;
+      margin: 0;
+      margin-right: 1.5rem;
+      text-align: right;
+    }
+
+    .input {
+      flex-basis: 0;
+      flex-grow: 5;
+    }
+  }
+}

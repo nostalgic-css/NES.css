@@ -1,296 +1,198 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="NES.css is NES-style CSSFramework." />
+    <meta name="keywords" content="html5,css,framework,sass,NES,8bit" />
+    <meta name="author" content="© 2018 B.C.Rikko" />
+    <link rel="shortcut icon" href="https://bcrikko.github.io/NES.css/favicon.ico" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="NES.css is NES-style CSSFramework.">
-  <meta name="keywords" content="html5,css,framework,sass,NES,8bit" />
-  <meta name="author" content="© 2018 B.C.Rikko">
-  <link rel="shortcut icon" href="https://bcrikko.github.io/NES.css/favicon.ico">
+    <title>NES.css - NES-style CSS Framework</title>
 
-  <title>NES.css - NES-style CSS Framework</title>
+    <link href="./css/nes.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
 
-  <link href="./css/nes.css" rel="stylesheet">
-  <link href="./style.css" rel="stylesheet">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="NES.css" />
+    <meta property="og:url" content="https://bcrikko.github.io/NES.css/" />
+    <meta property="og:description" content="NES-style CSS" />
+    <meta property="og:image" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bc_rikko" />
+    <meta name="twitter:creator" content="@bc_rikko" />
+    <meta name="twitter:image" content="https://user-images.githubusercontent.com/5305599/45937791-a5db2100-bffe-11e8-8bfd-fc3f534b28aa.gif" />
 
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="NES.css">
-  <meta property="og:url" content="https://bcrikko.github.io/NES.css/">
-  <meta property="og:description" content="NES-style CSS">
-  <meta property="og:image" content="">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@bc_rikko">
-  <meta name="twitter:creator" content="@bc_rikko">
-  <meta name="twitter:image" content="https://user-images.githubusercontent.com/5305599/45937791-a5db2100-bffe-11e8-8bfd-fc3f534b28aa.gif">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41640153-4"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "UA-41640153-4");</script>
+  </head>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41640153-4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+  <body>
+    <header>
+      <h1><i class="nes-logo brand"></i>NES.css</h1>
+      <p>NES-style CSS Framework.</p>
+    </header>
 
-    gtag('config', 'UA-41640153-4');
-  </script>
+    <a class="github-link" href="https://github.com/BcRikko/NES.css" target="_blank">
+      <p class="balloon from-right">Fork me<br />on GitHub</p>
+      <i class="octocat"></i>
+    </a>
 
-</head>
-
-<body>
-  <header class="header">
-    <h1 class="title -is-1">NES.css</h1>
-    <p class="subtitle -is-6">NES-style CSS Framework.</p>
-  </header>
-  <a class="github-link" href="https://github.com/BcRikko/NES.css" target="_blank">
-    <p class="balloon">Fork<br>me on<br>GitHub</p>
-    <div class="octocat"></div>
-  </a>
-
-  <main>
-    <section class="container">
-      <h2 class="title -is-3">Form</h2>
-      <section class="container">
-        <h3 class="title -is-4">Buttons</h3>
-        <h4 class="title -is-5">sizes</h4>
-        <a class="button -small">small</a>
-        <a class="button">normal</a>
-        <a class="button -medium">medium</a>
-        <a class="button -large">large</a>
-
-        <h4 class="title -is-5">colors</h4>
-        <a class="button -primary">primary</a>
-        <a class="button -success">success</a>
-        <a class="button -warning">warning</a>
-        <a class="button -error">error</a>
-      </section>
-
-      <section class="container">
-        <h3 class="title -is-4">Radios</h3>
-        <h4 class="title -is-5">rows</h4>
-        <div class="radios">
-          <label><input class="radio" type="radio" name="radios1" checked>FIGHT</label>
-          <label><input class="radio" type="radio" name="radios1">SPELL</label>
-          <label><input class="radio" type="radio" name="radios1">ITEM</label>
-          <label><input class="radio" type="radio" name="radios1">RUN</label>
-        </div>
-        <h4 class="title -is-5">columns</h4>
-        <div class="radios -columns">
-          <label><input class="radio" type="radio" name="radios2" checked>FIGHT</label>
-          <label><input class="radio" type="radio" name="radios2">SPELL</label>
-          <label><input class="radio" type="radio" name="radios2">ITEM</label>
-          <label><input class="radio" type="radio" name="radios2">RUN</label>
-        </div>
-      </section>
-
-      <section class="container">
-        <h3 class="title -is-4">Checkbox</h3>
-        <label><input class="checkbox" type="checkbox" checked>agree</label>
-      </section>
-
-      <section class="container">
-        <h3 class="title -is-4">Input</h3>
-        <h4 class="title -is-5">field</h4>
-        <div class="field">
-          <label class="label">field</label>
-          <input class="input" type="text" placeholder="hello nes">
-        </div>
-
-        <h4 class="title -is-5">inline field</h4>
-        <div class="field -inline">
-          <label class="label">inline field</label>
-          <input class="input" type="text" placeholder="hello nes">
-        </div>
-        <div class="field -inline">
-          <label class="label">success</label>
-          <input class="input -success" type="text" placeholder="hello nes" value="good">
-        </div>
-        <div class="field -inline">
-          <label class="label">warning</label>
-          <input class="input -warning" type="text" placeholder="hello nes" value="warn...">
-        </div>
-        <div class="field -inline">
-          <label class="label">error</label>
-          <input class="input -error" type="text" placeholder="hello nes" value="error...">
-        </div>
-      </section>
-
-      <section class="container">
-        <h3 class="title -is-4">Action group</h3>
-        <h4 class="title -is-5">default</h4>
-        <div class="group">
-          <button type="button" class="button -primary">submit</button>
-          <button type="button" class="button">cancel</button>
-        </div>
-
-        <h4 class="title -is-5">center</h4>
-        <div class="group -center">
-          <button type="button" class="button -primary">submit</button>
-          <button type="button" class="button">cancel</button>
-        </div>
-
-        <h4 class="title -is-5">right</h4>
-        <div class="group -right">
-          <button type="button" class="button -primary">submit</button>
-          <button type="button" class="button">cancel</button>
-        </div>
-      </section>
-    </section>
-
-    <section class="container">
-      <h2 class="title -is-3">Container</h2>
-      <h3 class="title -is-4">normal</h3>
-      <section class="container">
-        <p>Good morning. Thou hast had a good night's sleep I hope.</p>
-      </section>
-
-      <h3 class="title -is-4">dark theme</h3>
-      <section class="container _dark">
-        <p>Good morning. Thou hast had a good night's sleep I hope.</p>
-      </section>
-
-      <h3 class="title -is-4">with title</h3>
-      <section class="container _dark -with-title">
-        <label class="title">Command</label>
-        <p>Good morning. Thou hast had a good night's sleep I hope.</p>
-      </section>
-
-      <h3 class="title -is-4">align <code>(-center, -right)</code></h3>
-      <section class="container _dark -with-title -center">
-        <label class="title">Command</label>
-        <p>Good morning. Thou hast had a good night's sleep I hope.</p>
-      </section>
-    </section>
-
-    <section class="container">
-      <h2 class="title -is-3">Description</h2>
-      <h3 class="title -is-4">description list</h3>
-      <dl class="description">
-        <dt>Description list</dt>
-        <dd>Lorem ipsum dolor sit amet</dd>
-        <dt>Consectetur</dt>
-        <dd>adipiscing elit</dd>
-        <dt>sed do eiusmod</dt>
-        <dd>tempor incididunt ut labore et dolore magna aliqua</dd>
-      </dl>
-
-      <h3 class="title -is-4">with colon</h3>
-      <dl class="description">
-        <dt class="-colon">Description list</dt>
-        <dd>Lorem ipsum dolor sit amet</dd>
-        <dt class="-colon">Consectetur</dt>
-        <dd>adipiscing elit</dd>
-        <dt class="-colon">sed do eiusmod</dt>
-        <dd>tempor incididunt ut labore et dolore magna aliqua</dd>
-      </dl>
-
-      <h3 class="title -is-4">e.g. Dragon Quest-status</h3>
-      <section class="container _dark dq-like-grid">
-        <section class="overview container _dark -with-title -center _dark">
-          <label class=" title">ENlX</label>
-          <p>Hero</p>
-          <dl class="description">
-            <dt class="-colon">LV</dt>
-            <dd class="_right">10</dd>
-            <dt class="-colon">HP</dt>
-            <dd class="_right">58</dd>
-            <dt class="-colon">MP</dt>
-            <dd class="_right">18</dd>
-          </dl>
-        </section>
-        <section class="equipment container _dark">
-          <dl class="description">
-            <dt>E</dt>
-            <dd>SWORD</dd>
-            <dt>E</dt>
-            <dd>CLOTHES</dd>
-            <dt>E</dt>
-            <dd>POT LID</dd>
-            <dt>E</dt>
-            <dd>AMULET</dd>
-          </dl>
-        </section>
-        <section class="status container _dark">
-          <dl class="description">
-            <dt class="-colon">STRENGTH</dt>
-            <dd class="_right">15</dd>
-            <dt class="-colon">AGILITY</dt>
-            <dd class="_right">36</dd>
-            <dt class="-colon">VITALITY</dt>
-            <dd class="_right">41</dd>
-            <dt class="-colon">INTELLIGENCE</dt>
-            <dd class="_right">7</dd>
-            <dt class="-colon">LUCK</dt>
-            <dd class="_right">6</dd>
-            <dt class="-colon">MAX HP</dt>
-            <dd class="_right">81</dd>
-            <dt class="-colon">MAX MP</dt>
-            <dd class="_right">50</dd>
-            <dt class="-colon">ATTACK POWER</dt>
-            <dd class="_right">57</dd>
-            <dt class="-colon">DEFENSE POWER</dt>
-            <dd class="_right">87</dd>
-            <dt class="">EXP</dt>
-            <dd class="_right">1316</dd>
-          </dl>
-        </section>
-      </section>
-    </section>
-
-    <section class="container">
-      <h2 class="title -is-3">Balloons</h2>
-      <div class="conversation">
-        <div class="avatar -left">
-          <img src="https://avatars0.githubusercontent.com/u/5305599?s=100">
-        </div>
-        <div class="balloon -left">
-          <p>Hello NES.css</p>
-        </div>
+    <section class="container with-title">
+      <h2 class="title">Buttons</h2>
+      <div>
+        <button type="button" class="btn">Normal</button>
+        <button type="button" class="btn is-primary">Primary</button>
+        <button type="button" class="btn is-success">Success</button>
+        <button type="button" class="btn is-warning">Warning</button>
+        <button type="button" class="btn is-error">Error</button>
       </div>
+    </section>
 
-      <div class="conversation">
-        <div class="balloon -right">
+    <section class="container with-title">
+      <h2 class="title">Containers</h2>
+      <div class="containers">
+        <div class="container with-title is-center">
+          <label class="title">Container.is-center</label>
           <p>Good morning. Thou hast had a good night's sleep I hope.</p>
         </div>
-        <div class="avatar -right">
-          <img src="https://avatars0.githubusercontent.com/u/5305599?s=100">
+        <div class="container is-dark with-title">
+          <label class="title">Container.is-dark</label>
+          <p style="color: white;">Good morning. Thou hast had a good night's sleep I hope.</p>
+        </div>
+        <div class="container is-rounded">
+          <p>Good morning. Thou hast had a good night's sleep I hope.</p>
+        </div>
+        <div class="container is-rounded is-dark">
+          <p style="color: white;">Good morning. Thou hast had a good night's sleep I hope.</p>
         </div>
       </div>
     </section>
 
-    <section class="container">
-      <h2 class="title -is-3">Icons</h2>
-      <h3 class="title -is-4">sns</h3>
-      <a href="https://twitter.com/bc_rikko" target="_blank">
-        <i class="icon -twitter"></i>
-        <i class="icon -medium -twitter"></i>
-        <i class="icon -large -twitter"></i>
-      </a>
-      <i class="icon -facebook"></i>
-      <i class="icon -medium -facebook"></i>
-      <i class="icon -large -facebook"></i>
-      <a href="https://github.com/BcRikko" target="_blank">
-        <i class="icon -github"></i>
-        <i class="icon -medium -github"></i>
-        <i class="icon -large -github"></i>
-      </a>
-      <a href="https://www.youtube.com/channel/UCVVtxw2Cnn4qL7oZQa2awPA" target="_blank">
-        <i class="icon -youtube"></i>
-        <i class="icon -medium -youtube"></i>
-        <i class="icon -large -youtube"></i>
-      </a>
-
-      <h3 class="title -is-4">reaction</h3>
-      <i class="icon -heart"></i>
-      <i class="icon -medium -heart"></i>
-      <i class="icon -large -heart"></i>
-      <i class="icon -star"></i>
-      <i class="icon -medium -star"></i>
-      <i class="icon -large -star"></i>
-      <i class="icon -like"></i>
-      <i class="icon -medium -like"></i>
-      <i class="icon -large -like"></i>
+    <section class="container with-title">
+      <h2 class="title">Radios</h2>
+      <div>
+        <label>
+          <input type="radio" class="radio" name="answer" checked />
+          <span>Yes</span>
+        </label>
+        <label>
+          <input type="radio" class="radio" name="answer" />
+          <span>No</span>
+        </label>
+      </div>
     </section>
-  </main>
-</body>
 
+    <section class="container with-title">
+      <h2 class="title">Checkboxes</h2>
+      <label>
+        <input type="checkbox" class="checkbox" checked />
+        <span>Enable</span>
+      </label>
+    </section>
+
+    <section class="form container with-title">
+      <h2 class="title">Form</h2>
+      <div class="field">
+        <label>Your name</label>
+        <input type="text" class="input">
+      </div>
+      <div class="field is-inline">
+        <label>.input.is-success</label>
+        <input type="text" class="input is-success" placeholder="NES.css">
+      </div>
+      <div class="field is-inline">
+        <label>.input.is-warning</label>
+        <input type="text" class="input is-warning" placeholder="8bit.css">
+      </div>
+      <div class="field is-inline">
+        <label>.input.is-error</label>
+        <input type="text" class="input is-error" placeholder="awesome.css">
+      </div>
+    </section>
+
+    <section class="balloon container with-title">
+      <h2 class="title">Balloons</h2>
+      <div class="messages">
+        <div class="message -left">
+          <i class="bcrikko"></i>
+          <div class="balloon from-left">
+            <p>Hello NES.css</p>
+          </div>
+        </div>
+        <div class="message -right">
+          <div class="balloon from-right">
+            <p>Good morning. Thou hast had a good night's sleep I hope.</p>
+          </div>
+          <i class="bcrikko"></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="container with-title">
+      <h2 class="title">Icons</h2>
+      <section class="container with-title">
+        <h3 class="title">Reaction</h3>
+        <div>
+          <i class="icon heart"></i>
+          <i class="icon heart is-medium"></i>
+          <i class="icon heart is-large"></i>
+
+          <i class="icon star"></i>
+          <i class="icon star is-medium"></i>
+          <i class="icon star is-large"></i>
+
+          <i class="icon like"></i>
+          <i class="icon like is-medium"></i>
+          <i class="icon like is-large"></i>
+        </div>
+      </section>
+      <section class="container with-title">
+        <h3 class="title">SNS</h3>
+        <div>
+          <i class="icon twitter"></i>
+          <i class="icon twitter is-medium"></i>
+          <i class="icon twitter is-large"></i>
+
+          <i class="icon facebook"></i>
+          <i class="icon facebook is-medium"></i>
+          <i class="icon facebook is-large"></i>
+
+          <i class="icon github"></i>
+          <i class="icon github is-medium"></i>
+          <i class="icon github is-large"></i>
+        </div>
+      </section>
+
+      <section class="container with-title">
+          <h3 class="title">Others</h3>
+          <div>
+            <i class="icon close"></i>
+            <i class="icon close is-medium"></i>
+            <i class="icon close is-large"></i>
+
+            <i class="octocat animate"></i>
+          </div>
+        </section>
+    </section>
+
+    <footer class="footer">
+      <p>
+        <a href="https://kuroeveryday.blogspot.com/" target="_blank">Black Everyday Company</a>
+        <span>-</span>
+        <a href="https://twitter.com/bc_rikko" target="_blank">@bc_rikko</a>
+      </p>
+    </footer>
+  </body>
+  <script>
+    var link = document.querySelector("a.github-link");
+    var octocat = document.querySelector("a.github-link > i.octocat");
+    link.addEventListener("mouseover", function() {
+      octocat.classList.add("animate");
+    });
+    link.addEventListener("mouseout", function() {
+      octocat.classList.remove("animate");
+    });
+  </script>
 </html>
