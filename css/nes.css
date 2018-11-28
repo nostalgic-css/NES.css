@@ -702,18 +702,22 @@ button,
   padding: 0.5rem 1rem;
   margin: 4px;
   border: none;
+  outline-color: #e7e7e7;
   box-shadow: 0 4px #212529, 0 -4px #212529, 4px 0 #212529, -4px 0 #212529;
 }
 
 .input.is-success {
+  outline-color: #108de0;
   box-shadow: 0 4px #209cee, 0 -4px #209cee, 4px 0 #209cee, -4px 0 #209cee;
 }
 
 .input.is-warning {
+  outline-color: #f2c409;
   box-shadow: 0 4px #f7d51d, 0 -4px #f7d51d, 4px 0 #f7d51d, -4px 0 #f7d51d;
 }
 
 .input.is-error {
+  outline-color: #ce372b;
   box-shadow: 0 4px #e76e55, 0 -4px #e76e55, 4px 0 #e76e55, -4px 0 #e76e55;
 }
 
