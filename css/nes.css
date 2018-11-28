@@ -629,10 +629,23 @@ button,
   box-shadow: 2px 2px #212529,4px 2px #212529,6px 2px #212529,8px 2px #212529,10px 2px #212529,12px 2px #212529,14px 2px #212529,16px 2px #212529,2px 4px #212529,16px 4px #212529,2px 6px #212529,16px 6px #212529,2px 8px #212529,16px 8px #212529,2px 10px #212529,16px 10px #212529,2px 12px #212529,16px 12px #212529,2px 14px #212529,16px 14px #212529,2px 16px #212529,4px 16px #212529,6px 16px #212529,8px 16px #212529,10px 16px #212529,12px 16px #212529,14px 16px #212529,16px 16px #212529;;
 }
 
+.checkbox:focus + span::before {
+  /* stylelint-disable-line no-descending-specificity */
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 2px #adafbb,4px 2px #adafbb,6px 2px #adafbb,8px 2px #adafbb,10px 2px #adafbb,12px 2px #adafbb,14px 2px #adafbb,16px 2px #adafbb,2px 4px #adafbb,16px 4px #adafbb,2px 6px #adafbb,16px 6px #adafbb,2px 8px #adafbb,16px 8px #adafbb,2px 10px #adafbb,16px 10px #adafbb,2px 12px #adafbb,16px 12px #adafbb,2px 14px #adafbb,16px 14px #adafbb,2px 16px #adafbb,4px 16px #adafbb,6px 16px #adafbb,8px 16px #adafbb,10px 16px #adafbb,12px 16px #adafbb,14px 16px #adafbb,16px 16px #adafbb;;
+}
+
 .checkbox:checked + span::before {
   width: 2px;
   height: 2px;
   box-shadow: 2px 2px #212529,4px 2px #212529,6px 2px #212529,8px 2px #212529,10px 2px #212529,12px 2px #212529,14px 2px #212529,18px 2px #212529,20px 2px #212529,2px 4px #212529,16px 4px #212529,18px 4px #212529,20px 4px #212529,2px 6px #212529,14px 6px #212529,16px 6px #212529,2px 8px #212529,4px 8px #212529,12px 8px #212529,14px 8px #212529,2px 10px #212529,4px 10px #212529,6px 10px #212529,10px 10px #212529,12px 10px #212529,16px 10px #212529,2px 12px #212529,6px 12px #212529,8px 12px #212529,10px 12px #212529,16px 12px #212529,2px 14px #212529,8px 14px #212529,16px 14px #212529,2px 16px #212529,4px 16px #212529,6px 16px #212529,8px 16px #212529,10px 16px #212529,12px 16px #212529,14px 16px #212529,16px 16px #212529;;
+}
+
+.checkbox:checked:focus + span::before {
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 2px #adafbb,4px 2px #adafbb,6px 2px #adafbb,8px 2px #adafbb,10px 2px #adafbb,12px 2px #adafbb,14px 2px #adafbb,18px 2px #212529,20px 2px #212529,2px 4px #adafbb,16px 4px #212529,18px 4px #212529,20px 4px #212529,2px 6px #212529,14px 6px #212529,16px 6px #212529,2px 8px #212529,4px 8px #212529,12px 8px #212529,14px 8px #212529,2px 10px #adafbb,4px 10px #212529,6px 10px #212529,10px 10px #212529,12px 10px #212529,16px 10px #adafbb,2px 12px #adafbb,6px 12px #212529,8px 12px #212529,10px 12px #212529,16px 12px #adafbb,2px 14px #adafbb,8px 14px #212529,16px 14px #adafbb,2px 16px #adafbb,4px 16px #adafbb,6px 16px #adafbb,8px 16px #adafbb,10px 16px #adafbb,12px 16px #adafbb,14px 16px #adafbb,16px 16px #adafbb;;
 }
 
 .balloon {
