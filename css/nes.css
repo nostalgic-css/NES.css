@@ -349,11 +349,24 @@ samp {
   font-family: "Press Start 2P";
 }
 
+html {
+  cursor: url(../assets/cursor.png), auto;
+}
+
 body {
   font-size: 16px;
   color: #212529;
   background-color: #fff;
   -webkit-font-smoothing: none;
+}
+
+label {
+  cursor: inherit;
+}
+
+a,
+button {
+  cursor: url(../assets/cursor-click.png), pointer;
 }
 
 button,
@@ -379,7 +392,7 @@ button,
   margin: 4px;
   text-align: center;
   vertical-align: middle;
-  cursor: pointer;
+  cursor: url(../assets/cursor-click.png), pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -602,7 +615,7 @@ button,
 
 .radio + span {
   position: relative;
-  cursor: pointer;
+  cursor: url(../assets/cursor-click.png), pointer;
 }
 
 .radio:checked + span::before {
@@ -646,7 +659,7 @@ button,
 
 .checkbox + span {
   position: relative;
-  cursor: pointer;
+  cursor: url(../assets/cursor-click.png), pointer;
 }
 
 .checkbox + span::before,
