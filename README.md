@@ -59,6 +59,42 @@ NES.cssはCSSのみで構成されています。JavaScriptは不要です。
 * IE/Edge
 
 
+## Development
+
+### Commands
+```sh
+git clone git@github.com:BcRikko/NES.css.git
+cd NES.css
+
+npm i
+
+npm run watch
+npm run build
+```
+
+pre-commit hookにより、コミット時に自動でLint→format→buildが走り、`css`ディレクトリにファイルが出力されます。
+TODO: ビルドはCIでするように変更したい
+
+### Directories
+```
+.
+|- index.html: Demo page
+|- style.css: Demo page style
+|- css: Distribution files
+|-　scss: Source
+    |- base
+    |   |- reboot.scss: **Don't change!** (Bootstrap Reboot)
+    |   |- generic.scss: Generic style and overwrite reboot.css
+    |   |- variables.scss: Common variables
+    |- elements
+    |- form
+    |- icons: For 16x16 icon
+    |- pixel-arts: For icon other than 16x16 icon.
+    |- utilities
+```
+
+
+
 ## Copyright and license
 
 Code and documentation copyright 2018 [B.C.Rikko](https://github.com/BcRikko). Code released under the MIT License. Docs released under Creative Commons.
