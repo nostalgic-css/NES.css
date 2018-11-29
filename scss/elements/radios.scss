@@ -28,6 +28,7 @@
 
   & + span {
     position: relative;
+    cursor: pointer;
   }
 
   &:checked + span::before {
