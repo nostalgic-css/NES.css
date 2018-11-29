@@ -54,6 +54,7 @@
 
   & + span {
     position: relative;
+    cursor: pointer;
   }
 
   & + span::before,
