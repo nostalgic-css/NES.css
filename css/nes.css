@@ -389,7 +389,7 @@ button,
   box-shadow: inset -4px -4px #adafbc;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
   background-color: #e7e7e7;
   box-shadow: inset -6px -6px #adafbc;
 }
@@ -433,7 +433,7 @@ button,
   box-shadow: inset -4px -4px #4aa52e;
 }
 
-.btn.is-primary:hover {
+.btn.is-primary:hover, .btn.is-primary:focus {
   background-color: #76c442;
   box-shadow: inset -6px -6px #4aa52e;
 }
@@ -448,7 +448,7 @@ button,
   box-shadow: inset -4px -4px #006bb3;
 }
 
-.btn.is-success:hover {
+.btn.is-success:hover, .btn.is-success:focus {
   background-color: #108de0;
   box-shadow: inset -6px -6px #006bb3;
 }
@@ -463,7 +463,7 @@ button,
   box-shadow: inset -4px -4px #e59400;
 }
 
-.btn.is-warning:hover {
+.btn.is-warning:hover, .btn.is-warning:focus {
   background-color: #f2c409;
   box-shadow: inset -6px -6px #e59400;
 }
@@ -478,7 +478,7 @@ button,
   box-shadow: inset -4px -4px #8c2022;
 }
 
-.btn.is-error:hover {
+.btn.is-error:hover, .btn.is-error:focus {
   background-color: #ce372b;
   box-shadow: inset -6px -6px #8c2022;
 }
@@ -598,10 +598,13 @@ button,
   top: -2px;
   left: -20px;
   content: "";
-  animation: blink 1s infinite steps(1);
   width: 2px;
   height: 2px;
   box-shadow: 2px 2px #212529,4px 2px #212529,2px 4px #212529,4px 4px #212529,6px 4px #212529,8px 4px #212529,2px 6px #212529,4px 6px #212529,6px 6px #212529,8px 6px #212529,10px 6px #212529,2px 8px #212529,4px 8px #212529,6px 8px #212529,8px 8px #212529,10px 8px #212529,12px 8px #212529,2px 10px #212529,4px 10px #212529,6px 10px #212529,8px 10px #212529,10px 10px #212529,2px 12px #212529,4px 12px #212529,6px 12px #212529,8px 12px #212529,2px 14px #212529,4px 14px #212529;;
+}
+
+.radio:checked:hover + span::before, .radio:checked:focus + span::before {
+  animation: blink 1s infinite steps(1);
 }
 
 .radio:checked:focus + span::before {

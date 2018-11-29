@@ -36,10 +36,17 @@
     top: -2px;
     left: -20px;
     content: "";
-    animation: blink 1s infinite steps(1);
 
     @include pixelize($radio, $colors, 2px);
   }
+
+  &:checked:hover,
+  &:checked:focus {
+    & + span::before {
+      animation: blink 1s infinite steps(1);
+    }
+  }
+
   &:checked:focus + span::before {
     @include pixelize($radio-checked-focus, $colors, 2px);
   }
