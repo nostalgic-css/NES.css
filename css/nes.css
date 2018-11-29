@@ -380,10 +380,7 @@ button,
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   color: #212529;
   background-color: #fff;
   box-shadow: inset -4px -4px #adafbc;
@@ -601,6 +598,12 @@ button,
   width: 2px;
   height: 2px;
   box-shadow: 2px 2px #212529,4px 2px #212529,2px 4px #212529,4px 4px #212529,6px 4px #212529,8px 4px #212529,2px 6px #212529,4px 6px #212529,6px 6px #212529,8px 6px #212529,10px 6px #212529,2px 8px #212529,4px 8px #212529,6px 8px #212529,8px 8px #212529,10px 8px #212529,12px 8px #212529,2px 10px #212529,4px 10px #212529,6px 10px #212529,8px 10px #212529,10px 10px #212529,2px 12px #212529,4px 12px #212529,6px 12px #212529,8px 12px #212529,2px 14px #212529,4px 14px #212529;;
+}
+
+.radio:checked:focus + span::before {
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 2px #adafbc,4px 2px #adafbc,2px 4px #adafbc,4px 4px #adafbc,6px 4px #adafbc,8px 4px #adafbc,2px 6px #adafbc,4px 6px #adafbc,6px 6px #adafbc,8px 6px #adafbc,10px 6px #adafbc,2px 8px #adafbc,4px 8px #adafbc,6px 8px #adafbc,8px 8px #adafbc,10px 8px #adafbc,12px 8px #adafbc,2px 10px #adafbc,4px 10px #adafbc,6px 10px #adafbc,8px 10px #adafbc,10px 10px #adafbc,2px 12px #adafbc,4px 12px #adafbc,6px 12px #adafbc,8px 12px #adafbc,2px 14px #adafbc,4px 14px #adafbc;;
 }
 
 .checkbox {
@@ -1006,4 +1009,5 @@ button,
     box-shadow: 24px 6px #333,78px 6px #333,24px 12px #333,30px 12px #333,72px 12px #333,78px 12px #333,24px 18px #333,30px 18px #333,36px 18px #333,42px 18px #333,48px 18px #333,54px 18px #333,60px 18px #333,66px 18px #333,72px 18px #333,78px 18px #333,18px 24px #333,24px 24px #333,30px 24px #333,36px 24px #333,42px 24px #333,48px 24px #333,54px 24px #333,60px 24px #333,66px 24px #333,72px 24px #333,78px 24px #333,84px 24px #333,18px 30px #333,24px 30px #333,30px 30px #333,36px 30px #333,42px 30px #333,48px 30px #333,54px 30px #333,60px 30px #333,66px 30px #333,72px 30px #333,78px 30px #333,84px 30px #333,18px 36px #333,24px 36px #333,30px 36px #333,36px 36px #ffdec4,42px 36px #ffdec4,48px 36px #ffdec4,54px 36px #ffdec4,60px 36px #ffdec4,66px 36px #ffdec4,72px 36px #333,78px 36px #333,84px 36px #333,18px 42px #333,24px 42px #333,30px 42px #ffdec4,36px 42px #ffdec4,42px 42px #ffdec4,48px 42px #ffdec4,54px 42px #ffdec4,60px 42px #ffdec4,66px 42px #ffdec4,72px 42px #ffdec4,78px 42px #333,84px 42px #333,12px 48px #333,18px 48px #333,24px 48px #333,30px 48px #ffdec4,36px 48px #cb7066,42px 48px #ffdec4,48px 48px #ffdec4,54px 48px #ffdec4,60px 48px #ffdec4,66px 48px #cb7066,72px 48px #ffdec4,78px 48px #333,84px 48px #333,12px 54px #333,24px 54px #333,30px 54px #333,36px 54px #ffdec4,42px 54px #ffdec4,48px 54px #cb7066,54px 54px #cb7066,60px 54px #ffdec4,66px 54px #ffdec4,72px 54px #333,78px 54px #333,18px 60px #333,42px 60px #333,48px 60px #333,54px 60px #333,60px 60px #333,24px 66px #333,36px 66px #333,42px 66px #333,48px 66px #333,54px 66px #333,60px 66px #333,66px 66px #333,24px 72px #333,30px 72px #333,36px 72px #333,42px 72px #333,48px 72px #333,54px 72px #333,60px 72px #333,66px 72px #333,36px 78px #333,48px 78px #333,54px 78px #333,66px 78px #333,36px 84px #333,48px 84px #333,54px 84px #333,66px 84px #333,30px 90px #333,42px 90px #333,60px 90px #333,72px 90px #333;;
   }
 }
+
 /*# sourceMappingURL=nes.css.map */

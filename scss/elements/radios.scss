@@ -9,7 +9,17 @@
     (1,1,1,1,0,0),
     (1,1,0,0,0,0),
   );
-  $colors: ($base-color);
+  // prettier-ignore
+  $radio-checked-focus: (
+    (2,2,0,0,0,0),
+    (2,2,2,2,0,0),
+    (2,2,2,2,2,0),
+    (2,2,2,2,2,2),
+    (2,2,2,2,2,0),
+    (2,2,2,2,0,0),
+    (2,2,0,0,0,0),
+  );
+  $colors: ($base-color, #adafbc);
 
   margin-right: 20px;
   -webkit-appearance: none;
@@ -28,5 +38,8 @@
     animation: blink 1s infinite steps(1);
 
     @include pixelize($radio, $colors, 2px);
+  }
+  &:checked:focus + span::before {
+    @include pixelize($radio-checked-focus, $colors, 2px);
   }
 }
