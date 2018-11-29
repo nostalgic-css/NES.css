@@ -1,26 +1,28 @@
 .input {
-  @mixin border-style($color) {
+  @mixin border-style($border, $outline) {
+    outline-color: $outline;
     // prettier-ignore
     box-shadow:
-    0 4px $color,
-    0 -4px $color,
-    4px 0 $color,
-    -4px 0 $color;
+      0 4px $border,
+      0 -4px $border,
+      4px 0 $border,
+      -4px 0 $border;
   }
 
   padding: 0.5rem 1rem;
   margin: 4px;
   border: none;
-  @include border-style($base-color);
+
+  @include border-style($base-color, #e7e7e7);
 
   &.is-success {
-    @include border-style(#209cee);
+    @include border-style(#209cee, #108de0);
   }
   &.is-warning {
-    @include border-style(#f7d51d);
+    @include border-style(#f7d51d, #f2c409);
   }
   &.is-error {
-    @include border-style(#e76e55);
+    @include border-style(#e76e55, #ce372b);
   }
 }
 
