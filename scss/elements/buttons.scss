@@ -3,7 +3,8 @@
   background-color: $background;
   box-shadow: inset -4px -4px $shadow;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $hover-background;
     box-shadow: inset -6px -6px $shadow;
   }
