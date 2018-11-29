@@ -20,5 +20,5 @@
 
   width: $size;
   height: $size;
-  box-shadow: unquote($ret + ";");
+  box-shadow: unquote($ret);
 }
