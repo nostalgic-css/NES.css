@@ -364,6 +364,10 @@ button,
   -webkit-appearance: none;
 }
 
+input {
+  outline: 0;
+}
+
 @keyframes blink {
   0% {
     opacity: 1;

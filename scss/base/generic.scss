@@ -22,3 +22,8 @@ button,
 [type="submit"] {
   -webkit-appearance: none;
 }
+
+// Prevent stray pixels on focused inputs such as checkboxes and radios
+input {
+  outline: 0;
+}
