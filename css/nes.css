@@ -719,12 +719,16 @@ button,
   box-shadow: -4px 0 #212529, 4px 0 #212529, 4px 4px #fff, 0 4px #212529, 8px 4px #212529, 4px 8px #212529, 8px 8px #212529;
 }
 
+.table {
+  background-color: #fff;
+}
+
 .table.is-centered th {
   text-align: center;
 }
 
 .table.is-bordered {
-  box-shadow: 0 -4px #212529, 0 -8px #fff, 4px 0 #212529, 4px -4px #fff, 8px 0 #fff, 0 4px #212529, 0 8px #fff, -4px 0 #212529, -4px 4px #fff, -8px 0 #fff, -4px -4px #fff, 4px 4px #fff;
+  box-shadow: 4px 0 #212529, 0 -4px #212529, -4px 0 #212529, 0 4px #212529;
 }
 
 .table.is-bordered th,
@@ -733,19 +737,11 @@ button,
 }
 
 .table.is-bordered tr th {
-  box-shadow: 0 -4px #212529, 0 -8px #fff, 0 0 #212529, 4px -4px #fff, 8px 0 #fff, 0 4px #212529, 0 8px #fff, -4px 0 #212529, -4px 4px #fff, -8px 0 #fff, -4px -4px #fff, 4px 4px #fff;
-}
-
-.table.is-bordered tr th:last-child {
-  box-shadow: 0 -4px #212529, 0 -8px #fff, 4px 0 #212529, 4px -4px #fff, 8px 0 #fff, 0 4px #212529, 0 8px #fff, -4px 0 #212529, -4px 4px #fff, -8px 0 #fff, -4px -4px #fff, 4px 4px #fff;
+  box-shadow: 0 0 #212529, 0 0 #212529, -4px 0 #212529, 0 0 #212529;
 }
 
 .table.is-bordered tr td {
-  box-shadow: 0 4px #212529, 4px 6px #fff, 1px 0 #212529, 4px 4px #fff, 1px 0 #fff, 0 4px #212529, 4px 4px #fff, -4px 0 #212529, -2px 8px #fff, 0 4px #fff, 1px 0 #fff, -4px 4px #fff;
-}
-
-.table.is-bordered tr td:last-child {
-  box-shadow: 0 0 #212529, 0 -8px #fff, 4px 0 #212527, 4px 0 #fff, 8px 0 #fff, 0 4px #212529, 0 -8px #fff, -4px 0 #212529, 0 4px #fff, -4px 0 #fff, 8px 0 #fff, -4px 0 #fff;
+  box-shadow: 0 0 #212529, 0 -4px #212529, 0 0 #212529, -4px 0 #212529;
 }
 
 .input {
