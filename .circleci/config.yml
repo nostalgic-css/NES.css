@@ -1,0 +1,176 @@
+version: 2.1
+
+defaults: &defaults
+  docker:
+    - image: rollforguildinc/node:build-latest
+
+  working_directory: ~/app
+
+
+
+
+
+jobs:
+  checkout:
+    <<: *defaults
+
+    steps:
+      - restore_cache:
+          name: Restore Repository Cache
+          keys:
+            - repo-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+            - repo-{{ .Branch }}
+            - repo-master
+            - repo-
+
+      - checkout
+
+      - save_cache:
+          name: Save Repository Cache
+          key: repo-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - .
+
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+
+  install-dependencies:
+    <<: *defaults
+
+    steps:
+      - attach_workspace:
+          at: .
+
+      - restore_cache:
+          name: Restore npm Package Cache
+          keys:
+            - npm-{{ checksum "package-lock.json" }}
+            - npm-
+
+      - run:
+          name: Install Dependencies
+          command: npm install
+
+      - save_cache:
+          name: Save npm Package Cache
+          key: npm-{{ checksum "package-lock.json" }}
+          paths:
+            - node_modules
+
+      - persist_to_workspace:
+          root: .
+          paths:
+            - node_modules
+
+  build:
+    <<: *defaults
+
+    steps:
+      - attach_workspace:
+          at: .
+
+      - restore_cache:
+          name: Restore Build Cache
+          keys:
+            - build-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+            - build-{{ .Branch }}
+            - build-master
+            - build-
+
+      # - run:
+      #     name: Build the Application
+      #     command: |
+      #         if [[ ! -d .next ]]; then
+      #           export PATH="$PATH:`yarn global bin`"
+      #           yarn run build
+      #         fi
+
+
+      - run:
+          name: Build the Application
+          command: npm run build
+
+      - save_cache:
+          name: Save Build Cache
+          key: build-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - css
+
+      - persist_to_workspace:
+          root: .
+          paths:
+            - css
+
+  # test:
+  #   <<: *defaults
+
+  #   steps:
+  #     - attach_workspace:
+  #         at: .
+
+  #     - run:
+  #         name: Add Yarn Binary Folder To $PATH
+  #         command: export PATH="$PATH:`yarn global bin`"
+
+  #     - run:
+  #         name: Run tests
+  #         command: yarn test
+
+  # coverage:
+  #   <<: *defaults
+
+  #   steps:
+  #     - attach_workspace:
+  #         at: .
+
+  #     - run:
+  #         name: Add Yarn Binary Folder To $PATH
+  #         command: export PATH="$PATH:`yarn global bin`"
+
+  #     - run:
+  #         name: Generate and upload coverage report
+  #         command: yarn test-coverage
+
+  deploy:
+    <<: *defaults
+
+    steps:
+      - attach_workspace:
+          at: .
+
+
+
+
+
+workflows:
+  version: 2
+
+  main:
+    jobs:
+      - checkout
+      - install-dependencies:
+          requires:
+            - checkout
+      # - test:
+      #     requires:
+      #       - install-dependencies
+      # - coverage:
+      #     requires:
+      #       - install-dependencies
+      - build:
+          requires:
+            - install-dependencies
+          filters:
+            branches:
+              only:
+                - master
+                - develop
+      - deploy:
+          requires:
+            # - test
+            - build
+          filters:
+            branches:
+              only: master
