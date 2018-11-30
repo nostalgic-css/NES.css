@@ -354,6 +354,7 @@ body {
   font-size: 16px;
   color: #212529;
   background-color: #fff;
+  -webkit-font-smoothing: none;
 }
 
 button,
