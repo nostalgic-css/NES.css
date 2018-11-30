@@ -32,6 +32,7 @@
   "devDependencies": {
     "autoprefixer": "^9.1.5",
     "clean-css-cli": "^4.2.1",
+    "cz-conventional-changelog": "^2.1.0",
     "husky": "^1.0.0",
     "lint-staged": "^7.3.0",
     "node-sass": "^4.9.3",
@@ -78,6 +79,11 @@
       "string-quotes": "double",
       "at-rule-no-unknown": null,
       "scss/at-rule-no-unknown": true
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }
