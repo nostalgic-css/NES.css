@@ -723,6 +723,37 @@ button,
   box-shadow: -4px 0 #212529, 4px 0 #212529, 4px 4px #fff, 0 4px #212529, 8px 4px #212529, 4px 8px #212529, 8px 8px #212529;
 }
 
+.table {
+  table-layout: fixed;
+  background-color: #fff;
+}
+
+.table.is-centered th {
+  text-align: center;
+}
+
+.table.is-bordered {
+  box-shadow: 4px 0 #212529, 0 -4px #212529, -4px 0 #212529, 0 4px #212529;
+}
+
+.table.is-bordered th,
+.table.is-bordered td {
+  padding: 0.5rem;
+  word-wrap: break-word;
+}
+
+.table.is-bordered tr th + th {
+  box-shadow: -4px 0 #212529;
+}
+
+.table.is-bordered tr td {
+  box-shadow: 0 -4px #212529;
+}
+
+.table.is-bordered tr td:not(:first-child) {
+  box-shadow: -4px 0 #212529, 0 -4px #212529;
+}
+
 .input {
   max-width: 100%;
   padding: 0.5rem 1rem;
