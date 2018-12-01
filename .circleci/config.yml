@@ -15,13 +15,13 @@ jobs:
     <<: *defaults
 
     steps:
-      - restore_cache:
-          name: Restore Repository Cache
-          keys:
-            - repo-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
-            - repo-{{ .Branch }}
-            - repo-master
-            - repo-
+      # - restore_cache:
+      #     name: Restore Repository Cache
+      #     keys:
+      #       - repo-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+      #       - repo-{{ .Branch }}
+      #       - repo-master
+      #       - repo-
 
       - checkout
 
@@ -43,11 +43,11 @@ jobs:
       - attach_workspace:
           at: .
 
-      - restore_cache:
-          name: Restore npm Package Cache
-          keys:
-            - npm-{{ checksum "package-lock.json" }}
-            - npm-
+      # - restore_cache:
+      #     name: Restore npm Package Cache
+      #     keys:
+      #       - npm-{{ checksum "package-lock.json" }}
+      #       - npm-
 
       - run:
           name: Install Dependencies
@@ -71,13 +71,13 @@ jobs:
       - attach_workspace:
           at: .
 
-      - restore_cache:
-          name: Restore Build Cache
-          keys:
-            - build-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
-            - build-{{ .Branch }}
-            - build-master
-            - build-
+      # - restore_cache:
+      #     name: Restore Build Cache
+      #     keys:
+      #       - build-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+      #       - build-{{ .Branch }}
+      #       - build-master
+      #       - build-
 
       # - run:
       #     name: Build the Application
