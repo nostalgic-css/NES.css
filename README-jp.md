@@ -1,10 +1,9 @@
 <div align="center">
   <a href="https://bcrikko.github.io/NES.css/" target="_blank"><img src="https://user-images.githubusercontent.com/5305599/49061716-da649680-f254-11e8-9a89-d95a7407ec6a.png" alt="NES.css: NES-style  CSS framework" style="max-width:100%;" width="600" height="315"></a>
 
-  <a href="README.md">English</a> / <a href="README.md">日本語</a>
+  <a href="README.md">English</a> / <a href="README-jp.md">日本語</a>
 </div>
 
-NES.css is a **NES-style(8bit-like)** CSS Framework.  
 NES.cssは **ファミコン風(8bit ライク)** なCSSフレームワークです。
 
 
@@ -32,11 +31,8 @@ OR
 
 TODO: npm での使用方法を書く
 
+
 ## Usage
-
-NES.css only provides components. You will need to define your own layout.
-
-The default font is Press Start 2P which only supports English characters. When you're using this framework with any language except English, please use another font.
 
 NES.cssはコンポーネントのスタイルのみを提供しています。レイアウトはみなさんが好きなように定義してください。
 
@@ -47,22 +43,16 @@ TODO: 詳細を書く
 
 ## CSS Only
 
-NES.css only requires CSS and doesn't depend on any JavaScript.
-
 NES.cssはCSSのみで構成されています。JavaScriptは不要です。
 
 
 ## Browser Support
-
-NES.css is compatible with the newest version of the following browsers.
 
 次のブラウザの最新バージョンをサポートしています。
 
 * Chrome
 * Firefox
 * Safari
-
-Untested
 
 未確認
 * IE/Edge
