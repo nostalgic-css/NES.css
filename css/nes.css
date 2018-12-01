@@ -428,33 +428,33 @@ button,
   outline: 0;
 }
 
-.btn.is-primary {
+.btn.is-success {
   color: #fff;
   background-color: #92cc41;
   box-shadow: inset -4px -4px #4aa52e;
 }
 
-.btn.is-primary:hover, .btn.is-primary:focus {
+.btn.is-success:hover, .btn.is-success:focus {
   background-color: #76c442;
   box-shadow: inset -6px -6px #4aa52e;
 }
 
-.btn.is-primary:active {
+.btn.is-success:active {
   box-shadow: inset 4px 4px #4aa52e;
 }
 
-.btn.is-success {
+.btn.is-primary {
   color: #fff;
   background-color: #209cee;
   box-shadow: inset -4px -4px #006bb3;
 }
 
-.btn.is-success:hover, .btn.is-success:focus {
+.btn.is-primary:hover, .btn.is-primary:focus {
   background-color: #108de0;
   box-shadow: inset -6px -6px #006bb3;
 }
 
-.btn.is-success:active {
+.btn.is-primary:active {
   box-shadow: inset 4px 4px #006bb3;
 }
 
