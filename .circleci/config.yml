@@ -4,8 +4,6 @@ defaults: &defaults
   docker:
     - image: circleci/node
 
-  working_directory: ~/app
-
 
 
 
