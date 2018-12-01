@@ -40,7 +40,7 @@ The default font is [Press Start 2P](https://fonts.google.com/specimen/Press+Sta
 
 NES.cssはコンポーネントのスタイルのみを提供しています。レイアウトはみなさんが好きなように定義してください。
 
-デフォルトでは`Press Start 2P`フォントを使っています。英語以外（日本語など）で利用される場合は、別途フォントを読み込んで使ってください。
+デフォルトのフォントは[Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P?selection.family=Press+Start+2P)を使っています。英語以外（日本語など）で利用される場合は、別途フォントを読み込んで使ってください。 フォントを読み込む方法は、Google Fontsの[Get Started](https://developers.google.com/fonts/docs/getting_started)を参照するか、または以下のように読み込んでください。
 
 ```html
 <head>
