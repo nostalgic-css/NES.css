@@ -46,6 +46,11 @@ NES.cssはコンポーネントのスタイルのみを提供しています。�
 <head>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    <style>
+      html, body, pre, code, kbd, samp {
+          font-family: "font-family you want to use";
+      }
+    </style>    
 </head>
 ```
 
