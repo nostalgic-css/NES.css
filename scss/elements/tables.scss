@@ -1,0 +1,29 @@
+.table {
+  table-layout: fixed;
+  background-color: #fff;
+
+  &.is-centered th {
+    text-align: center;
+  }
+  &.is-bordered {
+    box-shadow: 4px 0 $base-color, 0 -4px $base-color, -4px 0 $base-color, 0 4px $base-color;
+
+    th,
+    td {
+      padding: 0.5rem;
+      word-wrap: break-word;
+    }
+
+    tr {
+      th + th {
+        box-shadow: -4px 0 $base-color;
+      }
+      td {
+        box-shadow: 0 -4px $base-color;
+      }
+      td:not(:first-child) {
+        box-shadow: -4px 0 $base-color, 0 -4px $base-color;
+      }
+    }
+  }
+}
