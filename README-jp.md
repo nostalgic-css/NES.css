@@ -4,7 +4,7 @@
   <a href="README.md">English</a> / <a href="README-jp.md">日本語</a>
 </div>
 
-NES.css is a **NES-style(8bit-like)** CSS Framework.
+NES.cssは **ファミコン風(8bit ライク)** なCSSフレームワークです。
 
 
 ## Install
@@ -31,28 +31,30 @@ OR
 
 TODO: npm での使用方法を書く
 
+
 ## Usage
 
-NES.css only provides components. You will need to define your own layout.
+NES.cssはコンポーネントのスタイルのみを提供しています。レイアウトはみなさんが好きなように定義してください。
 
-The default font is Press Start 2P which only supports English characters. When you're using this framework with any language except English, please use another font.
+デフォルトでは`Press Start 2P`フォントを使っています。英語以外（日本語など）で利用される場合は、別途フォントを読み込んで使ってください。
 
 TODO: 詳細を書く
 
 
 ## CSS Only
 
-NES.css only requires CSS and doesn't depend on any JavaScript.
+NES.cssはCSSのみで構成されています。JavaScriptは不要です。
 
 
 ## Browser Support
 
-NES.css is compatible with the newest version of the following browsers.
+次のブラウザの最新バージョンをサポートしています。
+
 * Chrome
 * Firefox
 * Safari
 
-Untested
+未確認
 * IE/Edge
 
 
@@ -69,7 +71,7 @@ npm run watch
 npm run build
 ```
 
-Linting, formatting and building runs automatically in the pre-commit hook.
+pre-commit hookにより、コミット時に自動でLint→format→buildが走り、`css`ディレクトリにファイルが出力されます。
 TODO: ビルドはCIでするように変更したい
 
 ### Directories
