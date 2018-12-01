@@ -132,10 +132,7 @@ jobs:
           at: .
 
       - run:
-          command: |
-            mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
-            git clone -b develop $CIRCLE_REPOSITORY_URL
-            cd $CIRCLE_PROJECT_REPONAME
+          command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
 
       - run:
           name: Release
