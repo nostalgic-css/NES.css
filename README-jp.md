@@ -38,7 +38,14 @@ NES.cssはコンポーネントのスタイルのみを提供しています。�
 
 デフォルトでは`Press Start 2P`フォントを使っています。英語以外（日本語など）で利用される場合は、別途フォントを読み込んで使ってください。
 
-TODO: 詳細を書く
+### Recommended Fonts
+
+|言語|フォント|
+|----|----|
+|(デフォルト)|[Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P)|
+|英語|[Kongtext](https://www.dafont.com/kongtext.font)|
+|日本語|[美咲フォント](http://www.geocities.jp/littlimi/misaki.htm)|
+|日本語|[Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)|
 
 
 ## CSS Only

@@ -37,7 +37,14 @@ NES.css only provides components. You will need to define your own layout.
 
 The default font is Press Start 2P which only supports English characters. When you're using this framework with any language except English, please use another font.
 
-TODO: 詳細を書く
+### Recommended Fonts
+
+|Language|Font|
+|----|----|
+|(Default)|[Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P)|
+|English|[Kongtext](https://www.dafont.com/kongtext.font)|
+|Japanese|[美咲フォント](http://www.geocities.jp/littlimi/misaki.htm)|
+|Japanese|[Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)|
 
 
 ## CSS Only
