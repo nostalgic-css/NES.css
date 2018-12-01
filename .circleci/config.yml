@@ -2,7 +2,7 @@ version: 2.1
 
 defaults: &defaults
   docker:
-    - image: rollforguildinc/node:build-latest
+    - image: circleci/node
 
   working_directory: ~/app
 
