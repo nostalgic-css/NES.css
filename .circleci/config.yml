@@ -4,7 +4,7 @@ defaults: &defaults
   docker:
     - image: circleci/node
 
-  working_directory: /home/circleci/app
+  working_directory: ~/app
 
 
 
@@ -138,6 +138,12 @@ jobs:
     steps:
       - attach_workspace:
           at: .
+
+      - run:
+          command: |
+            mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+            git clone -b develop $CIRCLE_REPOSITORY_URL
+            cd $CIRCLE_PROJECT_REPONAME
 
       - run:
           name: Release
