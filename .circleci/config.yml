@@ -87,9 +87,8 @@ jobs:
       #           yarn run build
       #         fi
 
-
       - run:
-          name: Build the Application
+          name: Build the Framework
           command: npm run build
 
       - save_cache:
@@ -133,12 +132,16 @@ jobs:
   #         name: Generate and upload coverage report
   #         command: yarn test-coverage
 
-  deploy:
+  release:
     <<: *defaults
 
     steps:
       - attach_workspace:
           at: .
+
+      - run:
+          name: Release
+          command: npx semantic-release
 
 
 
@@ -167,7 +170,7 @@ workflows:
               only:
                 - master
                 - develop
-      - deploy:
+      - release:
           requires:
             # - test
             - build
