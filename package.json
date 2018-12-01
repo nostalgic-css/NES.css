@@ -1,6 +1,6 @@
 {
   "name": "nes.css",
-  "version": "0.0.2",
+  "version": "0.0.0-development",
   "description": "NES.css is NES-style CSS Framework.",
   "scripts": {
     "watch": "npm run build:sass -- --watch",
@@ -11,13 +11,14 @@
     "build:sass": "node-sass --output-style expanded --source-map true scss/nes.scss css/nes.css",
     "build:autoprefix": "postcss --use autoprefixer --map false --output css/nes.css css/nes.css",
     "build:cleancss": "cleancss -o css/nes.min.css css/nes.css",
-    "deploy": "npm run build",
     "storybook": "start-storybook -p 6006",
-    "build:storybook": "build-storybook"
+    "build:storybook": "build-storybook",
+    "deploy": "npm run build",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BcRikko/NES.css.git"
+    "url": "https://github.com/BcRikko/NES.css.git"
   },
   "keywords": [
     "css",
@@ -47,6 +48,7 @@
     "postcss-cli": "^6.0.0",
     "prettier": "^1.15.2",
     "rimraf": "^2.6.2",
+    "semantic-release": "^15.12.3",
     "stylelint": "^9.5.0",
     "stylelint-config-prettier": "^4.0.0",
     "stylelint-config-recess-order": "^2.0.0",
