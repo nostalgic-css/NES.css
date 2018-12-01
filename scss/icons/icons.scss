@@ -10,6 +10,7 @@
 
 // others
 @import "close.scss";
+@import "trophy.scss";
 
 .icon {
   position: relative;
@@ -38,6 +39,10 @@
 
     &.star::before {
       @include pixelize($icon-star, $icon-star-colors, $px);
+    }
+
+    &.trophy::before {
+      @include pixelize($icon-trophy, $icon-trophy-colors, $px);
     }
 
     &.like::before {
