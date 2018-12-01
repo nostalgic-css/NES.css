@@ -36,7 +36,14 @@ TODO: npm での使用方法を書く
 
 NES.css only provides components. You will need to define your own layout.
 
-The default font is Press Start 2P which only supports English characters. When you're using this framework with any language except English, please use another font.
+The default font is [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P?selection.family=Press+Start+2P) which only supports English characters. When you're using this framework with any language except English, please use another font. Please follow the [instructions](https://developers.google.com/fonts/docs/getting_started) from Google Fonts about how to include them, or simply include it as below:
+
+```html
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+</head>
+```
 
 ### Recommended Fonts
 
