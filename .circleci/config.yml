@@ -4,7 +4,7 @@ defaults: &defaults
   docker:
     - image: circleci/node
 
-  working_directory: ~/tmp
+  working_directory: /home/circleci/app
 
 
 
