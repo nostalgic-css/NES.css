@@ -1,17 +1,7 @@
 version: 2.1
 
-defaults: &defaults
-  docker:
-    - image: circleci/node
-
-
-
-
-
 jobs:
   checkout:
-    <<: *defaults
-
     steps:
       - restore_cache:
           name: Restore Repository Cache
@@ -35,8 +25,6 @@ jobs:
             - .
 
   install-dependencies:
-    <<: *defaults
-
     steps:
       - attach_workspace:
           at: .
@@ -63,8 +51,6 @@ jobs:
             - node_modules
 
   build:
-    <<: *defaults
-
     steps:
       - attach_workspace:
           at: .
@@ -101,8 +87,6 @@ jobs:
             - css
 
   # test:
-  #   <<: *defaults
-
   #   steps:
   #     - attach_workspace:
   #         at: .
@@ -116,8 +100,6 @@ jobs:
   #         command: yarn test
 
   # coverage:
-  #   <<: *defaults
-
   #   steps:
   #     - attach_workspace:
   #         at: .
@@ -131,8 +113,6 @@ jobs:
   #         command: yarn test-coverage
 
   release:
-    <<: *defaults
-
     steps:
       - attach_workspace:
           at: .
