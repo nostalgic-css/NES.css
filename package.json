@@ -12,11 +12,14 @@
     "build:autoprefix": "postcss --use autoprefixer --map false --output css/nes.css css/nes.css",
     "build:cleancss": "cleancss -o css/nes.min.css css/nes.css",
     "deploy": "npm run build",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "commit": "git-cz",
+    "commit:retry": "git-cz --retry",
+    "commitmsg": "commitlint -e"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/BcRikko/NES.css.git"
+    "url": "https://github.com/trezy/NES.css.git"
   },
   "keywords": [
     "css",
@@ -31,8 +34,11 @@
   },
   "homepage": "https://github.com/BcRikko/NES.css#readme",
   "devDependencies": {
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-conventional": "^7.1.2",
     "autoprefixer": "^9.1.5",
     "clean-css-cli": "^4.2.1",
+    "commitizen": "^3.0.5",
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^1.0.0",
     "lint-staged": "^7.3.0",
@@ -51,9 +57,15 @@
   "browserslist": [
     "> 1%"
   ],
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
@@ -81,11 +93,6 @@
       "string-quotes": "double",
       "at-rule-no-unknown": null,
       "scss/at-rule-no-unknown": true
-    }
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }
