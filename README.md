@@ -38,6 +38,10 @@ NES.css only provides components. You will need to define your own layout.
 
 The default font is [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P?selection.family=Press+Start+2P) which only supports English characters. When you're using this framework with any language except English, please use another font. Please follow the [instructions](https://developers.google.com/fonts/docs/getting_started) from Google Fonts about how to include them, or simply include it as below:
 
+NES.cssはコンポーネントのスタイルのみを提供しています。レイアウトはみなさんが好きなように定義してください。
+
+デフォルトでは`Press Start 2P`フォントを使っています。英語以外（日本語など）で利用される場合は、別途フォントを読み込んで使ってください。
+
 ```html
 <head>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
