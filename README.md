@@ -32,8 +32,11 @@ OR
 
 TODO: npm での使用方法を書く
 
-
 ## Usage
+
+NES.css only provides components. You will need to define your own layout.
+
+The default font is Press Start 2P which only supports English characters. When you're using this framework with any language except English, please use another font.
 
 NES.cssはコンポーネントのスタイルのみを提供しています。レイアウトはみなさんが好きなように定義してください。
 
@@ -44,16 +47,22 @@ TODO: 詳細を書く
 
 ## CSS Only
 
+NES.css only requires CSS and doesn't depend on any JavaScript.
+
 NES.cssはCSSのみで構成されています。JavaScriptは不要です。
 
 
 ## Browser Support
+
+NES.css is compatible with the newest version of the following browsers.
 
 次のブラウザの最新バージョンをサポートしています。
 
 * Chrome
 * Firefox
 * Safari
+
+Untested
 
 未確認
 * IE/Edge

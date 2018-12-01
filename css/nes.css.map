@@ -16,6 +16,7 @@
 		"../scss/elements/radios.scss",
 		"../scss/elements/checkboxes.scss",
 		"../scss/elements/balloons.scss",
+		"../scss/elements/tables.scss",
 		"../scss/form/_index.scss",
 		"../scss/form/inputs.scss",
 		"../scss/icons/_index.scss",
