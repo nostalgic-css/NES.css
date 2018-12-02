@@ -36,9 +36,15 @@
     &.heart::before {
       @include pixelize($icon-heart, $icon-heart-colors, $px);
     }
+    &.heart.is-empty::before {
+      @include pixelize($icon-heart-empty, $icon-heart-empty-colors, $px);
+    }
 
     &.star::before {
       @include pixelize($icon-star, $icon-star-colors, $px);
+    }
+    &.star.is-empty::before {
+      @include pixelize($icon-star-empty, $icon-star-empty-colors, $px);
     }
 
     &.trophy::before {
@@ -47,6 +53,9 @@
 
     &.like::before {
       @include pixelize($icon-like, $icon-like-colors, $px);
+    }
+    &.like.is-empty::before {
+      @include pixelize($icon-like-empty, $icon-like-empty-colors, $px);
     }
 
     &.twitter::before {
