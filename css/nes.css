@@ -800,8 +800,8 @@ button,
 }
 
 .input.is-success {
-  outline-color: #108de0;
-  box-shadow: 0 4px #209cee, 0 -4px #209cee, 4px 0 #209cee, -4px 0 #209cee;
+  outline-color: #76c442;
+  box-shadow: 0 4px #92cc41, 0 -4px #92cc41, 4px 0 #92cc41, -4px 0 #92cc41;
 }
 
 .input.is-warning {
