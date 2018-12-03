@@ -7,6 +7,7 @@
 @import "twitter.scss";
 @import "facebook.scss";
 @import "github.scss";
+@import "youtube.scss";
 
 // others
 @import "close.scss";
@@ -72,6 +73,10 @@
 
     &.close::before {
       @include pixelize($icon-close, $icon-close-colors, $px);
+    }
+
+    &.youtube::before {
+      @include pixelize($icon-youtube, $icon-youtube-colors, $px);
     }
   }
 
