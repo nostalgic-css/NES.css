@@ -7,6 +7,8 @@
 NES.css is a **NES-style(8bit-like)** CSS Framework.
 
 
+[![Gitter][gitter-badge]][gitter]
+
 ## Install
 
 ### CDN
@@ -102,3 +104,10 @@ TODO: ビルドはCIでするように変更したい
 ## Copyright and license
 
 Code and documentation copyright 2018 [B.C.Rikko](https://github.com/BcRikko). Code released under the MIT License. Docs released under Creative Commons.
+
+
+
+
+
+[gitter]: https://gitter.im/nostalgic-css/Lobby
+[gitter-badge]: https://img.shields.io/gitter/room/nostalgic-css/Lobby.svg
