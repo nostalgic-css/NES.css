@@ -73,12 +73,10 @@
   }
 
   &.with-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     padding-top: 2rem;
 
     > .title {
+      display: table;
       padding: 0 0.5rem;
       margin: -2rem 0 1rem;
       font-size: 1rem;
