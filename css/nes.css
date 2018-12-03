@@ -558,11 +558,11 @@ button,
 }
 
 .container.with-title.is-center {
-  align-items: center;
+  text-align: center;
 }
 
 .container.with-title.is-right {
-  align-items: right;
+  text-align: right;
 }
 
 .container.is-dark::before {
