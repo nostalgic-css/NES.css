@@ -84,11 +84,19 @@
     }
 
     &.is-center {
-      align-items: center;
+      text-align: center;
+
+      > .title {
+        margin: -2rem auto 1rem;
+      }
     }
 
     &.is-right {
-      align-items: right;
+      text-align: right;
+
+      > .title {
+        margin: -2rem 0 1rem auto;
+      }
     }
   }
 
@@ -101,9 +109,11 @@
       border-color: #fff;
     }
 
-    > .title {
-      color: $background-color;
-      background-color: $base-color;
+    &.with-title {
+      > .title {
+        color: $background-color;
+        background-color: $base-color;
+      }
     }
   }
 }

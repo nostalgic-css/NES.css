@@ -558,11 +558,19 @@ button,
 }
 
 .container.with-title.is-center {
-  align-items: center;
+  text-align: center;
+}
+
+.container.with-title.is-center > .title {
+  margin: -2rem auto 1rem;
 }
 
 .container.with-title.is-right {
-  align-items: right;
+  text-align: right;
+}
+
+.container.with-title.is-right > .title {
+  margin: -2rem 0 1rem auto;
 }
 
 .container.is-dark::before {
@@ -573,7 +581,7 @@ button,
   border-color: #fff;
 }
 
-.container.is-dark > .title {
+.container.is-dark.with-title > .title {
   color: #fff;
   background-color: #212529;
 }
