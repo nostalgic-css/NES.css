@@ -33,6 +33,7 @@
   "homepage": "https://github.com/BcRikko/NES.css#readme",
   "devDependencies": {
     "@storybook/html": "^4.0.11",
+    "babel-loader": "^8.0.4",
     "autoprefixer": "^9.1.5",
     "clean-css-cli": "^4.2.1",
     "eslint": "^5.9.0",
@@ -64,7 +65,8 @@
       "npm run build",
       "git add ./css",
       "git add"
-    ]
+    ],
+    "*.js": ["eslint .", "git add"]
   },
   "prettier": {
     "printWidth": 100
@@ -85,8 +87,5 @@
       "at-rule-no-unknown": null,
       "scss/at-rule-no-unknown": true
     }
-  },
-  "dependencies": {
-    "babel-loader": "^8.0.4"
   }
 }
