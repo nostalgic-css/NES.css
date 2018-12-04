@@ -32,9 +32,10 @@
   },
   "homepage": "https://github.com/BcRikko/NES.css#readme",
   "devDependencies": {
+    "@storybook/addon-knobs": "^4.0.11",
     "@storybook/html": "^4.0.11",
-    "babel-loader": "^8.0.4",
     "autoprefixer": "^9.1.5",
+    "babel-loader": "^8.0.4",
     "clean-css-cli": "^4.2.1",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
@@ -66,7 +67,10 @@
       "git add ./css",
       "git add"
     ],
-    "*.js": ["eslint .", "git add"]
+    "*.js": [
+      "eslint .",
+      "git add"
+    ]
   },
   "prettier": {
     "printWidth": 100
