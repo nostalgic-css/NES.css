@@ -1,7 +1,12 @@
 import { storiesOf } from '@storybook/html'; // eslint-disable-line import/no-extraneous-dependencies
+import { // eslint-disable-line import/no-extraneous-dependencies
+  withKnobs, select,
+} from '@storybook/addon-knobs';
 
-storiesOf('Inputs', module)
-  .add('input.radio', () => `
+const stories = storiesOf('Inputs', module);
+stories.addDecorator(withKnobs);
+
+stories.add('input.radio', () => `
       <label>
         <input type="radio" class="radio" name="answer" checked />
         <span>Yes</span>
@@ -14,11 +19,13 @@ storiesOf('Inputs', module)
         <input type="checkbox" class="checkbox" checked />
         <span>Enable</span>
       </label>`)
-  .add('input.input', () => `
-        <input type="text" id="name_field" class="input">`)
-  .add('input.input.is-success', () => `
-        <input type="text" class="input is-success" placeholder="NES.css">`)
-  .add('input.input.is-warning', () => `
-        <input type="text" class="input is-warning" placeholder="8bit.css">`)
-  .add('input.input.is-error', () => `
-        <input type="text" class="input is-error" placeholder="awesome.css">`);
+  .add('input', () => {
+    const selectedClass = select('class', {
+      input: 'input',
+      'input is-success': 'input is-success',
+      'input is-warning': 'input is-warning',
+      'input is-error': 'input is-error',
+    }, 'input');
+
+    return `<input type="text" id="name_field" class="${selectedClass}" placeholder="NES.css">`;
+  });
