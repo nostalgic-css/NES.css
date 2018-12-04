@@ -1,18 +1,18 @@
 import { storiesOf } from '@storybook/html'; // eslint-disable-line import/no-extraneous-dependencies
 import { // eslint-disable-line import/no-extraneous-dependencies
-  withKnobs, select,
+  withKnobs, boolean,
 } from '@storybook/addon-knobs';
 
 const stories = storiesOf('Tables', module);
 stories.addDecorator(withKnobs);
 
 stories.add('table', () => {
-  const selectedClass = select('class', {
-    'table is-bordered': 'table is-bordered',
-    'table is-bordered is-centered': 'table is-bordered is-centered',
-  }, 'table is-bordered');
+  const isBordered = boolean('is-bordered', true) ? 'is-bordered' : '';
+  const isCentered = boolean('is-centered', false) ? 'is-centered' : '';
 
-  return `<table class="${selectedClass}" style="margin:15px 4px 5px 4px">
+  const selectedClasses = [isBordered, isCentered];
+
+  return `<table class="table ${selectedClasses.join(' ')}" style="margin:15px 4px 5px 4px">
         <thead>
           <tr>
             <th>Table</th>
