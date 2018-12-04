@@ -4,8 +4,9 @@
   <a href="README.md">English</a> / <a href="README-jp.md">日本語</a>
 </div>
 
-NES.css is a **NES-style(8bit-like)** CSS Framework.
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
+NES.css is a **NES-style(8bit-like)** CSS Framework.
 
 [![Gitter][gitter-badge]][gitter]
 
