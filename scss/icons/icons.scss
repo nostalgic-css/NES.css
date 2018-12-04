@@ -8,6 +8,7 @@
 @import "facebook.scss";
 @import "github.scss";
 @import "youtube.scss";
+@import "reddit.scss";
 
 // others
 @import "close.scss";
@@ -77,6 +78,10 @@
 
     &.youtube::before {
       @include pixelize($icon-youtube, $icon-youtube-colors, $px);
+    }
+
+    &.reddit::before {
+      @include pixelize($icon-reddit, $icon-reddit-colors, $px);
     }
   }
 
