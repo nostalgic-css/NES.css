@@ -1,6 +1,4 @@
-import { storiesOf } from '@storybook/html';
-
-import '../css/nes.css';
+import { storiesOf } from '@storybook/html'; // eslint-disable-line import/no-extraneous-dependencies
 
 storiesOf('Containers', module)
   .add('.container.with-title', () => `<div class="container with-title">

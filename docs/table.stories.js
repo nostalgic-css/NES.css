@@ -1,6 +1,4 @@
-import { storiesOf } from '@storybook/html';
-
-import '../css/nes.css';
+import { storiesOf } from '@storybook/html'; // eslint-disable-line import/no-extraneous-dependencies
 
 storiesOf('Tables', module)
   .add('table.table', () => `
