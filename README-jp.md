@@ -6,8 +6,7 @@
 
 NES.cssは **ファミコン風(8bit ライク)** なCSSフレームワークです。
 
-
-[![Gitter][gitter-badge]][gitter]
+[![Gitter][gitter-badge]][gitter] [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 ## Install
 
