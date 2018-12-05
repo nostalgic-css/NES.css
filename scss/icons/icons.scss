@@ -13,7 +13,7 @@
 @import "close.scss";
 @import "trophy.scss";
 
-.icon {
+.nes-icon {
   position: relative;
   display: inline-block;
 
@@ -48,10 +48,6 @@
       @include pixelize($icon-star-empty, $icon-star-empty-colors, $px);
     }
 
-    &.trophy::before {
-      @include pixelize($icon-trophy, $icon-trophy-colors, $px);
-    }
-
     &.like::before {
       @include pixelize($icon-like, $icon-like-colors, $px);
     }
@@ -71,12 +67,16 @@
       @include pixelize($icon-github, $icon-github-colors, $px);
     }
 
-    &.close::before {
-      @include pixelize($icon-close, $icon-close-colors, $px);
-    }
-
     &.youtube::before {
       @include pixelize($icon-youtube, $icon-youtube-colors, $px);
+    }
+
+    &.trophy::before {
+      @include pixelize($icon-trophy, $icon-trophy-colors, $px);
+    }
+
+    &.close::before {
+      @include pixelize($icon-close, $icon-close-colors, $px);
     }
   }
 
