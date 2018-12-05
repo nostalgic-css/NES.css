@@ -13,7 +13,7 @@
     "build:cleancss": "cleancss -o css/nes.min.css css/nes.css",
     "deploy": "npm run build",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build:storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -91,5 +91,8 @@
       "at-rule-no-unknown": null,
       "scss/at-rule-no-unknown": true
     }
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base"
   }
 }

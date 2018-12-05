@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html'; // eslint-disable-line import/no-extraneous-dependencies
 import { // eslint-disable-line import/no-extraneous-dependencies
-  withKnobs, select,
+  withKnobs, radios,
 } from '@storybook/addon-knobs';
 
 const stories = storiesOf('Inputs', module);
@@ -20,12 +20,12 @@ stories.add('input.radio', () => `
         <span>Enable</span>
       </label>`)
   .add('input', () => {
-    const selectedClass = select('class', {
-      input: 'input',
-      'input is-success': 'input is-success',
-      'input is-warning': 'input is-warning',
-      'input is-error': 'input is-error',
-    }, 'input');
+    const selectedClass = radios('class', {
+      default: '',
+      'is-success': 'is-success',
+      'is-warning': 'is-warning',
+      'is-error': 'is-error',
+    }, '');
 
-    return `<input type="text" id="name_field" class="${selectedClass}" placeholder="NES.css">`;
+    return `<input type="text" id="name_field" class="input ${selectedClass}" placeholder="NES.css">`;
   });
