@@ -78,6 +78,11 @@ npm run watch
 npm run build
 ```
 
+#### Run Storybook
+```
+npm run storybook
+```
+
 Linting, formatting and building runs automatically in the pre-commit hook.
 TODO: ビルドはCIでするように変更したい
 
@@ -87,6 +92,7 @@ TODO: ビルドはCIでするように変更したい
 ├── index.html: Demo page
 ├── style.css: Demo page style
 ├── css: Distribution files
+├── docs: Storybook stories
 └── scss: Source
     ├── base
     │   ├── reboot.scss: Don't change! (Bootstrap Reboot)
