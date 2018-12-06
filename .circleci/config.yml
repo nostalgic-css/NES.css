@@ -188,11 +188,6 @@ workflows:
       - build:
           requires:
             - install-dependencies
-          filters:
-            branches:
-              only:
-                - master
-                - develop
       - release:
           requires:
             - commitlint
