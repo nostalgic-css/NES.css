@@ -94,6 +94,17 @@ jobs:
           paths:
             - css
 
+  commitlint:
+    <<: *defaults
+
+    steps:
+      - attach_workspace:
+          at: .
+
+      - run:
+          name: Lint commit messages
+          command: npx semantic-commitlint -- --ci
+
   lint:
     <<: *defaults
 
@@ -104,10 +115,6 @@ jobs:
       - run:
           name: Lint styles
           command: npx stylelint -- --fix
-
-      - run:
-          name: Lint commit messages
-          command: npx semantic-commitlint -- --ci
 
   # test:
   #   <<: *defaults
@@ -163,6 +170,9 @@ workflows:
   main:
     jobs:
       - checkout
+      - commitlint:
+          requires:
+            - checkout
       - install-dependencies:
           requires:
             - checkout
@@ -185,9 +195,10 @@ workflows:
                 - develop
       - release:
           requires:
-            # - test
+            - commitlint
             - build
             - lint
+            # - test
           filters:
             branches:
               only: master
