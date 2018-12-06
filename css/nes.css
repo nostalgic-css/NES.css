@@ -427,6 +427,14 @@ button,
   outline: 0;
 }
 
+.btn.is-disabled, .btn.is-disabled:hover, .btn.is-disabled:focus {
+  color: #212529;
+  cursor: not-allowed;
+  background-color: #d3d3d3;
+  box-shadow: inset -4px -4px #adafbc;
+  opacity: 0.6;
+}
+
 .btn.is-primary {
   color: #fff;
   background-color: #209cee;
