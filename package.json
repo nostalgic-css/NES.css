@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/BcRikko/NES.css.git"
+    "url": "https://github.com/nostalgic-css/NES.css.git"
   },
   "keywords": [
     "css",
@@ -33,9 +33,9 @@
   "author": "BcRikko (https://github.com/Bcrikko)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BcRikko/NES.css/issues"
+    "url": "https://github.com/nostalgic-css/NES.css/issues"
   },
-  "homepage": "https://github.com/BcRikko/NES.css#readme",
+  "homepage": "https://github.com/nostalgic-css/NES.css#readme",
   "devDependencies": {
     "@commitlint/cli": "^7.2.1",
     "@commitlint/config-conventional": "^7.1.2",
