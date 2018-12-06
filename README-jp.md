@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://bcrikko.github.io/NES.css/" target="_blank"><img src="https://user-images.githubusercontent.com/5305599/49061716-da649680-f254-11e8-9a89-d95a7407ec6a.png" alt="NES.css: NES-style  CSS framework" style="max-width:100%;" width="600" height="315"></a>
+  <a href="https://nostalgic-css.github.io/NES.css/" target="_blank"><img src="https://user-images.githubusercontent.com/5305599/49061716-da649680-f254-11e8-9a89-d95a7407ec6a.png" alt="NES.css: NES-style  CSS framework" style="max-width:100%;" width="600" height="315"></a>
 
   <a href="README.md">English</a> / <a href="README-jp.md">日本語</a>
 </div>
@@ -47,7 +47,7 @@ NES.cssはコンポーネントのスタイルのみを提供しています。�
       html, body, pre, code, kbd, samp {
           font-family: "font-family you want to use";
       }
-    </style>    
+    </style>
 </head>
 ```
 
