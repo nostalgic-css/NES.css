@@ -771,6 +771,7 @@ button,
 }
 
 .table {
+  display: block;
   table-layout: fixed;
   background-color: #fff;
 }
@@ -799,6 +800,53 @@ button,
 
 .table.is-bordered tr td:not(:first-child) {
   box-shadow: -4px 0 #212529, 0 -4px #212529;
+}
+
+.table.is-dark {
+  position: relative;
+  color: #fff;
+  background-color: #212529;
+}
+
+.table.is-dark::before, .table.is-dark::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+}
+
+.table.is-dark::before {
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+  background-color: #212529;
+}
+
+.table.is-dark::after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  border: 4px solid #fff;
+}
+
+.table.is-dark th,
+.table.is-dark td {
+  padding: 0.5rem;
+  word-wrap: break-word;
+}
+
+.table.is-dark tr th + th {
+  box-shadow: -4px 0 #fff;
+}
+
+.table.is-dark tr td {
+  box-shadow: 0 -4px #fff;
+}
+
+.table.is-dark tr td:not(:first-child) {
+  box-shadow: -4px 0 #fff, 0 -4px #fff;
 }
 
 .input {
