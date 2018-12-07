@@ -1,5 +1,6 @@
 @mixin pixelize($matrix, $colors, $size) {
   $ret: "";
+  $moz: "";
 
   @for $i from 1 through length($matrix) {
     $row: nth($matrix, $i);
@@ -10,10 +11,12 @@
       @if $dot != 0 {
         @if $ret != "" {
           $ret: $ret + ",";
+          $moz: $moz + ",";
         }
 
         $color: nth($colors, $dot);
         $ret: $ret + ($j * $size) + " " + ($i * $size) + " " + $color;
+        $moz: $moz + ($j * $size)+" "+ ($i * $size)+" 0 0.020em " + $color;
       }
     }
   }
@@ -21,4 +24,7 @@
   width: $size;
   height: $size;
   box-shadow: unquote($ret);
+  @-moz-document url-prefix() {
+    -webkit-box-shadow: unquote($moz);
+  }
 }

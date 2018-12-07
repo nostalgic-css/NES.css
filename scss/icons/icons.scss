@@ -7,9 +7,12 @@
 @import "twitter.scss";
 @import "facebook.scss";
 @import "github.scss";
+@import "youtube.scss";
+@import "google.scss";
 
 // others
 @import "close.scss";
+@import "trophy.scss";
 
 .icon {
   position: relative;
@@ -35,13 +38,26 @@
     &.heart::before {
       @include pixelize($icon-heart, $icon-heart-colors, $px);
     }
+    &.heart.is-empty::before {
+      @include pixelize($icon-heart-empty, $icon-heart-empty-colors, $px);
+    }
 
     &.star::before {
       @include pixelize($icon-star, $icon-star-colors, $px);
     }
+    &.star.is-empty::before {
+      @include pixelize($icon-star-empty, $icon-star-empty-colors, $px);
+    }
+
+    &.trophy::before {
+      @include pixelize($icon-trophy, $icon-trophy-colors, $px);
+    }
 
     &.like::before {
       @include pixelize($icon-like, $icon-like-colors, $px);
+    }
+    &.like.is-empty::before {
+      @include pixelize($icon-like-empty, $icon-like-empty-colors, $px);
     }
 
     &.twitter::before {
@@ -58,6 +74,14 @@
 
     &.close::before {
       @include pixelize($icon-close, $icon-close-colors, $px);
+    }
+
+    &.youtube::before {
+      @include pixelize($icon-youtube, $icon-youtube-colors, $px);
+    }
+
+    &.google::before {
+      @include pixelize($icon-google, $icon-google-colors, $px);
     }
   }
 

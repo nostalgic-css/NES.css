@@ -72,27 +72,41 @@
     }
   }
 
+  &.is-center {
+    text-align: center;
+  }
+
+  &.is-right {
+    text-align: right;
+  }
+
   &.with-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     padding-top: 2rem;
 
     > .title {
-      position: absolute;
-      top: 0;
+      display: table;
       padding: 0 0.5rem;
-      margin: 0;
+      margin: -2rem 0 1rem;
       font-size: 1rem;
       background-color: $background-color;
     }
 
+    &.is-rounded {
+      > .title {
+        margin-top: -2.4rem;
+      }
+    }
+
     &.is-center {
-      align-items: center;
+      > .title {
+        margin: -2.4rem auto 1rem;
+      }
     }
 
     &.is-right {
-      align-items: right;
+      > .title {
+        margin: -2.4rem 0 1rem auto;
+      }
     }
   }
 
@@ -105,9 +119,11 @@
       border-color: #fff;
     }
 
-    > .title {
-      color: $background-color;
-      background-color: $base-color;
+    &.with-title {
+      > .title {
+        color: $background-color;
+        background-color: $base-color;
+      }
     }
   }
 }
