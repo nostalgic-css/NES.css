@@ -6,6 +6,7 @@
     text-align: center;
   }
   &.is-bordered {
+    margin: 4px;
     box-shadow: 4px 0 $base-color, 0 -4px $base-color, -4px 0 $base-color, 0 4px $base-color;
 
     th,
