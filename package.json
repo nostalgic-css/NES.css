@@ -82,7 +82,6 @@
   "lint-staged": {
     "scss/**/*.scss": [
       "npm run build",
-      "git add ./css",
       "git add"
     ],
     "*.js": [
