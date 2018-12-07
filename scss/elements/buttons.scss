@@ -14,6 +14,65 @@
   }
 }
 
+@mixin btn-extra-pixelize-style($color, $background, $hover-background, $shadow) {
+  color: $color;
+  background-color: $background;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-background;
+    outline: 0;
+    // prettier-ignore
+    box-shadow: 
+      0 -4px $hover-background,
+      inset 0 -2px $shadow,
+      0 -8px #212529,
+      4px 0 $shadow,
+      4px -4px #212529, 
+      8px 0 #212529, 
+      0 4px $shadow, 
+      4px 4px #212529, 
+      0 8px #212529,
+      -4px 0 $hover-background, 
+      inset -2px 0 $shadow, 
+      -4px -4px #212529, 
+      -8px 0 #212529,
+      -4px 4px #212529;
+  }
+
+  &:active {
+    // prettier-ignore
+    box-shadow: 
+      0 -4px $shadow, 
+      0 -8px #212529, 
+      4px 0 $hover-background, 
+      4px -4px #212529,
+      8px 0 #212529, 
+      0 4px $hover-background, 
+      4px 4px #212529, 
+      0 8px #212529, 
+      -4px 0 $shadow,
+      -4px -4px #212529, 
+      -8px 0 #212529, 
+      -4px 4px #212529;
+  }
+
+  // prettier-ignore
+  box-shadow: 
+    0 -4px $background, 
+    0 -8px #212529, 
+    4px 0 $shadow, 
+    4px -4px #212529, 
+    8px 0 #212529,
+    0 4px $shadow, 
+    4px 4px #212529, 
+    0 8px #212529, 
+    -4px 0 $background, 
+    -4px -4px #212529,
+    -8px 0 #212529, 
+    -4px 4px #212529;
+}
+
 // Default style
 .btn {
   $border-size: 4px;
@@ -70,6 +129,22 @@
   @each $type in $types {
     &.is-#{nth($type, 1)} {
       @include btn-style(nth($type, 2), nth($type, 3), nth($type, 4), nth($type, 5));
+    }
+  }
+
+  &.is-rounded {
+    box-sizing: content-box;
+    padding: 6px 8px;
+    @include btn-extra-pixelize-style($base-color, #fff, #e7e7e7, #adafbc);
+
+    &::before,
+    &::after {
+      border-width: 0;
+    }
+    @each $type in $types {
+      &.is-#{nth($type, 1)} {
+        @include btn-extra-pixelize-style(nth($type, 2), nth($type, 3), nth($type, 4), nth($type, 5));
+      }
     }
   }
 }
