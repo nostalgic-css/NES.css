@@ -771,7 +771,6 @@ button,
 }
 
 .table {
-  display: block;
   table-layout: fixed;
   background-color: #fff;
 }
@@ -806,20 +805,12 @@ button,
   position: relative;
   color: #fff;
   background-color: #212529;
+  box-shadow: 4px -4px #212529, -4px -4px #212529, -4px 4px #212529, 4px 4px #212529;
 }
 
 .table.is-dark::before, .table.is-dark::after {
   position: absolute;
-  z-index: -1;
   content: "";
-}
-
-.table.is-dark::before {
-  top: 2px;
-  right: 2px;
-  bottom: 2px;
-  left: 2px;
-  background-color: #212529;
 }
 
 .table.is-dark::after {
@@ -828,7 +819,16 @@ button,
   bottom: 0;
   left: 0;
   z-index: 1;
-  border: 4px solid #fff;
+}
+
+.table.is-dark::before {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to left, transparent 4px, #fff 4px) no-repeat, linear-gradient(to bottom, transparent 4px, #fff 4px) no-repeat, linear-gradient(to right, transparent 4px, #fff 4px) no-repeat, linear-gradient(to top, transparent 4px, #fff 4px) no-repeat;
+  background-position: 100% 0, 100% 0, 0 100%, 0 100%;
+  background-size: calc(100% - 4px) 4px, 4px calc(100% - 4px);
 }
 
 .table.is-dark th,
