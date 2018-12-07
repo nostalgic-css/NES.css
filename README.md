@@ -83,15 +83,16 @@ Untested
 git clone git@github.com:BcRikko/NES.css.git
 cd NES.css
 
-npm i
+sudo npm i -g yarn
 
-npm run watch
-npm run build
+yarn
+yarn run watch
+yarn run build
 ```
 
 #### Run Storybook
 ```
-npm run storybook
+yarn run storybook
 ```
 
 Linting, formatting and building runs automatically in the pre-commit hook.
