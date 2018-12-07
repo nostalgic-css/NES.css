@@ -793,7 +793,6 @@ button,
 }
 
 .table.is-bordered {
-  margin: 4px;
   box-shadow: 4px 0 #212529, 0 -4px #212529, -4px 0 #212529, 0 4px #212529;
 }
 
@@ -813,6 +812,43 @@ button,
 
 .table.is-bordered tr td:not(:first-child) {
   box-shadow: -4px 0 #212529, 0 -4px #212529;
+}
+
+.table.is-dark {
+  position: relative;
+  color: #fff;
+  background-color: #212529;
+  box-shadow: 4px -4px #212529, -4px -4px #212529, -4px 4px #212529, 4px 4px #212529;
+}
+
+.table.is-dark::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background: linear-gradient(to left, transparent 4px, #fff 4px) no-repeat, linear-gradient(to bottom, transparent 4px, #fff 4px) no-repeat, linear-gradient(to right, transparent 4px, #fff 4px) no-repeat, linear-gradient(to top, transparent 4px, #fff 4px) no-repeat;
+  background-position: 100% 0, 100% 0, 0 100%, 0 100%;
+  background-size: calc(100% - 4px) 4px, 4px calc(100% - 4px);
+}
+
+.table.is-dark th,
+.table.is-dark td {
+  padding: 0.5rem;
+  word-wrap: break-word;
+}
+
+.table.is-dark tr th + th {
+  box-shadow: -4px 0 #fff;
+}
+
+.table.is-dark tr td {
+  box-shadow: 0 -4px #fff;
+}
+
+.table.is-dark tr td:not(:first-child) {
+  box-shadow: -4px 0 #fff, 0 -4px #fff;
 }
 
 .input {
