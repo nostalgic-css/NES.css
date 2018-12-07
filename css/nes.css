@@ -793,6 +793,7 @@ button,
 }
 
 .table.is-bordered {
+  margin: 4px;
   box-shadow: 4px 0 #212529, 0 -4px #212529, -4px 0 #212529, 0 4px #212529;
 }
 
