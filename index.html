@@ -11,6 +11,7 @@
 
     <title>NES.css - NES-style CSS Framework</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="./css/nes.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
 
@@ -47,6 +48,7 @@
         <button type="button" class="btn is-success">Success</button>
         <button type="button" class="btn is-warning">Warning</button>
         <button type="button" class="btn is-error">Error</button>
+        <button type="button" class="btn is-disabled">Disabled</button>
       </div>
     </section>
 
@@ -54,11 +56,11 @@
       <h2 class="title">Containers</h2>
       <div class="containers">
         <div class="container with-title is-center">
-          <label class="title">Container.is-center</label>
+          <p class="title">Container.is-center</p>
           <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
         </div>
         <div class="container is-dark with-title">
-          <label class="title">Container.is-dark</label>
+          <p class="title">Container.is-dark</p>
           <p style="color: white;">Good morning. Thou hast had a good night's sleep, I hope.</p>
         </div>
         <div class="container is-rounded">
@@ -95,20 +97,20 @@
     <section class="form container with-title">
       <h2 class="title">Form</h2>
       <div class="field">
-        <label>Your name</label>
-        <input type="text" class="input">
+        <label for="name_field">Your name</label>
+        <input type="text" id="name_field" class="input">
       </div>
       <div class="field is-inline">
-        <label>.input.is-success</label>
-        <input type="text" class="input is-success" placeholder="NES.css">
+        <label for="inline_field">.input.is-success</label>
+        <input type="text" id="inline_field" class="input is-success" placeholder="NES.css">
       </div>
       <div class="field is-inline">
-        <label>.input.is-warning</label>
-        <input type="text" class="input is-warning" placeholder="8bit.css">
+        <label for="warning_field">.input.is-warning</label>
+        <input type="text" id="warning_field" class="input is-warning" placeholder="8bit.css">
       </div>
       <div class="field is-inline">
-        <label>.input.is-error</label>
-        <input type="text" class="input is-error" placeholder="awesome.css">
+        <label for="error_field">.input.is-error</label>
+        <input type="text" id="error_field" class="input is-error" placeholder="awesome.css">
       </div>
     </section>
 
@@ -130,6 +132,36 @@
       </div>
     </section>
 
+    <section class="container with-title" style="display:flex;">
+      <h2 class="title">Table</h2>
+      <table class="table is-bordered is-centered" style="margin:15px 15px 5px 0">
+        <thead>
+          <tr>
+            <th>Table.is-bordered</th>
+            <th>Table.is-centered</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Thou hast had a good morning</td>
+            <td>Thou hast had a good afternoon</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table is-dark is-bordered" style="margin:15px 15px 5px 0">
+        <thead>
+          <tr>
+            <th>Table.is-dark.is-bordered</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Thou hast had a good night</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
     <section class="container with-title">
       <h2 class="title">Icons</h2>
       <section class="container with-title">
@@ -138,14 +170,17 @@
           <i class="icon heart"></i>
           <i class="icon heart is-medium"></i>
           <i class="icon heart is-large"></i>
+          <i class="icon heart is-empty"></i>
 
           <i class="icon star"></i>
           <i class="icon star is-medium"></i>
           <i class="icon star is-large"></i>
+          <i class="icon star is-empty"></i>
 
           <i class="icon like"></i>
           <i class="icon like is-medium"></i>
           <i class="icon like is-large"></i>
+          <i class="icon like is-empty"></i>
         </div>
       </section>
       <section class="container with-title">
@@ -162,6 +197,10 @@
           <i class="icon github"></i>
           <i class="icon github is-medium"></i>
           <i class="icon github is-large"></i>
+
+          <i class="icon youtube"></i>
+          <i class="icon youtube is-medium"></i>
+          <i class="icon youtube is-large"></i>
         </div>
       </section>
 
@@ -173,6 +212,10 @@
           <i class="icon close is-large"></i>
 
           <i class="octocat animate"></i>
+
+          <i class="icon trophy"></i>
+          <i class="icon trophy is-medium"></i>
+          <i class="icon trophy is-large"></i>
         </div>
       </section>
 
