@@ -24,7 +24,7 @@
   margin: $border-size;
   text-align: center;
   vertical-align: middle;
-  cursor: pointer;
+  cursor: $cursor-click-url, pointer;
   user-select: none;
 
   @include btn-style($base-color, #fff, #e7e7e7, #adafbc);
