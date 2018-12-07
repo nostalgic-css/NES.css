@@ -1,6 +1,6 @@
 .table {
   table-layout: fixed;
-  background-color: #fff;
+  background-color: $background-color;
   @mixin thsAndTdsBoxShadow($color) {
     th,
     td {
@@ -34,33 +34,21 @@
     box-shadow: 4px -4px $base-color, -4px -4px $base-color, -4px 4px $base-color,
       4px 4px $base-color;
 
-    &::before,
-    &::after {
-      position: absolute;
-      content: "";
-    }
-
-    &::after {
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 1;
-    }
-
     &::before {
+      position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
-      background: linear-gradient(to left, transparent 4px, #fff 4px) no-repeat,
-        linear-gradient(to bottom, transparent 4px, #fff 4px) no-repeat,
-        linear-gradient(to right, transparent 4px, #fff 4px) no-repeat,
-        linear-gradient(to top, transparent 4px, #fff 4px) no-repeat;
+      content: "";
+      background: linear-gradient(to left, transparent 4px, $background-color 4px) no-repeat,
+        linear-gradient(to bottom, transparent 4px, $background-color 4px) no-repeat,
+        linear-gradient(to right, transparent 4px, $background-color 4px) no-repeat,
+        linear-gradient(to top, transparent 4px, $background-color 4px) no-repeat;
       background-position: 100% 0, 100% 0, 0 100%, 0 100%;
       background-size: calc(100% - 4px) 4px, 4px calc(100% - 4px);
     }
 
-    @include thsAndTdsBoxShadow(#fff);
+    @include thsAndTdsBoxShadow($background-color);
   }
 }

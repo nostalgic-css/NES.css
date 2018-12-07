@@ -821,24 +821,13 @@ button,
   box-shadow: 4px -4px #212529, -4px -4px #212529, -4px 4px #212529, 4px 4px #212529;
 }
 
-.table.is-dark::before, .table.is-dark::after {
-  position: absolute;
-  content: "";
-}
-
-.table.is-dark::after {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-}
-
 .table.is-dark::before {
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  content: "";
   background: linear-gradient(to left, transparent 4px, #fff 4px) no-repeat, linear-gradient(to bottom, transparent 4px, #fff 4px) no-repeat, linear-gradient(to right, transparent 4px, #fff 4px) no-repeat, linear-gradient(to top, transparent 4px, #fff 4px) no-repeat;
   background-position: 100% 0, 100% 0, 0 100%, 0 100%;
   background-size: calc(100% - 4px) 4px, 4px calc(100% - 4px);
