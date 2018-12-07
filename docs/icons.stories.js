@@ -11,6 +11,7 @@ stories.add('icon', () => {
     'icon twitter': 'icon twitter',
     'icon facebook': 'icon facebook',
     'icon github': 'icon github',
+    'icon google': 'icon google',
     'icon youtube': 'icon youtube',
     'icon close': 'icon close',
     'octocat animate': 'octocat animate',
