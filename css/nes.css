@@ -8,7 +8,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
  */
-@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
 *,
 *::before,
 *::after {
@@ -350,11 +349,24 @@ samp {
   font-family: "Press Start 2P";
 }
 
+html {
+  cursor: url(../assets/cursor.png), auto;
+}
+
 body {
   font-size: 16px;
   color: #212529;
   background-color: #fff;
   -webkit-font-smoothing: none;
+}
+
+label {
+  cursor: inherit;
+}
+
+a,
+button {
+  cursor: url(../assets/cursor-click.png), pointer;
 }
 
 button,
@@ -380,7 +392,7 @@ button,
   margin: 4px;
   text-align: center;
   vertical-align: middle;
-  cursor: pointer;
+  cursor: url(../assets/cursor-click.png), pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -426,6 +438,14 @@ button,
 
 .btn:focus {
   outline: 0;
+}
+
+.btn.is-disabled, .btn.is-disabled:hover, .btn.is-disabled:focus {
+  color: #212529;
+  cursor: not-allowed;
+  background-color: #d3d3d3;
+  box-shadow: inset -4px -4px #adafbc;
+  opacity: 0.6;
 }
 
 .btn.is-primary {
@@ -545,6 +565,14 @@ button,
   left: -8px;
 }
 
+.container.is-center {
+  text-align: center;
+}
+
+.container.is-right {
+  text-align: right;
+}
+
 .container.with-title {
   padding-top: 2rem;
 }
@@ -557,16 +585,8 @@ button,
   background-color: #fff;
 }
 
-.container.with-title.is-center {
-  text-align: center;
-}
-
 .container.with-title.is-center > .title {
   margin: -2rem auto 1rem;
-}
-
-.container.with-title.is-right {
-  text-align: right;
 }
 
 .container.with-title.is-right > .title {
@@ -595,7 +615,7 @@ button,
 
 .radio + span {
   position: relative;
-  cursor: pointer;
+  cursor: url(../assets/cursor-click.png), pointer;
 }
 
 .radio:checked + span::before {
@@ -639,7 +659,7 @@ button,
 
 .checkbox + span {
   position: relative;
-  cursor: pointer;
+  cursor: url(../assets/cursor-click.png), pointer;
 }
 
 .checkbox + span::before,
@@ -792,6 +812,43 @@ button,
 
 .table.is-bordered tr td:not(:first-child) {
   box-shadow: -4px 0 #212529, 0 -4px #212529;
+}
+
+.table.is-dark {
+  position: relative;
+  color: #fff;
+  background-color: #212529;
+  box-shadow: 4px -4px #212529, -4px -4px #212529, -4px 4px #212529, 4px 4px #212529;
+}
+
+.table.is-dark::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background: linear-gradient(to left, transparent 4px, #fff 4px) no-repeat, linear-gradient(to bottom, transparent 4px, #fff 4px) no-repeat, linear-gradient(to right, transparent 4px, #fff 4px) no-repeat, linear-gradient(to top, transparent 4px, #fff 4px) no-repeat;
+  background-position: 100% 0, 100% 0, 0 100%, 0 100%;
+  background-size: calc(100% - 4px) 4px, 4px calc(100% - 4px);
+}
+
+.table.is-dark th,
+.table.is-dark td {
+  padding: 0.5rem;
+  word-wrap: break-word;
+}
+
+.table.is-dark tr th + th {
+  box-shadow: -4px 0 #fff;
+}
+
+.table.is-dark tr td {
+  box-shadow: 0 -4px #fff;
+}
+
+.table.is-dark tr td:not(:first-child) {
+  box-shadow: -4px 0 #fff, 0 -4px #fff;
 }
 
 .input {

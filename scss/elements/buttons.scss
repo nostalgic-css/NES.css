@@ -83,7 +83,7 @@
   margin: $border-size;
   text-align: center;
   vertical-align: middle;
-  cursor: pointer;
+  cursor: $cursor-click-url, pointer;
   user-select: none;
 
   @include btn-style($base-color, #fff, #e7e7e7, #adafbc);
@@ -116,6 +116,16 @@
 
   &:focus {
     outline: 0;
+  }
+
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus {
+    color: $base-color;
+    cursor: not-allowed;
+    background-color: #d3d3d3;
+    box-shadow: inset -4px -4px #adafbc;
+    opacity: 0.6;
   }
 
   // Other styles

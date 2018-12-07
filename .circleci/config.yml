@@ -1,0 +1,199 @@
+version: 2.1
+
+defaults: &defaults
+  docker:
+    - image: circleci/node
+
+  working_directory: ~/app
+
+
+
+
+
+jobs:
+  checkout:
+    <<: *defaults
+
+    steps:
+      - restore_cache:
+          name: Restore Repository Cache
+          keys:
+            - repo-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+            - repo-{{ .Branch }}
+            - repo-master
+            - repo-
+
+      - checkout
+
+      - save_cache:
+          name: Save Repository Cache
+          key: repo-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - .
+
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+
+  install-dependencies:
+    <<: *defaults
+
+    steps:
+      - attach_workspace:
+          at: .
+
+      - restore_cache:
+          name: Restore npm Package Cache
+          keys:
+            - npm-{{ checksum "package-lock.json" }}
+            - npm-
+
+      - run:
+          name: Install Dependencies
+          command: npm install
+
+      - save_cache:
+          name: Save npm Package Cache
+          key: npm-{{ checksum "package-lock.json" }}
+          paths:
+            - node_modules
+
+      - persist_to_workspace:
+          root: .
+          paths:
+            - node_modules
+
+  build:
+    <<: *defaults
+
+    steps:
+      - attach_workspace:
+          at: .
+
+      - restore_cache:
+          name: Restore Build Cache
+          keys:
+            - build-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+            - build-{{ .Branch }}
+            - build-master
+            - build-
+
+      - run:
+          name: Build the Framework
+          command: npm run build
+
+      - save_cache:
+          name: Save Build Cache
+          key: build-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - css
+
+      - persist_to_workspace:
+          root: .
+          paths:
+            - css
+
+  commitlint:
+    <<: *defaults
+
+    steps:
+      - attach_workspace:
+          at: .
+
+      - run:
+          name: Lint commit messages
+          command: npx semantic-commitlint -- --ci
+
+  lint:
+    <<: *defaults
+
+    steps:
+      - attach_workspace:
+          at: .
+
+      - run:
+          name: Lint styles
+          command: npx stylelint -- --fix
+
+  # test:
+  #   <<: *defaults
+
+  #   steps:
+  #     - attach_workspace:
+  #         at: .
+
+  #     - run:
+  #         name: Add Yarn Binary Folder To $PATH
+  #         command: export PATH="$PATH:`yarn global bin`"
+
+  #     - run:
+  #         name: Run tests
+  #         command: yarn test
+
+  # coverage:
+  #   <<: *defaults
+
+  #   steps:
+  #     - attach_workspace:
+  #         at: .
+
+  #     - run:
+  #         name: Add Yarn Binary Folder To $PATH
+  #         command: export PATH="$PATH:`yarn global bin`"
+
+  #     - run:
+  #         name: Generate and upload coverage report
+  #         command: yarn test-coverage
+
+  release:
+    <<: *defaults
+
+    steps:
+      - attach_workspace:
+          at: .
+
+      - run:
+          command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+
+      - run:
+          name: Release
+          command: npx semantic-release
+
+
+
+
+
+workflows:
+  version: 2
+
+  main:
+    jobs:
+      - checkout
+      - install-dependencies:
+          requires:
+            - checkout
+      # - test:
+      #     requires:
+      #       - install-dependencies
+      # - coverage:
+      #     requires:
+      #       - install-dependencies
+      - commitlint:
+          requires:
+            - install-dependencies
+      - lint:
+          requires:
+            - install-dependencies
+      - build:
+          requires:
+            - install-dependencies
+      - release:
+          requires:
+            - commitlint
+            - build
+            - lint
+            # - test
+          filters:
+            branches:
+              only: master
