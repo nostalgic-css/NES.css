@@ -565,6 +565,14 @@ button,
   left: -8px;
 }
 
+.container.is-center {
+  text-align: center;
+}
+
+.container.is-right {
+  text-align: right;
+}
+
 .container.with-title {
   padding-top: 2rem;
 }
@@ -577,16 +585,8 @@ button,
   background-color: #fff;
 }
 
-.container.with-title.is-center {
-  text-align: center;
-}
-
 .container.with-title.is-center > .title {
   margin: -2rem auto 1rem;
-}
-
-.container.with-title.is-right {
-  text-align: right;
 }
 
 .container.with-title.is-right > .title {

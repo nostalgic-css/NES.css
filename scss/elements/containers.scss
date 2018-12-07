@@ -72,6 +72,14 @@
     }
   }
 
+  &.is-center {
+    text-align: center;
+  }
+
+  &.is-right {
+    text-align: right;
+  }
+
   &.with-title {
     padding-top: 2rem;
 
@@ -84,16 +92,12 @@
     }
 
     &.is-center {
-      text-align: center;
-
       > .title {
         margin: -2rem auto 1rem;
       }
     }
 
     &.is-right {
-      text-align: right;
-
       > .title {
         margin: -2rem 0 1rem auto;
       }
