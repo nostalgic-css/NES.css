@@ -9,6 +9,9 @@
 @import "github.scss";
 @import "youtube.scss";
 @import "google.scss";
+@import "medium.scss";
+@import "twitch.scss";
+@import "reddit.scss";
 
 // others
 @import "close.scss";
@@ -82,6 +85,18 @@
 
     &.google::before {
       @include pixelize($icon-google, $icon-google-colors, $px);
+    }
+
+    &.medium::before {
+      @include pixelize($icon-medium, $icon-medium-colors, $px);
+    }    
+    
+    &.twitch::before {
+      @include pixelize($icon-twitch, $icon-twitch-colors, $px);
+    }
+    
+    &.reddit::before {
+      @include pixelize($icon-reddit, $icon-reddit-colors, $px);
     }
   }
 
