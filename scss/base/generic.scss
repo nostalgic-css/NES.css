@@ -9,11 +9,24 @@ samp {
   font-family: $font-family;
 }
 
+html {
+  cursor: $cursor-url, auto;
+}
+
 body {
   font-size: $font-size;
   color: $base-color;
   background-color: $background-color;
-  -webkit-font-smoothing: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+label {
+  cursor: inherit;
+}
+
+a,
+button {
+  cursor: $cursor-click-url, pointer;
 }
 
 button,
@@ -21,4 +34,10 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: none;
+}
+
+// Prevent stray pixels on focused inputs such as checkboxes and radios
+input[type="radio"],
+input[type="checkbox"] {
+  outline: 0;
 }

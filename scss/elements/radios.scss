@@ -28,7 +28,7 @@
 
   & + span {
     position: relative;
-    cursor: pointer;
+    cursor: $cursor-click-url, pointer;
   }
 
   &:checked + span::before {

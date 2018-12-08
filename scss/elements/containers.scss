@@ -72,6 +72,14 @@
     }
   }
 
+  &.is-center {
+    text-align: center;
+  }
+
+  &.is-right {
+    text-align: right;
+  }
+
   &.with-title {
     padding-top: 2rem;
 
@@ -83,24 +91,27 @@
       background-color: $background-color;
     }
 
-    &.is-center {
-      text-align: center;
-
+    &.is-rounded {
       > .title {
-        margin: -2rem auto 1rem;
+        margin-top: -2.4rem;
+      }
+    }
+
+    &.is-center {
+      > .title {
+        margin: -2.4rem auto 1rem;
       }
     }
 
     &.is-right {
-      text-align: right;
-
       > .title {
-        margin: -2rem 0 1rem auto;
+        margin: -2.4rem 0 1rem auto;
       }
     }
   }
 
   &.is-dark {
+    color: $background-color;
     &::before {
       background-color: $base-color;
     }
