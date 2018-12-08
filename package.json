@@ -3,17 +3,17 @@
   "version": "0.0.0-development",
   "description": "NES.css is NES-style CSS Framework.",
   "scripts": {
-    "watch": "npm run build:sass -- --watch",
-    "build": "npm run build:clean && npm run build:stylelint && npm run build:sass && npm run build:autoprefix && npm run build:cleancss && npm run build:storybook",
+    "watch": "yarn run build:sass -- --watch",
+    "build": "yarn run build:clean && yarn run build:stylelint && yarn run build:sass && yarn run build:autoprefix && yarn run build:cleancss && yarn run build:storybook",
     "stylelint": "stylelint scss/**/*.scss",
-    "build:stylelint": "npm run stylelint -- --fix",
+    "build:stylelint": "yarn run stylelint -- --fix",
     "build:clean": "rimraf css",
     "build:sass": "node-sass --output-style expanded --source-map true scss/nes.scss css/nes.css",
     "build:autoprefix": "postcss --use autoprefixer --map false --output css/nes.css css/nes.css",
     "build:cleancss": "cleancss -o css/nes.min.css css/nes.css",
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook",
-    "deploy": "npm run build",
+    "deploy": "yarn run build",
     "semantic-commitlint": "semantic-commitlint",
     "semantic-release": "semantic-release",
     "commit": "git-cz",
@@ -76,12 +76,12 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged",
-      "prepare-commit-msg": "npm run semantic-commitlint -- -h"
+      "prepare-commit-msg": "yarn run semantic-commitlint -- -h"
     }
   },
   "lint-staged": {
     "scss/**/*.scss": [
-      "npm run build",
+      "yarn run build",
       "git add"
     ],
     "*.js": [
