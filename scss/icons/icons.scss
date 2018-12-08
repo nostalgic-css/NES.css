@@ -11,6 +11,7 @@
 @import "google.scss";
 @import "medium.scss";
 @import "twitch.scss";
+@import "reddit.scss";
 
 // others
 @import "close.scss";
@@ -92,6 +93,10 @@
     
     &.twitch::before {
       @include pixelize($icon-twitch, $icon-twitch-colors, $px);
+    }
+    
+    &.reddit::before {
+      @include pixelize($icon-reddit, $icon-reddit-colors, $px);
     }
   }
 
