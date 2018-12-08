@@ -15,6 +15,7 @@ stories.add('icon', () => {
     'icon youtube': 'icon youtube',
     'icon close': 'icon close',
     pokeball: 'pokeball',
+    bulbasaur: 'bulbasaur',
     'octocat animate': 'octocat animate',
     'icon trophy': 'icon trophy',
     'nes-logo': 'nes-logo',
