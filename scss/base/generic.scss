@@ -17,7 +17,7 @@ body {
   font-size: $font-size;
   color: $base-color;
   background-color: $background-color;
-  -webkit-font-smoothing: none;
+  -webkit-font-smoothing: antialiased;
 }
 
 label {
