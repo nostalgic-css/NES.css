@@ -30,8 +30,6 @@
   display: inline-block;
   width: $px * 8;
   height: $px * 21;
-  margin: 0 2.2em 0 1.5em;
-  transform: rotate(-45deg);
 
   &::before {
     position: absolute;
