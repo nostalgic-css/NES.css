@@ -54,7 +54,7 @@
 
   & + span {
     position: relative;
-    cursor: pointer;
+    cursor: $cursor-click-url, pointer;
   }
 
   & + span::before,
