@@ -8,6 +8,7 @@
 @import "facebook.scss";
 @import "github.scss";
 @import "youtube.scss";
+@import "google.scss";
 @import "medium.scss";
 
 // others
@@ -80,9 +81,13 @@
       @include pixelize($icon-youtube, $icon-youtube-colors, $px);
     }
 
+    &.google::before {
+      @include pixelize($icon-google, $icon-google-colors, $px);
+    }
+
     &.medium::before {
       @include pixelize($icon-medium, $icon-medium-colors, $px);
-    }
+    }    
   }
 
   // default
