@@ -4,14 +4,16 @@
   "description": "NES.css is NES-style CSS Framework.",
   "scripts": {
     "watch": "npm run build:sass -- --watch",
-    "build": "npm run build:clean && npm run build:stylelint && npm run build:sass && npm run build:autoprefix && npm run build:cleancss",
+    "build": "npm run build:clean && npm run build:stylelint && npm run build:sass && npm run build:autoprefix && npm run build:cleancss && npm run build-storybook",
     "stylelint": "stylelint scss/**/*.scss",
     "build:stylelint": "npm run stylelint -- --fix",
     "build:clean": "rimraf css",
     "build:sass": "node-sass --output-style expanded --source-map true scss/nes.scss css/nes.css",
     "build:autoprefix": "postcss --use autoprefixer --map false --output css/nes.css css/nes.css",
     "build:cleancss": "cleancss -o css/nes.min.css css/nes.css",
-    "deploy": "npm run build"
+    "deploy": "npm run build",
+    "storybook": "start-storybook -p 6006",
+    "build:storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -30,8 +32,14 @@
   },
   "homepage": "https://github.com/BcRikko/NES.css#readme",
   "devDependencies": {
+    "@storybook/addon-knobs": "^4.0.11",
+    "@storybook/html": "^4.0.11",
     "autoprefixer": "^9.1.5",
+    "babel-loader": "^8.0.4",
     "clean-css-cli": "^4.2.1",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
     "husky": "^1.0.0",
     "lint-staged": "^7.3.0",
     "node-sass": "^4.9.3",
@@ -58,6 +66,10 @@
       "npm run build",
       "git add ./css",
       "git add"
+    ],
+    "*.js": [
+      "eslint .",
+      "git add"
     ]
   },
   "prettier": {
@@ -79,5 +91,8 @@
       "at-rule-no-unknown": null,
       "scss/at-rule-no-unknown": true
     }
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base"
   }
 }
