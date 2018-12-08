@@ -17,7 +17,7 @@ body {
   font-size: $font-size;
   color: $base-color;
   background-color: $background-color;
-  -webkit-font-smoothing: none;
+  -webkit-font-smoothing: antialiased;
 }
 
 label {
@@ -37,6 +37,7 @@ button,
 }
 
 // Prevent stray pixels on focused inputs such as checkboxes and radios
-input {
+input[type="radio"],
+input[type="checkbox"] {
   outline: 0;
 }
