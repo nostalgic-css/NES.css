@@ -9,6 +9,7 @@
 @import "github.scss";
 @import "youtube.scss";
 @import "google.scss";
+@import "medium.scss";
 
 // others
 @import "close.scss";
@@ -83,6 +84,10 @@
     &.google::before {
       @include pixelize($icon-google, $icon-google-colors, $px);
     }
+
+    &.medium::before {
+      @include pixelize($icon-medium, $icon-medium-colors, $px);
+    }    
   }
 
   // default
