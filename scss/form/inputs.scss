@@ -53,3 +53,18 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .field.is-inline {
+    display: block;
+
+    > label {
+      margin-bottom: 0.5rem; // reboot.css:label
+      text-align: left;
+    }
+
+    .input {
+      max-width: 100%;
+    }
+  }
+}
