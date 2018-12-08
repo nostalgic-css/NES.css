@@ -4,7 +4,7 @@
   "description": "NES.css is NES-style CSS Framework.",
   "scripts": {
     "watch": "npm run build:sass -- --watch",
-    "build": "npm run build:clean && npm run build:stylelint && npm run build:sass && npm run build:autoprefix && npm run build:cleancss && npm run build-storybook",
+    "build": "npm run build:clean && npm run build:stylelint && npm run build:sass && npm run build:autoprefix && npm run build:cleancss && npm run build:storybook",
     "stylelint": "stylelint scss/**/*.scss",
     "build:stylelint": "npm run stylelint -- --fix",
     "build:clean": "rimraf css",
