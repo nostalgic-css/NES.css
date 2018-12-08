@@ -10,6 +10,7 @@
 @import "youtube.scss";
 @import "google.scss";
 @import "medium.scss";
+@import "twitch.scss";
 
 // others
 @import "close.scss";
@@ -88,6 +89,10 @@
     &.medium::before {
       @include pixelize($icon-medium, $icon-medium-colors, $px);
     }    
+    
+    &.twitch::before {
+      @include pixelize($icon-twitch, $icon-twitch-colors, $px);
+    }
   }
 
   // default
