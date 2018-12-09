@@ -55,6 +55,9 @@
     &.trophy::before {
       @include pixelize($icon-trophy, $icon-trophy-colors, $px);
     }
+    &.trophy.is-empty::before {
+      @include pixelize($icon-trophy-empty, $icon-trophy-empty-colors, $px);
+    }
 
     &.like::before {
       @include pixelize($icon-like, $icon-like-colors, $px);
@@ -89,12 +92,12 @@
 
     &.medium::before {
       @include pixelize($icon-medium, $icon-medium-colors, $px);
-    }    
-    
+    }
+
     &.twitch::before {
       @include pixelize($icon-twitch, $icon-twitch-colors, $px);
     }
-    
+
     &.reddit::before {
       @include pixelize($icon-reddit, $icon-reddit-colors, $px);
     }
@@ -102,6 +105,10 @@
 
   // default
   @include setup(2px);
+
+  &.is-small {
+    @include setup(1px);
+  }
 
   &.is-medium {
     @include setup(3px);
