@@ -16,6 +16,27 @@ div.containers > .container {
   max-width: 400px;
 }
 
+div.tables {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.tables > .table {
+  min-width: 350px;
+  max-width: calc(50% - 2rem);
+}
+div.tables > .table:first-child {
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  div.tables > .table {
+    max-width: 100%;
+    margin-right: 0;
+  }
+}
+
 .balloon.container .balloon {
   max-width: 600px;
   margin: 2rem 2rem;
