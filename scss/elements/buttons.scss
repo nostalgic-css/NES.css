@@ -88,9 +88,9 @@
 
   @include btn-style(
     $base-color,
-    map-get($btn-colors, "normal"),
-    map-get($btn-colors, "hover"),
-    map-get($btn-colors, "shadow")
+    map-get($default-colors, "normal"),
+    map-get($default-colors, "hover"),
+    map-get($default-colors, "shadow")
   );
 
   &::before,
@@ -128,8 +128,8 @@
   &.is-disabled:focus {
     color: $base-color;
     cursor: not-allowed;
-    background-color: map-get($disabled-btn-colors, "normal");
-    box-shadow: inset -4px -4px map-get($disabled-btn-colors, "shadow");
+    background-color: map-get($disabled-colors, "normal");
+    box-shadow: inset -4px -4px map-get($disabled-colors, "shadow");
     opacity: 0.6;
   }
 
@@ -152,9 +152,9 @@
     padding: 6px 8px;
     @include btn-extra-pixelize-style(
       $base-color,
-      map-get($btn-colors, "normal"),
-      map-get($btn-colors, "hover"),
-      map-get($btn-colors, "shadow")
+      map-get($default-colors, "normal"),
+      map-get($default-colors, "hover"),
+      map-get($default-colors, "shadow")
     );
 
     &::before,

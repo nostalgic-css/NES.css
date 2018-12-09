@@ -14,16 +14,16 @@
   margin: 4px;
   border: none;
 
-  @include border-style($base-color, #e7e7e7);
+  @include border-style($base-color, map-get($default-colors, "hover"));
 
   &.is-success {
-    @include border-style(#92cc41, #76c442);
+    @include border-style(map-get($success-colors, "normal"), map-get($success-colors, "hover"));
   }
   &.is-warning {
-    @include border-style(#f7d51d, #f2c409);
+    @include border-style(map-get($warning-colors, "normal"), map-get($warning-colors, "hover"));
   }
   &.is-error {
-    @include border-style(#e76e55, #ce372b);
+    @include border-style(map-get($error-colors, "normal"), map-get($error-colors, "hover"));
   }
 }
 

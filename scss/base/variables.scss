@@ -8,12 +8,12 @@ $background-color: $color-white;
 $cursor-url: url(../assets/cursor.png);
 $cursor-click-url: url(../assets/cursor-click.png);
 
-$btn-colors: (
+$default-colors: (
   normal: $background-color,
   hover: #e7e7e7,
   shadow: #adafbc
 );
-$disabled-btn-colors: (
+$disabled-colors: (
   normal: #d3d3d3,
   shadow: #adafbc
 );
