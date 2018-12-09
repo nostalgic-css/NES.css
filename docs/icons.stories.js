@@ -19,6 +19,7 @@ stories.add('icon', () => {
     smartphone: 'smartphone',
     phone: 'phone',
     'octocat animate': 'octocat animate',
+    ash: 'ash',
     'icon trophy': 'icon trophy',
     'nes-logo': 'nes-logo',
     'nes-jp-logo': 'nes-jp-logo',
