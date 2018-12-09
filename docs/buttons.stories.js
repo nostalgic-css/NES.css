@@ -13,6 +13,7 @@ stories.add('button', () => {
     'is-success': 'is-success',
     'is-warning': 'is-warning',
     'is-error': 'is-error',
+    'is-disabled': 'is-disabled',
   }, '');
   return `<button type="button" class="btn ${extraClass}">Normal</button>`;
 });

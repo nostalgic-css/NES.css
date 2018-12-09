@@ -11,6 +11,7 @@
 
     <title>NES.css - NES-style CSS Framework</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="./css/nes.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
 
@@ -47,6 +48,7 @@
         <button type="button" class="btn is-success">Success</button>
         <button type="button" class="btn is-warning">Warning</button>
         <button type="button" class="btn is-error">Error</button>
+        <button type="button" class="btn is-disabled">Disabled</button>
       </div>
     </section>
 
@@ -59,13 +61,13 @@
         </div>
         <div class="container is-dark with-title">
           <p class="title">Container.is-dark</p>
-          <p style="color: white;">Good morning. Thou hast had a good night's sleep, I hope.</p>
+          <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
         </div>
         <div class="container is-rounded">
           <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
         </div>
         <div class="container is-rounded is-dark">
-          <p style="color: white;">Good morning. Thou hast had a good night's sleep, I hope.</p>
+          <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
         </div>
       </div>
     </section>
@@ -130,12 +132,11 @@
       </div>
     </section>
 
-    <section class="container with-title">
+    <section class="container with-title" style="display:flex">
       <h2 class="title">Table</h2>
-      <table class="table is-bordered is-centered" style="margin:15px 4px 5px 4px">
+      <table class="table is-bordered is-centered" style="margin:15px 15px 5px 0;">
         <thead>
           <tr>
-            <th>Table</th>
             <th>Table.is-bordered</th>
             <th>Table.is-centered</th>
           </tr>
@@ -144,12 +145,28 @@
           <tr>
             <td>Thou hast had a good morning</td>
             <td>Thou hast had a good afternoon</td>
-            <td>Thou hast had a good night</td>
           </tr>
           <tr>
             <td>Thou hast had a good morning</td>
             <td>Thou hast had a good afternoon</td>
-            <td>Thou hast had a good night</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table is-bordered is-dark" style="margin:15px 4px 5px 15px">
+        <thead>
+          <tr>
+            <th>Table.is-dark</th>
+            <th>Table.is-bordered</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Thou hast had a good morning</td>
+            <td>Thou hast had a good morning</td>
+          </tr>
+          <tr>
+            <td>Thou hast had a good morning</td>
+            <td>Thou hast had a good afternoon</td>
           </tr>
         </tbody>
       </table>
@@ -194,6 +211,22 @@
           <i class="icon youtube"></i>
           <i class="icon youtube is-medium"></i>
           <i class="icon youtube is-large"></i>
+
+          <i class="icon google"></i>
+          <i class="icon google is-medium"></i>
+          <i class="icon google is-large"></i>
+
+          <i class="icon medium"></i>
+          <i class="icon medium is-medium"></i>
+          <i class="icon medium is-large"></i>
+
+          <i class="icon twitch"></i>
+          <i class="icon twitch is-medium"></i>
+          <i class="icon twitch is-large"></i>
+        
+          <i class="icon reddit"></i>
+          <i class="icon reddit is-medium"></i>
+          <i class="icon reddit is-large"></i>
         </div>
       </section>
 
@@ -209,6 +242,8 @@
           <i class="icon trophy"></i>
           <i class="icon trophy is-medium"></i>
           <i class="icon trophy is-large"></i>
+
+          <i class="pokeball"></i>
         </div>
       </section>
 
