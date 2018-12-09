@@ -19,7 +19,7 @@
     (2,2,2,2,0,0),
     (2,2,0,0,0,0),
   );
-  $colors: ($base-color, #adafbc);
+  $colors: ($base-color, map-get($default-colors, "shadow"));
 
   margin-right: 20px;
   -webkit-appearance: none;
