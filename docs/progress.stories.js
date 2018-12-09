@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html'; // eslint-disable-line import/no-extraneous-dependencies
 import { // eslint-disable-line import/no-extraneous-dependencies
-  withKnobs, number,
+  withKnobs, number, boolean,
 } from '@storybook/addon-knobs';
 
 const stories = storiesOf('Progress', module);
@@ -14,5 +14,7 @@ stories.add('progress', () => {
     max: 100,
     step: 1,
   });
-  return `<progress class="nes-progress" value="${percentage}" max="100" style="width: 98%;"></progress>`;
+  const isFilled = boolean('is-filled', false) ? 'is-filled' : '';
+  const selectedClasses = [isFilled];
+  return `<progress class="nes-progress ${selectedClasses.join(' ')}" value="${percentage}" max="100" style="width: 98%;"></progress>`;
 });

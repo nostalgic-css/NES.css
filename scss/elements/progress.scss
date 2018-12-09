@@ -73,4 +73,18 @@
     background-size: 20px 20px;
     border: none;
   }
+
+  &.is-filled {
+    &::-webkit-progress-value {
+      background-image: none;
+    }
+
+    &::-moz-progress-bar {
+      background-image: none;
+    }
+
+    &::-ms-fill {
+      background-image: none;
+    }
+  }
 }
