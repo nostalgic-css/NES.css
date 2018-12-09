@@ -89,12 +89,12 @@
 
     &.medium::before {
       @include pixelize($icon-medium, $icon-medium-colors, $px);
-    }    
-    
+    }
+
     &.twitch::before {
       @include pixelize($icon-twitch, $icon-twitch-colors, $px);
     }
-    
+
     &.reddit::before {
       @include pixelize($icon-reddit, $icon-reddit-colors, $px);
     }
