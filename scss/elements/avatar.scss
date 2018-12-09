@@ -1,28 +1,28 @@
-@mixin before($px) {
+@mixin before($px, $color: #b3b3b3) {
   &::before {
     position: absolute;
     top: $px + 10px * -1;
-    left: $px + 14px * -1;
+    left: $px + 16px * -1;
     width: $px;
     height: $px;
     content: "";
     background: transparent;
     box-shadow: 4px 4px 0 transparent, 8px 4px 0 transparent, 12px 4px 0 transparent,
-      16px 4px 0 #9d9f9f, 20px 4px 0 #9d9f9f, 24px 4px 0 transparent, 28px 4px 0 transparent,
-      32px 4px 0 transparent, 4px 8px 0 transparent, 8px 8px 0 transparent, 12px 8px 0 #9d9f9f,
-      16px 8px 0 transparent, 20px 8px 0 transparent, 24px 8px 0 #9d9f9f, 28px 8px 0 transparent,
-      32px 8px 0 transparent, 4px 12px 0 transparent, 8px 12px 0 #9d9f9f, 12px 12px 0 transparent,
-      16px 12px 0 transparent, 20px 12px 0 transparent, 24px 12px 0 transparent, 28px 12px 0 #9d9f9f,
-      32px 12px 0 transparent, 4px 16px 0 #9d9f9f, 8px 16px 0 transparent, 12px 16px 0 transparent,
+      16px 4px 0 $color, 20px 4px 0 $color, 24px 4px 0 transparent, 28px 4px 0 transparent,
+      32px 4px 0 transparent, 4px 8px 0 transparent, 8px 8px 0 $color, 12px 8px 0 $color,
+      16px 8px 0 transparent, 20px 8px 0 transparent, 24px 8px 0 $color, 28px 8px 0 $color,
+      32px 8px 0 transparent, 4px 12px 0 transparent, 8px 12px 0 $color, 12px 12px 0 transparent,
+      16px 12px 0 transparent, 20px 12px 0 transparent, 24px 12px 0 transparent, 28px 12px 0 $color,
+      32px 12px 0 transparent, 4px 16px 0 $color, 8px 16px 0 transparent, 12px 16px 0 transparent,
       16px 16px 0 transparent, 20px 16px 0 transparent, 24px 16px 0 transparent,
-      28px 16px 0 transparent, 32px 16px 0 #9d9f9f, 4px 20px 0 #9d9f9f, 8px 20px 0 transparent,
+      28px 16px 0 transparent, 32px 16px 0 $color, 4px 20px 0 $color, 8px 20px 0 transparent,
       12px 20px 0 transparent, 16px 20px 0 transparent, 20px 20px 0 transparent,
-      24px 20px 0 transparent, 28px 20px 0 transparent, 32px 20px 0 #9d9f9f, 4px 24px 0 transparent,
-      8px 24px 0 #9d9f9f, 12px 24px 0 transparent, 16px 24px 0 transparent, 20px 24px 0 transparent,
-      24px 24px 0 transparent, 28px 24px 0 #9d9f9f, 32px 24px 0 transparent, 4px 28px 0 transparent,
-      8px 28px 0 transparent, 12px 28px 0 #9d9f9f, 16px 28px 0 transparent, 20px 28px 0 transparent,
-      24px 28px 0 #9d9f9f, 28px 28px 0 transparent, 32px 28px 0 transparent, 4px 32px 0 transparent,
-      8px 32px 0 transparent, 12px 32px 0 transparent, 16px 32px 0 #9d9f9f, 20px 32px 0 #9d9f9f,
+      24px 20px 0 transparent, 28px 20px 0 transparent, 32px 20px 0 $color, 4px 24px 0 transparent,
+      8px 24px 0 $color, 12px 24px 0 transparent, 16px 24px 0 transparent, 20px 24px 0 transparent,
+      24px 24px 0 transparent, 28px 24px 0 $color, 32px 24px 0 transparent, 4px 28px 0 transparent,
+      8px 28px 0 $color, 12px 28px 0 $color, 16px 28px 0 transparent, 20px 28px 0 transparent,
+      24px 28px 0 $color, 28px 28px 0 $color, 32px 28px 0 transparent, 4px 32px 0 transparent,
+      8px 32px 0 transparent, 12px 32px 0 transparent, 16px 32px 0 $color, 20px 32px 0 $color,
       24px 32px 0 transparent, 28px 32px 0 transparent, 32px 32px 0 transparent;
   }
 }
@@ -30,7 +30,7 @@
   position: relative;
 
   &.is-small {
-    $small: 1.3px;
+    $small: 1px;
     img {
       $size: $small * 16;
 
