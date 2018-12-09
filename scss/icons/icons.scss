@@ -12,6 +12,7 @@
 @import "medium.scss";
 @import "twitch.scss";
 @import "reddit.scss";
+@import "whatsapp.scss";
 
 // others
 @import "close.scss";
@@ -54,6 +55,9 @@
 
     &.trophy::before {
       @include pixelize($icon-trophy, $icon-trophy-colors, $px);
+    }
+    &.trophy.is-empty::before {
+      @include pixelize($icon-trophy-empty, $icon-trophy-empty-colors, $px);
     }
 
     &.like::before {
@@ -98,10 +102,18 @@
     &.reddit::before {
       @include pixelize($icon-reddit, $icon-reddit-colors, $px);
     }
+
+    &.whatsapp::before {
+      @include pixelize($icon-whatsapp, $icon-whatsapp-colors, $px);
+    }
   }
 
   // default
   @include setup(2px);
+
+  &.is-small {
+    @include setup(1px);
+  }
 
   &.is-medium {
     @include setup(3px);
