@@ -4,11 +4,11 @@
   <a href="README.md">English</a> / <a href="README-jp.md">日本語</a> / <a href="README-es.md">Español</a> / <a href="README-pt-BR.md">Português</a>
 </div>
 
-NES.css é um Framework CSS **Estilo NES(8bit)**.
+NES.css is a **NES-style(8bit-like)** CSS Framework.
 
 [![Gitter][gitter-badge]][gitter] [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-## Instalação
+## Install
 
 ### CDN
 
@@ -19,7 +19,7 @@ NES.css é um Framework CSS **Estilo NES(8bit)**.
 <link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" />
 ```
 
-OU
+OR
 
 ```html
 <!-- non-minified -->
@@ -30,13 +30,13 @@ OU
 
 ### npm
 
-TODO: Como utilizar com npm
+TODO: npm での使用方法を書く
 
-## Utilização
+## Usage
 
-NES.css apenas fornece os componentes. Você precisará definir seu próprio layout.
+NES.css only provides components. You will need to define your own layout.
 
-A fonte padrão é a [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P?selection.family=Press+Start+2P) o qual oferece suporte apenas para caracteres ingleses. Quando você estiver usando este framework in qualquer outro idioma com exceção do inglês, por favor use outra fonte. Por favor, siga as [instruções](https://developers.google.com/fonts/docs/getting_started) fornecida pelo Google Fonts sobre como incluí-la, ou simplismente faça a inclusão como consta abaixo:
+The default font is [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P?selection.family=Press+Start+2P) which only supports English characters. When you're using this framework with any language except English, please use another font. Please follow the [instructions](https://developers.google.com/fonts/docs/getting_started) from Google Fonts about how to include them, or simply include it as below:
 
 ```html
 <head>
@@ -50,35 +50,35 @@ A fonte padrão é a [Press Start 2P](https://fonts.google.com/specimen/Press+St
 </head>
 ```
 
-### Fontes Recomendadas
+### Recommended Fonts
 
-|Idioma|Fonte|
+|Language|Font|
 |----|----|
-|(Padrão)|[Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P)|
-|Inglês|[Kongtext](https://www.dafont.com/kongtext.font)|
-|Japonês|[美咲フォント](http://www.geocities.jp/littlimi/misaki.htm)|
-|Japonês|[Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)|
+|(Default)|[Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P)|
+|English|[Kongtext](https://www.dafont.com/kongtext.font)|
+|Japanese|[美咲フォント](http://www.geocities.jp/littlimi/misaki.htm)|
+|Japanese|[Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)|
 
 
-## Exclusivamente CSS
+## CSS Only
 
-NES.css apenas usa CSS e não depende de qualquer JavaScript.
+NES.css only requires CSS and doesn't depend on any JavaScript.
 
 
-## Suporte para Browser
+## Browser Support
 
-NES.css é compatível com as mais novas versões dos seguintes browsers.
+NES.css is compatible with the newest version of the following browsers.
 * Chrome
 * Firefox
 * Safari
 
-Não testado
+Untested
 * IE/Edge
 
 
-## Desenvolvimento
+## Development
 
-### Comandos
+### Commands
 ```sh
 git clone git@github.com:BcRikko/NES.css.git
 cd NES.css
@@ -89,38 +89,38 @@ npm run watch
 npm run build
 ```
 
-#### Execute Storybook
+#### Run Storybook
 ```
 npm run storybook
 ```
 
-Lint, formatação e build são executados automaticamente em um hook de pré-commit.
-TODO: Mudar a compilação para fazer com CI
+Linting, formatting and building runs automatically in the pre-commit hook.
+TODO: ビルドはCIでするように変更したい
 
-### Diretórios
+### Directories
 ```sh
 .
-├── index.html: Página de demonstração
-├── style.css: Estilização da página de demonstração
-├── css: Arquivos de distribuição
-├── docs: Histórias do Storybook
-└── scss: Código fonte
+├── index.html: Demo page
+├── style.css: Demo page style
+├── css: Distribution files
+├── docs: Storybook stories
+└── scss: Source
     ├── base
-    │   ├── reboot.scss: Não modifique-o! (Bootstrap Reboot)
-    │   ├── generic.scss: Estilização genérica e reboot.css
-    │   └── variables.scss: Variáveis em comum
+    │   ├── reboot.scss: Don't change! (Bootstrap Reboot)
+    │   ├── generic.scss: Generic style and reboot.css
+    │   └── variables.scss: Common variables
     ├── elements
     ├── form
-    ├── icons: ícones 16x16
-    ├── pixel-arts: Para ícones que não são 16x16.
+    ├── icons: 16x16 icons
+    ├── pixel-arts: For icons other than 16x16.
     └── utilities
 ```
 
 
 
-## Copyright e licença
+## Copyright and license
 
-Código e documentação copyright 2018 [B.C.Rikko](https://github.com/BcRikko). Código lançado sobre a Licença MIT. Documentação e novos lançamentos com Creative Commons.
+Code and documentation copyright 2018 [B.C.Rikko](https://github.com/BcRikko). Code released under the MIT License. Docs released under Creative Commons.
 
 
 
