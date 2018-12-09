@@ -13,6 +13,7 @@ stories.add('icon', () => {
     'icon github': 'icon github',
     'icon google': 'icon google',
     'icon youtube': 'icon youtube',
+    'icon whatsapp': 'icon whatsapp',
     'icon close': 'icon close',
     pokeball: 'pokeball',
     smartphone: 'smartphone',
