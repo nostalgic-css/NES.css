@@ -21,6 +21,7 @@ stories.add('icon', () => {
     'octocat animate': 'octocat animate',
     ash: 'ash',
     'icon trophy': 'icon trophy',
+    mario: 'mario',
     'nes-logo': 'nes-logo',
     'nes-jp-logo': 'nes-jp-logo',
     'snes-logo': 'snes-logo',
