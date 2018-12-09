@@ -28,6 +28,6 @@
     content: "";
     background: transparent;
 
-    @include pixelize($logo, $logo-colors, $px);
+    @include pixelize($logo, $logo-colors, $px, nth($logo-colors, 2));
   }
 }

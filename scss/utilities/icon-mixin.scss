@@ -1,6 +1,9 @@
-@mixin pixelize($matrix, $colors, $size) {
+@mixin pixelize($matrix, $colors, $size, $default-color: null) {
   $ret: "";
   $moz: "";
+  @if ($default-color == null) {
+    $default-color: nth($colors, 1);
+  }
 
   @for $i from 1 through length($matrix) {
     $row: nth($matrix, $i);
@@ -15,14 +18,20 @@
         }
 
         $color: nth($colors, $dot);
-        $ret: $ret + ($j * $size) + " " + ($i * $size) + " " + $color;
-        $moz: $moz + ($j * $size)+" "+ ($i * $size)+" 0 0.020em " + $color;
+        @if $color == $default-color {
+          $ret: $ret + ($j * $size) + " " + ($i * $size);
+          $moz: $moz + ($j * $size) + " " + ($i * $size) + " 0 0.020em";
+        } @else {
+          $ret: $ret + ($j * $size) + " " + ($i * $size) + " " + $color;
+          $moz: $moz + ($j * $size) + " " + ($i * $size) + " 0 0.020em " + $color;
+        }
       }
     }
   }
 
   width: $size;
   height: $size;
+  color: $default-color;
   box-shadow: unquote($ret);
   @-moz-document url-prefix() {
     -webkit-box-shadow: unquote($moz);
