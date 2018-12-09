@@ -16,6 +16,7 @@ stories.add('icon', () => {
     'icon whatsapp': 'icon whatsapp',
     'icon close': 'icon close',
     pokeball: 'pokeball',
+    bulbasaur: 'bulbasaur',
     charmander: 'charmander',
     squirtle: 'squirtle',
     smartphone: 'smartphone',
