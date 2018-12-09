@@ -4,7 +4,7 @@
   <a href="README.md">English</a> / <a href="README-jp.md">日本語</a> / <a href="README-es.md">Español</a> / <a href="README-pt-BR.md">Português</a>
 </div>
 
-NES.css é um Framework CSS **Estilo NES(8bit)**.
+NES.css é um Framework CSS, no **estilo NES(8bit)**.
 
 [![Gitter][gitter-badge]][gitter] [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
@@ -36,7 +36,7 @@ TODO: Como utilizar com npm
 
 NES.css apenas fornece os componentes. Você precisará definir seu próprio layout.
 
-A fonte padrão é a [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P?selection.family=Press+Start+2P) o qual oferece suporte apenas para caracteres ingleses. Quando você estiver usando este framework in qualquer outro idioma com exceção do inglês, por favor use outra fonte. Por favor, siga as [instruções](https://developers.google.com/fonts/docs/getting_started) fornecida pelo Google Fonts sobre como incluí-la, ou simplismente faça a inclusão como consta abaixo:
+A fonte padrão é a [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P?selection.family=Press+Start+2P) o qual oferece suporte apenas para caracteres ingleses. Quando você estiver usando este framework em qualquer outro idioma com exceção do inglês, por favor use outra fonte. Por favor, siga as [instruções](https://developers.google.com/fonts/docs/getting_started) fornecidas pelo Google Fonts sobre como incluí-la, ou simplismente faça a inclusão como consta abaixo:
 
 ```html
 <head>
@@ -65,7 +65,7 @@ A fonte padrão é a [Press Start 2P](https://fonts.google.com/specimen/Press+St
 NES.css apenas usa CSS e não depende de qualquer JavaScript.
 
 
-## Suporte para Browser
+## Suporte para Browsers
 
 NES.css é compatível com as mais novas versões dos seguintes browsers.
 * Chrome
@@ -95,6 +95,7 @@ npm run storybook
 ```
 
 Lint, formatação e build são executados automaticamente em um hook de pré-commit.
+
 TODO: Mudar a compilação para fazer com CI
 
 ### Diretórios
@@ -103,7 +104,7 @@ TODO: Mudar a compilação para fazer com CI
 ├── index.html: Página de demonstração
 ├── style.css: Estilização da página de demonstração
 ├── css: Arquivos de distribuição
-├── docs: Histórias do Storybook
+├── docs: "Histórias" Storybook
 └── scss: Código fonte
     ├── base
     │   ├── reboot.scss: Não modifique-o! (Bootstrap Reboot)
