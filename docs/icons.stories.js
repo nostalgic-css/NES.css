@@ -8,20 +8,20 @@ stories.addDecorator(withKnobs);
 
 stories.add('icon', () => {
   const selectedClass = select('class', {
-    'icon twitter': 'icon twitter',
-    'icon facebook': 'icon facebook',
-    'icon github': 'icon github',
-    'icon google': 'icon google',
-    'icon youtube': 'icon youtube',
-    'icon close': 'icon close',
-    pokeball: 'pokeball',
-    'octocat animate': 'octocat animate',
-    'icon trophy': 'icon trophy',
+    'nes-icon twitter': 'nes-icon twitter',
+    'nes-icon facebook': 'nes-icon facebook',
+    'nes-icon github': 'nes-icon github',
+    'nes-icon google': 'nes-icon google',
+    'nes-icon youtube': 'nes-icon youtube',
+    'nes-icon close': 'nes-icon close',
+    'nes-pokeball': 'nes-pokeball',
+    'nes-octocat animate': 'nes-octocat animate',
+    'nes-icon trophy': 'nes-icon trophy',
     'nes-logo': 'nes-logo',
     'nes-jp-logo': 'nes-jp-logo',
     'snes-logo': 'snes-logo',
     'snes-jp-logo': 'snes-jp-logo',
-  }, 'icon twitter');
+  }, 'nes-icon twitter');
   const selectedSize = radios('size', {
     default: '',
     'is-medium': 'is-medium',
