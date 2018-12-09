@@ -31,6 +31,56 @@
     border-radius: 4px;
   }
 
+  &.is-center {
+    text-align: center;
+  }
+
+  &.is-right {
+    text-align: right;
+  }
+
+  &.with-title {
+    padding-top: 2rem;
+
+    > .title {
+      display: table;
+      padding: 0 0.5rem;
+      margin: -2rem 0 1rem;
+      font-size: 1rem;
+      background-color: $background-color;
+    }
+
+    &.is-center {
+      > .title {
+        margin: -2rem auto 1rem;
+      }
+    }
+
+    &.is-right {
+      > .title {
+        margin: -2rem 0 1rem auto;
+      }
+    }
+  }
+
+  &.is-dark {
+    color: $background-color;
+    &::before {
+      background-color: $base-color;
+    }
+
+    &::after {
+      border-color: #fff;
+    }
+
+    &.with-title {
+      > .title {
+        color: $background-color;
+        background-color: $base-color;
+      }
+    }
+  }
+
   @mixin rounded($base, $background) {
     border: none;
     border-radius: 0;
@@ -70,60 +120,22 @@
         left: -8px;
       }
     }
-  }
-
-  &.is-center {
-    text-align: center;
-  }
-
-  &.is-right {
-    text-align: right;
-  }
-
-  &.with-title {
-    padding-top: 2rem;
-
-    > .title {
-      display: table;
-      padding: 0 0.5rem;
-      margin: -2rem 0 1rem;
-      font-size: 1rem;
-      background-color: $background-color;
-    }
-
-    &.is-rounded {
-      > .title {
-        margin-top: -2.4rem;
-      }
-    }
-
-    &.is-center {
-      > .title {
-        margin: -2.4rem auto 1rem;
-      }
-    }
-
-    &.is-right {
-      > .title {
-        margin: -2.4rem 0 1rem auto;
-      }
-    }
-  }
-
-  &.is-dark {
-    color: $background-color;
-    &::before {
-      background-color: $base-color;
-    }
-
-    &::after {
-      border-color: $background-color;
-    }
 
     &.with-title {
       > .title {
-        color: $background-color;
-        background-color: $base-color;
+        margin-top: -1.5rem;
+      }
+
+      &.is-center {
+        > .title {
+          margin: -1.5rem auto 1rem;
+        }
+      }
+
+      &.is-right {
+        > .title {
+          margin: -1.5rem 0 1rem auto;
+        }
       }
     }
   }
