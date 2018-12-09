@@ -12,6 +12,7 @@
 @import "medium.scss";
 @import "twitch.scss";
 @import "reddit.scss";
+@import "whatsapp.scss";
 
 // others
 @import "close.scss";
@@ -100,6 +101,10 @@
 
     &.reddit::before {
       @include pixelize($icon-reddit, $icon-reddit-colors, $px);
+    }
+
+    &.whatsapp::before {
+      @include pixelize($icon-whatsapp, $icon-whatsapp-colors, $px);
     }
   }
 
