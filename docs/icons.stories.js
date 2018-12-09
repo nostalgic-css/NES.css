@@ -13,8 +13,11 @@ stories.add('icon', () => {
     'icon github': 'icon github',
     'icon google': 'icon google',
     'icon youtube': 'icon youtube',
+    'icon whatsapp': 'icon whatsapp',
     'icon close': 'icon close',
     pokeball: 'pokeball',
+    smartphone: 'smartphone',
+    phone: 'phone',
     'octocat animate': 'octocat animate',
     ash: 'ash',
     'icon trophy': 'icon trophy',
@@ -25,6 +28,7 @@ stories.add('icon', () => {
   }, 'icon twitter');
   const selectedSize = radios('size', {
     default: '',
+    'is-small': 'is-small',
     'is-medium': 'is-medium',
     'is-large': 'is-large',
   }, '');
