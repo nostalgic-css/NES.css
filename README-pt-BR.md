@@ -4,7 +4,7 @@
   <a href="README.md">English</a> / <a href="README-jp.md">日本語</a> / <a href="README-es.md">Español</a> / <a href="README-pt-BR.md">Português</a>
 </div>
 
-NES.cssは **ファミコン風(8bit ライク)** なCSSフレームワークです。
+NES.css is a **NES-style(8bit-like)** CSS Framework.
 
 [![Gitter][gitter-badge]][gitter] [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
@@ -32,12 +32,11 @@ OR
 
 TODO: npm での使用方法を書く
 
-
 ## Usage
 
-NES.cssはコンポーネントのスタイルのみを提供しています。レイアウトはみなさんが好きなように定義してください。
+NES.css only provides components. You will need to define your own layout.
 
-デフォルトのフォントは[Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P?selection.family=Press+Start+2P)を使っています。英語以外（日本語など）で利用される場合は、別途フォントを読み込んで使ってください。 フォントを読み込む方法は、Google Fontsの[Get Started](https://developers.google.com/fonts/docs/getting_started)を参照するか、または以下のように読み込んでください。
+The default font is [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P?selection.family=Press+Start+2P) which only supports English characters. When you're using this framework with any language except English, please use another font. Please follow the [instructions](https://developers.google.com/fonts/docs/getting_started) from Google Fonts about how to include them, or simply include it as below:
 
 ```html
 <head>
@@ -53,28 +52,27 @@ NES.cssはコンポーネントのスタイルのみを提供しています。�
 
 ### Recommended Fonts
 
-|言語|フォント|
+|Language|Font|
 |----|----|
-|(デフォルト)|[Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P)|
-|英語|[Kongtext](https://www.dafont.com/kongtext.font)|
-|日本語|[美咲フォント](http://www.geocities.jp/littlimi/misaki.htm)|
-|日本語|[Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)|
+|(Default)|[Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P)|
+|English|[Kongtext](https://www.dafont.com/kongtext.font)|
+|Japanese|[美咲フォント](http://www.geocities.jp/littlimi/misaki.htm)|
+|Japanese|[Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)|
 
 
 ## CSS Only
 
-NES.cssはCSSのみで構成されています。JavaScriptは不要です。
+NES.css only requires CSS and doesn't depend on any JavaScript.
 
 
 ## Browser Support
 
-次のブラウザの最新バージョンをサポートしています。
-
+NES.css is compatible with the newest version of the following browsers.
 * Chrome
 * Firefox
 * Safari
 
-未確認
+Untested
 * IE/Edge
 
 
@@ -91,7 +89,12 @@ npm run watch
 npm run build
 ```
 
-pre-commit hookにより、コミット時に自動でLint→format→buildが走り、`css`ディレクトリにファイルが出力されます。
+#### Run Storybook
+```
+npm run storybook
+```
+
+Linting, formatting and building runs automatically in the pre-commit hook.
 TODO: ビルドはCIでするように変更したい
 
 ### Directories
@@ -100,6 +103,7 @@ TODO: ビルドはCIでするように変更したい
 ├── index.html: Demo page
 ├── style.css: Demo page style
 ├── css: Distribution files
+├── docs: Storybook stories
 └── scss: Source
     ├── base
     │   ├── reboot.scss: Don't change! (Bootstrap Reboot)
