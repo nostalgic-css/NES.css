@@ -1,4 +1,5 @@
-.input {
+.input,
+.textarea {
   @mixin border-style($border, $outline) {
     outline-color: $outline;
     // prettier-ignore
@@ -31,7 +32,8 @@
   > label {
     display: block;
   }
-  .input {
+  .input,
+  .textarea {
     display: block;
   }
 
@@ -47,7 +49,8 @@
       text-align: right;
     }
 
-    .input {
+    .input,
+    .textarea {
       flex-basis: 0;
       flex-grow: 5;
     }
