@@ -26,6 +26,7 @@ stories.add('icon', () => {
   }, 'icon twitter');
   const selectedSize = radios('size', {
     default: '',
+    'is-small': 'is-small',
     'is-medium': 'is-medium',
     'is-large': 'is-large',
   }, '');
