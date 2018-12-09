@@ -117,7 +117,7 @@
     }
 
     &::after {
-      border-color: #fff;
+      border-color: $background-color;
     }
 
     &.with-title {
