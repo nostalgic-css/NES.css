@@ -23,53 +23,53 @@
     background-color: $hover-background;
     outline: 0;
     // prettier-ignore
-    box-shadow: 
+    box-shadow:
       0 -4px $hover-background,
       inset 0 -2px $shadow,
       0 -8px #212529,
       4px 0 $shadow,
-      4px -4px #212529, 
-      8px 0 #212529, 
-      0 4px $shadow, 
-      4px 4px #212529, 
+      4px -4px #212529,
+      8px 0 #212529,
+      0 4px $shadow,
+      4px 4px #212529,
       0 8px #212529,
-      -4px 0 $hover-background, 
-      inset -2px 0 $shadow, 
-      -4px -4px #212529, 
+      -4px 0 $hover-background,
+      inset -2px 0 $shadow,
+      -4px -4px #212529,
       -8px 0 #212529,
       -4px 4px #212529;
   }
 
   &:active {
     // prettier-ignore
-    box-shadow: 
-      0 -4px $shadow, 
-      0 -8px #212529, 
-      4px 0 $hover-background, 
+    box-shadow:
+      0 -4px $shadow,
+      0 -8px #212529,
+      4px 0 $hover-background,
       4px -4px #212529,
-      8px 0 #212529, 
-      0 4px $hover-background, 
-      4px 4px #212529, 
-      0 8px #212529, 
+      8px 0 #212529,
+      0 4px $hover-background,
+      4px 4px #212529,
+      0 8px #212529,
       -4px 0 $shadow,
-      -4px -4px #212529, 
-      -8px 0 #212529, 
+      -4px -4px #212529,
+      -8px 0 #212529,
       -4px 4px #212529;
   }
 
   // prettier-ignore
-  box-shadow: 
-    0 -4px $background, 
-    0 -8px #212529, 
-    4px 0 $shadow, 
-    4px -4px #212529, 
+  box-shadow:
+    0 -4px $background,
+    0 -8px #212529,
+    4px 0 $shadow,
+    4px -4px #212529,
     8px 0 #212529,
-    0 4px $shadow, 
-    4px 4px #212529, 
-    0 8px #212529, 
-    -4px 0 $background, 
+    0 4px $shadow,
+    4px 4px #212529,
+    0 8px #212529,
+    -4px 0 $background,
     -4px -4px #212529,
-    -8px 0 #212529, 
+    -8px 0 #212529,
     -4px 4px #212529;
 }
 
@@ -85,6 +85,7 @@
   vertical-align: middle;
   cursor: $cursor-click-url, pointer;
   user-select: none;
+  border: none;
 
   @include btn-style($base-color, #fff, #e7e7e7, #adafbc);
 
