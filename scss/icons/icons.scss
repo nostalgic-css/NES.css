@@ -12,6 +12,7 @@
 @import "medium.scss";
 @import "twitch.scss";
 @import "reddit.scss";
+@import "whatsapp.scss";
 
 // others
 @import "close.scss";
@@ -50,6 +51,12 @@
     }
     &.star.is-empty::before {
       @include pixelize($icon-star-empty, $icon-star-empty-colors, $px);
+    }
+    &.star.is-half::before {
+      @include pixelize($icon-star-half, $icon-star-colors, $px);
+    }
+    &.star.is-transparent::before {
+      @include pixelize($icon-star-transparent, $icon-star-colors, $px);
     }
 
     &.trophy::before {
@@ -100,6 +107,10 @@
 
     &.reddit::before {
       @include pixelize($icon-reddit, $icon-reddit-colors, $px);
+    }
+
+    &.whatsapp::before {
+      @include pixelize($icon-whatsapp, $icon-whatsapp-colors, $px);
     }
   }
 
