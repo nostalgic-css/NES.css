@@ -12,5 +12,5 @@ stories.add('balloon', () => {
     'from-left': 'from-left',
     'from-right': 'from-right',
   }, '');
-  return `<div class="balloon ${selectedClass}"> <p>Hello NES.css</p> </div>`;
+  return `<div class="nes-balloon ${selectedClass}"> <p>Hello NES.css</p> </div>`;
 });

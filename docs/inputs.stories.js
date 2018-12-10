@@ -8,15 +8,15 @@ stories.addDecorator(withKnobs);
 
 stories.add('input.radio', () => `
       <label>
-        <input type="radio" class="radio" name="answer" checked />
+        <input type="radio" class="nes-radio" name="answer" checked />
         <span>Yes</span>
       </label> <label>
-        <input type="radio" class="radio" name="answer" />
+        <input type="radio" class="nes-radio" name="answer" />
         <span>No</span>
       </label>`)
   .add('input.checkbox', () => `
       <label>
-        <input type="checkbox" class="checkbox" checked />
+        <input type="checkbox" class="nes-checkbox" checked />
         <span>Enable</span>
       </label>`)
   .add('input', () => {
@@ -27,5 +27,5 @@ stories.add('input.radio', () => `
       'is-error': 'is-error',
     }, '');
 
-    return `<input type="text" id="name_field" class="input ${selectedClass}" placeholder="NES.css">`;
+    return `<input type="text" id="name_field" class="nes-input ${selectedClass}" placeholder="NES.css">`;
   });

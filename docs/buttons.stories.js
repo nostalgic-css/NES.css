@@ -15,5 +15,5 @@ stories.add('button', () => {
     'is-error': 'is-error',
     'is-disabled': 'is-disabled',
   }, '');
-  return `<button type="button" class="btn ${extraClass}">Normal</button>`;
+  return `<button type="button" class="nes-btn ${extraClass}">Normal</button>`;
 });
