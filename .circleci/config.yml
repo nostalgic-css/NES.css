@@ -11,6 +11,17 @@ defaults: &defaults
 
 
 jobs:
+  commitlint:
+    docker:
+      - image: williamlauze/circleci-commitlint:latest
+    working_directory: ~/app
+
+    steps:
+      - checkout
+      - run:
+          name: Lint commit messages
+          command: /bin/sh /.scripts/commitlint_range.sh
+
   checkout:
     <<: *defaults
 
@@ -94,17 +105,6 @@ jobs:
           paths:
             - css
 
-  commitlint:
-    <<: *defaults
-
-    steps:
-      - attach_workspace:
-          at: .
-
-      - run:
-          name: Lint commit messages
-          command: npx semantic-commitlint -- --ci
-
   lint:
     <<: *defaults
 
@@ -170,6 +170,7 @@ workflows:
   main:
     jobs:
       - checkout
+      - commitlint
       - install-dependencies:
           requires:
             - checkout
@@ -179,9 +180,6 @@ workflows:
       # - coverage:
       #     requires:
       #       - install-dependencies
-      - commitlint:
-          requires:
-            - install-dependencies
       - lint:
           requires:
             - install-dependencies
