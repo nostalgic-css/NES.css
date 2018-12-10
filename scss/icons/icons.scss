@@ -12,6 +12,7 @@
 @import "medium.scss";
 @import "twitch.scss";
 @import "reddit.scss";
+@import "whatsapp.scss";
 
 // others
 @import "close.scss";
@@ -51,6 +52,19 @@
     &.star.is-empty::before {
       @include pixelize($icon-star-empty, $icon-star-empty-colors, $px);
     }
+    &.star.is-half::before {
+      @include pixelize($icon-star-half, $icon-star-colors, $px);
+    }
+    &.star.is-transparent::before {
+      @include pixelize($icon-star-transparent, $icon-star-colors, $px);
+    }
+
+    &.trophy::before {
+      @include pixelize($icon-trophy, $icon-trophy-colors, $px);
+    }
+    &.trophy.is-empty::before {
+      @include pixelize($icon-trophy-empty, $icon-trophy-empty-colors, $px);
+    }
 
     &.like::before {
       @include pixelize($icon-like, $icon-like-colors, $px);
@@ -75,10 +89,6 @@
       @include pixelize($icon-youtube, $icon-youtube-colors, $px);
     }
 
-    &.trophy::before {
-      @include pixelize($icon-trophy, $icon-trophy-colors, $px);
-    }
-
     &.close::before {
       @include pixelize($icon-close, $icon-close-colors, $px);
     }
@@ -98,10 +108,18 @@
     &.reddit::before {
       @include pixelize($icon-reddit, $icon-reddit-colors, $px);
     }
+
+    &.whatsapp::before {
+      @include pixelize($icon-whatsapp, $icon-whatsapp-colors, $px);
+    }
   }
 
   // default
   @include setup(2px);
+
+  &.is-small {
+    @include setup(1px);
+  }
 
   &.is-medium {
     @include setup(3px);

@@ -13,10 +13,18 @@ stories.add('icon', () => {
     'nes-icon github': 'nes-icon github',
     'nes-icon google': 'nes-icon google',
     'nes-icon youtube': 'nes-icon youtube',
+    'nes-icon whatsapp': 'nes-icon whatsapp',
     'nes-icon close': 'nes-icon close',
     'nes-pokeball': 'nes-pokeball',
+    'nes-bulbasaur': 'nes-bulbasaur',
+    'nes-charmander': 'nes-charmander',
+    'nes-squirtle': 'nes-squirtle',
+    'nes-smartphone': 'nes-smartphone',
+    'nes-phone': 'nes-phone',
     'nes-octocat animate': 'nes-octocat animate',
+    'nes-ash': 'nes-ash',
     'nes-icon trophy': 'nes-icon trophy',
+    'nes-mario': 'nes-mario',
     'nes-logo': 'nes-logo',
     'nes-jp-logo': 'nes-jp-logo',
     'snes-logo': 'snes-logo',
@@ -24,6 +32,7 @@ stories.add('icon', () => {
   }, 'nes-icon twitter');
   const selectedSize = radios('size', {
     default: '',
+    'is-small': 'is-small',
     'is-medium': 'is-medium',
     'is-large': 'is-large',
   }, '');
