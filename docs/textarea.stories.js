@@ -3,17 +3,16 @@ import { // eslint-disable-line import/no-extraneous-dependencies
   withKnobs, radios,
 } from '@storybook/addon-knobs';
 
-const stories = storiesOf('Buttons', module);
+const stories = storiesOf('Textareas', module);
 stories.addDecorator(withKnobs);
 
-stories.add('button', () => {
-  const extraClass = radios('class', {
+stories.add('textarea', () => {
+  const selectedClass = radios('class', {
     default: '',
-    'is-primary': 'is-primary',
     'is-success': 'is-success',
     'is-warning': 'is-warning',
     'is-error': 'is-error',
-    'is-disabled': 'is-disabled',
   }, '');
-  return `<button type="button" class="nes-btn ${extraClass}">Normal</button>`;
+
+  return `<textarea id="textarea_field" class="nes-textarea ${selectedClass}" placeholder="NES.css"></textarea>`;
 });

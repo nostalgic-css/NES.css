@@ -1,4 +1,5 @@
-.input {
+.nes-input,
+.nes-textarea {
   @mixin border-style($border, $outline) {
     outline-color: $outline;
     // prettier-ignore
@@ -27,11 +28,12 @@
   }
 }
 
-.field {
+.nes-field {
   > label {
     display: block;
   }
-  .input {
+  .nes-input,
+  .nes-textarea {
     display: block;
   }
 
@@ -47,7 +49,8 @@
       text-align: right;
     }
 
-    .input {
+    .nes-input,
+    .nes-textarea {
       flex-basis: 0;
       flex-grow: 5;
     }

@@ -18,7 +18,7 @@
 @import "close.scss";
 @import "trophy.scss";
 
-.icon {
+.nes-icon {
   position: relative;
   display: inline-block;
 
@@ -52,6 +52,12 @@
     &.star.is-empty::before {
       @include pixelize($icon-star-empty, $icon-star-empty-colors, $px);
     }
+    &.star.is-half::before {
+      @include pixelize($icon-star-half, $icon-star-colors, $px);
+    }
+    &.star.is-transparent::before {
+      @include pixelize($icon-star-transparent, $icon-star-colors, $px);
+    }
 
     &.trophy::before {
       @include pixelize($icon-trophy, $icon-trophy-colors, $px);
@@ -79,12 +85,12 @@
       @include pixelize($icon-github, $icon-github-colors, $px);
     }
 
-    &.close::before {
-      @include pixelize($icon-close, $icon-close-colors, $px);
-    }
-
     &.youtube::before {
       @include pixelize($icon-youtube, $icon-youtube-colors, $px);
+    }
+
+    &.close::before {
+      @include pixelize($icon-close, $icon-close-colors, $px);
     }
 
     &.google::before {

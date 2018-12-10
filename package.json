@@ -70,16 +70,8 @@
       "@commitlint/config-conventional"
     ],
     "rules": {
-      "subject-case": [
-        0,
-        "never",
-        "sentence-case"
-      ],
-      "subject-full-stop": [
-        0,
-        "never",
-        "."
-      ]
+      "subject-case": [0, "never", "sentence-case"],
+      "subject-full-stop": [0, "never", "."]
     }
   },
   "husky": {
