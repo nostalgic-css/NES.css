@@ -1,14 +1,14 @@
-.input {
-  @mixin border-style($border, $outline) {
-    outline-color: $outline;
-    // prettier-ignore
-    box-shadow:
-      0 4px $border,
-      0 -4px $border,
-      4px 0 $border,
-      -4px 0 $border;
-  }
+@mixin border-style($border, $outline) {
+  outline-color: $outline;
+  // prettier-ignore
+  box-shadow:
+    0 4px $border,
+    0 -4px $border,
+    4px 0 $border,
+    -4px 0 $border;
+}
 
+.input {
   max-width: 100%;
   padding: 0.5rem 1rem;
   margin: 4px;
@@ -65,6 +65,52 @@
 
     .input {
       max-width: 100%;
+    }
+  }
+}
+
+.select-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    height: 100%;
+    content: "";
+    background: black;
+  }
+  &::after {
+    position: absolute;
+    right: 5px;
+    bottom: -7px;
+    width: 30px;
+    height: 100%;
+    color: white;
+    content: ">";
+    transform: rotate(90deg);
+  }
+  .select {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+    background: white;
+    border: none;
+    outline: none;
+    @include border-style(#000000, #ffffff);
+  }
+  &.is-dark {
+    &::before {
+      background: white;
+    }
+    &::after {
+      color: black;
+    }
+    .select {
+      color: white;
+      background: black;
     }
   }
 }
