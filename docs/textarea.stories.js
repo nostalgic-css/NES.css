@@ -14,5 +14,5 @@ stories.add('textarea', () => {
     'is-error': 'is-error',
   }, '');
 
-  return `<textarea id="textarea_field" class="textarea ${selectedClass}" placeholder="NES.css"></textarea>`;
+  return `<textarea id="textarea_field" class="nes-textarea ${selectedClass}" placeholder="NES.css"></textarea>`;
 });
