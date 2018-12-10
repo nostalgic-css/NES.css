@@ -18,7 +18,7 @@
 @import "close.scss";
 @import "trophy.scss";
 
-.icon {
+.nes-icon {
   position: relative;
   display: inline-block;
 
@@ -85,12 +85,12 @@
       @include pixelize($icon-github, $icon-github-colors, $px);
     }
 
-    &.close::before {
-      @include pixelize($icon-close, $icon-close-colors, $px);
-    }
-
     &.youtube::before {
       @include pixelize($icon-youtube, $icon-youtube-colors, $px);
+    }
+
+    &.close::before {
+      @include pixelize($icon-close, $icon-close-colors, $px);
     }
 
     &.google::before {

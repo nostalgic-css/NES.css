@@ -13,7 +13,7 @@ stories.add('table', () => {
 
   const selectedClasses = [isBordered, isCentered, isDark];
 
-  return `<table class="table ${selectedClasses.join(' ')}" style="margin:15px 4px 5px 4px">
+  return `<table class="nes-table ${selectedClasses.join(' ')}" style="margin:15px 4px 5px 4px">
         <thead>
           <tr>
             <th>Table.is-dark</th>
