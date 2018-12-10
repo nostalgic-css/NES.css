@@ -14,7 +14,6 @@
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook",
     "deploy": "npm run build",
-    "semantic-commitlint": "semantic-commitlint",
     "semantic-release": "semantic-release",
     "commit": "git-cz",
     "commit:retry": "git-cz --retry",
@@ -55,7 +54,6 @@
     "postcss-cli": "^6.0.0",
     "prettier": "^1.15.2",
     "rimraf": "^2.6.2",
-    "semantic-commitlint": "^1.3.2",
     "semantic-release": "^15.12.3",
     "stylelint": "^9.5.0",
     "stylelint-config-prettier": "^4.0.0",
@@ -72,8 +70,16 @@
       "@commitlint/config-conventional"
     ],
     "rules": {
-      "subject-case": [0, "never", "sentence-case"],
-      "subject-full-stop": [0, "never", "."]
+      "subject-case": [
+        0,
+        "never",
+        "sentence-case"
+      ],
+      "subject-full-stop": [
+        0,
+        "never",
+        "."
+      ]
     }
   },
   "husky": {
@@ -94,11 +100,6 @@
   },
   "prettier": {
     "printWidth": 100
-  },
-  "release": {
-    "verifyRelease": [
-      "semantic-commitlint"
-    ]
   },
   "stylelint": {
     "plugins": [
