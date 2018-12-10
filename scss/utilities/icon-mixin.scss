@@ -2,7 +2,25 @@
   $ret: "";
   $moz: "";
   @if ($default-color == null) {
-    $default-color: nth($colors, 1);
+    // count number of each color in matrix and decide main color by highest count
+    $matrix-colors: ();
+    $counts: ();
+    @each $row in $matrix {
+      @each $item in $row {
+        @if $item != 0 {
+          $index: index($matrix-colors, $item);
+          @if not $index {
+            $matrix-colors: append($matrix-colors, $item);
+            $counts: append($counts, 1);
+          } @else {
+            $count: nth($counts, $index) + 1;
+            $counts: set-nth($counts, $index, $count);
+          }
+        }
+      }
+    }
+    // use index of the highest count to get the corresponding matrix color
+    $default-color: nth($colors, nth($matrix-colors, index($counts, max($counts...))));
   }
 
   @for $i from 1 through length($matrix) {

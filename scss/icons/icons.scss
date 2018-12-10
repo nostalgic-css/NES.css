@@ -40,14 +40,14 @@
     }
 
     &.heart::before {
-      @include pixelize($icon-heart, $icon-heart-colors, $px, nth($icon-heart-colors, 3));
+      @include pixelize($icon-heart, $icon-heart-colors, $px);
     }
     &.heart.is-empty::before {
       @include pixelize($icon-heart-empty, $icon-heart-empty-colors, $px);
     }
 
     &.star::before {
-      @include pixelize($icon-star, $icon-star-colors, $px, nth($icon-star-colors, 3));
+      @include pixelize($icon-star, $icon-star-colors, $px);
     }
     &.star.is-empty::before {
       @include pixelize($icon-star-empty, $icon-star-empty-colors, $px);
@@ -78,15 +78,15 @@
     }
 
     &.facebook::before {
-      @include pixelize($icon-facebook, $icon-facebook-colors, $px, nth($icon-facebook-colors, 2));
+      @include pixelize($icon-facebook, $icon-facebook-colors, $px);
     }
 
     &.github::before {
-      @include pixelize($icon-github, $icon-github-colors, $px, nth($icon-github-colors, 2));
+      @include pixelize($icon-github, $icon-github-colors, $px);
     }
 
     &.youtube::before {
-      @include pixelize($icon-youtube, $icon-youtube-colors, $px, nth($icon-youtube-colors, 2));
+      @include pixelize($icon-youtube, $icon-youtube-colors, $px);
     }
 
     &.close::before {

@@ -34,6 +34,6 @@
     content: "";
     background: transparent;
 
-    @include pixelize($bcrikko, $bcrikko-colors, $px, nth($bcrikko-colors, 2));
+    @include pixelize($bcrikko, $bcrikko-colors, $px);
   }
 }
