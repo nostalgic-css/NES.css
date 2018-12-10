@@ -20,6 +20,7 @@ stories.add('icon', () => {
     'nes-charmander': 'nes-charmander',
     'nes-squirtle': 'nes-squirtle',
     'nes-smartphone': 'nes-smartphone',
+    'nes-kirby': 'nes-kirby',
     'nes-phone': 'nes-phone',
     'nes-octocat animate': 'nes-octocat animate',
     'nes-ash': 'nes-ash',
