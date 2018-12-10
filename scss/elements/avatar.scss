@@ -1,0 +1,23 @@
+@mixin img-style($param) {
+  $size: $param * 16;
+
+  width: $size;
+  height: $size;
+
+  &.is-rounded {
+    border-radius: 50px;
+  }
+}
+.nes-avatar {
+  @include img-style(2px);
+
+  &.is-small {
+    @include img-style(1px);
+  }
+  &.is-medium {
+    @include img-style(3px);
+  }
+  &.is-large {
+    @include img-style(4px);
+  }
+}
