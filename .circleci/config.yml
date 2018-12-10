@@ -11,6 +11,17 @@ defaults: &defaults
 
 
 jobs:
+  commitlint:
+    docker:
+      - image: williamlauze/circleci-commitlint:latest
+    working_directory: ~/app
+
+    steps:
+      - checkout
+      - run:
+          name: Lint commit messages
+          command: /bin/sh /.scripts/commitlint_range.sh
+
   checkout:
     <<: *defaults
 
@@ -159,6 +170,7 @@ workflows:
   main:
     jobs:
       - checkout
+      - commitlint
       - install-dependencies:
           requires:
             - checkout
