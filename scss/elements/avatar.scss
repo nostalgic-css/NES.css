@@ -1,56 +1,48 @@
-@mixin before($px, $color: #b3b3b3) {
-  &::before {
-    position: absolute;
-    top: $px + 10px * -1;
-    left: $px + 16px * -1;
-    width: $px;
-    height: $px;
-    content: "";
+@mixin img-style($param) {
+  img {
+    $size: $param * 16;
+
+    width: $size;
+    height: $size;
     background: transparent;
-    box-shadow: 16px 4px 0 $color, 20px 4px 0 $color, 8px 8px 0 $color, 12px 8px 0 $color,
-      24px 8px 0 $color, 28px 8px 0 $color, 8px 12px 0 $color, 28px 12px 0 $color, 4px 16px 0 $color,
-      32px 16px 0 $color, 4px 20px 0 $color, 32px 20px 0 $color, 8px 24px 0 $color,
-      28px 24px 0 $color, 8px 28px 0 $color, 12px 28px 0 $color, 24px 28px 0 $color,
-      28px 28px 0 $color, 16px 32px 0 $color, 20px 32px 0 $color;
   }
+  &.is-rounded img {
+    border-radius: 50px;
+  }
+}
+@mixin avatar-border-style($color) {
+  border: 4px solid $color;
 }
 .avatar {
   position: relative;
   display: inline-block;
+  @include img-style(2px);
 
   &.is-small {
-    $small: 1px;
-    img {
-      $size: $small * 16;
-
-      width: $size;
-      height: $size;
-      border-radius: 50px;
-    }
-    @include before(4px);
+    @include img-style(1px);
   }
   &.is-medium {
-    $medium: 3px;
-    img {
-      $size: $medium * 16;
-
-      width: $size;
-      height: $size;
-      background: transparent;
-      border-radius: 50px;
-    }
-    @include before(12px);
+    @include img-style(3px);
   }
   &.is-large {
-    $large: 4px;
-    img {
-      $size: $large * 16;
-
-      width: $size;
-      height: $size;
-      background: transparent;
-      border-radius: 50px;
-    }
-    @include before(16px);
+    @include img-style(4px);
+  }
+  &.is-bordered {
+    @include avatar-border-style($base-color);
+  }
+  &.is-bordered.is-success {
+    @include avatar-border-style(map-get($success-colors, "normal"));
+  }
+  &.is-bordered.is-warning {
+    @include avatar-border-style(map-get($warning-colors, "normal"));
+  }
+  &.is-bordered.is-error {
+    @include avatar-border-style(map-get($error-colors, "normal"));
+  }
+  &.is-bordered.is-primary {
+    @include avatar-border-style(map-get($primary-colors, "normal"));
+  }
+  &.is-bordered.is-default {
+    @include avatar-border-style(map-get($default-colors, "normal"));
   }
 }
