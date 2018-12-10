@@ -82,22 +82,23 @@
   }
 
   @mixin rounded($base, $background) {
+    color: $base;
     border: none;
     border-radius: 0;
     // prettier-ignore
     box-shadow:
       0 -4px $background,
-      0 -8px $base,
+      0 -8px,
       4px 0 $background,
-      4px -4px $base,
-      8px 0 $base,
+      4px -4px,
+      8px 0,
       0 4px $background,
-      0 8px $base,
+      0 8px,
       -4px 0 $background,
-      -4px 4px $base,
-      -8px 0 $base,
-      -4px -4px $base,
-      4px 4px $base;
+      -4px 4px,
+      -8px 0,
+      -4px -4px,
+      4px 4px;
   }
 
   &.is-rounded {
