@@ -1,0 +1,52 @@
+dialog {
+  position: relative;
+  padding: 1.5rem 2rem;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+  }
+
+  &::before {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &::after {
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    border-color: $base-color;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 4px;
+  }
+
+  &.is-center.is-dark {
+    color: $background-color;
+    background-color: $base-color;
+    // &::before {
+    //   background-color: $base-color;
+    // }
+
+    // &::after {
+    //   border-color: #fff;
+    // }
+
+    // &.with-title {
+    //   > .title {
+    //     color: $background-color;
+    //     background-color: $base-color;
+    //   }
+    // }
+  }
+}
