@@ -1,2 +1,4 @@
 node_modules
 .vscode
+css
+storybook-static

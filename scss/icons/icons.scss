@@ -8,12 +8,17 @@
 @import "facebook.scss";
 @import "github.scss";
 @import "youtube.scss";
+@import "google.scss";
+@import "medium.scss";
+@import "twitch.scss";
+@import "reddit.scss";
+@import "whatsapp.scss";
 
 // others
 @import "close.scss";
 @import "trophy.scss";
 
-.icon {
+.nes-icon {
   position: relative;
   display: inline-block;
 
@@ -47,9 +52,18 @@
     &.star.is-empty::before {
       @include pixelize($icon-star-empty, $icon-star-empty-colors, $px);
     }
+    &.star.is-half::before {
+      @include pixelize($icon-star-half, $icon-star-colors, $px);
+    }
+    &.star.is-transparent::before {
+      @include pixelize($icon-star-transparent, $icon-star-colors, $px);
+    }
 
     &.trophy::before {
       @include pixelize($icon-trophy, $icon-trophy-colors, $px);
+    }
+    &.trophy.is-empty::before {
+      @include pixelize($icon-trophy-empty, $icon-trophy-empty-colors, $px);
     }
 
     &.like::before {
@@ -71,17 +85,41 @@
       @include pixelize($icon-github, $icon-github-colors, $px);
     }
 
+    &.youtube::before {
+      @include pixelize($icon-youtube, $icon-youtube-colors, $px);
+    }
+
     &.close::before {
       @include pixelize($icon-close, $icon-close-colors, $px);
     }
 
-    &.youtube::before {
-      @include pixelize($icon-youtube, $icon-youtube-colors, $px);
+    &.google::before {
+      @include pixelize($icon-google, $icon-google-colors, $px);
+    }
+
+    &.medium::before {
+      @include pixelize($icon-medium, $icon-medium-colors, $px);
+    }
+
+    &.twitch::before {
+      @include pixelize($icon-twitch, $icon-twitch-colors, $px);
+    }
+
+    &.reddit::before {
+      @include pixelize($icon-reddit, $icon-reddit-colors, $px);
+    }
+
+    &.whatsapp::before {
+      @include pixelize($icon-whatsapp, $icon-whatsapp-colors, $px);
     }
   }
 
   // default
   @include setup(2px);
+
+  &.is-small {
+    @include setup(1px);
+  }
 
   &.is-medium {
     @include setup(3px);

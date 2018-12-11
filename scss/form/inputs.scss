@@ -1,4 +1,5 @@
-.input {
+.nes-input,
+.nes-textarea {
   @mixin border-style($border, $outline) {
     outline-color: $outline;
     // prettier-ignore
@@ -9,29 +10,30 @@
       -4px 0 $border;
   }
 
-  max-width: 100%;
+  width: 100%;
   padding: 0.5rem 1rem;
   margin: 4px;
   border: none;
 
-  @include border-style($base-color, #e7e7e7);
+  @include border-style($base-color, map-get($default-colors, "hover"));
 
   &.is-success {
-    @include border-style(#92cc41, #76c442);
+    @include border-style(map-get($success-colors, "normal"), map-get($success-colors, "hover"));
   }
   &.is-warning {
-    @include border-style(#f7d51d, #f2c409);
+    @include border-style(map-get($warning-colors, "normal"), map-get($warning-colors, "hover"));
   }
   &.is-error {
-    @include border-style(#e76e55, #ce372b);
+    @include border-style(map-get($error-colors, "normal"), map-get($error-colors, "hover"));
   }
 }
 
-.field {
+.nes-field {
   > label {
     display: block;
   }
-  .input {
+  .nes-input,
+  .nes-textarea {
     display: block;
   }
 
@@ -47,9 +49,25 @@
       text-align: right;
     }
 
-    .input {
+    .nes-input,
+    .nes-textarea {
       flex-basis: 0;
       flex-grow: 5;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .field.is-inline {
+    display: block;
+
+    > label {
+      margin-bottom: 0.5rem; // reboot.css:label
+      text-align: left;
+    }
+
+    .input {
+      max-width: 100%;
     }
   }
 }

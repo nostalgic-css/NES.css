@@ -1,13 +1,12 @@
 <div align="center">
-  <a href="https://bcrikko.github.io/NES.css/" target="_blank"><img src="https://user-images.githubusercontent.com/5305599/49061716-da649680-f254-11e8-9a89-d95a7407ec6a.png" alt="NES.css: NES-style  CSS framework" style="max-width:100%;" width="600" height="315"></a>
+  <a href="https://nostalgic-css.github.io/NES.css/" target="_blank"><img src="https://user-images.githubusercontent.com/5305599/49061716-da649680-f254-11e8-9a89-d95a7407ec6a.png" alt="NES.css: NES-style  CSS framework" style="max-width:100%;" width="600" height="315"></a>
 
-  <a href="README.md">English</a> / <a href="README-jp.md">日本語</a>
+  <a href="README.md">English</a> / <a href="README-jp.md">日本語</a> / <a href="README-es.md">Español</a> / <a href="README-pt-BR.md">Português</a>
 </div>
 
 NES.cssは **ファミコン風(8bit ライク)** なCSSフレームワークです。
 
-
-[![Gitter][gitter-badge]][gitter]
+[![Gitter][gitter-badge]][gitter] [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 ## Install
 
@@ -38,7 +37,19 @@ TODO: npm での使用方法を書く
 
 NES.cssはコンポーネントのスタイルのみを提供しています。レイアウトはみなさんが好きなように定義してください。
 
-デフォルトでは`Press Start 2P`フォントを使っています。英語以外（日本語など）で利用される場合は、別途フォントを読み込んで使ってください。
+デフォルトのフォントは[Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P?selection.family=Press+Start+2P)を使っています。英語以外（日本語など）で利用される場合は、別途フォントを読み込んで使ってください。 フォントを読み込む方法は、Google Fontsの[Get Started](https://developers.google.com/fonts/docs/getting_started)を参照するか、または以下のように読み込んでください。
+
+```html
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    <style>
+      html, body, pre, code, kbd, samp {
+          font-family: "font-family you want to use";
+      }
+    </style>
+</head>
+```
 
 ### Recommended Fonts
 

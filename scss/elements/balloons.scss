@@ -1,4 +1,4 @@
-.balloon {
+.nes-balloon {
   position: relative;
   display: inline-block;
   padding: 1rem 1.5rem;
@@ -49,18 +49,19 @@
     &::after {
       bottom: -18px;
       width: 18px;
-      height: 3px;
+      height: 4px;
       margin-right: 8px;
+      color: $base-color;
       background-color: $background-color;
       // prettier-ignore
       box-shadow:
-        -4px 0 $base-color,
-        4px 0 $base-color,
+        -4px 0,
+        4px 0,
         -4px 4px $background-color,
-        0 4px $base-color,
-        -8px 4px $base-color,
-        -4px 8px $base-color,
-        -8px 8px $base-color;
+        0 4px,
+        -8px 4px,
+        -4px 8px,
+        -8px 8px;
     }
   }
 
@@ -82,18 +83,18 @@
     &::after {
       bottom: -18px;
       width: 18px;
-      height: 3px;
+      height: 4px;
       margin-left: 8px;
       background-color: $background-color;
       // prettier-ignore
       box-shadow:
-        -4px 0 $base-color,
-        4px 0 $base-color,
+        -4px 0,
+        4px 0,
         4px 4px $background-color,
-        0 4px $base-color,
-        8px 4px $base-color,
-        4px 8px $base-color,
-        8px 8px $base-color;
+        0 4px,
+        8px 4px,
+        4px 8px,
+        8px 8px;
     }
   }
 }

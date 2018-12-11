@@ -1,4 +1,4 @@
-.checkbox {
+.nes-checkbox {
   // prettier-ignore
   $checkbox: (
     (1,1,1,1,1,1,1,1,0,0),
@@ -45,7 +45,7 @@
     (2,0,0,1,0,0,0,2,0,0),
     (2,2,2,2,2,2,2,2,0,0)
   );
-  $colors: ($base-color, #adafbb);
+  $colors: ($base-color, map-get($default-colors, "shadow"));
 
   margin-left: 28px;
   -webkit-appearance: none;
@@ -54,7 +54,7 @@
 
   & + span {
     position: relative;
-    cursor: pointer;
+    cursor: $cursor-click-url, pointer;
   }
 
   & + span::before,
