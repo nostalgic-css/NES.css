@@ -1,6 +1,6 @@
 import { configure } from '@storybook/html'; // eslint-disable-line import/no-extraneous-dependencies
 
-import '../css/nes.css'; // eslint-disable-line import/no-unresolved
+import '../scss/nes.scss'; // eslint-disable-line import/no-unresolved
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../docs', true, /.stories.js$/);
