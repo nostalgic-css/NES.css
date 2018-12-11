@@ -30,23 +30,4 @@ dialog {
     border-width: 4px;
     border-radius: 4px;
   }
-
-  &.is-center.is-dark {
-    color: $background-color;
-    background-color: $base-color;
-    // &::before {
-    //   background-color: $base-color;
-    // }
-
-    // &::after {
-    //   border-color: #fff;
-    // }
-
-    // &.with-title {
-    //   > .title {
-    //     color: $background-color;
-    //     background-color: $base-color;
-    //   }
-    // }
-  }
 }
