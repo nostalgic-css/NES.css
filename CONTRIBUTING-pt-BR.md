@@ -28,7 +28,7 @@ Este projeto adere o código de conduta "Contributor Covenant". Ao participar do
 Nós estamos muito felizes de você querer contribuir para o projeto! Os próximos passos irão deixá-lo pronto em pouco tempo:
 
 1. Fork e clone o repositório
-2. Instale as dependencias necessárias:
+2. Instale as dependências necessárias:
     ```sh
     $ npm install
     ```
