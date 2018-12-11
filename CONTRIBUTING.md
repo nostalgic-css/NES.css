@@ -64,7 +64,7 @@ We're really happy you want to contribute to the project! ❤️ The following s
 > git branch --set-upstream-to=upstream/master master
 > ```
 >
-> This will add the original repository as a "remote" called "upstream," Then fetch the git information from that remote, then set your local `master` branch to use the upstream master branch whenever you run `git pull`. Then you can make all of your pull request branches based on this `master` branch. Whenever you want to update your version of `master`, do a regular `git pull`.
+> This will add the original repository as a "remote" called "upstream," fetch the git information from that remote, and set your local `master` branch to use the `upstream/master` branch whenever you run `git pull`. At that point, you can create all of your branches from this `master` branch. Whenever you want to update your version of `master`, do a regular `git pull`.
 
 ## Contributing for members of the `nostalgic-css` organization
 
@@ -89,7 +89,6 @@ We use [Commitizen][commitizen] and [`commitlint`][commitlint] to make sure all 
 
 
 
-[all-contributors]: https://github.com/kentcdodds/all-contributors
 [code-of-conduct]: https://github.com/nostalgic-css/NES.css/blob/master/CODE_OF_CONDUCT.md
 [commitizen]: https://github.com/commitizen/cz-cli
 [commitlint]: [https://github.com/marionebl/commitlint]
