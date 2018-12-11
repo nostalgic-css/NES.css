@@ -87,7 +87,7 @@ Código e documentação copyright 2018 [B.C.Rikko](https://github.com/BcRikko).
 
 ## Desenvolvimento
 
-Se você quiser nos ajudar com o projeto, nós agradecemos contribuições de todos os tipos! Verifique nosso [`CONTRIBUTING.md`][contributing-document] para mais detalhes em como você pode ajudar a tornar o NES.css incrível!
+Se você quiser nos ajudar com o projeto, nós agradecemos contribuições de todos os tipos! Verifique nosso [`CONTRIBUTING-pt-BR.md`][contributing-document] para mais detalhes em como você pode ajudar a tornar o NES.css incrível!
 
 
 
@@ -95,7 +95,7 @@ Se você quiser nos ajudar com o projeto, nós agradecemos contribuições de to
 
 [commitizen]: http://commitizen.github.io/cz-cli/
 [commitizen-badge]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
-[contributing-document]: https://github.com/nostalgic-css/NES.css/blob/master/CONTRIBUTING.md
+[contributing-document]: https://github.com/nostalgic-css/NES.css/blob/master/CONTRIBUTING-pt-BR.md
 [gitter]: https://gitter.im/nostalgic-css/Lobby
 [gitter-badge]: https://img.shields.io/gitter/room/nostalgic-css/Lobby.svg
 [google-fonts-guide]: https://developers.google.com/fonts/docs/getting_started
