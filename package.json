@@ -44,16 +44,18 @@
     "babel-loader": "^8.0.4",
     "clean-css-cli": "^4.2.1",
     "commitizen": "^3.0.5",
+    "cz-conventional-changelog": "^2.1.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
-    "cz-conventional-changelog": "^2.1.0",
+    "file-loader": "^2.0.0",
     "husky": "^1.0.0",
     "lint-staged": "^7.3.0",
     "node-sass": "^4.9.3",
     "postcss-cli": "^6.0.0",
     "prettier": "^1.15.2",
     "rimraf": "^2.6.2",
+    "sass-loader": "^7.1.0",
     "semantic-release": "^15.12.3",
     "stylelint": "^9.5.0",
     "stylelint-config-prettier": "^4.0.0",
@@ -70,8 +72,16 @@
       "@commitlint/config-conventional"
     ],
     "rules": {
-      "subject-case": [0, "never", "sentence-case"],
-      "subject-full-stop": [0, "never", "."]
+      "subject-case": [
+        0,
+        "never",
+        "sentence-case"
+      ],
+      "subject-full-stop": [
+        0,
+        "never",
+        "."
+      ]
     }
   },
   "husky": {
