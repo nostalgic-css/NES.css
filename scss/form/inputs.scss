@@ -80,7 +80,7 @@
     width: 30px;
     height: 100%;
     content: "";
-    background: black;
+    background: $base-color;
   }
   &::after {
     position: absolute;
@@ -88,7 +88,7 @@
     bottom: -7px;
     width: 30px;
     height: 100%;
-    color: white;
+    color: $background-color;
     content: ">";
     transform: rotate(90deg);
   }
@@ -96,21 +96,21 @@
     display: block;
     width: 100%;
     padding: 0.5rem 0;
-    background: white;
+    background: $background-color;
     border: none;
     outline: none;
-    @include border-style(#000000, #ffffff);
+    @include border-style($base-color, $background-color);
   }
   &.is-dark {
     &::before {
-      background: white;
+      background: $background-color;
     }
     &::after {
-      color: black;
+      color: $base-color;
     }
     .select {
-      color: white;
-      background: black;
+      color: $background-color;
+      background: $base-color;
     }
   }
 }
