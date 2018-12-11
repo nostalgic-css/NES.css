@@ -37,7 +37,7 @@ TODO: npm での使用方法を書く
 
 NES.css sólo tiene componentes. Tienes que definir tu propio diseño.
 
-La tipogfrafía por fefecto es Press Start 2P, la cual tiene soporte para caracteres latinos (acentos, ñ y ü).
+La tipografía por defecto es Press Start 2P, la cual tiene soporte para caracteres latinos (acentos, ñ y ü).
 
 ### Tipografías recomendadas
 
@@ -45,8 +45,8 @@ La tipogfrafía por fefecto es Press Start 2P, la cual tiene soporte para caract
 |----|----|
 |(Default)|[Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P)|
 |Latino|[Kongtext](https://www.dafont.com/kongtext.font)|
-|Japanese|[美咲フォント](http://www.geocities.jp/littlimi/misaki.htm)|
-|Japanese|[Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)|
+|Japonés|[美咲フォント](http://www.geocities.jp/littlimi/misaki.htm)|
+|Japonés|[Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)|
 
 
 ## CSS Only
