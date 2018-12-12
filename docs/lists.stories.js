@@ -8,9 +8,9 @@ stories.addDecorator(withKnobs);
 
 stories.add('list', () => {
   const selectedClass = radios('type', {
-    default: 'is-circle',
-    'is-arrow': 'is-arrow',
-    'is-pointer': 'is-pointer',
-  }, 'is-circle');
+    default: 'is-disc',
+    'is-circle': 'is-circle',
+    'is-square': 'is-square',
+  }, 'is-disc');
   return `<ul class="nes-list ${selectedClass}"> <li>Test</li> </ul>`;
 });
