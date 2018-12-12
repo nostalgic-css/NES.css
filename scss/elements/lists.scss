@@ -1,5 +1,5 @@
 .nes-list {
-  $ball: (
+  $disc: (
     (0, 0, 0, 1, 1, 0, 0, 0),
     (0, 0, 1, 1, 1, 1, 0, 0),
     (0, 1, 1, 1, 1, 1, 1, 0),
@@ -8,23 +8,22 @@
     (0, 0, 0, 1, 1, 0, 0, 0)
   );
 
-  $arrow: (
+  $circle: (
     (0, 0, 0, 1, 1, 0, 0, 0),
-    (0, 0, 0, 1, 1, 1, 0, 0),
-    (0, 0, 0, 1, 1, 1, 1, 0),
-    (0, 0, 0, 1, 1, 1, 1, 0),
-    (0, 0, 0, 1, 1, 1, 0, 0),
+    (0, 0, 1, 1, 1, 1, 0, 0),
+    (0, 1, 1, 0, 0, 1, 1, 0),
+    (0, 1, 1, 0, 0, 1, 1, 0),
+    (0, 0, 1, 1, 1, 1, 0, 0),
     (0, 0, 0, 1, 1, 0, 0, 0)
   );
 
-  $pointer: (
-    (1, 1, 1, 0, 0, 0, 0, 0),
-    (0, 1, 1, 1, 0, 0, 0, 0),
-    (0, 0, 1, 1, 1, 0, 0, 0),
-    (0, 0, 0, 1, 1, 1, 0, 0),
-    (0, 0, 1, 1, 1, 0, 0, 0),
-    (0, 1, 1, 1, 0, 0, 0, 0),
-    (1, 1, 1, 0, 0, 0, 0, 0)
+  $square: (
+    (0, 1, 1, 1, 1, 1, 1, 0),
+    (0, 1, 1, 1, 1, 1, 1, 0),
+    (0, 1, 1, 1, 1, 1, 1, 0),
+    (0, 1, 1, 1, 1, 1, 1, 0),
+    (0, 1, 1, 1, 1, 1, 1, 0),
+    (0, 1, 1, 1, 1, 1, 1, 0)
   );
   $colors: ($base-color, map-get($default-colors, "shadow"));
 
@@ -37,30 +36,30 @@
     position: relative;
   }
 
+  &.is-disc li::before {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: -20px;
+    content: "";
+
+    @include pixelize($disc, $colors, 2px);
+  }
+
   &.is-circle li::before {
     position: absolute;
     top: calc(50% - 10px);
     left: -20px;
     content: "";
 
-    @include pixelize($ball, $colors, 2px);
+    @include pixelize($circle, $colors, 2px);
   }
 
-  &.is-arrow li::before {
+  &.is-square li::before {
     position: absolute;
     top: calc(50% - 10px);
     left: -20px;
     content: "";
 
-    @include pixelize($arrow, $colors, 2px);
-  }
-
-  &.is-pointer li::before {
-    position: absolute;
-    top: calc(50% - 10px);
-    left: -20px;
-    content: "";
-
-    @include pixelize($pointer, $colors, 2px);
+    @include pixelize($square, $colors, 2px);
   }
 }
