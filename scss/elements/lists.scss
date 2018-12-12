@@ -1,0 +1,47 @@
+.nes-list {
+  $ball: (
+    (0, 0, 0, 1, 1, 0, 0, 0),
+    (0, 0, 1, 1, 1, 1, 0, 0),
+    (0, 1, 1, 1, 1, 1, 1, 0),
+    (0, 1, 1, 1, 1, 1, 1, 0),
+    (0, 0, 1, 1, 1, 1, 0, 0),
+    (0, 0, 0, 1, 1, 0, 0, 0)
+  );
+
+  $arrow: (
+    (0, 0, 0, 1, 1, 0, 0, 0),
+    (0, 0, 0, 1, 1, 1, 0, 0),
+    (0, 0, 0, 1, 1, 1, 1, 0),
+    (0, 0, 0, 1, 1, 1, 1, 0),
+    (0, 0, 0, 1, 1, 1, 0, 0),
+    (0, 0, 0, 1, 1, 0, 0, 0)
+  );
+  $colors: ($base-color, map-get($default-colors, "shadow"));
+
+  list-style-type: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  & li {
+    position: relative;
+  }
+
+  &.is-circle li::before {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: -20px;
+    content: "";
+
+    @include pixelize($ball, $colors, 2px);
+  }
+
+  &.is-arrow li::before {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: -20px;
+    content: "";
+
+    @include pixelize($arrow, $colors, 2px);
+  }
+}
