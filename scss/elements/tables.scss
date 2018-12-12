@@ -1,7 +1,7 @@
 .nes-table-responsive {
-  @media (max-width: 768px) {
-    overflow-x: scroll;
-  }
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 .nes-table {
   table-layout: fixed;
