@@ -16,6 +16,16 @@
     (0, 0, 0, 1, 1, 1, 0, 0),
     (0, 0, 0, 1, 1, 0, 0, 0)
   );
+
+  $pointer: (
+    (1, 1, 1, 0, 0, 0, 0, 0),
+    (0, 1, 1, 1, 0, 0, 0, 0),
+    (0, 0, 1, 1, 1, 0, 0, 0),
+    (0, 0, 0, 1, 1, 1, 0, 0),
+    (0, 0, 1, 1, 1, 0, 0, 0),
+    (0, 1, 1, 1, 0, 0, 0, 0),
+    (1, 1, 1, 0, 0, 0, 0, 0)
+  );
   $colors: ($base-color, map-get($default-colors, "shadow"));
 
   list-style-type: none;
@@ -43,5 +53,14 @@
     content: "";
 
     @include pixelize($arrow, $colors, 2px);
+  }
+
+  &.is-pointer li::before {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: -20px;
+    content: "";
+
+    @include pixelize($pointer, $colors, 2px);
   }
 }
