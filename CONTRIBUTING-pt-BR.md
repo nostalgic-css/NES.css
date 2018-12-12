@@ -89,8 +89,7 @@ Nós usamos [Commitizen][commitizen] e [`commitlint`][commitlint] a fim de asseg
 
 
 
-[all-contributors]: https://github.com/kentcdodds/all-contributors
-[code-of-conduct]: https://github.com/nostalgic-css/NES.css/blob/master/CODE_OF_CONDUCT.md
+[code-of-conduct]: https://github.com/nostalgic-css/NES.css/blob/master/CODE_OF_CONDUCT-pt-BR.md
 [commitizen]: https://github.com/commitizen/cz-cli
 [commitlint]: [https://github.com/marionebl/commitlint]
 [egghead]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
