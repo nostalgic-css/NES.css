@@ -36,7 +36,7 @@ Este Código de Conduta aplica-se dentro dos espaços do projeto ou qualquer esp
 
 Comportamento abusivo, de assédio ou de outros tipos pode ser comunicado contatando a equipe do projeto [support@nostalgi.cc][support-email]. If contacting the full project team is not desirable, feel free to contact any of them individually:
 
-* B. C. Rikko <[bcrikko@example.com](mailto:b.c.rikko@gmail.com)>
+* B.C.Rikko <[b.c.rikko@gmail.com](mailto:b.c.rikko@gmail.com)>
 * Igor Guastalla <[limaguastallaigor@gmail.com](mailto:limaguastallaigor@gmail.com)>
 * Trezy <[tre@trezy.com](mailto:tre@trezy.com)>
 

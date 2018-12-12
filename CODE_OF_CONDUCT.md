@@ -36,7 +36,7 @@ This Code of Conduct applies both within project spaces and in public spaces whe
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at [support@nostalgi.cc][support-email]. If contacting the full project team is not desirable, feel free to contact any of them individually:
 
-* B. C. Rikko <[bcrikko@example.com](mailto:b.c.rikko@gmail.com)>
+* B.C.Rikko <[b.c.rikko@gmail.com](mailto:b.c.rikko@gmail.com)>
 * Igor Guastalla <[limaguastallaigor@gmail.com](mailto:limaguastallaigor@gmail.com)>
 * Trezy <[tre@trezy.com](mailto:tre@trezy.com)>
 
