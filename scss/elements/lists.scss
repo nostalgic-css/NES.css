@@ -1,0 +1,44 @@
+.nes-list {
+  $disc: (
+    (0, 0, 0, 1, 1, 0, 0, 0),
+    (0, 0, 1, 1, 1, 1, 0, 0),
+    (0, 1, 1, 1, 1, 1, 1, 0),
+    (0, 1, 1, 1, 1, 1, 1, 0),
+    (0, 0, 1, 1, 1, 1, 0, 0),
+    (0, 0, 0, 1, 1, 0, 0, 0)
+  );
+
+  $circle: (
+    (0, 0, 0, 1, 1, 0, 0, 0),
+    (0, 0, 1, 1, 1, 1, 0, 0),
+    (0, 1, 1, 0, 0, 1, 1, 0),
+    (0, 1, 1, 0, 0, 1, 1, 0),
+    (0, 0, 1, 1, 1, 1, 0, 0),
+    (0, 0, 0, 1, 1, 0, 0, 0)
+  );
+  $colors: ($base-color, map-get($default-colors, "shadow"));
+
+  list-style-type: none;
+
+  & li {
+    position: relative;
+  }
+
+  &.is-disc li::before {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: -22px;
+    content: "";
+
+    @include pixelize($disc, $colors, 2px);
+  }
+
+  &.is-circle li::before {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: -22px;
+    content: "";
+
+    @include pixelize($circle, $colors, 2px);
+  }
+}
