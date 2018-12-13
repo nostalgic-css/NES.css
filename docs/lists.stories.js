@@ -10,7 +10,11 @@ stories.add('list', () => {
   const selectedClass = radios('type', {
     default: 'is-disc',
     'is-circle': 'is-circle',
-    'is-square': 'is-square',
   }, 'is-disc');
-  return `<ul class="nes-list ${selectedClass}"> <li>Test</li> </ul>`;
+  return `<ul class="nes-list ${selectedClass}">
+            <li>Good morning.</li>
+            <li>Thou hast had a good night's sleep, I hope.</li>
+            <li>Thou hast had a good afternoon</li>
+            <li>Good night.</li>
+          </ul>`;
 });
