@@ -13,7 +13,6 @@
     "build:cleancss": "cleancss -o css/nes.min.css css/nes.css",
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook",
-    "build-storybook": "npm run storybook",
     "deploy": "npm run build",
     "semantic-release": "semantic-release",
     "commit": "git-cz",
