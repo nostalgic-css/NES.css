@@ -1,7 +1,7 @@
 <div align="center">
   <a href="https://nostalgic-css.github.io/NES.css/" target="_blank"><img src="https://user-images.githubusercontent.com/5305599/49061716-da649680-f254-11e8-9a89-d95a7407ec6a.png" alt="NES.css: NES-style  CSS framework" style="max-width: 100%;" width="600" height="315"></a>
 
-  <a href="README.md">English</a> / <a href="README-jp.md">日本語</a> / <a href="README-es.md">Español</a> / <a href="README-pt-BR.md">Português</a>
+  <a href=".github/README-jp.md">日本語</a> / <a href=".github/README-es.md">Español</a> / <a href=".github/README-pt-BR.md">Português</a>
 </div>
 
 NES.css is a **NES-style(8bit-like)** CSS Framework.
@@ -95,7 +95,7 @@ If you'd like to help us out with the project, we welcome contributions of all t
 
 [commitizen]: http://commitizen.github.io/cz-cli/
 [commitizen-badge]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
-[contributing-document]: https://github.com/nostalgic-css/NES.css/blob/master/CONTRIBUTING.md
+[contributing-document]: CONTRIBUTING.md
 [gitter]: https://gitter.im/nostalgic-css/Lobby
 [gitter-badge]: https://img.shields.io/gitter/room/nostalgic-css/Lobby.svg
 [google-fonts-guide]: https://developers.google.com/fonts/docs/getting_started

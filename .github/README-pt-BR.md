@@ -95,7 +95,7 @@ Se você quiser nos ajudar com o projeto, nós agradecemos contribuições de to
 
 [commitizen]: http://commitizen.github.io/cz-cli/
 [commitizen-badge]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
-[contributing-document]: CONTRIBUTING-pt-BR.md
+[contributing-document]: .github/CONTRIBUTING-pt-BR.md
 [gitter]: https://gitter.im/nostalgic-css/Lobby
 [gitter-badge]: https://img.shields.io/gitter/room/nostalgic-css/Lobby.svg
 [google-fonts-guide]: https://developers.google.com/fonts/docs/getting_started
