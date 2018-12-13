@@ -16,21 +16,9 @@
     (0, 0, 1, 1, 1, 1, 0, 0),
     (0, 0, 0, 1, 1, 0, 0, 0)
   );
-
-  $square: (
-    (0, 1, 1, 1, 1, 1, 1, 0),
-    (0, 1, 1, 1, 1, 1, 1, 0),
-    (0, 1, 1, 1, 1, 1, 1, 0),
-    (0, 1, 1, 1, 1, 1, 1, 0),
-    (0, 1, 1, 1, 1, 1, 1, 0),
-    (0, 1, 1, 1, 1, 1, 1, 0)
-  );
   $colors: ($base-color, map-get($default-colors, "shadow"));
 
   list-style-type: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 
   & li {
     position: relative;
@@ -38,8 +26,8 @@
 
   &.is-disc li::before {
     position: absolute;
-    top: calc(50% - 10px);
-    left: -20px;
+    top: calc(50% - 8px);
+    left: -22px;
     content: "";
 
     @include pixelize($disc, $colors, 2px);
@@ -47,19 +35,10 @@
 
   &.is-circle li::before {
     position: absolute;
-    top: calc(50% - 10px);
-    left: -20px;
+    top: calc(50% - 8px);
+    left: -22px;
     content: "";
 
     @include pixelize($circle, $colors, 2px);
-  }
-
-  &.is-square li::before {
-    position: absolute;
-    top: calc(50% - 10px);
-    left: -20px;
-    content: "";
-
-    @include pixelize($square, $colors, 2px);
   }
 }
