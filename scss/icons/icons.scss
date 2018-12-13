@@ -13,6 +13,8 @@
 @import "twitch.scss";
 @import "reddit.scss";
 @import "whatsapp.scss";
+@import "gmail.scss";
+@import "linkedin.scss";
 
 // others
 @import "close.scss";
@@ -111,6 +113,14 @@
 
     &.whatsapp::before {
       @include pixelize($icon-whatsapp, $icon-whatsapp-colors, $px);
+    }
+
+    &.gmail::before {
+      @include pixelize($icon-gmail, $icon-gmail-colors, $px);
+    }
+
+    &.linkedin::before {
+      @include pixelize($icon-linkedin, $icon-linkedin-colors, $px);
     }
   }
 
