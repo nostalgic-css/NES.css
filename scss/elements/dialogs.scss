@@ -1,32 +1,10 @@
 .nes-dialog {
   padding: 1.5rem 2rem;
+  color: $base-color;
+  border: none;
+  box-shadow: 4px 0, -4px 0, 0 4px, 0 -4px;
 
   > :last-child {
     margin-bottom: 0;
-  }
-
-  &::before,
-  &::after {
-    position: absolute;
-    z-index: -1;
-    content: "";
-  }
-
-  &::before {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-
-  &::after {
-    top: 2px;
-    right: 2px;
-    bottom: 2px;
-    left: 2px;
-    border-color: $base-color;
-    border-style: solid;
-    border-width: 4px;
-    border-radius: 4px;
   }
 }
