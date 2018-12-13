@@ -1,5 +1,8 @@
 # Contribución
 
+Ver este documento en otro idioma:
+[English](CONTRIBUTING.md) / [日本語](.github/CONTRIBUTING-jp.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
+
 ¿Quieres contribuir al proyecto? ¡Genial!
 
 ## Cosas que tienes que saber

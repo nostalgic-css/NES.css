@@ -1,5 +1,8 @@
 # Código de Conduta para Colaboradores
 
+Veja este documento em outro idioma:
+[English](CONTRIBUTING.md) / [日本語](.github/CONTRIBUTING-jp.md) / [Español](.github/CONTRIBUTING-es.md)
+
 ## Nossa promessa
 
 Com o interesse de fomentar uma comunidade aberta e acolhedora, nós, como colaboradores e administradores deste projeto, comprometemo-nos a fazer a participação deste projeto uma experiência livre de assédio para todos, independentemente da aparência pessoal, deficiência, etnia, gênero, idade, identidade ou expressão de gênero, identidade ou orientação sexual, nacionalidade, nível de experiência, porte físico, raça ou religião.

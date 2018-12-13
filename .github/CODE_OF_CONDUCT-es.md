@@ -1,5 +1,8 @@
 # Código de Conducta convenido para Contribuyentes
 
+Ver este documento en otro idioma:
+[English](CONTRIBUTING.md) / [日本語](.github/CONTRIBUTING-jp.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
+
 ## Nuestro compromiso
 
 En el interés de fomentar una comunidad abierta y acogedora, nosotros como contribuyentes y administradores nos comprometemos a hacer de la participación en nuestro proyecto y nuestra comunidad una experiencia libre de acoso para todos, independientemente de la edad, dimensión corporal, discapacidad, etnia, identidad y expresión de género, nivel de experiencia, nacionalidad, apariencia física, raza, religión, identidad u orientación sexual.

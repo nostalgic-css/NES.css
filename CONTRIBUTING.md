@@ -1,5 +1,8 @@
 # Contributing
 
+View this document in another language:
+[日本語](.github/CONTRIBUTING-jp.md) / [Español](.github/CONTRIBUTING-es.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
+
 You want to contribute to the project? Awesome!
 
 ## Things to know
@@ -89,7 +92,7 @@ We use [Commitizen][commitizen] and [`commitlint`][commitlint] to make sure all 
 
 
 
-[code-of-conduct]: https://github.com/nostalgic-css/NES.css/blob/master/CODE_OF_CONDUCT.md
+[code-of-conduct]: CODE_OF_CONDUCT.md
 [commitizen]: https://github.com/commitizen/cz-cli
 [commitlint]: [https://github.com/marionebl/commitlint]
 [egghead]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github

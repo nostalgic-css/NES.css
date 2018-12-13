@@ -1,5 +1,8 @@
 # 貢献する
 
+このドキュメントを別の言語で表示する：
+[English](CONTRIBUTING.md) / [Español](.github/CONTRIBUTING-es.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
+
 このプロジェクトに貢献したいですか?素晴らしい!
 
 ## 知るべきこと
