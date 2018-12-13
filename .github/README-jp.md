@@ -59,6 +59,7 @@ NES.cssはコンポーネントのスタイルのみを提供しています。�
 |英語|[Kongtext](https://www.dafont.com/kongtext.font)|
 |日本語|[美咲フォント](http://www.geocities.jp/littlimi/misaki.htm)|
 |日本語|[Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)|
+|韓國語|[둥근모꼴](http://cactus.tistory.com/193)|
 
 
 ## CSS Only

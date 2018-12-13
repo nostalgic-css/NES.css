@@ -47,6 +47,7 @@ NES.css no contiene ninguna tipografía, pero recomendamos la siguiente lista de
 | Inglés   | [Kongtext](https://www.dafont.com/kongtext.font)                   |
 | Japonés  | [美咲フォント](http://www.geocities.jp/littlimi/misaki.htm)          |
 | Japonés  | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                  |
+| Coreano  | [둥근모꼴](http://cactus.tistory.com/193)                            |
 
 ## Uso
 

@@ -47,6 +47,7 @@ NES.css doesn't provide any fonts, but we do maintain the following list of font
 | English   | [Kongtext](https://www.dafont.com/kongtext.font)                   |
 | Japanese  | [美咲フォント](http://www.geocities.jp/littlimi/misaki.htm)          |
 | Japanese  | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                  |
+| Korean    | [둥근모꼴](http://cactus.tistory.com/193)                            |
 
 ## Usage
 
