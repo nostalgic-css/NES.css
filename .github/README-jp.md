@@ -14,7 +14,7 @@ NES.cssは **ファミコン風(8bit ライク)** なCSSフレームワークで
 
 NES.cssはnpm(推奨)、またはYarn、CDNのいずれかを介して利用できます。
 
-#### パッケージマネージャの場合
+#### パッケージマネージャを使う場合
 
 ```shell
 npm install nes.css
@@ -26,7 +26,7 @@ yarn add nes.css
 * `sass` - メインのSassソースファイルへのパス
 * `style` - 非圧縮のCSSへのパス
 
-#### CDNの場合
+#### CDNを使う場合
 
 `<link />`要素を使ってCSSをインポートする:
 
@@ -85,7 +85,7 @@ NES.cssは次のブラウザの最新バージョンと互換性があります�
 ## コピーライトとライセンス
 
 
-Code and documentation copyright 2018 [B.C.Rikko](https://github.com/BcRikko). コードはMITライセンスの下で公開されています。ドキュメントはクリエイティブ コモンズの下で公開されています。
+コードとドキュメント copyright 2018 [B.C.Rikko](https://github.com/BcRikko). コードはMITライセンスの下で公開されています。ドキュメントはクリエイティブ コモンズの下で公開されています。
 
 ## 開発
 
