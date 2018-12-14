@@ -31,7 +31,7 @@
     border-radius: 4px;
   }
 
-  &.is-center {
+  &.is-centered {
     text-align: center;
   }
 
@@ -50,7 +50,7 @@
       background-color: $background-color;
     }
 
-    &.is-center {
+    &.is-centered {
       > .title {
         margin: -2rem auto 1rem;
       }
@@ -127,7 +127,7 @@
         margin-top: -1.5rem;
       }
 
-      &.is-center {
+      &.is-centered {
         > .title {
           margin: -1.5rem auto 1rem;
         }
