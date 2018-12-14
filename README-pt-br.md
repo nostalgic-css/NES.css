@@ -16,7 +16,7 @@ NES.css é um framework CSS **estilo-NES (em 8bits)**.
 ```html
 <!-- minify -->
 <link href="https://unpkg.com/nes.css@0.0.2/css/nes.min.css" rel="stylesheet" />
-<!-- latest -->
+<!-- mais atual -->
 <link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" />
 ```
 
@@ -25,7 +25,7 @@ OU
 ```html
 <!-- non-minified -->
 <link href="https://unpkg.com/nes.css@0.0.2/css/nes.css" rel="stylesheet" />
-<!-- latest -->
+<!-- mais atual -->
 <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
 ```
 
