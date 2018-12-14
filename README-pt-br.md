@@ -4,7 +4,7 @@
   <a href="README.md">English</a> / <a href="README-jp.md">日本語</a> / <a href="README-pt-br.md">Português brasileiro</a>
 </div>
 
-NES.css é um framework CSS **estilo-NES(em 8bits)**.
+NES.css é um framework CSS **estilo-NES (em 8bits)**.
 
 
 [![Gitter][gitter-badge]][gitter]
@@ -51,11 +51,11 @@ A fonte padrão é a Press Start 2P, que apenas suporta caracteres do inglês. Q
 
 ## Apenas CSS
 
-NES.css precisa apenas de CSS e não depende de nenhum javaScript.
+NES.css apenas precisa de CSS e não depende de nenhum javaScript.
 
 ## Suporte a navegadores
 
-NES.css é compativel com a mais nova versão dos seguintes navegadores:
+NES.css é compatível com a mais nova versão dos seguintes navegadores:
 * Chrome
 * Firefox
 * Safari
@@ -89,25 +89,25 @@ TODO: ビルドはCIでするように変更したい
 ### Diretórios
 ```sh
 .
-├── index.html: Demo page
-├── style.css: Demo page style
-├── css: Distribution files
+├── index.html: Página demo
+├── style.css: Estilo da página demo
+├── css: arquivos de distribuição
 ├── docs: Storybook stories
-└── scss: Source
+└── scss: Fonte
     ├── base
     │   ├── reboot.scss: Não mude! (Bootstrap Reboot)
     │   ├── generic.scss: Estilo geral e reboot.css
     │   └── variables.scss: Variáveis comuns
     ├── elements
     ├── form
-    ├── icons: 16x16 icons
-    ├── pixel-arts: For icons other than 16x16.
+    ├── icons: ícones 16x16
+    ├── pixel-arts: Para ícones maiores que 16x16.
     └── utilities
 ```
 
 
 
-## Copyright and licensa
+## Copyright and licença
 
 Código e documentação copyright 2018 [B.C.Rikko](https://github.com/BcRikko). Código divulgado sob a lincença MIT. Documentos lançados sob Creative Commons
 
