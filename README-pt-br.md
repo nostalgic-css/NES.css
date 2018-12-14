@@ -55,7 +55,7 @@ NES.css apenas precisa de CSS e não depende de nenhum javaScript.
 
 ## Suporte a navegadores
 
-NES.css é compatível com a mais nova versão dos seguintes navegadores:
+NES.css é compatível com a versão mais nova dos seguintes navegadores:
 * Chrome
 * Firefox
 * Safari
