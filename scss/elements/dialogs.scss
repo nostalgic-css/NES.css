@@ -1,0 +1,15 @@
+.nes-dialog {
+  padding: 1.5rem 2rem;
+  color: $base-color;
+  border: none;
+  box-shadow: 4px 0, -4px 0, 0 4px, 0 -4px;
+
+  > .backdrop,
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}

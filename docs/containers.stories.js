@@ -12,7 +12,7 @@ stories.add('container', () => {
   const isRounded = boolean('is-rounded', false) ? 'is-rounded' : '';
   const alignment = radios('alignment', {
     default: '',
-    'is-center': 'is-center',
+    'is-centered': 'is-centered',
     'is-right': 'is-right',
   }, '');
   const selectedClasses = [withTitle, isDark, isRounded, alignment];
