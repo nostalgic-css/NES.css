@@ -99,6 +99,7 @@ TODO: ビルドはCIでするように変更したい
     ├── icons: 16x16 icons
     ├── pixel-arts: For icons other than 16x16.
     └── utilities
+└── sketch: Demo page's UI design file
 ```
 
 
