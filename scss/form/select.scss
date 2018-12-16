@@ -1,0 +1,55 @@
+.nes-select {
+  @mixin border-style($border, $outline) {
+    color: $border;
+    box-shadow: 0 4px, 0 -4px, 4px 0, -4px 0;
+
+    > select {
+      outline-color: $outline;
+    }
+
+    &::after {
+      color: $background-color;
+      background-color: $border;
+    }
+  }
+
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  margin: 4px;
+
+  @include border-style($base-color, map-get($default-colors, "hover"));
+
+  &.is-success {
+    @include border-style(map-get($success-colors, "normal"), map-get($success-colors, "hover"));
+  }
+  &.is-warning {
+    @include border-style(map-get($warning-colors, "normal"), map-get($warning-colors, "hover"));
+  }
+  &.is-error {
+    @include border-style(map-get($error-colors, "normal"), map-get($error-colors, "hover"));
+  }
+
+  > select {
+    width: 100%;
+    padding: 0.5rem 3.2rem 0.5rem 1rem;
+    cursor: $cursor-click-url, pointer;
+    border: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 2.5rem;
+    line-height: 2.5rem;
+    color: $background-color;
+    text-align: center;
+    pointer-events: none;
+    content: ">";
+    transform: rotateZ(90deg);
+  }
+}
