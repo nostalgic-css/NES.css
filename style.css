@@ -16,20 +16,6 @@ div.containers > .nes-container {
   max-width: 400px;
 }
 
-div.tables {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-div.tables > .nes-table {
-  min-width: 350px;
-  max-width: calc(50% - 2rem);
-}
-div.tables > .nes-table:first-child {
-  margin-right: 2rem;
-  margin-bottom: 2rem;
-}
-
 .balloon.nes-container .nes-balloon {
   max-width: 600px;
   margin: 2rem 2rem;
@@ -91,10 +77,6 @@ div.tables > .nes-table:first-child {
   body {
     padding: 0;
     margin: 2rem 0.2rem;
-  }
-  div.tables > .nes-table {
-    max-width: 100%;
-    margin-right: 0;
   }
   .balloon.nes-container .nes-balloon {
     max-width: 70%;

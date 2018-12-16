@@ -1,3 +1,8 @@
+.nes-table-responsive {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
 .nes-table {
   table-layout: fixed;
   background-color: $background-color;
