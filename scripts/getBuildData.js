@@ -4,7 +4,7 @@ module.exports = (isCompiled = false) => {
   let buildData = '';
 
   if (git.branch() !== 'master') {
-    buildData += '\n';
+    buildData += '';
 
     if (isCompiled) {
       buildData += `
@@ -22,5 +22,5 @@ module.exports = (isCompiled = false) => {
     }
   }
 
-  return buildData.replace(/\n/, '').replace(/^  +/gm, '  ');
+  return buildData.replace(/^  +/gm, '  ');
 };
