@@ -7,7 +7,7 @@
     "stylelint": "stylelint scss/**/*.scss",
     "build:stylelint": "npm run stylelint -- --fix",
     "build:clean": "rimraf css",
-    "build:sass": "node-sass --output-style expanded --source-map true --functions scss/functions.js scss/nes.scss css/nes.css",
+    "build:sass": "node-sass --output-style expanded --source-map true --functions scripts/scssFunctions.js scss/nes.scss css/nes.css",
     "build:autoprefix": "postcss --use autoprefixer --map false --output css/nes.css css/nes.css",
     "build:cleancss": "cleancss -o css/nes.min.css css/nes.css",
     "storybook": "start-storybook -p 6006",
