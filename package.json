@@ -1,6 +1,5 @@
 {
   "name": "nes.css",
-  "version": "0.0.0-development",
   "description": "NES.css is NES-style CSS Framework.",
   "scripts": {
     "watch": "npm run build:sass -- --watch",
