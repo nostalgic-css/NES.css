@@ -4,8 +4,6 @@ module.exports = (isCompiled = false) => {
   let buildData = '';
 
   if (git.branch() !== 'master') {
-    buildData += '';
-
     if (isCompiled) {
       buildData += `
         Build Date: ${(new Date()).toISOString()}
