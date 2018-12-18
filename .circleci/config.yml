@@ -171,6 +171,9 @@ workflows:
     jobs:
       - checkout
       - commitlint
+          filters:
+            branches:
+              ignore: master
       - install-dependencies:
           requires:
             - checkout
