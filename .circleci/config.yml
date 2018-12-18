@@ -170,7 +170,7 @@ workflows:
   main:
     jobs:
       - checkout
-      - commitlint
+      - commitlint:
           filters:
             branches:
               ignore: master
