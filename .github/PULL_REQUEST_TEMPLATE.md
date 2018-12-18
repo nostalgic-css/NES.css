@@ -1,4 +1,11 @@
-<!-- 
-  I'm not very good at English. So, I'm glad if you write in English as easy as possible.
-  日本語がわかる方はなるべく日本語でお願いします。
--->
+<!-- Please fill your information below the lines starting with `#`. -->
+<!-- You can delete these lines enclosed by `<` and `>` before posting, too. -->
+
+**Description**
+<!-- What does this PR do, what does it want to achieve? -->
+
+**Compatibility**
+<!-- Elaborate on how this PR affects the compatibility. Is it breaking, or not? -->
+
+**Caveats**
+<!-- Is there something specific you'd like to mention before merge? -->

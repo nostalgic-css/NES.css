@@ -12,12 +12,12 @@ stories.add('container', () => {
   const isRounded = boolean('is-rounded', false) ? 'is-rounded' : '';
   const alignment = radios('alignment', {
     default: '',
-    'is-center': 'is-center',
+    'is-centered': 'is-centered',
     'is-right': 'is-right',
   }, '');
   const selectedClasses = [withTitle, isDark, isRounded, alignment];
 
-  return `<div class="container ${selectedClasses.join(' ')}">
+  return `<div class="nes-container ${selectedClasses.join(' ')}">
       <p class="title">Container</p>
       <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
   </div>`;

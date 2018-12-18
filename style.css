@@ -3,7 +3,7 @@ body {
   margin: 2rem;
 }
 
-.container:not(:last-child) {
+.nes-container:not(:last-child) {
   margin-bottom: 1rem;
 }
 
@@ -11,34 +11,34 @@ i.brand {
   margin-right: 1rem;
 }
 
-div.containers > .container {
+div.containers > .nes-container {
   display: inline-block;
   max-width: 400px;
 }
 
-.balloon.container .balloon {
+.balloon.nes-container .nes-balloon {
   max-width: 600px;
   margin: 2rem 2rem;
 }
 
-.balloon.container .messages {
+.balloon.nes-container .messages {
   display: flex;
   flex-direction: column;
 }
-.balloon.container .message {
+.balloon.nes-container .message {
   display: flex;
 }
-.balloon.container .message i {
+.balloon.nes-container .message i {
   align-self: flex-end;
 }
-.balloon.container .message.-left {
+.balloon.nes-container .message.-left {
   align-self: flex-start;
 }
-.balloon.container .message.-right {
+.balloon.nes-container .message.-right {
   align-self: flex-end;
 }
 
-.form.container > .field:not(:last-child) {
+.form.nes-container > .nes-field:not(:last-child) {
   margin-bottom: 1rem;
 }
 
@@ -63,12 +63,26 @@ div.containers > .container {
 .github-link:hover {
   text-decoration: none;
 }
-.github-link > p.balloon {
+.github-link > p.nes-balloon {
   align-self: flex-start;
   padding: 0.2rem 0.5rem;
   font-size: 0.8rem;
   color: #333;
 }
-.github-link > i.octocat {
+.github-link > i.nes-octocat {
   align-self: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0;
+    margin: 2rem 0.2rem;
+  }
+  .balloon.nes-container .nes-balloon {
+    max-width: 70%;
+  }
+
+  .github-link {
+    display: none;
+  }
 }

@@ -1,0 +1,18 @@
+# User & editor settings
+.editorconfig
+.prettierignore
+.vscode
+
+# Build files
+.circleci
+.github
+.storybook
+commitlint.config.js
+node_modules
+
+# Documentation files
+docs
+favicon.ico
+index.html
+storybook-static
+style.css

@@ -1,23 +1,26 @@
 {
   "name": "nes.css",
-  "version": "0.0.2",
   "description": "NES.css is NES-style CSS Framework.",
   "scripts": {
     "watch": "npm run build:sass -- --watch",
-    "build": "npm run build:clean && npm run build:stylelint && npm run build:sass && npm run build:autoprefix && npm run build:cleancss && npm run build-storybook",
+    "build": "npm run build:clean && npm run build:stylelint && npm run build:sass && npm run build:autoprefix && npm run build:cleancss && npm run build:storybook",
     "stylelint": "stylelint scss/**/*.scss",
     "build:stylelint": "npm run stylelint -- --fix",
     "build:clean": "rimraf css",
-    "build:sass": "node-sass --output-style expanded --source-map true scss/nes.scss css/nes.css",
+    "build:sass": "node-sass --output-style expanded --source-map true --functions scripts/scssFunctions.js scss/nes.scss css/nes.css",
     "build:autoprefix": "postcss --use autoprefixer --map false --output css/nes.css css/nes.css",
     "build:cleancss": "cleancss -o css/nes.min.css css/nes.css",
-    "deploy": "npm run build",
     "storybook": "start-storybook -p 6006",
-    "build:storybook": "build-storybook"
+    "build:storybook": "build-storybook",
+    "deploy": "npm run build",
+    "semantic-release": "semantic-release",
+    "commit": "git-cz",
+    "commit:retry": "git-cz --retry",
+    "commitmsg": "commitlint -e"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BcRikko/NES.css.git"
+    "url": "https://github.com/nostalgic-css/NES.css.git"
   },
   "keywords": [
     "css",
@@ -28,24 +31,35 @@
   "author": "BcRikko (https://github.com/Bcrikko)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BcRikko/NES.css/issues"
+    "url": "https://github.com/nostalgic-css/NES.css/issues"
   },
-  "homepage": "https://github.com/BcRikko/NES.css#readme",
+  "homepage": "https://github.com/nostalgic-css/NES.css#readme",
   "devDependencies": {
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-conventional": "^7.1.2",
+    "@semantic-release/exec": "^3.3.0",
     "@storybook/addon-knobs": "^4.0.11",
     "@storybook/html": "^4.0.11",
     "autoprefixer": "^9.1.5",
     "babel-loader": "^8.0.4",
     "clean-css-cli": "^4.2.1",
+    "commitizen": "^3.0.5",
+    "css-loader": "^2.0.0",
+    "cz-conventional-changelog": "^2.1.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "file-loader": "^2.0.0",
+    "git-rev-sync": "^1.12.0",
     "husky": "^1.0.0",
     "lint-staged": "^7.3.0",
     "node-sass": "^4.9.3",
     "postcss-cli": "^6.0.0",
     "prettier": "^1.15.2",
     "rimraf": "^2.6.2",
+    "sass-loader": "^7.1.0",
+    "semantic-release": "^15.12.3",
+    "style-loader": "^0.23.1",
     "stylelint": "^9.5.0",
     "stylelint-config-prettier": "^4.0.0",
     "stylelint-config-recess-order": "^2.0.0",
@@ -56,24 +70,52 @@
   "browserslist": [
     "> 1%"
   ],
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "subject-case": [
+        0,
+        "never",
+        "sentence-case"
+      ],
+      "subject-full-stop": [
+        0,
+        "never",
+        "."
+      ]
+    }
+  },
   "husky": {
     "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
     "scss/**/*.scss": [
       "npm run build",
-      "git add ./css",
       "git add"
     ],
     "*.js": [
-      "eslint .",
+      "eslint '.storybook/**/*.js' 'docs/**/*.js'",
       "git add"
     ]
   },
   "prettier": {
     "printWidth": 100
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      ["@semantic-release/exec", {
+        "prepareCmd": "./scripts/update-version ${nextRelease.version}"
+      }]
+    ]
   },
   "stylelint": {
     "plugins": [
@@ -94,5 +136,10 @@
   },
   "eslintConfig": {
     "extends": "airbnb-base"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
