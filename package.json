@@ -95,12 +95,10 @@
   },
   "lint-staged": {
     "scss/**/*.scss": [
-      "npm run build",
-      "git add"
+      "npm run build:stylelint"
     ],
     "*.js": [
-      "eslint '.storybook/**/*.js' 'docs/**/*.js'",
-      "git add"
+      "eslint '.storybook/**/*.js' 'docs/**/*.js'"
     ]
   },
   "prettier": {
