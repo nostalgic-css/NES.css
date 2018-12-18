@@ -113,7 +113,7 @@
       "@semantic-release/npm",
       "@semantic-release/github",
       ["@semantic-release/exec", {
-        "prepareCmd": "./scripts/update-version ${nextRelease.version}"
+        "prepareCmd": "./scripts/updatePackageHeader.js ${nextRelease.version}"
       }]
     ]
   },
