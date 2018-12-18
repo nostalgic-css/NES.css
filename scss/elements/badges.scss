@@ -1,0 +1,88 @@
+@mixin badge-style($color, $background) {
+  & span:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    color: map-get($default-colors, "normal");
+    background-color: $base-color;
+    // prettier-ignore
+    box-shadow:
+      0 4px $base-color,
+      0 -4px $base-color,
+      0 0 $base-color,
+      -4px 0 $base-color;
+  }
+
+  & span:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    color: $color;
+    background-color: $background;
+    // prettier-ignore
+    box-shadow:
+      0 4px $background,
+      0 -4px $background,
+      4px 0 $background,
+      0 0 $background;
+  }
+}
+
+@mixin setup($px) {
+  width: $px * 14;
+  height: $px;
+  font-size: $px * 1.2;
+  // 0.75rem;
+  line-height: 1.5;
+}
+
+// Default style
+.nes-badge {
+  $border-size: 4px;
+
+  position: relative;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75em;
+  margin: $border-size;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: $cursor-click-url;
+  user-select: none;
+  border: none;
+
+  @include badge-style($base-color, map-get($default-colors, "normal"));
+
+  // Other styles
+  // prettier-ignore
+  $types:
+    "primary" $background-color map-get($primary-colors, "normal"),
+    "success" $background-color map-get($success-colors, "normal"),
+    "warning" $base-color map-get($warning-colors, "normal"),
+    "error" $background-color map-get($error-colors, "normal");
+
+  @each $type in $types {
+    &.is-#{nth($type, 1)} {
+      @include badge-style(nth($type, 2), nth($type, 3));
+    }
+  }
+
+  @include setup(5px);
+
+  &.is-small {
+    @include setup(5px);
+  }
+
+  &.is-medium {
+    @include setup(7px);
+  }
+
+  &.is-large {
+    @include setup(9px);
+  }
+}
