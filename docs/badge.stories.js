@@ -8,26 +8,29 @@ stories.addDecorator(withKnobs);
 
 stories.add('badges', () => {
   const optionsLeft = radios('class-left', {
+    default: 'is-dark',
     'is-dark': 'is-dark',
     'is-success': 'is-success',
     'is-primary': 'is-primary',
     'is-warning': 'is-warning',
     'is-error': 'is-error',
-  }, '');
+  }, 'is-dark');
 
   const optionsRight = radios('class-right', {
+    default: 'is-success',
     'is-dark': 'is-dark',
     'is-success': 'is-success',
     'is-primary': 'is-primary',
     'is-warning': 'is-warning',
     'is-error': 'is-error',
-  }, '');
+  }, 'is-success');
 
   const sizes = radios('size', {
+    default: 'is-medium',
     'is-small': 'is-small',
     'is-medium': 'is-medium',
     'is-large': 'is-large',
-  }, '');
+  }, 'is-medium');
 
   return `<span class="nes-badge ${sizes}">
               <span class="${optionsLeft}">npm</span>

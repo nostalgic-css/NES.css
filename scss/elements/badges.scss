@@ -1,9 +1,9 @@
 @mixin span-style($color, $background, $left) {
   position: absolute;
-  color: $color;
-  background-color: $background;
   top: 0;
   width: 50%;
+  color: $color;
+  background-color: $background;
 
   @if $left == 0 {
     left: 0;
@@ -46,6 +46,7 @@
   $border-size: 4px;
 
   position: relative;
+  box-sizing: border-box;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -55,7 +56,6 @@
   white-space: nowrap;
   vertical-align: middle;
   cursor: $cursor-click-url;
-  box-sizing: border-box;
   user-select: none;
   border: none;
 
