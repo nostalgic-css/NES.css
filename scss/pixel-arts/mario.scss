@@ -1,5 +1,4 @@
 .nes-mario {
-  $px: 6px;
   // prettier-ignore
   $mario-colors: (#f81c2f, #65352b, #ffbb8e, #000,
     #1560ad, #aeaeac, #fef102);
@@ -25,16 +24,17 @@
 
   position: relative;
   display: inline-block;
-  width: $px * 14;
-  height: $px * 16;
+  width: calc(1em * 14);
+  height: calc(1em * 16);
+  font-size: 6px;
 
   &::before {
     position: absolute;
-    top: $px * -1;
-    left: $px * -1;
+    top: -1em;
+    left: -1em;
     content: "";
     background: transparent;
 
-    @include pixelize($mario, $mario-colors, $px);
+    @include pixelize($mario, $mario-colors);
   }
 }

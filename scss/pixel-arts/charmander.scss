@@ -1,5 +1,4 @@
 .nes-charmander {
-  $px: 6px;
   // prettier-ignore
   $charmander-colors: (#000202, #f77702, #eb2010,
     #fdfcff, #e5d70a, #e7d70e);
@@ -27,16 +26,17 @@
 
   position: relative;
   display: inline-block;
-  width: $px * 21;
-  height: $px * 18;
+  width: calc(1em * 21);
+  height: calc(1em * 18);
+  font-size: 6px;
 
   &::before {
     position: absolute;
-    top: $px * -1;
-    left: $px * -1;
+    top: -1em;
+    left: -1em;
     content: "";
     background: transparent;
 
-    @include pixelize($charmander, $charmander-colors, $px);
+    @include pixelize($charmander, $charmander-colors);
   }
 }

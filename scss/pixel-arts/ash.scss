@@ -1,5 +1,4 @@
 .nes-ash {
-  $px: 6px;
   // prettier-ignore
   $ash-colors: (#f8f8ff, #ff614e, #007f7f,
   #181818, #ffe3c5, #426adb, #4169e1);
@@ -24,16 +23,17 @@
 
   position: relative;
   display: inline-block;
-  width: $px * 14;
-  height: $px * 15;
+  width: calc(1em * 14);
+  height: calc(1em * 15);
+  font-size: 6px;
 
   &::before {
     position: absolute;
-    top: $px * -1;
-    left: $px * -1;
+    top: -1em;
+    left: -1em;
     content: "";
     background: transparent;
 
-    @include pixelize($ash, $ash-colors, $px);
+    @include pixelize($ash, $ash-colors);
   }
 }
