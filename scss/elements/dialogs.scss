@@ -11,8 +11,7 @@
   }
 
   &.is-rounded {
-    color: $base-color;
     border: none;
-    box-shadow: 4px 0, -4px 0, 0 4px, 0 -4px;
+    box-shadow: 4px 0 $base-color, -4px 0 $base-color, 0 4px $base-color, 0 -4px $base-color;
   }
 }
