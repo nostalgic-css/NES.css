@@ -8,7 +8,6 @@ stories.addDecorator(withKnobs);
 
 stories.add('badges', () => {
   const optionsLeft = radios('class-left', {
-    default: 'is-dark',
     'is-dark': 'is-dark',
     'is-success': 'is-success',
     'is-primary': 'is-primary',
@@ -17,7 +16,6 @@ stories.add('badges', () => {
   }, 'is-dark');
 
   const optionsRight = radios('class-right', {
-    default: 'is-success',
     'is-dark': 'is-dark',
     'is-success': 'is-success',
     'is-primary': 'is-primary',
@@ -26,7 +24,6 @@ stories.add('badges', () => {
   }, 'is-success');
 
   const sizes = radios('size', {
-    default: 'is-medium',
     'is-small': 'is-small',
     'is-medium': 'is-medium',
     'is-large': 'is-large',
