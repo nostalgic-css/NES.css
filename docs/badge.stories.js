@@ -7,7 +7,16 @@ const stories = storiesOf('Badges', module);
 stories.addDecorator(withKnobs);
 
 stories.add('badges', () => {
-  const options = radios('class', {
+  const optionsLeft = radios('class-left', {
+    'is-dark': 'is-dark',
+    'is-success': 'is-success',
+    'is-primary': 'is-primary',
+    'is-warning': 'is-warning',
+    'is-error': 'is-error',
+  }, '');
+
+  const optionsRight = radios('class-right', {
+    'is-dark': 'is-dark',
     'is-success': 'is-success',
     'is-primary': 'is-primary',
     'is-warning': 'is-warning',
@@ -20,10 +29,8 @@ stories.add('badges', () => {
     'is-large': 'is-large',
   }, '');
 
-  const selectedClasses = [options, sizes].join(' ');
-
-  return `<span class="nes-badge ${selectedClasses}">
-              <span>npm</span>
-              <span>1.0.0</span>
+  return `<span class="nes-badge ${sizes}">
+              <span class="${optionsLeft}">npm</span>
+              <span class="${optionsRight}">1.0.0</span>
           </span>`;
 });
