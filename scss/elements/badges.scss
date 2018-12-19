@@ -1,36 +1,37 @@
-@mixin span-style($color, $background, $left) {
+@mixin span-style($color, $background, $option, $width: 50%) {
   position: absolute;
   top: 0;
-  width: 50%;
+  width: $width;
   color: $color;
   background-color: $background;
 
-  @if $left == 0 {
+  @if $option == left {
     left: 0;
-  } @else {
+  } @else if $option == right {
     right: 0;
   }
 }
 
-@mixin badge-style($color, $background) {
-  &:first-child {
-    @include span-style($color, $background, 0);
-    // prettier-ignore
-    box-shadow:
-      0 4px $background,
-      0 -4px $background,
-      0 0 $background,
-      -4px 0 $background;
-  }
+@mixin badge-style($color, $background, $is-splited: true) {
+  $box-shadow-first-two: 0 0.5em $background, 0 -0.5em $background;
 
-  &:last-child {
-    @include span-style($color, $background, 1);
-    // prettier-ignore
-    box-shadow:
-      0 4px $background,
-      0 -4px $background,
-      4px 0 $background,
-      0 0 $background;
+  @if $is-splited == true {
+    &:first-child {
+      @include span-style($color, $background, left);
+
+      box-shadow: $box-shadow-first-two, 0 0 $background, -0.5em 0 $background;
+    }
+    &:last-child {
+      @include span-style($color, $background, right);
+
+      box-shadow: $box-shadow-first-two, 0.5em 0 $background, 0 0 $background;
+    }
+  } @else {
+    &:first-child {
+      @include span-style($color, $background, 0, 100%);
+
+      box-shadow: $box-shadow-first-two, 0.5em 0 $background, -0.5em 0 $background;
+    }
   }
 }
 
@@ -43,21 +44,20 @@
 
 // Default style
 .nes-badge {
-  $border-size: 4px;
-
   position: relative;
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.75em;
-  margin: $border-size;
+  margin: 4px;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   cursor: $cursor-click-url;
   user-select: none;
   border: none;
+  @include setup(7px);
 
   // Other styles
   // prettier-ignore
@@ -69,22 +69,27 @@
     "error" $background-color map-get($error-colors, "normal");
 
   @each $type in $types {
+    &.is-splited {
+      & span.is-#{nth($type, 1)} {
+        @include badge-style(nth($type, 2), nth($type, 3));
+      }
+    }
+
     & span.is-#{nth($type, 1)} {
-      @include badge-style(nth($type, 2), nth($type, 3));
+      @include badge-style(nth($type, 2), nth($type, 3), false);
     }
   }
 
-  @include setup(9px);
+  // Other sizes
+  // prettier-ignore
+  $sizes:
+    "small" 5px,
+    "medium" 7px,
+    "large" 9px;
 
-  &.is-small {
-    @include setup(5px);
-  }
-
-  &.is-medium {
-    @include setup(7px);
-  }
-
-  &.is-large {
-    @include setup(9px);
+  @each $size in $sizes {
+    &.is-#{nth($size, 1)} {
+      @include setup(nth($size, 2));
+    }
   }
 }
