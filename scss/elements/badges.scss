@@ -35,25 +35,22 @@
   }
 }
 
-@mixin setup($px) {
-}
-
 // Default style
 .nes-badge {
   $em: 0.75em;
-  width: $em * 14;
-  height: $em;
-  font-size: $em * 1.2;
+
   position: relative;
   display: inline-block;
+  width: $em * 14;
+  height: $em;
   padding: 0.75em;
   margin: 0.5em;
+  font-size: $em * 1.2;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   cursor: $cursor-click-url, pointer;
   user-select: none;
-  @include setup(7px);
 
   // Other styles
   // prettier-ignore

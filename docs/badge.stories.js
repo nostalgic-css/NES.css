@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html'; // eslint-disable-line import/no-extraneous-dependencies
 import { // eslint-disable-line import/no-extraneous-dependencies
-  withKnobs, radios, boolean, number
+  withKnobs, radios, boolean, number,
 } from '@storybook/addon-knobs';
 
 const stories = storiesOf('Badges', module);
