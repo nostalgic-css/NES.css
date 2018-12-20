@@ -8,6 +8,7 @@
     (0,0,1,1,1,0,0),
     (0,0,0,1,0,0,0),
   );
+  $colors: ($base-color, map-get($default-colors, "shadow"));
 
   position: relative;
   width: 100%;
@@ -28,27 +29,20 @@
   }
 
   &::after {
-    $colors: ($base-color, map-get($default-colors, "shadow"));
-
     @include pixelize($dropdown, $colors);
 
     position: absolute;
     top: calc(50% - 11px);
     right: 36px;
-    width: 2px;
-    height: 2px;
-    font-size: 2px;
+    font-size: 3px;
     content: "";
-    transform: scale(1.5);
   }
 
   &.is-success {
     $color: map-get($success-colors, "normal");
 
     &::after {
-      $colors: ($color, map-get($default-colors, "shadow"));
-
-      @include pixelize($dropdown, $colors);
+      color: $color;
     }
 
     select {
@@ -60,9 +54,7 @@
     $color: map-get($warning-colors, "normal");
 
     &::after {
-      $colors: ($color, map-get($default-colors, "shadow"));
-
-      @include pixelize($dropdown, $colors);
+      color: $color;
     }
 
     select {
@@ -74,9 +66,7 @@
     $color: map-get($error-colors, "normal");
 
     &::after {
-      $colors: ($color, map-get($default-colors, "shadow"));
-
-      @include pixelize($dropdown, $colors);
+      color: $color;
     }
 
     select {
