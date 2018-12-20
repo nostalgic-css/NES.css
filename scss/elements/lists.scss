@@ -28,17 +28,19 @@
     position: absolute;
     top: calc(50% - 8px);
     left: -22px;
+    font-size: 2px;
     content: "";
 
-    @include pixelize($disc, $colors, 2px);
+    @include pixelize($disc, $colors);
   }
 
   &.is-circle li::before {
     position: absolute;
     top: calc(50% - 8px);
     left: -22px;
+    font-size: 2px;
     content: "";
 
-    @include pixelize($circle, $colors, 2px);
+    @include pixelize($circle, $colors);
   }
 }
