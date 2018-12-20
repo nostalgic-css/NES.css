@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html'; // eslint-disable-line import/no-extraneous-dependencies
 import { // eslint-disable-line import/no-extraneous-dependencies
-  withKnobs, radios, boolean,
+  withKnobs, radios, boolean, number
 } from '@storybook/addon-knobs';
 
 const stories = storiesOf('Badges', module);
@@ -23,17 +23,17 @@ stories.add('badges', () => {
     'is-error': 'is-error',
   }, 'is-success');
 
-  const sizes = radios('size', {
-    'is-small': 'is-small',
-    'is-medium': 'is-medium',
-    'is-large': 'is-large',
-  }, 'is-medium');
+  const fontSize = number('font-size', 1, {
+    range: true,
+    min: 0,
+    max: 100,
+    step: 0.01,
+  });
 
   const isSplited = boolean('is-splited', true) ? 'is-splited' : '';
-  const selectedClasses = [sizes, isSplited].join(' ');
 
-  return `<span class="nes-badge ${selectedClasses}">
+  return `<a href="#" class="nes-badge ${isSplited}" style="font-size:${fontSize}em">
               <span class="${optionsLeft}">npm</span>
               <span class="${optionsRight}">1.0.0</span>
-          </span>`;
+          </a>`;
 });

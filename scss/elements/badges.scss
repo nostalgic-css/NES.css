@@ -36,27 +36,23 @@
 }
 
 @mixin setup($px) {
-  width: $px * 14;
-  height: $px;
-  font-size: $px * 1.2;
-  line-height: 1.5;
 }
 
 // Default style
 .nes-badge {
+  $em: 0.75em;
+  width: $em * 14;
+  height: $em;
+  font-size: $em * 1.2;
   position: relative;
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   padding: 0.75em;
-  margin: 4px;
+  margin: 0.5em;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  cursor: $cursor-click-url;
+  cursor: $cursor-click-url, pointer;
   user-select: none;
-  border: none;
   @include setup(7px);
 
   // Other styles
@@ -77,19 +73,6 @@
 
     & span.is-#{nth($type, 1)} {
       @include badge-style(nth($type, 2), nth($type, 3), false);
-    }
-  }
-
-  // Other sizes
-  // prettier-ignore
-  $sizes:
-    "small" 5px,
-    "medium" 7px,
-    "large" 9px;
-
-  @each $size in $sizes {
-    &.is-#{nth($size, 1)} {
-      @include setup(nth($size, 2));
     }
   }
 }
