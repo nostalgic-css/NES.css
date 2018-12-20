@@ -1,5 +1,4 @@
 .nes-pokeball {
-  $px: 6px;
   $pokeball-colors: (#060606, #ff001d, #fff, #9fa1a1);
   // prettier-ignore
   $pokeball: (
@@ -23,16 +22,17 @@
 
   position: relative;
   display: inline-block;
-  width: $px * 14;
-  height: $px * 14;
+  width: calc(1em * 14);
+  height: calc(1em * 14);
+  font-size: 6px;
 
   &::before {
     position: absolute;
-    top: $px * -1;
-    left: $px * -1;
+    top: -1em;
+    left: -1em;
     content: "";
     background: transparent;
 
-    @include pixelize($pokeball, $pokeball-colors, $px);
+    @include pixelize($pokeball, $pokeball-colors);
   }
 }

@@ -1,5 +1,4 @@
 .nes-bulbasaur {
-  $px: 6px;
   // prettier-ignore
   $bulbasaur-colors: (#000, #8beb46, #2d8d22, #5ceee1,
    #3fc3b5, #fdfdf5, #ca242a);
@@ -26,16 +25,17 @@
 
   position: relative;
   display: inline-block;
-  width: $px * 20;
-  height: $px * 17;
+  width: calc(1em * 20);
+  height: calc(1em * 17);
+  font-size: 6px;
 
   &::before {
     position: absolute;
-    top: $px * -1;
-    left: $px * -1;
+    top: -1em;
+    left: -1em;
     content: "";
     background: transparent;
 
-    @include pixelize($bulbasaur, $bulbasaur-colors, $px);
+    @include pixelize($bulbasaur, $bulbasaur-colors);
   }
 }

@@ -1,5 +1,4 @@
 .nes-smartphone {
-  $px: 6px;
   $smartphone-colors: (#fff, #060606);
   // prettier-ignore
   $smartphone: (
@@ -34,16 +33,17 @@
 
   position: relative;
   display: inline-block;
-  width: $px * 16;
-  height: $px * 27;
+  width: calc(1em * 16);
+  height: calc(1em * 27);
+  font-size: 6px;
 
   &::before {
     position: absolute;
-    top: $px * -1;
-    left: $px * -1;
+    top: -1em;
+    left: -1em;
     content: "";
     background: transparent;
 
-    @include pixelize($smartphone, $smartphone-colors, $px);
+    @include pixelize($smartphone, $smartphone-colors);
   }
 }

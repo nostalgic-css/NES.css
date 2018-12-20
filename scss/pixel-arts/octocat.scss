@@ -1,5 +1,4 @@
 .nes-octocat {
-  $px: 6px;
   $octocat-colors: (#333, #ffdec4, #cb7066);
   // prettier-ignore
   $octocat-1: (
@@ -40,17 +39,18 @@
 
   position: relative;
   display: inline-block;
-  width: $px * 14;
-  height: $px * 15;
+  width: calc(1em * 14);
+  height: calc(1em * 15);
+  font-size: 6px;
 
   &::before {
     position: absolute;
-    top: $px * -1;
-    left: $px * -1;
+    top: -1em;
+    left: -1em;
     content: "";
     background: transparent;
 
-    @include pixelize($octocat-1, $octocat-colors, $px);
+    @include pixelize($octocat-1, $octocat-colors);
   }
 
   &.animate::before {
@@ -59,10 +59,10 @@
 
   @keyframes wave {
     0% {
-      @include pixelize($octocat-1, $octocat-colors, $px);
+      @include pixelize($octocat-1, $octocat-colors);
     }
     50% {
-      @include pixelize($octocat-2, $octocat-colors, $px);
+      @include pixelize($octocat-2, $octocat-colors);
     }
   }
 }

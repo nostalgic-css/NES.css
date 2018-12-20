@@ -35,9 +35,10 @@
     position: absolute;
     top: -2px;
     left: -20px;
+    font-size: 2px;
     content: "";
 
-    @include pixelize($radio, $colors, 2px);
+    @include pixelize($radio, $colors);
   }
 
   &:checked:hover,
@@ -48,6 +49,6 @@
   }
 
   &:checked:focus + span::before {
-    @include pixelize($radio-checked-focus, $colors, 2px);
+    @include pixelize($radio-checked-focus, $colors);
   }
 }

@@ -1,5 +1,4 @@
 .nes-kirby {
-  $px: 6px;
   $kirby-colors: (#000, #ffaccc, #ff5478);
   // prettier-ignore
   $kirby: (
@@ -23,16 +22,17 @@
 
   position: relative;
   display: inline-block;
-  width: $px * 16;
-  height: $px * 16;
+  width: calc(1em * 16);
+  height: calc(1em * 16);
+  font-size: 6px;
 
   &::before {
     position: absolute;
-    top: $px * -1;
-    left: $px * -1;
+    top: -1em;
+    left: -1em;
     content: "";
     background: transparent;
 
-    @include pixelize($kirby, $kirby-colors, $px);
+    @include pixelize($kirby, $kirby-colors);
   }
 }
