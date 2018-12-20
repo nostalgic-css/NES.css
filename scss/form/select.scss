@@ -1,0 +1,43 @@
+.nes-select {
+  // prettier-ignore
+  $dropdown: (
+    (1,1,1,1,1,1,1),
+    (1,1,1,1,1,1,1),
+    (0,1,1,1,1,1,0),
+    (0,1,1,1,1,1,0),
+    (0,0,1,1,1,0,0),
+    (0,0,0,1,0,0,0),
+  );
+  $colors: ($base-color, map-get($default-colors, "shadow"));
+
+  position: relative;
+  width: 100%;
+
+  select {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: $cursor-click-url, pointer;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 4px #212529, 0 -4px #212529, 4px 0 #212529, -4px 0 #212529;
+
+    &:invalid {
+      color: $color-00;
+    }
+  }
+
+  &::after {
+    @include pixelize($dropdown, $colors);
+
+    position: absolute;
+    top: calc(50% - 11px);
+    right: 36px;
+    width: 2px;
+    height: 2px;
+    font-size: 2px;
+    content: "";
+    transform: scale(1.5);
+  }
+}
