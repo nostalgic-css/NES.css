@@ -8,20 +8,19 @@
     (0,0,1,1,1,0,0),
     (0,0,0,1,0,0,0),
   );
-  $colors: ($base-color, map-get($default-colors, "shadow"));
 
   position: relative;
   width: 100%;
 
   select {
     width: 100%;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
     -webkit-appearance: none;
     appearance: none;
     cursor: $cursor-click-url, pointer;
     border: none;
     border-radius: 0;
-    box-shadow: 0 4px #212529, 0 -4px #212529, 4px 0 #212529, -4px 0 #212529;
+    box-shadow: 0 4px $color-black, 0 -4px $color-black, 4px 0 $color-black, -4px 0 $color-black;
 
     &:invalid {
       color: $color-00;
@@ -29,6 +28,8 @@
   }
 
   &::after {
+    $colors: ($base-color, map-get($default-colors, "shadow"));
+
     @include pixelize($dropdown, $colors);
 
     position: absolute;
@@ -39,5 +40,47 @@
     font-size: 2px;
     content: "";
     transform: scale(1.5);
+  }
+
+  &.is-success {
+    $color: map-get($success-colors, "normal");
+
+    &::after {
+      $colors: ($color, map-get($default-colors, "shadow"));
+
+      @include pixelize($dropdown, $colors);
+    }
+
+    select {
+      box-shadow: 0 4px $color, 0 -4px $color, 4px 0 $color, -4px 0 $color;
+    }
+  }
+
+  &.is-warning {
+    $color: map-get($warning-colors, "normal");
+
+    &::after {
+      $colors: ($color, map-get($default-colors, "shadow"));
+
+      @include pixelize($dropdown, $colors);
+    }
+
+    select {
+      box-shadow: 0 4px $color, 0 -4px $color, 4px 0 $color, -4px 0 $color;
+    }
+  }
+
+  &.is-error {
+    $color: map-get($error-colors, "normal");
+
+    &::after {
+      $colors: ($color, map-get($default-colors, "shadow"));
+
+      @include pixelize($dropdown, $colors);
+    }
+
+    select {
+      box-shadow: 0 4px $color, 0 -4px $color, 4px 0 $color, -4px 0 $color;
+    }
   }
 }

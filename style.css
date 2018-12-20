@@ -16,6 +16,20 @@ div.containers > .nes-container {
   max-width: 400px;
 }
 
+.selects {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 4px;
+}
+
+.selects .nes-select {
+  display: inline-flex;
+}
+
+.nes-select + .nes-select {
+  margin: 0 0 0 24px;
+}
+
 .balloon.nes-container .nes-balloon {
   max-width: 600px;
   margin: 2rem 2rem;
