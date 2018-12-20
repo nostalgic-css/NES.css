@@ -1,8 +1,5 @@
 .nes-dialog {
   padding: 1.5rem 2rem;
-  color: $base-color;
-  border: none;
-  box-shadow: 4px 0, -4px 0, 0 4px, 0 -4px;
 
   > .backdrop,
   &::backdrop {
@@ -11,5 +8,10 @@
 
   > :last-child {
     margin-bottom: 0;
+  }
+
+  &.is-rounded {
+    border: none;
+    box-shadow: 4px 0 $base-color, -4px 0 $base-color, 0 4px $base-color, 0 -4px $base-color;
   }
 }
