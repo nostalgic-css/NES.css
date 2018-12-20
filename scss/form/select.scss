@@ -21,6 +21,7 @@
     cursor: $cursor-click-url, pointer;
     border: none;
     border-radius: 0;
+    outline-color: map-get($default-colors, "hover");
     box-shadow: 0 4px $color-black, 0 -4px $color-black, 4px 0 $color-black, -4px 0 $color-black;
 
     &:invalid {
@@ -46,6 +47,7 @@
     }
 
     select {
+      outline-color: map-get($success-colors, "hover");
       box-shadow: 0 4px $color, 0 -4px $color, 4px 0 $color, -4px 0 $color;
     }
   }
@@ -58,6 +60,7 @@
     }
 
     select {
+      outline-color: map-get($warning-colors, "hover");
       box-shadow: 0 4px $color, 0 -4px $color, 4px 0 $color, -4px 0 $color;
     }
   }
@@ -70,6 +73,7 @@
     }
 
     select {
+      outline-color: map-get($error-colors, "hover");
       box-shadow: 0 4px $color, 0 -4px $color, 4px 0 $color, -4px 0 $color;
     }
   }
