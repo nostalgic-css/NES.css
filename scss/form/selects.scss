@@ -12,6 +12,7 @@
 
   position: relative;
   width: 100%;
+  margin: 4px;
 
   select {
     width: 100%;
@@ -25,7 +26,7 @@
     box-shadow: 0 4px $color-black, 0 -4px $color-black, 4px 0 $color-black, -4px 0 $color-black;
 
     &:invalid {
-      color: $color-00;
+      color: map-get($disabled-colors, shadow);
     }
   }
 
@@ -36,45 +37,28 @@
     top: calc(50% - 11px);
     right: 36px;
     font-size: 3px;
+    pointer-events: none;
     content: "";
   }
 
-  &.is-success {
-    $color: map-get($success-colors, "normal");
+  // prettier-ignore
+  $types:
+    "success" map-get($success-colors, "normal") map-get($success-colors, "hover"),
+    "warning" map-get($warning-colors, "normal") map-get($warning-colors, "hover"),
+    "error" map-get($error-colors, "normal") map-get($error-colors, "hover");
 
-    &::after {
-      color: $color;
-    }
+  @each $type in $types {
+    &.is-#{nth($type, 1)} {
+      $color: nth($type, 2);
 
-    select {
-      outline-color: map-get($success-colors, "hover");
-      box-shadow: 0 4px $color, 0 -4px $color, 4px 0 $color, -4px 0 $color;
-    }
-  }
+      &::after {
+        color: $color;
+      }
 
-  &.is-warning {
-    $color: map-get($warning-colors, "normal");
-
-    &::after {
-      color: $color;
-    }
-
-    select {
-      outline-color: map-get($warning-colors, "hover");
-      box-shadow: 0 4px $color, 0 -4px $color, 4px 0 $color, -4px 0 $color;
-    }
-  }
-
-  &.is-error {
-    $color: map-get($error-colors, "normal");
-
-    &::after {
-      color: $color;
-    }
-
-    select {
-      outline-color: map-get($error-colors, "hover");
-      box-shadow: 0 4px $color, 0 -4px $color, 4px 0 $color, -4px 0 $color;
+      select {
+        outline-color: nth($type, 3);
+        box-shadow: 0 4px $color, 0 -4px $color, 4px 0 $color, -4px 0 $color;
+      }
     }
   }
 }

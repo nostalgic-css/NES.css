@@ -27,7 +27,7 @@ div.containers > .nes-container {
 }
 
 .nes-select + .nes-select {
-  margin: 0 0 0 24px;
+  margin-left: 24px;
 }
 
 .balloon.nes-container .nes-balloon {
