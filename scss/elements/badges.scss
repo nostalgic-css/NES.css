@@ -1,3 +1,11 @@
+@mixin span-style-is-icon($color, $background-color, $display, $width, $font-size) {
+  display: $display;
+  width: $width;
+  font-size: $font-size;
+  color: $color;
+  background-color: $background-color;
+}
+
 @mixin span-style($color, $background, $option, $width: 50%) {
   position: absolute;
   top: 0;
@@ -12,10 +20,10 @@
   }
 }
 
-@mixin badge-style($color, $background, $is-splited: true) {
+@mixin badge-style($color, $background, $option: is-default) {
   $box-shadow-first-two: 0 0.5em $background, 0 -0.5em $background;
 
-  @if $is-splited == true {
+  @if $option == is-splited {
     &:first-child {
       @include span-style($color, $background, left);
 
@@ -25,6 +33,21 @@
       @include span-style($color, $background, right);
 
       box-shadow: $box-shadow-first-two, 0.5em 0 $background, 0 0 $background;
+    }
+  } @else if $option == is-icon {
+    &:first-child {
+      @include span-style-is-icon($color, $background, flex, 2.7em, 0.5em);
+
+      position: absolute;
+      top: -1.7em;
+      left: 2.5em;
+      align-items: center;
+      height: 2.7em;
+    }
+    &:last-child {
+      @include span-style-is-icon($color, $background, inline-block, 6em, 0.88em);
+
+      box-shadow: $box-shadow-first-two, 0.5em 0 $background, -0.5em 0 $background;
     }
   } @else {
     &:first-child {
@@ -63,12 +86,18 @@
   @each $type in $types {
     &.is-splited {
       & span.is-#{nth($type, 1)} {
-        @include badge-style(nth($type, 2), nth($type, 3));
+        @include badge-style(nth($type, 2), nth($type, 3), is-splited);
+      }
+    }
+
+    &.is-icon {
+      & span.is-#{nth($type, 1)} {
+        @include badge-style(nth($type, 2), nth($type, 3), is-icon);
       }
     }
 
     & span.is-#{nth($type, 1)} {
-      @include badge-style(nth($type, 2), nth($type, 3), false);
+      @include badge-style(nth($type, 2), nth($type, 3));
     }
   }
 }
