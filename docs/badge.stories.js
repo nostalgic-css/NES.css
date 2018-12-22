@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html'; // eslint-disable-line import/no-extraneous-dependencies
 import { // eslint-disable-line import/no-extraneous-dependencies
-  withKnobs, radios, boolean, number,
+  withKnobs, radios, number,
 } from '@storybook/addon-knobs';
 
 const stories = storiesOf('Badges', module);
@@ -23,6 +23,12 @@ stories.add('badges', () => {
     'is-error': 'is-error',
   }, 'is-success');
 
+  const isSplitedIsIconOrDefault = radios('default/splited/icon', {
+    default: '',
+    'is-splited': 'is-splited',
+    'is-icon': 'is-icon',
+  }, '');
+
   const fontSize = number('font-size', 1, {
     range: true,
     min: 0,
@@ -30,9 +36,7 @@ stories.add('badges', () => {
     step: 0.01,
   });
 
-  const isSplited = boolean('is-splited', true) ? 'is-splited' : '';
-
-  return `<a href="#" class="nes-badge ${isSplited}" style="font-size:${fontSize}em">
+  return `<a href="#" class="nes-badge ${isSplitedIsIconOrDefault}" style="font-size:${fontSize}em">
               <span class="${optionsLeft}">npm</span>
               <span class="${optionsRight}">1.0.0</span>
           </a>`;
