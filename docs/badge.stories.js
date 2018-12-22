@@ -27,7 +27,7 @@ stories.add('badges', () => {
     default: '',
     'is-splited': 'is-splited',
     'is-icon': 'is-icon',
-  }, '');
+  }, 'is-splited');
 
   const fontSize = number('font-size', 1, {
     range: true,
