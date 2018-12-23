@@ -35,6 +35,8 @@ Importe o CSS através de um elemento `<link />`:
 <link href="https://unpkg.com/nes.css@0.0.2/css/nes.min.css" rel="stylesheet" />
 <!-- latest -->
 <link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" />
+<!-- core style only -->
+<link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
 ```
 
 ### Fontes

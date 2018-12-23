@@ -31,10 +31,12 @@ yarn add nes.css
 `<link />`要素を使ってCSSをインポートする:
 
 ```html
-<!-- minify -->
+<!-- 圧縮版 -->
 <link href="https://unpkg.com/nes.css@0.0.2/css/nes.min.css" rel="stylesheet" />
-<!-- latest -->
+<!-- 最新版 -->
 <link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" />
+<!-- コアスタイルのみ -->
+<link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
 ```
 
 ### フォント

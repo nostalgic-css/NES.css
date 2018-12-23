@@ -35,6 +35,8 @@ Import the CSS via a `<link />` element:
 <link href="https://unpkg.com/nes.css@0.0.2/css/nes.min.css" rel="stylesheet" />
 <!-- latest -->
 <link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" />
+<!-- core style only -->
+<link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
 ```
 
 ### Fonts
