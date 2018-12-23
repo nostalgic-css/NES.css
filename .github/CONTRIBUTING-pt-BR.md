@@ -53,6 +53,7 @@ Nós estamos muito felizes de você querer contribuir para o projeto! Os próxim
     │   ├── generic.scss: Estilização genérica e reboot.css
     │   └── variables.scss: Variáveis em comum
     ├── elements
+    ├── components
     ├── form
     ├── icons: 16x16 icons
     ├── pixel-arts: Para ícones que não são 16x16.

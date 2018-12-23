@@ -53,6 +53,7 @@ Este proyecto se apega al Código de Conducta convenido para Contribuyentes. Al 
     │   ├── generic.scss: Estilo general y reboot.css
     │   └── variables.scss: Variables comunes
     ├── elements
+    ├── components
     ├── form
     ├── icons: Iconos 16x16
     ├── pixel-arts: Para iconos que no son 16x16.

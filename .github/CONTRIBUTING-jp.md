@@ -53,6 +53,7 @@
     │   ├── generic.scss: 一般的なスタイルとreboot.cssの上書き
     │   └── variables.scss: 共通変数
     ├── elements
+    ├── components
     ├── form
     ├── icons: 16x16のアイコン
     ├── pixel-arts: 16x16以外のアイコン
