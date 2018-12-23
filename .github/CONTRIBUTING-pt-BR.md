@@ -1,7 +1,7 @@
 # Contribuindo
 
 Veja este documento em outro idioma:
-[English](CONTRIBUTING.md) / [日本語](.github/CONTRIBUTING-jp.md) / [Español](.github/CONTRIBUTING-es.md)
+[简体中文](CONTRIBUTING-zh-CN.md) / [English](CONTRIBUTING.md) / [日本語](.github/CONTRIBUTING-jp.md) / [Español](.github/CONTRIBUTING-es.md)
 
 Quer contribuir para este projeto? Legal!
 
