@@ -1,5 +1,4 @@
 .nes-logo {
-  $px: 3px;
   $logo-colors: (#3e3634, #c3c3c3, #787973, #bf1710);
 
   // prettier-ignore
@@ -18,16 +17,17 @@
 
   position: relative;
   display: inline-block;
-  width: $px * 16;
-  height: $px * 11;
+  width: calc(1em * 16);
+  height: calc(1em * 11);
+  font-size: 3px;
 
   &::before {
     position: absolute;
-    top: $px * -1;
-    left: $px * -1;
+    top: -1em;
+    left: -1em;
     content: "";
     background: transparent;
 
-    @include pixelize($logo, $logo-colors, $px);
+    @include pixelize($logo, $logo-colors);
   }
 }

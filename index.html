@@ -7,17 +7,19 @@
     <meta name="description" content="NES.css is a NES-style CSS Framework." />
     <meta name="keywords" content="html5,css,framework,sass,NES,8bit" />
     <meta name="author" content="© 2018 B.C.Rikko" />
-    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" sizes="196x196" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
 
     <title>NES.css - NES-style CSS Framework</title>
 
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-    <link href="./css/nes.css" rel="stylesheet" />
+    <link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="NES.css" />
-    <meta property="og:url" content="https://bcrikko.github.io/NES.css/" />
+    <meta property="og:url" content="https://nostalgic-css.github.io/NES.css/" />
     <meta property="og:description" content="NES-style CSS Framework | ファミコン風CSSフレームワーク" />
     <meta property="og:image" content="https://user-images.githubusercontent.com/5305599/49061716-da649680-f254-11e8-9a89-d95a7407ec6a.png" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -35,7 +37,7 @@
       <p>NES-style CSS Framework.</p>
     </header>
 
-    <a class="github-link" href="https://github.com/BcRikko/NES.css" target="_blank">
+    <a class="github-link" href="https://github.com/nostalgic-css/NES.css" target="_blank">
       <p class="nes-balloon from-right">Fork me<br />on GitHub</p>
       <i class="nes-octocat"></i>
     </a>
@@ -55,8 +57,8 @@
     <section class="nes-container with-title">
       <h2 class="title">Containers</h2>
       <div class="containers">
-        <div class="nes-container with-title is-center">
-          <p class="title">Container.is-center</p>
+        <div class="nes-container with-title is-centered">
+          <p class="title">Container.is-centered</p>
           <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
         </div>
         <div class="nes-container is-dark with-title">
@@ -97,14 +99,14 @@
     <section class="nes-container with-title">
       <h2 class="title">Avatars</h2>
       <div>
-        <img src="http://www.gravatar.com/avatar" class="nes-avatar is-small">
-        <img src="http://www.gravatar.com/avatar" class="nes-avatar">
-        <img src="http://www.gravatar.com/avatar" class="nes-avatar is-medium">
-        <img src="http://www.gravatar.com/avatar" class="nes-avatar is-large">
-        <img src="http://www.gravatar.com/avatar" class="nes-avatar is-small is-rounded">
-        <img src="http://www.gravatar.com/avatar" class="nes-avatar is-rounded">
-        <img src="http://www.gravatar.com/avatar" class="nes-avatar is-medium is-rounded">
-        <img src="http://www.gravatar.com/avatar" class="nes-avatar is-large is-rounded">
+        <img src="https://www.gravatar.com/avatar" class="nes-avatar is-small">
+        <img src="https://www.gravatar.com/avatar" class="nes-avatar">
+        <img src="https://www.gravatar.com/avatar" class="nes-avatar is-medium">
+        <img src="https://www.gravatar.com/avatar" class="nes-avatar is-large">
+        <img src="https://www.gravatar.com/avatar" class="nes-avatar is-small is-rounded">
+        <img src="https://www.gravatar.com/avatar" class="nes-avatar is-rounded">
+        <img src="https://www.gravatar.com/avatar" class="nes-avatar is-medium is-rounded">
+        <img src="https://www.gravatar.com/avatar" class="nes-avatar is-large is-rounded">
       </div>
     </section>
 
@@ -129,6 +131,39 @@
       <div class="field">
         <label for="textarea_field">Textarea</label>
         <textarea id="textarea_field" class="nes-textarea"></textarea>
+      </div>
+      <div class="field">
+        <label for="selects">Select</label>
+        <div id="selects" class="selects">
+          <div class="nes-select">
+            <select required>
+              <option value="" disabled selected hidden>Select...</option>
+              <option value="0">To be</option>
+              <option value="1">Not to be</option>
+            </select>
+          </div>
+          <div class="nes-select is-success">
+            <select required>
+              <option value="" disabled selected hidden>Select...</option>
+              <option value="0">To be</option>
+              <option value="1">Not to be</option>
+            </select>
+          </div>
+          <div class="nes-select is-warning">
+            <select required>
+              <option value="" disabled selected hidden>Select...</option>
+              <option value="0">To be</option>
+              <option value="1">Not to be</option>
+            </select>
+          </div>
+          <div class="nes-select is-error">
+            <select required>
+              <option value="" disabled selected hidden>Select...</option>
+              <option value="0">To be</option>
+              <option value="1">Not to be</option>
+            </select>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -173,11 +208,13 @@
 
     <section class="nes-container with-title">
       <h2 class="title">Table</h2>
-      <div class="tables">
+      <div class="nes-table-responsive">
         <table class="nes-table is-bordered is-centered">
           <thead>
             <tr>
               <th>Table.is-bordered</th>
+              <th>Table.is-centered</th>
+              <th>Table.is-centered</th>
               <th>Table.is-centered</th>
             </tr>
           </thead>
@@ -185,27 +222,39 @@
             <tr>
               <td>Thou hast had a good morning</td>
               <td>Thou hast had a good afternoon</td>
+              <td>Thou hast had a good evening</td>
+              <td>Thou hast had a good night</td>
             </tr>
             <tr>
               <td>Thou hast had a good morning</td>
               <td>Thou hast had a good afternoon</td>
+              <td>Thou hast had a good evening</td>
+              <td>Thou hast had a good night</td>
             </tr>
           </tbody>
         </table>
+      </div>
+      <div class="nes-table-responsive">
         <table class="nes-table is-bordered is-dark">
           <thead>
             <tr>
               <th>Table.is-dark</th>
+              <th>Table.is-bordered</th>
+              <th>Table.is-bordered</th>
               <th>Table.is-bordered</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Thou hast had a good morning</td>
-              <td>Thou hast had a good morning</td>
+              <td>Thou hast had a good afternon</td>
+              <td>Thou hast had a good evening</td>
+              <td>Thou hast had a good night</td>
             </tr>
             <tr>
               <td>Thou hast had a good morning</td>
+              <td>Thou hast had a good afternoon</td>
+              <td>Thou hast had a good afternoon</td>
               <td>Thou hast had a good afternoon</td>
             </tr>
           </tbody>
@@ -315,7 +364,7 @@
       <section class="nes-container with-title">
         <h3 class="title">Others</h3>
         <div>
-            <i class="nes-icon close is-small"></i>
+          <i class="nes-icon close is-small"></i>
           <i class="nes-icon close"></i>
           <i class="nes-icon close is-medium"></i>
           <i class="nes-icon close is-large"></i>

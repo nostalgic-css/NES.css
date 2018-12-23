@@ -16,18 +16,18 @@ div.containers > .nes-container {
   max-width: 400px;
 }
 
-div.tables {
+.selects {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 4px;
 }
 
-div.tables > .nes-table {
-  min-width: 350px;
-  max-width: calc(50% - 2rem);
+.selects .nes-select {
+  display: inline-flex;
 }
-div.tables > .nes-table:first-child {
-  margin-right: 2rem;
-  margin-bottom: 2rem;
+
+.nes-select + .nes-select {
+  margin-left: 24px;
 }
 
 .balloon.nes-container .nes-balloon {
@@ -91,10 +91,6 @@ div.tables > .nes-table:first-child {
   body {
     padding: 0;
     margin: 2rem 0.2rem;
-  }
-  div.tables > .nes-table {
-    max-width: 100%;
-    margin-right: 0;
   }
   .balloon.nes-container .nes-balloon {
     max-width: 70%;
