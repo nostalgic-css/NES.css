@@ -1,7 +1,7 @@
 # 贡献
 
 使用其他语言来阅读本文档:
-[日本語](.github/CONTRIBUTING-jp.md) / [Español](.github/CONTRIBUTING-es.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
+[English](CONTRIBUTING.md) / [日本語](.github/CONTRIBUTING-jp.md) / [Español](.github/CONTRIBUTING-es.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
 
 你打算为本项目做贡献？太棒了！
 

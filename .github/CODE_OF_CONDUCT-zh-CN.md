@@ -1,7 +1,7 @@
 # 参与者行为准则
 
 使用其他语言来阅读本文档:
-[日本語](.github/CONTRIBUTING-jp.md) / [Español](.github/CONTRIBUTING-es.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
+[English](CONTRIBUTING.md) / [日本語](.github/CONTRIBUTING-jp.md) / [Español](.github/CONTRIBUTING-es.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
 
 ## 我们的誓言
 
