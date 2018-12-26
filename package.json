@@ -42,6 +42,7 @@
     "@storybook/html": "^4.0.11",
     "autoprefixer": "^9.1.5",
     "babel-loader": "^8.0.4",
+    "backstopjs": "^3.8.5",
     "clean-css-cli": "^4.2.1",
     "commitizen": "^3.0.5",
     "css-loader": "^2.0.0",
@@ -110,9 +111,12 @@
       "@semantic-release/release-notes-generator",
       "@semantic-release/npm",
       "@semantic-release/github",
-      ["@semantic-release/exec", {
-        "prepareCmd": "./scripts/updatePackageHeader.js ${nextRelease.version}"
-      }]
+      [
+        "@semantic-release/exec",
+        {
+          "prepareCmd": "./scripts/updatePackageHeader.js ${nextRelease.version}"
+        }
+      ]
     ]
   },
   "stylelint": {
@@ -139,5 +143,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "dependencies": {}
 }
