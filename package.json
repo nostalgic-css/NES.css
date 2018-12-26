@@ -16,7 +16,7 @@
     "pretest": "npm run kill-server && npm run build; http-server storybook-static -s -p 6007 &",
     "test": "./node_modules/.bin/backstop test --config=backstop.js",
     "posttest": "npm run kill-server",
-    "test:approve": "./node_modules/.bin/backstop approve",
+    "test:approve": "./node_modules/.bin/backstop approve --config=backstop.js",
     "deploy": "npm run build",
     "semantic-release": "semantic-release",
     "commit": "git-cz",
