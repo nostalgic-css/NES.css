@@ -1,11 +1,8 @@
+const scenarios = require('./tests/scenario_generator.js');
+
 module.exports = {
   id: 'backstop_default',
   viewports: [
-    {
-      label: 'phone',
-      width: 320,
-      height: 480,
-    },
     {
       label: 'tablet',
       width: 1024,
@@ -14,7 +11,7 @@ module.exports = {
   ],
   onBeforeScript: 'puppet/onBefore.js',
   onReadyScript: 'puppet/onReady.js',
-  scenarios: require('./tests/scenario_generator.js'),
+  scenarios,
   paths: {
     bitmaps_reference: 'backstop_data/bitmaps_reference',
     bitmaps_test: 'backstop_data/bitmaps_test',
