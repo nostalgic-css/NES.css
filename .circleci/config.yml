@@ -116,20 +116,20 @@ jobs:
           name: Lint styles
           command: npx stylelint -- --fix
 
-  # test:
-  #   <<: *defaults
+  test:
+    <<: *defaults
 
-  #   steps:
-  #     - attach_workspace:
-  #         at: .
+    steps:
+      - attach_workspace:
+          at: .
 
-  #     - run:
-  #         name: Add Yarn Binary Folder To $PATH
-  #         command: export PATH="$PATH:`yarn global bin`"
+      - run:
+          name: Add Yarn Binary Folder To $PATH
+          command: export PATH="$PATH:`yarn global bin`"
 
-  #     - run:
-  #         name: Run tests
-  #         command: yarn test
+      - run:
+          name: Run tests
+          command: yarn test
 
   # coverage:
   #   <<: *defaults

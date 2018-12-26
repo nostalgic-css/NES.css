@@ -104,7 +104,7 @@
       "npm run build:stylelint"
     ],
     "*.js": [
-      "eslint '.storybook/**/*.js' 'docs/**/*.js'"
+      "eslint '.storybook/**/*.js' 'docs/**/*.js' 'tests/**/*.js'"
     ]
   },
   "prettier": {
