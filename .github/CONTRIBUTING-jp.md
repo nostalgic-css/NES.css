@@ -1,7 +1,7 @@
 # 貢献する
 
 このドキュメントを別の言語で表示する：
-[English](CONTRIBUTING.md) / [Español](.github/CONTRIBUTING-es.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
+[简体中文](CONTRIBUTING-zh-CN.md) / [English](CONTRIBUTING.md) / [Español](.github/CONTRIBUTING-es.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
 
 このプロジェクトに貢献したいですか?素晴らしい!
 
@@ -96,7 +96,7 @@
 [commitizen]: https://github.com/commitizen/cz-cli
 [commitlint]: [https://github.com/marionebl/commitlint]
 [egghead]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
-[new-issue]: https://github.com/nostalgic-css/NES.css/issues/new
+[new-issue]: https://github.com/nostalgic-css/NES.css/issues/new/choose
 [new-pr]: https://github.com/nostalgic-css/NES.css/compare/develop...develop
 [semantic-release]: https://github.com/semantic-release/semantic-release
 [sentimental-versioning]: http://sentimentalversioning.org/
