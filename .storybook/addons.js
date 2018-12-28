@@ -1,1 +1,4 @@
-import '@storybook/addon-knobs/register'; // eslint-disable-line import/no-extraneous-dependencies
+/* eslint-disable import/no-extraneous-dependencies */
+import '@storybook/addon-knobs/register';
+import '@storybook/addon-backgrounds/register';
+/* eslint-enable */
