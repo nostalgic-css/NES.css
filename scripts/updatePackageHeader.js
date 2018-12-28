@@ -12,7 +12,7 @@ if (!nextVersion) {
 }
 
 // Update the SCSS Package Header
-const SCSSFilePath = path.resolve('scss', 'nes.scss');
+const SCSSFilePath = path.resolve('scss', 'nes-core.scss');
 let SCSSFile = fs.readFileSync(SCSSFilePath, 'utf8');
 
 SCSSFile = SCSSFile.replace(/^ {2}Version: development/m, `  Version: ${nextVersion}`);

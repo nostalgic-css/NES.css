@@ -1,7 +1,7 @@
 # 貢献する
 
 このドキュメントを別の言語で表示する：
-[简体中文](CONTRIBUTING-zh-CN.md) / [English](CONTRIBUTING.md) / [Español](.github/CONTRIBUTING-es.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
+[English](CONTRIBUTING.md) / [简体中文](CONTRIBUTING-zh-CN.md) / [Español](.github/CONTRIBUTING-es.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
 
 このプロジェクトに貢献したいですか?素晴らしい!
 
@@ -53,6 +53,7 @@
     │   ├── generic.scss: 一般的なスタイルとreboot.cssの上書き
     │   └── variables.scss: 共通変数
     ├── elements
+    ├── components
     ├── form
     ├── icons: 16x16のアイコン
     ├── pixel-arts: 16x16以外のアイコン
