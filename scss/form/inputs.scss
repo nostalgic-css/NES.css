@@ -1,19 +1,15 @@
 .nes-input,
 .nes-textarea {
   @mixin border-style($border, $outline) {
+    @include compact-rounded-corners();
+    @include compact-border-image($border);
+
     outline-color: $outline;
-    // prettier-ignore
-    box-shadow:
-      0 4px $border,
-      0 -4px $border,
-      4px 0 $border,
-      -4px 0 $border;
   }
 
   width: 100%;
   padding: 0.5rem 1rem;
   margin: 4px;
-  border: none;
 
   @include border-style($base-color, map-get($default-colors, "hover"));
 

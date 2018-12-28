@@ -1,34 +1,12 @@
 .nes-container {
   position: relative;
   padding: 1.5rem 2rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 4px;
 
   > :last-child {
     margin-bottom: 0;
-  }
-
-  &::before,
-  &::after {
-    position: absolute;
-    z-index: -1;
-    content: "";
-  }
-
-  &::before {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-
-  &::after {
-    top: 2px;
-    right: 2px;
-    bottom: 2px;
-    left: 2px;
-    border-color: $base-color;
-    border-style: solid;
-    border-width: 4px;
-    border-radius: 4px;
   }
 
   &.is-centered {
@@ -65,13 +43,8 @@
 
   &.is-dark {
     color: $background-color;
-    &::before {
-      background-color: $base-color;
-    }
-
-    &::after {
-      border-color: #fff;
-    }
+    background-color: $base-color;
+    border-color: white;
 
     &.with-title {
       > .title {
@@ -81,45 +54,14 @@
     }
   }
 
-  @mixin rounded($base, $background) {
-    color: $base;
-    border: none;
-    border-radius: 0;
-    // prettier-ignore
-    box-shadow:
-      0 -4px $background,
-      0 -8px,
-      4px 0 $background,
-      4px -4px,
-      8px 0,
-      0 4px $background,
-      0 8px,
-      -4px 0 $background,
-      -4px 4px,
-      -8px 0,
-      -4px -4px,
-      4px 4px;
-  }
-
   &.is-rounded {
+    @include rounded-corners();
+
     padding: 1rem 1.5rem;
     margin: 14px 8px;
 
-    &::after {
-      @include rounded($base-color, $background-color);
-    }
-
     &.is-dark {
-      &::after {
-        @include rounded($background-color, $base-color);
-      }
-
-      &::before {
-        top: -8px;
-        right: -8px;
-        bottom: -8px;
-        left: -8px;
-      }
+      @include rounded-corners(true);
     }
 
     &.with-title {
