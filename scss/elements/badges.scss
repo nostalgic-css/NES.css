@@ -1,0 +1,103 @@
+@mixin span-style-is-icon($color, $background-color, $display, $width, $font-size) {
+  display: $display;
+  width: $width;
+  font-size: $font-size;
+  color: $color;
+  background-color: $background-color;
+}
+
+@mixin span-style($color, $background, $option, $width: 50%) {
+  position: absolute;
+  top: 0;
+  width: $width;
+  color: $color;
+  background-color: $background;
+
+  @if $option == left {
+    left: 0;
+  } @else if $option == right {
+    right: 0;
+  }
+}
+
+@mixin badge-style($color, $background, $option: is-default) {
+  $box-shadow-first-two: 0 0.5em $background, 0 -0.5em $background;
+
+  @if $option == is-splited {
+    &:first-child {
+      @include span-style($color, $background, left);
+
+      box-shadow: $box-shadow-first-two, 0 0 $background, -0.5em 0 $background;
+    }
+    &:last-child {
+      @include span-style($color, $background, right);
+
+      box-shadow: $box-shadow-first-two, 0.5em 0 $background, 0 0 $background;
+    }
+  } @else if $option == is-icon {
+    &:first-child {
+      @include span-style-is-icon($color, $background, flex, 2.7em, 0.5em);
+
+      position: absolute;
+      top: -1.7em;
+      left: 2.5em;
+      align-items: center;
+      height: 2.7em;
+    }
+    &:last-child {
+      @include span-style-is-icon($color, $background, inline-block, 6em, 0.88em);
+
+      box-shadow: $box-shadow-first-two, 0.5em 0 $background, -0.5em 0 $background;
+    }
+  } @else {
+    &:first-child {
+      @include span-style($color, $background, 0, 100%);
+
+      box-shadow: $box-shadow-first-two, 0.5em 0 $background, -0.5em 0 $background;
+    }
+  }
+}
+
+// Default style
+.nes-badge {
+  $em: 0.75em;
+
+  position: relative;
+  display: inline-block;
+  width: $em * 14;
+  height: $em;
+  padding: 0.75em;
+  margin: 0.5em;
+  font-size: $em * 1.2;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+
+  // Other styles
+  // prettier-ignore
+  $types:
+    "dark" $background-color $base-color,
+    "primary" $background-color map-get($primary-colors, "normal"),
+    "success" $background-color map-get($success-colors, "normal"),
+    "warning" $base-color map-get($warning-colors, "normal"),
+    "error" $background-color map-get($error-colors, "normal");
+
+  @each $type in $types {
+    &.is-splited {
+      & span.is-#{nth($type, 1)} {
+        @include badge-style(nth($type, 2), nth($type, 3), is-splited);
+      }
+    }
+
+    &.is-icon {
+      & span.is-#{nth($type, 1)} {
+        @include badge-style(nth($type, 2), nth($type, 3), is-icon);
+      }
+    }
+
+    & span.is-#{nth($type, 1)} {
+      @include badge-style(nth($type, 2), nth($type, 3));
+    }
+  }
+}
