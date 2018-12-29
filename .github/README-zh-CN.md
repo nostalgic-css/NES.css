@@ -10,27 +10,35 @@ NES.css 是一款 **NES-风格(8位机)** 的CSS 框架.
 
 ## 安装
 
-### CDN
+#### via package manager
 
-```html
-<!-- minify -->
-<link href="https://unpkg.com/nes.css@0.0.2/css/nes.min.css" rel="stylesheet" />
-<!-- latest -->
-<link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" />
+```shell
+npm install nes.css
+# or
+yarn add nes.css
 ```
 
-或者
+### via CDN
 
 ```html
 <!-- non-minified -->
-<link href="https://unpkg.com/nes.css@0.0.2/css/nes.css" rel="stylesheet" />
+<link href="https://unpkg.com/nes.css@1.0.0/css/nes.min.css" rel="stylesheet" />
 <!-- latest -->
 <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+<!-- core style only -->
+<link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
 ```
 
-### npm
+### 推荐字体
 
-TODO: npm での使用方法を書く
+|Language|Font|
+|----|----|
+|(Default)|[Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P)|
+|English|[Kongtext](https://www.dafont.com/kongtext.font)|
+|Japanese|[美咲フォント](http://www.geocities.jp/littlimi/misaki.htm)|
+|Japanese|[Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)|
+| Korean|[둥근모꼴](http://cactus.tistory.com/193)|
+
 
 ## 使用
 
@@ -50,16 +58,6 @@ NES.css 只提供组件. 你需要定义你自己的布局.
 </head>
 ```
 
-### 推荐字体
-
-|Language|Font|
-|----|----|
-|(Default)|[Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P)|
-|English|[Kongtext](https://www.dafont.com/kongtext.font)|
-|Japanese|[美咲フォント](http://www.geocities.jp/littlimi/misaki.htm)|
-|Japanese|[Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)|
-
-
 ## 只需要CSS
 
 NES.css 仅仅需要 CSS 而不依赖其他任何 JavaScript.
@@ -76,52 +74,9 @@ NES.css 与如下浏览器的最新版本兼容.
 * IE/Edge
 
 
-## 开发
-
-### 命令
-```sh
-git clone git@github.com:BcRikko/NES.css.git
-cd NES.css
-
-npm i
-
-npm run watch
-npm run build
-```
-
-#### 运行 Storybook
-```
-npm run storybook
-```
-
-在预提交阶段Linting, 格式化以及构建都会自动运行.
-TODO: ビルドはCIでするように変更したい
-
-### 目录结构
-```sh
-.
-├── index.html: Demo page
-├── style.css: Demo page style
-├── css: Distribution files
-├── docs: Storybook stories
-└── scss: Source
-    ├── base
-    │   ├── reboot.scss: Don't change! (Bootstrap Reboot)
-    │   ├── generic.scss: Generic style and reboot.css
-    │   └── variables.scss: Common variables
-    ├── elements
-    ├── form
-    ├── icons: 16x16 icons
-    ├── pixel-arts: For icons other than 16x16.
-    └── utilities
-```
-
-
-
 ## 版权许可
 
 代码以及文档版权 2018 [B.C.Rikko](https://github.com/BcRikko). 代码基于MIT许可发布. 文档基于Creative Commons许可发布.
-
 
 
 

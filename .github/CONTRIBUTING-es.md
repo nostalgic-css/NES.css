@@ -1,7 +1,7 @@
 # Contribución
 
 Ver este documento en otro idioma:
-[简体中文](CONTRIBUTING-zh-CN.md) / [English](CONTRIBUTING.md) / [日本語](.github/CONTRIBUTING-jp.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
+[English](CONTRIBUTING.md) / [日本語](.github/CONTRIBUTING-jp.md) / [简体中文](CONTRIBUTING-zh-CN.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
 
 ¿Quieres contribuir al proyecto? ¡Genial!
 
@@ -53,6 +53,7 @@ Este proyecto se apega al Código de Conducta convenido para Contribuyentes. Al 
     │   ├── generic.scss: Estilo general y reboot.css
     │   └── variables.scss: Variables comunes
     ├── elements
+    ├── components
     ├── form
     ├── icons: Iconos 16x16
     ├── pixel-arts: Para iconos que no son 16x16.
