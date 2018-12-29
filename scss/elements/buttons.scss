@@ -38,7 +38,6 @@
   vertical-align: middle;
   cursor: $cursor-click-url, pointer;
   user-select: none;
-  // border: none;
 
   @include btn-style(
     $base-color,
