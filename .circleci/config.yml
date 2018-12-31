@@ -124,12 +124,8 @@ jobs:
           at: .
 
       - run:
-          name: Add Yarn Binary Folder To $PATH
-          command: export PATH="$PATH:`yarn global bin`"
-
-      - run:
           name: Run tests
-          command: yarn test
+          command: npm test
 
   # coverage:
   #   <<: *defaults
