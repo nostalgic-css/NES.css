@@ -1,25 +1,12 @@
 .nes-balloon {
+  @include rounded-corners();
   position: relative;
   display: inline-block;
   padding: 1rem 1.5rem;
   margin: 8px;
   margin-bottom: 30px;
-  background-color: $background-color;
 
-  // prettier-ignore
-  box-shadow:
-    0 -4px $background-color,
-    0 -8px $base-color,
-    4px 0 $background-color,
-    4px -4px $base-color,
-    8px 0 $base-color,
-    0 4px $background-color,
-    0 8px $base-color,
-    -4px 0 $background-color,
-    -4px 4px $base-color,
-    -8px 0 $base-color,
-    -4px -4px $base-color,
-    4px 4px $base-color;
+  background-color: $background-color;
 
   > :last-child {
     margin-bottom: 0;

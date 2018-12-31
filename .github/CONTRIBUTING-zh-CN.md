@@ -53,6 +53,7 @@
     │   ├── generic.scss: Generic style and reboot.css
     │   └── variables.scss: Common variables
     ├── elements
+    ├── components
     ├── form
     ├── icons: 16x16 icons
     ├── pixel-arts: For icons other than 16x16.

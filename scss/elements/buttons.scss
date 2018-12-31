@@ -1,81 +1,34 @@
 @mixin btn-style($color, $background, $hover-background, $shadow) {
   color: $color;
   background-color: $background;
-  box-shadow: inset -4px -4px $shadow;
+
+  &::after {
+    position: absolute;
+    top: -$border-size;
+    right: -$border-size;
+    bottom: -$border-size;
+    left: -$border-size;
+    content: "";
+    box-shadow: inset -4px -4px $shadow;
+  }
 
   &:hover,
   &:focus {
     background-color: $hover-background;
-    box-shadow: inset -6px -6px $shadow;
+
+    &::after {
+      box-shadow: inset -6px -6px $shadow;
+    }
   }
 
-  &:active {
+  &:active::after {
     box-shadow: inset 4px 4px $shadow;
   }
 }
 
-@mixin btn-extra-pixelize-style($color, $background, $hover-background, $shadow) {
-  color: $color;
-  background-color: $background;
-
-  &:hover,
-  &:focus {
-    background-color: $hover-background;
-    outline: 0;
-    // prettier-ignore
-    box-shadow:
-      0 -4px $hover-background,
-      inset 0 -2px $shadow,
-      0 -8px $base-color,
-      4px 0 $shadow,
-      4px -4px $base-color,
-      8px 0 $base-color,
-      0 4px $shadow,
-      4px 4px $base-color,
-      0 8px $base-color,
-      -4px 0 $hover-background,
-      inset -2px 0 $shadow,
-      -4px -4px $base-color,
-      -8px 0 $base-color,
-      -4px 4px $base-color;
-  }
-
-  &:active {
-    // prettier-ignore
-    box-shadow:
-      0 -4px $shadow,
-      0 -8px $base-color,
-      4px 0 $hover-background,
-      4px -4px $base-color,
-      8px 0 $base-color,
-      0 4px $hover-background,
-      4px 4px $base-color,
-      0 8px $base-color,
-      -4px 0 $shadow,
-      -4px -4px $base-color,
-      -8px 0 $base-color,
-      -4px 4px $base-color;
-  }
-
-  // prettier-ignore
-  box-shadow:
-    0 -4px $background,
-    0 -8px $base-color,
-    4px 0 $shadow,
-    4px -4px $base-color,
-    8px 0 $base-color,
-    0 4px $shadow,
-    4px 4px $base-color,
-    0 8px $base-color,
-    -4px 0 $background,
-    -4px -4px $base-color,
-    -8px 0 $base-color,
-    -4px 4px $base-color;
-}
-
 // Default style
 .nes-btn {
-  $border-size: 4px;
+  @include compact-rounded-corners();
 
   position: relative;
   display: inline-block;
@@ -85,7 +38,6 @@
   vertical-align: middle;
   cursor: $cursor-click-url, pointer;
   user-select: none;
-  border: none;
 
   @include btn-style(
     $base-color,
@@ -93,32 +45,6 @@
     map-get($default-colors, "hover"),
     map-get($default-colors, "shadow")
   );
-
-  &::before,
-  &::after {
-    position: absolute;
-    box-sizing: content-box;
-    width: 100%;
-    height: 100%;
-    content: "";
-    border-color: $base-color;
-    border-style: solid;
-    border-width: $border-size;
-  }
-
-  &::before {
-    top: $border-size * -1;
-    left: 0;
-    border-right: $border-size / 2;
-    border-left: $border-size / 2;
-  }
-
-  &::after {
-    top: 0;
-    left: $border-size * -1;
-    border-top: $border-size / 2;
-    border-bottom: $border-size / 2;
-  }
 
   &:focus {
     outline: 0;
@@ -145,32 +71,6 @@
   @each $type in $types {
     &.is-#{nth($type, 1)} {
       @include btn-style(nth($type, 2), nth($type, 3), nth($type, 4), nth($type, 5));
-    }
-  }
-
-  &.is-rounded {
-    box-sizing: content-box;
-    padding: 6px 8px;
-    @include btn-extra-pixelize-style(
-      $base-color,
-      map-get($default-colors, "normal"),
-      map-get($default-colors, "hover"),
-      map-get($default-colors, "shadow")
-    );
-
-    &::before,
-    &::after {
-      border-width: 0;
-    }
-    @each $type in $types {
-      &.is-#{nth($type, 1)} {
-        @include btn-extra-pixelize-style(
-          nth($type, 2),
-          nth($type, 3),
-          nth($type, 4),
-          nth($type, 5)
-        );
-      }
     }
   }
 }

@@ -15,15 +15,15 @@
   margin: 4px;
 
   select {
+    @include compact-rounded-corners();
     width: 100%;
     padding: 0.5rem 2.5rem 0.5rem 1rem;
-    -webkit-appearance: none;
-    appearance: none;
     cursor: $cursor-click-url, pointer;
-    border: none;
     border-radius: 0;
     outline-color: map-get($default-colors, "hover");
-    box-shadow: 0 4px $color-black, 0 -4px $color-black, 4px 0 $color-black, -4px 0 $color-black;
+
+    -webkit-appearance: none;
+    appearance: none;
 
     &:invalid {
       color: map-get($disabled-colors, shadow);
@@ -56,8 +56,9 @@
       }
 
       select {
+        @include compact-border-image($color);
+
         outline-color: nth($type, 3);
-        box-shadow: 0 4px $color, 0 -4px $color, 4px 0 $color, -4px 0 $color;
       }
     }
   }
