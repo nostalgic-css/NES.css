@@ -16,12 +16,12 @@
 
   select {
     @include compact-rounded-corners();
+
     width: 100%;
     padding: 0.5rem 2.5rem 0.5rem 1rem;
     cursor: $cursor-click-url, pointer;
     border-radius: 0;
     outline-color: map-get($default-colors, "hover");
-
     -webkit-appearance: none;
     appearance: none;
 
