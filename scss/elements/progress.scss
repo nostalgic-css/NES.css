@@ -1,11 +1,11 @@
 .nes-progress {
   @include compact-rounded-corners();
+
   width: 100%;
   height: 48px;
   margin: 4px;
   color: $base-color;
   background-color: $background-color;
-
   -webkit-appearance: none;
   appearance: none;
 
