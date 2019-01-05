@@ -41,3 +41,8 @@ input[type="radio"],
 input[type="checkbox"] {
   outline: 0;
 }
+
+// Hides the default <input type="file"> upload button. A <label> targeting the id of the now hidden input is required.
+input[type="file"] {
+  display: none;
+}
