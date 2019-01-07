@@ -1,8 +1,11 @@
 @mixin span-style-is-icon($color, $background-color, $display, $width, $font-size) {
   display: $display;
+  align-items: center;
+  justify-content: center;
   width: $width;
   font-size: $font-size;
   color: $color;
+  text-align: center;
   background-color: $background-color;
 }
 
@@ -11,6 +14,7 @@
   top: 0;
   width: $width;
   color: $color;
+  text-align: center;
   background-color: $background;
 
   @if $option == left {
@@ -39,9 +43,8 @@
       @include span-style-is-icon($color, $background, flex, 2.7em, 0.5em);
 
       position: absolute;
-      top: -1.7em;
-      left: 2.5em;
-      align-items: center;
+      top: -2.8em;
+      left: -2.7em;
       height: 2.7em;
     }
     &:last-child {
@@ -65,13 +68,11 @@
   position: relative;
   display: inline-block;
   width: $em * 14;
-  height: $em;
-  padding: 0.75em;
+  height: $em * 2.5;
   margin: 0.5em;
   font-size: $em * 1.2;
-  text-align: center;
   white-space: nowrap;
-  vertical-align: middle;
+  vertical-align: top;
   user-select: none;
 
   // Other styles
@@ -91,6 +92,7 @@
     }
 
     &.is-icon {
+      width: $em * 7;
       & span.is-#{nth($type, 1)} {
         @include badge-style(nth($type, 2), nth($type, 3), is-icon);
       }
