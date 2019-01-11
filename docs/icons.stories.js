@@ -18,6 +18,8 @@ stories.add('icon', () => {
     'nes-icon linkedin': 'nes-icon linkedin',
     'nes-icon close': 'nes-icon close',
     'nes-icon heart': 'nes-icon heart',
+    'is-half': 'is-half',
+    'is-empty': 'is-empty',
     'nes-pokeball': 'nes-pokeball',
     'nes-bulbasaur': 'nes-bulbasaur',
     'nes-charmander': 'nes-charmander',
@@ -39,9 +41,6 @@ stories.add('icon', () => {
     'is-small': 'is-small',
     'is-medium': 'is-medium',
     'is-large': 'is-large',
-    'is-half': 'is-half',
-    'is-empty': 'is-empty',
-
   }, '');
 
   return `<i class="${selectedClass} ${selectedSize}"></i>`;
