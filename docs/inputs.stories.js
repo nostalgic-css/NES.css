@@ -25,6 +25,7 @@ stories.add('input.radio', () => `
       'is-success': 'is-success',
       'is-warning': 'is-warning',
       'is-error': 'is-error',
+      'is-dark': 'is-dark',
     }, '');
 
     return `<input type="text" id="name_field" class="nes-input ${selectedClass}" placeholder="NES.css">`;

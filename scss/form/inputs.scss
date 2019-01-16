@@ -13,6 +13,12 @@
 
   @include border-style($base-color, map-get($default-colors, "hover"));
 
+  &.is-dark {
+    @include border-style(map-get($default-colors, "normal"), map-get($default-colors, "hover"));
+
+    color: $background-color;
+    background-color: $base-color;
+  }
   &.is-success {
     @include border-style(map-get($success-colors, "normal"), map-get($success-colors, "hover"));
   }
