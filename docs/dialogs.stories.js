@@ -9,7 +9,8 @@ stories.addDecorator(withKnobs);
 stories.add('dialog', () => {
   const open = boolean('open', true) ? 'open' : '';
   const isRounded = boolean('is-rounded', false) ? 'is-rounded' : '';
-  const selectedClasses = [isRounded];
+  const isDark = boolean('is-dark', false) ? 'is-dark' : '';
+  const selectedClasses = [isRounded, isDark];
 
   return `<dialog class="nes-dialog ${selectedClasses.join(' ')}" ${open}>
       <p class="title">Dialog</p>
