@@ -12,5 +12,14 @@
 
   &.is-rounded {
     @include rounded-corners();
+
+    &.is-dark {
+      @include rounded-corners(true);
+    }
+  }
+  &.is-dark {
+    color: $background-color;
+    background-color: $base-color;
+    border-color: $background-color;
   }
 }
