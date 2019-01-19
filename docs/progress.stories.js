@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html'; // eslint-disable-line import/no-extraneous-dependencies
 import { // eslint-disable-line import/no-extraneous-dependencies
-  withKnobs, number, radios,
+  withKnobs, number, radios, boolean,
 } from '@storybook/addon-knobs';
 
 const stories = storiesOf('Progress', module);
@@ -22,5 +22,7 @@ stories.add('progress', () => {
     'is-error': 'is-error',
     'is-pattern': 'is-pattern',
   }, '');
-  return `<progress class="nes-progress ${extraClass}" value="${percentage}" max="100" style="width: 98%;"></progress>`;
+  const isRounded = boolean('is-rounded', false) ? 'is-rounded' : '';
+  const selectedClasses = [extraClass, isRounded];
+  return `<progress class="nes-progress ${selectedClasses.join(' ')}" value="${percentage}" max="100" style="width: 98%;"></progress>`;
 });
