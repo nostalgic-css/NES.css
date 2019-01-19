@@ -21,7 +21,7 @@
     }
   }
 
-  &:active::after {
+  &:active:not(.is-disabled)::after {
     box-shadow: inset 4px 4px $shadow;
   }
 }
