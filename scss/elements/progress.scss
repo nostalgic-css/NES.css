@@ -27,6 +27,9 @@
 
   @include progress-style($base-color);
 
+  &.is-rounded {
+    @include rounded-corners();
+  }
   &.is-primary {
     @include progress-style(map-get($primary-colors, "normal"));
   }
