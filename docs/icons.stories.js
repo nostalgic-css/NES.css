@@ -31,6 +31,7 @@ stories.add('icon', () => {
     'nes-logo': 'nes-logo',
     'nes-jp-logo': 'nes-jp-logo',
     'snes-logo': 'snes-logo',
+    'nes-atari': 'nes-atari',
     'snes-jp-logo': 'snes-jp-logo',
   }, 'nes-icon twitter');
   const selectedSize = radios('size', {
