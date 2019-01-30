@@ -21,115 +21,129 @@
 @import "trophy.scss";
 
 .nes-icon {
+  $default-size: 1px;
+  $icon-size: $default-size * 16;
+
   position: relative;
   display: inline-block;
-  width: calc(1em * 16);
-  height: calc(1em * 16);
+  width: $icon-size;
+  height: $icon-size;
+  margin-right: $icon-size;
+  margin-bottom: $icon-size;
 
-  // font size dictates pixel size, everything will adjust
-  // default
-  font-size: 2px;
+  // NOTE: Use `transform: scale()` because cannot use font-size less than 10px on Chrome
+  // default 2px
+  transform: scale(2);
+  transform-origin: top left;
 
   &.is-small {
-    font-size: 1px;
+    margin: 0;
+    // 1px
+    transform: scale(1);
   }
 
   &.is-medium {
-    font-size: 3px;
+    margin-right: $icon-size * 2;
+    margin-bottom: $icon-size * 2;
+    // 3px
+    transform: scale(3);
   }
 
   &.is-large {
-    font-size: 4px;
+    margin-right: $icon-size * 3;
+    margin-bottom: $icon-size * 3;
+    // 4px
+    transform: scale(4);
   }
 
   &::before {
     position: absolute;
-    top: -1em;
-    left: -1em;
+    top: $default-size * -1;
+    left: $default-size * -1;
     display: block;
     content: "";
     background: transparent;
   }
 
   &.heart::before {
-    @include pixelize($icon-heart, $icon-heart-colors);
+    @include pixelize($default-size, $icon-heart, $icon-heart-colors);
   }
   &.heart.is-empty::before {
-    @include pixelize($icon-heart-empty, $icon-heart-empty-colors);
+    @include pixelize($default-size, $icon-heart-empty, $icon-heart-empty-colors);
   }
 
   &.star::before {
-    @include pixelize($icon-star, $icon-star-colors);
+    @include pixelize($default-size, $icon-star, $icon-star-colors);
   }
   &.star.is-empty::before {
-    @include pixelize($icon-star-empty, $icon-star-empty-colors);
+    @include pixelize($default-size, $icon-star-empty, $icon-star-empty-colors);
   }
   &.star.is-half::before {
-    @include pixelize($icon-star-half, $icon-star-colors);
+    @include pixelize($default-size, $icon-star-half, $icon-star-colors);
   }
   &.star.is-transparent::before {
-    @include pixelize($icon-star-transparent, $icon-star-colors);
+    @include pixelize($default-size, $icon-star-transparent, $icon-star-colors);
   }
 
   &.trophy::before {
-    @include pixelize($icon-trophy, $icon-trophy-colors);
+    @include pixelize($default-size, $icon-trophy, $icon-trophy-colors);
   }
   &.trophy.is-empty::before {
-    @include pixelize($icon-trophy-empty, $icon-trophy-empty-colors);
+    @include pixelize($default-size, $icon-trophy-empty, $icon-trophy-empty-colors);
   }
 
   &.like::before {
-    @include pixelize($icon-like, $icon-like-colors);
+    @include pixelize($default-size, $icon-like, $icon-like-colors);
   }
   &.like.is-empty::before {
-    @include pixelize($icon-like-empty, $icon-like-empty-colors);
+    @include pixelize($default-size, $icon-like-empty, $icon-like-empty-colors);
   }
 
   &.twitter::before {
-    @include pixelize($icon-twitter, $icon-twitter-colors);
+    @include pixelize($default-size, $icon-twitter, $icon-twitter-colors);
   }
 
   &.facebook::before {
-    @include pixelize($icon-facebook, $icon-facebook-colors);
+    @include pixelize($default-size, $icon-facebook, $icon-facebook-colors);
   }
 
   &.github::before {
-    @include pixelize($icon-github, $icon-github-colors);
+    @include pixelize($default-size, $icon-github, $icon-github-colors);
   }
 
   &.youtube::before {
-    @include pixelize($icon-youtube, $icon-youtube-colors);
+    @include pixelize($default-size, $icon-youtube, $icon-youtube-colors);
   }
 
   &.close::before {
-    @include pixelize($icon-close, $icon-close-colors);
+    @include pixelize($default-size, $icon-close, $icon-close-colors);
   }
 
   &.google::before {
-    @include pixelize($icon-google, $icon-google-colors);
+    @include pixelize($default-size, $icon-google, $icon-google-colors);
   }
 
   &.medium::before {
-    @include pixelize($icon-medium, $icon-medium-colors);
+    @include pixelize($default-size, $icon-medium, $icon-medium-colors);
   }
 
   &.twitch::before {
-    @include pixelize($icon-twitch, $icon-twitch-colors);
+    @include pixelize($default-size, $icon-twitch, $icon-twitch-colors);
   }
 
   &.reddit::before {
-    @include pixelize($icon-reddit, $icon-reddit-colors);
+    @include pixelize($default-size, $icon-reddit, $icon-reddit-colors);
   }
 
   &.whatsapp::before {
-    @include pixelize($icon-whatsapp, $icon-whatsapp-colors);
+    @include pixelize($default-size, $icon-whatsapp, $icon-whatsapp-colors);
   }
 
   &.gmail::before {
-    @include pixelize($icon-gmail, $icon-gmail-colors);
+    @include pixelize($default-size, $icon-gmail, $icon-gmail-colors);
   }
 
   &.linkedin::before {
-    @include pixelize($icon-linkedin, $icon-linkedin-colors);
+    @include pixelize($default-size, $icon-linkedin, $icon-linkedin-colors);
   }
 }
