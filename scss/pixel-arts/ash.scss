@@ -1,7 +1,5 @@
 .nes-ash {
-  // prettier-ignore
-  $ash-colors: (#f8f8ff, #ff614e, #007f7f,
-  #181818, #ffe3c5, #426adb, #4169e1);
+  $ash-colors: (#f8f8ff, #ff614e, #007f7f, #181818, #ffe3c5, #426adb, #4169e1);
   // prettier-ignore
   $ash: (
     (0,0,0,0,4,4,4,4,4,4,0,0,0,0),
@@ -20,20 +18,20 @@
     (4,3,3,4,4,4,4,4,3,3,4,0,0,0),
     (0,4,4,0,0,0,0,0,4,4,0,0,0,0)
   );
+  $size: 6px;
 
   position: relative;
   display: inline-block;
-  width: calc(1em * 14);
-  height: calc(1em * 15);
-  font-size: 6px;
+  width: $size * length(nth($ash, 1));
+  height: $size * length($ash);
 
   &::before {
     position: absolute;
-    top: -1em;
-    left: -1em;
+    top: -$size;
+    left: -$size;
     content: "";
     background: transparent;
 
-    @include pixelize($ash, $ash-colors);
+    @include pixelize($size, $ash, $ash-colors);
   }
 }

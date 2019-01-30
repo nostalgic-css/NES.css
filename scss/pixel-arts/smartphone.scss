@@ -2,7 +2,7 @@
   $smartphone-colors: (#fff, #060606);
   // prettier-ignore
   $smartphone: (
-    (0,2,2,2,2,2,2,2,2,2,2,2,2,2),
+    (0,2,2,2,2,2,2,2,2,2,2,2,2,2,0),
     (2,2,1,1,1,1,1,1,1,1,1,1,1,2,2),
     (2,1,1,1,2,2,2,2,2,2,2,1,1,1,2),
     (2,1,1,1,1,1,1,1,1,1,1,1,1,1,2),
@@ -28,22 +28,22 @@
     (2,1,1,1,1,1,1,2,2,1,1,1,1,1,2),
     (2,1,1,1,1,1,1,2,2,1,1,1,1,1,2),
     (2,2,1,1,1,1,1,1,1,1,1,1,1,2,2),
-    (0,2,2,2,2,2,2,2,2,2,2,2,2,2)
+    (0,2,2,2,2,2,2,2,2,2,2,2,2,2,0)
   );
+  $size: 6px;
 
   position: relative;
   display: inline-block;
-  width: calc(1em * 16);
-  height: calc(1em * 27);
-  font-size: 6px;
+  width: $size * length(nth($smartphone, 1));
+  height: $size * length($smartphone);
 
   &::before {
     position: absolute;
-    top: -1em;
-    left: -1em;
+    top: -$size;
+    left: -$size;
     content: "";
     background: transparent;
 
-    @include pixelize($smartphone, $smartphone-colors);
+    @include pixelize($size, $smartphone, $smartphone-colors);
   }
 }
