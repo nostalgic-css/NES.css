@@ -78,7 +78,8 @@
     "stylelint-config-recess-order": "^2.0.0",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-prettier": "^1.0.5",
-    "stylelint-scss": "^3.3.1"
+    "stylelint-scss": "^3.3.1",
+    "url-loader": "^1.1.2"
   },
   "browserslist": [
     "> 1%"
