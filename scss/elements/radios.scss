@@ -44,7 +44,11 @@
   &:checked:hover,
   &:checked:focus {
     & + span::before {
-      animation: blink 1s infinite steps(1);
+      animation-name: blink;
+      animation-duration: 1s;
+      animation-timing-function: steps(1);
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
     }
   }
 
