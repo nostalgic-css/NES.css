@@ -19,20 +19,20 @@
     (0,0,0,0,0,0,0,0,0,0,0,0,0,0),
     (0,0,0,0,0,0,0,0,0,0,0,0,0,0),
   );
+  $size: 6px;
 
   position: relative;
   display: inline-block;
-  width: calc(1em * 14);
-  height: calc(1em * 14);
-  font-size: 6px;
+  width: $size * length(nth($pokeball, 1));
+  height: $size * length($pokeball);
 
   &::before {
     position: absolute;
-    top: -1em;
-    left: -1em;
+    top: -$size;
+    left: -$size;
     content: "";
     background: transparent;
 
-    @include pixelize($pokeball, $pokeball-colors);
+    @include pixelize($size, $pokeball, $pokeball-colors);
   }
 }

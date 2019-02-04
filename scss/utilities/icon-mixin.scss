@@ -1,4 +1,4 @@
-@mixin pixelize($matrix, $colors, $default-color: null) {
+@mixin pixelize($size, $matrix, $colors, $default-color: null) {
   $ret: "";
   $moz: "";
   @if ($default-color == null) {
@@ -37,18 +37,18 @@
 
         $color: nth($colors, $dot);
         @if $color == $default-color {
-          $ret: $ret + $j + "em " + $i + "em";
-          $moz: $moz + $j + "em " + $i + "em 0 0.020em";
+          $ret: $ret + ($j * $size) + " " + ($i * $size);
+          $moz: $moz + ($j * $size) + " " + ($i * $size) + "0 0.020px";
         } @else {
-          $ret: $ret + $j + "em " + $i + "em " + $color;
-          $moz: $moz + $j + "em " + $i + "em 0 0.020em " + $color;
+          $ret: $ret + ($j * $size) + " " + ($i * $size) + "" + $color;
+          $moz: $moz + ($j * $size) + " " + ($i * $size) + "0 0.020px " + $color;
         }
       }
     }
   }
 
-  width: 1em;
-  height: 1em;
+  width: $size;
+  height: $size;
   color: $default-color;
   box-shadow: unquote($ret);
   @-moz-document url-prefix() {
