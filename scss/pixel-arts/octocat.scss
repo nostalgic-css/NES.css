@@ -36,21 +36,21 @@
     (0,0,0,0,0,1,0,1,1,0,1,0,0,0),
     (0,0,0,0,1,0,1,0,0,1,0,1,0,0)
   );
+  $size: 6px;
 
   position: relative;
   display: inline-block;
-  width: calc(1em * 14);
-  height: calc(1em * 15);
-  font-size: 6px;
+  width: $size * length(nth($octocat-1, 1));
+  height: $size * length($octocat-1);
 
   &::before {
     position: absolute;
-    top: -1em;
-    left: -1em;
+    top: -$size;
+    left: -$size;
     content: "";
     background: transparent;
 
-    @include pixelize($octocat-1, $octocat-colors);
+    @include pixelize($size, $octocat-1, $octocat-colors);
   }
 
   &.animate::before {
@@ -58,11 +58,8 @@
   }
 
   @keyframes wave {
-    0% {
-      @include pixelize($octocat-1, $octocat-colors);
-    }
     50% {
-      @include pixelize($octocat-2, $octocat-colors);
+      @include pixelize($size, $octocat-2, $octocat-colors);
     }
   }
 }

@@ -21,7 +21,7 @@
     > .title {
       display: table;
       padding: 0 0.5rem;
-      margin: -2rem 0 1rem;
+      margin: -1.8rem 0 1rem;
       font-size: 1rem;
       background-color: $background-color;
     }
@@ -40,9 +40,22 @@
   }
 
   &.is-dark {
+    position: relative;
+    margin: $border-size;
     color: $background-color;
     background-color: $base-color;
     border-color: white;
+
+    &::after {
+      position: absolute;
+      top: -$border-size * 1.8;
+      right: -$border-size * 1.8;
+      bottom: -$border-size * 1.8;
+      left: -$border-size * 1.8;
+      z-index: -1;
+      content: "";
+      background-color: $base-color;
+    }
 
     &.with-title {
       > .title {
@@ -56,11 +69,7 @@
     @include rounded-corners();
 
     padding: 1rem 1.5rem;
-    margin: 14px 8px;
-
-    &.is-dark {
-      @include rounded-corners(true);
-    }
+    margin: $border-size;
 
     &.with-title {
       > .title {
@@ -76,6 +85,31 @@
       &.is-right {
         > .title {
           margin: -1.5rem 0 1rem auto;
+        }
+      }
+    }
+
+    &.is-dark {
+      @include rounded-corners(true);
+      &::after {
+        content: none;
+      }
+
+      &.with-title {
+        > .title {
+          margin-top: -1.3rem;
+        }
+
+        &.is-centered {
+          > .title {
+            margin: -1.3rem auto 1rem;
+          }
+        }
+
+        &.is-right {
+          > .title {
+            margin: -1.3rem 0 1rem auto;
+          }
         }
       }
     }

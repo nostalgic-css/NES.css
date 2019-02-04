@@ -62,23 +62,22 @@
     position: absolute;
     top: -3px;
     left: -28px;
-    font-size: 2px;
     content: "";
   }
 
   // prettier-ignore
   & + span::before { /* stylelint-disable-line no-descending-specificity */
-    @include pixelize($checkbox, $colors);
+    @include pixelize(2px, $checkbox, $colors);
   }
   // prettier-ignore
   &:focus + span::before { /* stylelint-disable-line no-descending-specificity */
-    @include pixelize($checkbox-focus, $colors);
+    @include pixelize(2px, $checkbox-focus, $colors);
   }
 
   &:checked + span::before {
-    @include pixelize($checkbox-checked, $colors);
+    @include pixelize(2px, $checkbox-checked, $colors);
   }
   &:checked:focus + span::before {
-    @include pixelize($checkbox-checked-focus, $colors);
+    @include pixelize(2px, $checkbox-checked-focus, $colors);
   }
 }
