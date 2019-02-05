@@ -15,19 +15,20 @@
     (0,2,2,0,0,0,0,0,0,0,0,0,0,2,2,0)
   );
 
+  $size: 4px;
+
   position: relative;
   display: inline-block;
-  width: calc(1em * 16);
-  height: calc(1em * 11);
-  font-size: 3px;
+  width: $size * length(nth($psone, 1));
+  height: $size * length($psone);
 
   &::before {
     position: absolute;
-    top: -1em;
-    left: -1em;
+    top: -$size;
+    left: -$size;
     content: "";
     background: transparent;
 
-    @include pixelize($psone, $psone-colors);
+    @include pixelize($size, $psone, $psone-colors);
   }
 }
