@@ -14,11 +14,19 @@ stories.add('input.radio', () => `
         <input type="radio" class="nes-radio" name="answer" />
         <span>No</span>
       </label>`)
-  .add('input.checkbox', () => `
-      <label>
-        <input type="checkbox" class="nes-checkbox" checked />
+  .add('input.checkbox', () => {
+    const selectedClass = radios('class', {
+      default: '',
+      'is-dark': 'is-dark',
+    }, '');
+
+    return (
+      `<label>
+        <input type="checkbox" class="nes-checkbox ${selectedClass}" checked />
         <span>Enable</span>
-      </label>`)
+      </label>`
+    );
+  })
   .add('input', () => {
     const selectedClass = radios('class', {
       default: '',
