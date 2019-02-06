@@ -31,12 +31,11 @@
   }
 
   &::after {
-    @include pixelize($dropdown, $colors);
+    @include pixelize(3px, $dropdown, $colors);
 
     position: absolute;
     top: calc(50% - 11px);
     right: 36px;
-    font-size: 3px;
     pointer-events: none;
     content: "";
   }

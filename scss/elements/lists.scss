@@ -1,20 +1,22 @@
 .nes-list {
+  // prettier-ignore
   $disc: (
-    (0, 0, 0, 1, 1, 0, 0, 0),
-    (0, 0, 1, 1, 1, 1, 0, 0),
-    (0, 1, 1, 1, 1, 1, 1, 0),
-    (0, 1, 1, 1, 1, 1, 1, 0),
-    (0, 0, 1, 1, 1, 1, 0, 0),
-    (0, 0, 0, 1, 1, 0, 0, 0)
-  );
+    (0,0,0,1,1,0,0,0),
+    (0,0,1,1,1,1,0,0),
+    (0,1,1,1,1,1,1,0),
+    (0,1,1,1,1,1,1,0),
+    (0,0,1,1,1,1,0,0),
+    (0,0,0,1,1,0,0,0)
+    );
 
+  // prettier-ignore
   $circle: (
-    (0, 0, 0, 1, 1, 0, 0, 0),
-    (0, 0, 1, 1, 1, 1, 0, 0),
-    (0, 1, 1, 0, 0, 1, 1, 0),
-    (0, 1, 1, 0, 0, 1, 1, 0),
-    (0, 0, 1, 1, 1, 1, 0, 0),
-    (0, 0, 0, 1, 1, 0, 0, 0)
+    (0,0,0,1,1,0,0,0),
+    (0,0,1,1,1,1,0,0),
+    (0,1,1,0,0,1,1,0),
+    (0,1,1,0,0,1,1,0),
+    (0,0,1,1,1,1,0,0),
+    (0,0,0,1,1,0,0,0)
   );
   $colors: ($base-color, map-get($default-colors, "shadow"));
 
@@ -28,19 +30,17 @@
     position: absolute;
     top: calc(50% - 8px);
     left: -22px;
-    font-size: 2px;
     content: "";
 
-    @include pixelize($disc, $colors);
+    @include pixelize(2px, $disc, $colors);
   }
 
   &.is-circle li::before {
     position: absolute;
     top: calc(50% - 8px);
     left: -22px;
-    font-size: 2px;
     content: "";
 
-    @include pixelize($circle, $colors);
+    @include pixelize(2px, $circle, $colors);
   }
 }

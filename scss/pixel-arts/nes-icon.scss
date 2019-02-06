@@ -14,20 +14,20 @@
     (2,1,1,1,1,1,1,1,1,1,1,1,1,1,2),
     (2,2,2,2,2,2,2,2,2,2,2,2,2,2,2)
   );
+  $size: 4px;
 
   position: relative;
   display: inline-block;
-  width: calc(1em * 16);
-  height: calc(1em * 11);
-  font-size: 3px;
+  width: $size * length(nth($logo, 1));
+  height: $size * length($logo);
 
   &::before {
     position: absolute;
-    top: -1em;
-    left: -1em;
+    top: -$size;
+    left: -$size;
     content: "";
     background: transparent;
 
-    @include pixelize($logo, $logo-colors);
+    @include pixelize($size, $logo, $logo-colors);
   }
 }
