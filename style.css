@@ -100,3 +100,21 @@ div.containers > .nes-container {
     display: none;
   }
 }
+
+.show-code {
+  font-size: .7em;
+  height: 34px;
+  width: 128px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.code {
+  display: none;
+  font-size: .8em;
+  color: white;
+  background-color: #ce372b;
+  padding: 15px 0 0px 10px;
+  margin-top: -20px;
+}
