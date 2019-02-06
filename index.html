@@ -51,8 +51,8 @@
         <button type="button" class="nes-btn is-warning">Warning</button>
         <button type="button" class="nes-btn is-error">Error</button>
         <button type="button" class="nes-btn is-disabled">Disabled</button>
-        <button type="button" class="nes-btn is-error show-code" id="show-buttons-code"><></button>
       </div>
+      <button type="button" class="nes-btn is-error show-code" id="show-buttons-code"><></button>
     </section>
     <section class="nes-container code" id="code-buttons">
       <code>
@@ -62,13 +62,13 @@
         <p><span><</span>button type="button" class="nes-btn is-warning">Warning<span><</span>/button></p>
         <p><span><</span>button type="button" class="nes-btn is-error">Error<span><</span>/button></p>
         <p><span><</span>button type="button" class="nes-btn is-disabled">Disabled<span><</span>/button></p>
-        <button type="button" class="nes-btn show-code copy" id="copy-buttons" onClick="copyToClipboard('buttons')">Copy</button>
+        <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('buttons')">Copy</button>
       </code>
     </section>
 
     <section class="nes-container with-title">
       <h2 class="title">Containers</h2>
-      <div class="containers">
+      <div class="containers" id="containers">
         <div class="nes-container with-title is-centered">
           <p class="title">Container.is-centered</p>
           <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
@@ -84,11 +84,30 @@
           <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
         </div>
       </div>
+      <button type="button" class="nes-btn is-error show-code" id="show-containers-code"><></button>
     </section>
-
+    <section class="nes-container code" id="code-containers">
+      <code>
+        <p><span><</span>div class="nes-container with-title is-centered">
+          <span><</span>p class="title">Container.is-centered<span><</span>/p>
+          <span><</span>p>Good morning. Thou hast had a good night's sleep, I hope.<span><</span>/p>
+        <span><</span>/div></p>
+        <p><span><</span>div class="nes-container is-dark with-title">
+          <span><</span>p class="title">Container.is-dark<span><</span>/p>
+          <span><</span>p>Good morning. Thou hast had a good night's sleep, I hope.<span><</span>/p>
+        <span><</span>/div></p>
+        <p><span><</span>div class="nes-container is-rounded">
+          <span><</span>p>Good morning. Thou hast had a good night's sleep, I hope.<span><</span>/p>
+        <span><</span>/div>
+        <p><span><</span>div class="nes-container is-rounded is-dark">
+          <span><</span>p>Good morning. Thou hast had a good night's sleep, I hope.<span><</span>/p>
+        <span><</span>/div>
+        <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('containers')">Copy</button>
+      </code>
+    </section>
     <section class="nes-container with-title">
       <h2 class="title">Radios</h2>
-      <div>
+      <div id="radios">
         <label>
           <input type="radio" class="nes-radio" name="answer" checked />
           <span>Yes</span>
@@ -98,6 +117,20 @@
           <span>No</span>
         </label>
       </div>
+      <button type="button" class="nes-btn is-error show-code" id="show-radios-code"><></button>
+    </section>
+    <section class="nes-container code" id="code-radios">
+      <code>
+        <p><span><</span>label>
+          <span><</span>input type="radio" class="nes-radio" name="answer" checked />
+          <span><</span>span>Yes<span><</span>/span>
+        <span><</span>/label></p>
+        <p><span><</span>label>
+          <span><</span>input type="radio" class="nes-radio" name="answer" />
+          <span><</span>span>No<span><</span>/span>
+        <span><</span>/label></p>
+        <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('radios')">Copy</button>
+      </code>
     </section>
 
     <section class="nes-container with-title">
@@ -106,6 +139,7 @@
         <input type="checkbox" class="nes-checkbox" checked />
         <span>Enable</span>
       </label>
+      <button type="button" class="nes-btn is-error show-code" id="show-checkboxes-code"><></button>
     </section>
 
     <section class="nes-container with-title">
@@ -120,6 +154,7 @@
         <img src="https://www.gravatar.com/avatar" class="nes-avatar is-medium is-rounded">
         <img src="https://www.gravatar.com/avatar" class="nes-avatar is-large is-rounded">
       </div>
+      <button type="button" class="nes-btn is-error show-code" id="show-avatars-code"><></button>
     </section>
 
     <section class="form nes-container with-title">
@@ -468,7 +503,7 @@
   <script>
     function copyToClipboard(element) {
       var divToClipboard = document.querySelector('#' + element);
-      const el = document.createElement('textarea');
+      var el = document.createElement('textarea');
       el.value = divToClipboard.innerHTML;
       el.setAttribute('readonly', '');
       el.style.position = 'absolute';
@@ -489,11 +524,14 @@
         octocat.classList.remove("animate");
       });
 
-      var buttons = document.querySelector("#show-buttons-code");
-      var codeButtons = document.querySelector("#code-buttons");
-      buttons.addEventListener("click", function() {
-        codeButtons.style.display = codeButtons.style.display === 'block' ? 'none' : 'block';
-      });
+      var elements = ['buttons', 'containers', 'radios'];
+      for (var i = 0; i < elements.length; i++) {
+        let showEl = document.querySelector("#show-" + elements[i] + "-code");
+        let codeEl = document.querySelector("#code-" + elements[i]);
+        showEl.addEventListener("click", function() {
+          codeEl.style.display = codeEl.style.display === 'block' ? 'none' : 'block';
+        }, false);
+      }
     }
   </script>
 </html>
