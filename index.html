@@ -44,14 +44,14 @@
 
     <section class="nes-container with-title">
       <h2 class="title">Buttons</h2>
-      <div>
+      <div id="buttons">
         <button type="button" class="nes-btn">Normal</button>
         <button type="button" class="nes-btn is-primary">Primary</button>
         <button type="button" class="nes-btn is-success">Success</button>
         <button type="button" class="nes-btn is-warning">Warning</button>
         <button type="button" class="nes-btn is-error">Error</button>
         <button type="button" class="nes-btn is-disabled">Disabled</button>
-        <button type="button" class="nes-btn is-primary show-code" id="show-buttons-code">Show Code</button>
+        <button type="button" class="nes-btn is-error show-code" id="show-buttons-code"><></button>
       </div>
     </section>
     <section class="nes-container code" id="code-buttons">
@@ -62,6 +62,7 @@
         <p><span><</span>button type="button" class="nes-btn is-warning">Warning<span><</span>/button></p>
         <p><span><</span>button type="button" class="nes-btn is-error">Error<span><</span>/button></p>
         <p><span><</span>button type="button" class="nes-btn is-disabled">Disabled<span><</span>/button></p>
+        <button type="button" class="nes-btn show-code copy" id="copy-buttons" onClick="copyToClipboard('buttons')">Copy</button>
       </code>
     </section>
 
@@ -465,92 +466,34 @@
     </footer>
   </body>
   <script>
-    var link = document.querySelector("a.github-link");
-    var octocat = document.querySelector("a.github-link > i.nes-octocat");
-    link.addEventListener("mouseover", function() {
-      octocat.classList.add("animate");
-    });
-    link.addEventListener("mouseout", function() {
-      octocat.classList.remove("animate");
-    });
+    function copyToClipboard(element) {
+      var divToClipboard = document.querySelector('#' + element);
+      const el = document.createElement('textarea');
+      el.value = divToClipboard.innerHTML;
+      el.setAttribute('readonly', '');
+      el.style.position = 'absolute';
+      el.style.left = '-9999px';
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+    }
 
     window.onload = function() {
-      var buttons = document.querySelector("#show-buttons-code");
-      var codeButtons = document.querySelector("#code-buttons");
-
-      buttons.addEventListener("click", function() {
-        console.log('test')
+      var link = document.querySelector("a.github-link");
+      var octocat = document.querySelector("a.github-link > i.nes-octocat");
+      link.addEventListener("mouseover", function() {
+        octocat.classList.add("animate");
+      });
+      link.addEventListener("mouseout", function() {
+        octocat.classList.remove("animate");
       });
 
-      // var containers = document.querySelector("#show-containers-code");
-      // container.addEventListener("click", function() {
-      //   console.log('oi2')
-      // });
-
-      // var radios = document.querySelector("#show-radios-code");
-      // radios.addEventListener("click", function() {
-      //   console.log('oi3')
-      // });
-
-      // var checkboxes = document.querySelector("#show-checkboxes-code");
-      // checkboxes.addEventListener("click", function() {
-      //   console.log('oi4')
-      // });
-
-      // var avatars = document.querySelector("#show-avatars-code");
-      // avatars.addEventListener("click", function() {
-      //   console.log('oi5')
-      // });
-
-      // var forms = document.querySelector("#show-forms-code");
-      // forms.addEventListener("click", function() {
-      //   console.log('oi6')
-      // });
-
-      // var ballons = document.querySelector("#show-ballons-code");
-      // ballons.addEventListener("click", function() {
-      //   console.log('oi7')
-      // });
-
-      // var lists = document.querySelector("#show-lists-code");
-      // lists.addEventListener("click", function() {
-      //   console.log('oi7')
-      // });
-
-      // var table = document.querySelector("#show-table-code");
-      // table.addEventListener("click", function() {
-      //   console.log('oi7')
-      // });
-
-      // var progress = document.querySelector("#show-progress-code");
-      // progress.addEventListener("click", function() {
-      //   console.log('oi7')
-      // });
-
-      // var badges = document.querySelector("#show-badges-code");
-      // badges.addEventListener("click", function() {
-      //   console.log('oi7')
-      // });
-
-      // var reactions = document.querySelector("#show-icons-reactions-code");
-      // reactions.addEventListener("click", function() {
-      //   console.log('oi7')
-      // });
-
-      // var sns = document.querySelector("#show-icons-sns-code");
-      // sns.addEventListener("click", function() {
-      //   console.log('oi7')
-      // });
-
-      // var others = document.querySelector("#show-icons-others-code");
-      // others.addEventListener("click", function() {
-      //   console.log('oi7')
-      // });
-
-      // var controllers = document.querySelector("#show-icons-controllers-code");
-      // controllers.addEventListener("click", function() {
-      //   console.log('oi7')
-      // });
+      var buttons = document.querySelector("#show-buttons-code");
+      var codeButtons = document.querySelector("#code-buttons");
+      buttons.addEventListener("click", function() {
+        codeButtons.style.display = codeButtons.style.display === 'block' ? 'none' : 'block';
+      });
     }
   </script>
 </html>

@@ -104,17 +104,22 @@ div.containers > .nes-container {
 .show-code {
   font-size: .7em;
   height: 34px;
-  width: 128px;
+  width: 43px;
   position: absolute;
-  right: 5px;
-  top: 5px;
+  right: -5px;
+  top: -5px;
+}
+
+.copy {
+  height: 34px;
+  width: 58px;
 }
 
 .code {
   display: none;
   font-size: .8em;
-  color: white;
-  background-color: #ce372b;
+  color: #e76e55;
+  background-color: rgba(45, 45, 45, .9);
   padding: 15px 0 0px 10px;
   margin-top: -20px;
 }
