@@ -106,6 +106,10 @@ div.containers > .nes-container {
   top: -4px;
 }
 
+pre {
+  white-space: normal;
+}
+
 .code {
   display: none;
   font-size: .85em;
