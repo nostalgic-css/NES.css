@@ -61,7 +61,6 @@
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
-    "file-loader": "^2.0.0",
     "git-rev-sync": "^1.12.0",
     "husky": "^1.0.0",
     "lint-staged": "^7.3.0",
@@ -78,7 +77,8 @@
     "stylelint-config-recess-order": "^2.0.0",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-prettier": "^1.0.5",
-    "stylelint-scss": "^3.3.1"
+    "stylelint-scss": "^3.3.1",
+    "url-loader": "^1.1.2"
   },
   "browserslist": [
     "> 1%"
