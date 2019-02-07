@@ -142,9 +142,14 @@ div.containers > .nes-container {
   right: 10px;
 }
 
+.code p {
+  width: 96%;
+}
+
 @media screen and (max-width: 1280px) {
   .code p:first-child {
     padding-top: 2.7em;
+    width: 99%;
   }
 }
 
@@ -163,6 +168,7 @@ div.containers > .nes-container {
 
   .code p {
     font-size: .8em;
+    width: 100%;
   }
 
   #code-avatars p {
