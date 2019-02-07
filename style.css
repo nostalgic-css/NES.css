@@ -56,6 +56,14 @@ div.containers > .nes-container {
   margin-bottom: 1rem;
 }
 
+#table {
+  margin: 35px auto;
+}
+
+#progress {
+  margin-top: 35px;
+}
+
 .footer {
   text-align: center;
 }
