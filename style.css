@@ -87,6 +87,59 @@ div.containers > .nes-container {
   align-self: flex-end;
 }
 
+.show-code {
+  font-size: .7em;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  position: absolute;
+  right: -4px;
+  top: -4px;
+}
+
+.code {
+  display: none;
+  font-size: .85em;
+  color: #e76e55;
+  background-color: rgba(45, 45, 45, .9);
+  padding: 15px 0px 0px 15px;
+  margin-top: -20px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.copy {
+  height: 34px;
+  width: 58px;
+}
+
+#form .nes-field, #form .field {
+  margin-top: 20px;
+}
+
+.copied {
+  position: absolute;
+  bottom: 25px;
+  padding: 10px;
+  font-size: .7em;
+  z-index: 2;
+  right: 35px;
+  color: #000;
+  display: none;
+}
+
+.balloon .copied {
+  bottom: -4px;
+  right: 10px;
+}
+
+@media screen and (max-width: 1280px) {
+  .code p:first-child {
+    padding-top: 2.7em;
+  }
+}
+
 @media screen and (max-width: 768px) {
   body {
     padding: 0;
@@ -99,27 +152,13 @@ div.containers > .nes-container {
   .github-link {
     display: none;
   }
-}
 
-.show-code {
-  font-size: .7em;
-  height: 34px;
-  width: 43px;
-  position: absolute;
-  right: -4px;
-  top: -4px;
-}
+  .code p {
+    font-size: .8em;
+  }
 
-.copy {
-  height: 34px;
-  width: 58px;
-}
-
-.code {
-  display: none;
-  font-size: .8em;
-  color: #e76e55;
-  background-color: rgba(45, 45, 45, .9);
-  padding: 15px 0 0px 10px;
-  margin-top: -20px;
+  #code-avatars p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
