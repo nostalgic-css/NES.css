@@ -115,14 +115,10 @@ div.containers > .nes-container {
 }
 
 .code {
-  box-sizing: border-box;
   display: none;
-  padding: 15px 0 0 15px;
+  padding: 0;
   margin-top: -20px;
-  overflow: auto;
   font-size: 0.85em;
-  color: #e76e55;
-  background-color: rgba(45, 45, 45, 0.9);
 }
 
 .copy {
