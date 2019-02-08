@@ -96,64 +96,65 @@ div.containers > .nes-container {
 }
 
 .show-code {
-  font-size: .7em;
-  height: 34px;
+  position: absolute;
+  top: -4px;
+  right: -4px;
   display: flex;
   justify-content: center;
   width: 40px;
-  position: absolute;
-  right: -4px;
-  top: -4px;
+  height: 34px;
+  font-size: 0.7em;
 }
 
-pre {
-  white-space: normal;
+.sample-code {
+  margin: 0;
+}
+.sample-code > code {
+  padding: 1em 2em;
+  line-height: 2em;
 }
 
 .code {
-  display: none;
-  font-size: .85em;
-  color: #e76e55;
-  background-color: rgba(45, 45, 45, .9);
-  padding: 15px 0px 0px 15px;
-  margin-top: -20px;
   box-sizing: border-box;
+  display: none;
+  padding: 15px 0 0 15px;
+  margin-top: -20px;
   overflow: auto;
+  font-size: 0.85em;
+  color: #e76e55;
+  background-color: rgba(45, 45, 45, 0.9);
 }
 
 .copy {
-  height: 34px;
   width: 58px;
+  height: 34px;
 }
 
-#form .nes-field, #form .field {
+#form .nes-field,
+#form .field {
   margin-top: 20px;
 }
 
 .copied {
   position: absolute;
-  bottom: 25px;
-  padding: 10px;
-  font-size: .7em;
-  z-index: 2;
   right: 35px;
-  color: #000;
+  bottom: 25px;
+  z-index: 2;
   display: none;
+  padding: 10px;
+  font-size: 0.7em;
+  color: #000;
 }
 
 .balloon .copied {
-  bottom: -4px;
   right: 10px;
-}
-
-.code p {
-  width: 96%;
+  bottom: -4px;
 }
 
 @media screen and (max-width: 1280px) {
   .code p:first-child {
-    padding-top: 2.7em;
     width: 99%;
+    padding-top: 2.7em;
   }
 }
 
@@ -171,8 +172,8 @@ pre {
   }
 
   .code p {
-    font-size: .8em;
     width: 100%;
+    font-size: 0.8em;
   }
 
   #code-avatars p {
