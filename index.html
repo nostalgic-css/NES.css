@@ -106,6 +106,50 @@
 &lt;/div&gt;</code></pre>
       <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('containers')">Copy</button>
     </section>
+
+    <section class="nes-container with-title">
+      <h2 class="title">Dialogs</h2>
+      <div id="dialogs">
+        <dialog class="nes-dialog" open>
+          <p class="title">Dialog</p>
+          <p>Alert: this is a dialog.</p>
+        </dialog>
+        <dialog class="nes-dialog is-dark" open>
+          <p class="title">Dialog</p>
+          <p>Alert: this is a dialog.</p>
+        </dialog>
+        <dialog class="nes-dialog is-rounded" open>
+          <p class="title">Dialog</p>
+          <p>Alert: this is a dialog.</p>
+        </dialog>
+        <dialog class="nes-dialog is-rounded is-dark" open>
+          <p class="title">Dialog</p>
+          <p>Alert: this is a dialog.</p>
+        </dialog>
+      </div>
+      <button type="button" class="nes-btn is-error show-code" id="show-dialogs-code">&lt;&gt;</button>
+      <span class="nes-balloon from-right copied" id="copied-dialogs">Copied!</span>
+    </section>
+    <section class="nes-container code" id="code-dialogs">
+      <pre class="sample-code"><code class="html">&lt;dialog class=&quot;nes-dialog&quot; open&gt;
+  &lt;p class=&quot;title&quot;&gt;Dialog&lt;/p&gt;
+  &lt;p&gt;Alert: this is a dialog.&lt;/p&gt;
+&lt;/dialog&gt;
+&lt;dialog class=&quot;nes-dialog is-dark&quot; open&gt;
+  &lt;p class=&quot;title&quot;&gt;Dialog&lt;/p&gt;
+  &lt;p&gt;Alert: this is a dialog.&lt;/p&gt;
+&lt;/dialog&gt;
+&lt;dialog class=&quot;nes-dialog is-rounded&quot; open&gt;
+  &lt;p class=&quot;title&quot;&gt;Dialog&lt;/p&gt;
+  &lt;p&gt;Alert: this is a dialog.&lt;/p&gt;
+&lt;/dialog&gt;
+&lt;dialog class=&quot;nes-dialog is-rounded is-dark&quot; open&gt;
+  &lt;p class=&quot;title&quot;&gt;Dialog&lt;/p&gt;
+  &lt;p&gt;Alert: this is a dialog.&lt;/p&gt;
+&lt;/dialog&gt;</code></pre>
+      <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('dialogs')">Copy</button>
+    </section>
+
     <section class="nes-container with-title">
       <h2 class="title">Radios</h2>
       <div id="radios">
@@ -383,8 +427,31 @@
     </section>
 
     <section class="nes-container with-title">
-      <h2 class="title">Table</h2>
-      <div class="nes-table-responsive" id="table">
+      <h2 class="title">Texts</h2>
+      <div id="texts">
+        <span class="nes-text">Normal</span>
+        <span class="nes-text is-primary">Primary</span>
+        <span class="nes-text is-success">Success</span>
+        <span class="nes-text is-warning">Warning</span>
+        <span class="nes-text is-error">Error</span>
+        <span class="nes-text is-disabled">Disabled</span>
+      </div>
+      <button type="button" class="nes-btn is-error show-code" id="show-texts-code">&lt;&gt;</button>
+      <span class="nes-balloon from-right copied" id="copied-texts">Copied!</span>
+    </section>
+    <section class="nes-container code" id="code-texts">
+      <pre class="sample-code"><code class="html">&lt;span class=&quot;nes-text&quot;&gt;Normal&lt;/span&gt;
+&lt;span class=&quot;nes-text is-primary&quot;&gt;Primary&lt;/span&gt;
+&lt;span class=&quot;nes-text is-success&quot;&gt;Success&lt;/span&gt;
+&lt;span class=&quot;nes-text is-warning&quot;&gt;Warning&lt;/span&gt;
+&lt;span class=&quot;nes-text is-error&quot;&gt;Error&lt;/span&gt;
+&lt;span class=&quot;nes-text is-disabled&quot;&gt;Disabled&lt;/span&gt;</code></pre>
+      <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('texts')">Copy</button>
+    </section>
+
+    <section class="nes-container with-title">
+      <h2 class="title">Tables</h2>
+      <div class="nes-table-responsive" id="tables">
         <table class="nes-table is-bordered is-centered">
           <thead>
             <tr>
@@ -436,10 +503,10 @@
           </tbody>
         </table>
       </div>
-      <button type="button" class="nes-btn is-error show-code" id="show-table-code">&lt;&gt;</button>
-      <span class="nes-balloon from-right copied" id="copied-table">Copied!</span>
+      <button type="button" class="nes-btn is-error show-code" id="show-tables-code">&lt;&gt;</button>
+      <span class="nes-balloon from-right copied" id="copied-tables">Copied!</span>
     </section>
-    <section class="nes-container code" id="code-table">
+    <section class="nes-container code" id="code-tables">
       <pre class="sample-code"><code class="html">&lt;div class=&quot;nes-table-responsive&quot;&gt;
   &lt;table class=&quot;nes-table is-bordered is-centered&quot;&gt;
     &lt;thead&gt;
@@ -492,7 +559,7 @@
     &lt;/tbody&gt;
   &lt;/table&gt;
 &lt;/div&gt;</code></pre>
-      <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('table')">Copy</button>
+      <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('tables')">Copy</button>
     </section>
 
     <section class="nes-container with-title">
@@ -898,7 +965,8 @@
       });
 
       var elements = ['buttons', 'containers', 'radios', 'checkboxes', 'avatars', 'form',
-        'balloons', 'lists', 'table', 'progress', 'badges', 'reaction', 'sns', 'others', 'controllers'];
+        'balloons', 'lists', 'tables', 'progress', 'badges', 'reaction', 'sns', 'others',
+        'controllers', 'dialogs', 'texts'];
       for (var i = 0; i < elements.length; i++) {
         let showEl = document.querySelector("#show-" + elements[i] + "-code");
         let codeEl = document.querySelector("#code-" + elements[i]);
