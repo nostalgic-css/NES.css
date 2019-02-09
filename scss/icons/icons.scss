@@ -19,6 +19,7 @@
 // others
 @import "close.scss";
 @import "trophy.scss";
+@import "coin.scss";
 
 .nes-icon {
   $default-size: 1px;
@@ -145,5 +146,9 @@
 
   &.linkedin::before {
     @include pixelize($default-size, $icon-linkedin, $icon-linkedin-colors);
+  }
+
+  &.coin::before {
+    @include pixelize($default-size, $icon-coin, $icon-coin-colors);
   }
 }

@@ -17,6 +17,7 @@ stories.add('icon', () => {
     'nes-icon gmail': 'nes-icon gmail',
     'nes-icon linkedin': 'nes-icon linkedin',
     'nes-icon close': 'nes-icon close',
+    'nes-icon coin': 'nes-icon coin',
     'nes-pokeball': 'nes-pokeball',
     'nes-bulbasaur': 'nes-bulbasaur',
     'nes-charmander': 'nes-charmander',
@@ -32,7 +33,6 @@ stories.add('icon', () => {
     'nes-jp-logo': 'nes-jp-logo',
     'snes-logo': 'snes-logo',
     'snes-jp-logo': 'snes-jp-logo',
-    'nes-coin': 'nes-coin',
   }, 'nes-icon twitter');
   const selectedSize = radios('size', {
     default: '',
