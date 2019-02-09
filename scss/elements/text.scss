@@ -14,4 +14,8 @@
   &.is-error {
     color: map_get($error-colors, "normal");
   }
+
+  &.is-disabled {
+    color: map_get($disabled-colors, "normal");
+  }
 }
