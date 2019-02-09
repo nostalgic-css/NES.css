@@ -56,6 +56,14 @@ div.containers > .nes-container {
   margin-bottom: 1rem;
 }
 
+#table {
+  margin: 35px auto;
+}
+
+#progress {
+  margin-top: 35px;
+}
+
 .footer {
   text-align: center;
 }
@@ -87,6 +95,65 @@ div.containers > .nes-container {
   align-self: flex-end;
 }
 
+.show-code {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  height: 34px;
+  font-size: 0.7em;
+}
+
+.sample-code {
+  margin: 0;
+}
+.sample-code > code {
+  padding: 1em 2em;
+  line-height: 2em;
+}
+
+.code {
+  display: none;
+  padding: 0;
+  margin-top: -20px;
+  font-size: 0.85em;
+}
+
+.copy {
+  width: 58px;
+  height: 34px;
+}
+
+#form .nes-field,
+#form .field {
+  margin-top: 20px;
+}
+
+.copied {
+  position: absolute;
+  right: 35px;
+  bottom: 25px;
+  z-index: 2;
+  display: none;
+  padding: 10px;
+  font-size: 0.7em;
+  color: #000;
+}
+
+.balloon .copied {
+  right: 10px;
+  bottom: -4px;
+}
+
+@media screen and (max-width: 1280px) {
+  .code p:first-child {
+    width: 99%;
+    padding-top: 2.7em;
+  }
+}
+
 @media screen and (max-width: 768px) {
   body {
     padding: 0;
@@ -98,5 +165,15 @@ div.containers > .nes-container {
 
   .github-link {
     display: none;
+  }
+
+  .code p {
+    width: 100%;
+    font-size: 0.8em;
+  }
+
+  #code-avatars p {
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }

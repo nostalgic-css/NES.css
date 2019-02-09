@@ -146,11 +146,17 @@
       "string-quotes": "double",
       "at-rule-no-unknown": null,
       "scss/at-rule-no-unknown": true
-    }
+    },
+    "ignoreFiles": [
+      "demo/lib/*"
+    ]
   },
   "eslintConfig": {
     "extends": "airbnb-base"
   },
+  "eslintIgnore": [
+    "demo/lib/*"
+  ],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
