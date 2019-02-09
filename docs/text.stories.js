@@ -3,7 +3,7 @@ import { // eslint-disable-line import/no-extraneous-dependencies
   withKnobs, radios,
 } from '@storybook/addon-knobs';
 
-const stories = storiesOf('Text', module);
+const stories = storiesOf('Texts', module);
 stories.addDecorator(withKnobs);
 
 stories.add('text', () => {
