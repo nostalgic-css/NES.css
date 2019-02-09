@@ -16,5 +16,7 @@ stories.add('avatars', () => {
   const isRounded = boolean('is-rounded', false) ? 'is-rounded' : '';
   const selectedClasses = [isRounded, options].join(' ');
 
-  return `<img src="http://www.gravatar.com/avatar" class="nes-avatar ${selectedClasses}">`;
+  return `<img src="http://www.gravatar.com/avatar?s=15" class="nes-avatar ${selectedClasses}"
+    alt="Gravatar Image Example"
+    style="image-rendering: pixelated;">`;
 });
