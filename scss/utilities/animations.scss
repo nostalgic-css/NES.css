@@ -7,23 +7,3 @@
     opacity: 0;
   }
 }
-
-@keyframes rotateIn {
-  0% {
-    opacity: 0;
-    transform: rotateY(0) translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: rotateY(1800deg) translateY(0);
-  }
-}
-
-@keyframes fadeOut {
-  70% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}

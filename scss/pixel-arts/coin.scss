@@ -33,9 +33,4 @@
 
     @include pixelize($size, $coin, $coin-colors);
   }
-
-  &.earned {
-    animation: rotateIn 1.4s ease-out forwards,
-    fadeOut 2s ease-out forwards;
-  }
 }
