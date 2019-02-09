@@ -33,6 +33,7 @@ stories.add('icon', () => {
     'snes-logo': 'snes-logo',
     'snes-jp-logo': 'snes-jp-logo',
     'nes-coin': 'nes-coin',
+    'nes-coin earned': 'nes-coin earned',
   }, 'nes-icon twitter');
   const selectedSize = radios('size', {
     default: '',
