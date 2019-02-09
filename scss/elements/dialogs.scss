@@ -21,5 +21,16 @@
     color: $background-color;
     background-color: $base-color;
     border-color: $background-color;
+
+    &::after {
+      position: absolute;
+      top: -$border-size * 1.8;
+      right: -$border-size * 1.8;
+      bottom: -$border-size * 1.8;
+      left: -$border-size * 1.8;
+      z-index: -1;
+      content: "";
+      background-color: $base-color;
+    }
   }
 }
