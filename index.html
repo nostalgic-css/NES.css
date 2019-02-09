@@ -15,7 +15,10 @@
 
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" />
-    <link href="./style.css" rel="stylesheet" />
+    <link href="./demo/style.css" rel="stylesheet" />
+    <script async src="./demo/lib/highlight.js"></script>
+    <link async href="./demo/lib/highlight-theme.css" rel="stylesheet" />
+    <script>hljs.initHighlightingOnLoad();</script>
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="NES.css" />
@@ -44,7 +47,7 @@
 
     <section class="nes-container with-title">
       <h2 class="title">Buttons</h2>
-      <div>
+      <div id="buttons">
         <button type="button" class="nes-btn">Normal</button>
         <button type="button" class="nes-btn is-primary">Primary</button>
         <button type="button" class="nes-btn is-success">Success</button>
@@ -52,11 +55,22 @@
         <button type="button" class="nes-btn is-error">Error</button>
         <button type="button" class="nes-btn is-disabled">Disabled</button>
       </div>
+      <button type="button" class="nes-btn is-error show-code" id="show-buttons-code">&lt;&gt;</button>
+      <span class="nes-balloon from-right copied" id="copied-buttons">Copied!</span>
+    </section>
+    <section class="nes-container code" id="code-buttons">
+      <pre class="sample-code"><code class="html">&lt;button type=&quot;button&quot; class=&quot;nes-btn&quot;&gt;Normal&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;nes-btn is-primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;nes-btn is-success&quot;&gt;Success&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;nes-btn is-warning&quot;&gt;Warning&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;nes-btn is-error&quot;&gt;Error&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;nes-btn is-disabled&quot;&gt;Disabled&lt;/button&gt;</code></pre>
+      <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('buttons')">Copy</button>
     </section>
 
     <section class="nes-container with-title">
       <h2 class="title">Containers</h2>
-      <div class="containers">
+      <div class="containers" id="containers">
         <div class="nes-container with-title is-centered">
           <p class="title">Container.is-centered</p>
           <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
@@ -72,11 +86,29 @@
           <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
         </div>
       </div>
+      <button type="button" class="nes-btn is-error show-code" id="show-containers-code">&lt;&gt;</button>
+      <span class="nes-balloon from-right copied" id="copied-containers">Copied!</span>
     </section>
-
+    <section class="nes-container code" id="code-containers">
+      <pre class="sample-code"><code class="html">&lt;div class=&quot;nes-container with-title is-centered&quot;&gt;
+  &lt;p class=&quot;title&quot;&gt;Container.is-centered&lt;/p&gt;
+  &lt;p&gt;Good morning. Thou hast had a good night's sleep, I hope.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;nes-container is-dark with-title&quot;&gt;
+  &lt;p class=&quot;title&quot;&gt;Container.is-dark&lt;/p&gt;
+  &lt;p&gt;Good morning. Thou hast had a good night's sleep, I hope.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;nes-container is-rounded&quot;&gt;
+  &lt;p&gt;Good morning. Thou hast had a good night's sleep, I hope.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;nes-container is-rounded is-dark&quot;&gt;
+  &lt;p&gt;Good morning. Thou hast had a good night's sleep, I hope.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+      <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('containers')">Copy</button>
+    </section>
     <section class="nes-container with-title">
       <h2 class="title">Radios</h2>
-      <div>
+      <div id="radios">
         <label>
           <input type="radio" class="nes-radio" name="answer" checked />
           <span>Yes</span>
@@ -86,19 +118,51 @@
           <span>No</span>
         </label>
       </div>
+      <button type="button" class="nes-btn is-error show-code" id="show-radios-code">&lt;&gt;</button>
+      <span class="nes-balloon from-right copied" id="copied-radios">Copied!</span>
+    </section>
+    <section class="nes-container code" id="code-radios">
+      <pre class="sample-code"><code class="html">&lt;label&gt;
+  &lt;input type=&quot;radio&quot; class=&quot;nes-radio&quot; name=&quot;answer&quot; checked /&gt;
+  &lt;span&gt;Yes&lt;/span&gt;
+&lt;/label&gt;
+&lt;label&gt;
+  &lt;input type=&quot;radio&quot; class=&quot;nes-radio&quot; name=&quot;answer&quot; /&gt;
+  &lt;span&gt;No&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+      <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('radios')">Copy</button>
     </section>
 
     <section class="nes-container with-title">
       <h2 class="title">Checkboxes</h2>
-      <label>
-        <input type="checkbox" class="nes-checkbox" checked />
-        <span>Enable</span>
-      </label>
+      <div id="checkboxes">
+        <label>
+          <input type="checkbox" class="nes-checkbox" checked />
+          <span>Enable</span>
+        </label>
+        <label>
+          <input type="checkbox" class="nes-checkbox is-dark" checked />
+          <span>Dark</span>
+        </label>
+      </div>
+      <button type="button" class="nes-btn is-error show-code" id="show-checkboxes-code">&lt;&gt;</button>
+      <span class="nes-balloon from-right copied" id="copied-checkboxes">Copied!</span>
+    </section>
+    <section class="nes-container code" id="code-checkboxes">
+      <pre class="sample-code"><code class="html">&lt;label&gt;
+  &lt;input type=&quot;checkbox&quot; class=&quot;nes-checkbox&quot; checked /&gt;
+  &lt;span>Enable&lt;/span&gt;
+&lt;/label&gt;
+&lt;label&gt;
+  &lt;input type=&quot;checkbox&quot; class=&quot;nes-checkbox is-dark&quot; checked /&gt;
+  &lt;span&gt;Dark&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+      <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('checkboxes')">Copy</button>
     </section>
 
     <section class="nes-container with-title">
       <h2 class="title">Avatars</h2>
-      <div>
+      <div id="avatars">
         <img src="https://www.gravatar.com/avatar" class="nes-avatar is-small">
         <img src="https://www.gravatar.com/avatar" class="nes-avatar">
         <img src="https://www.gravatar.com/avatar" class="nes-avatar is-medium">
@@ -108,68 +172,139 @@
         <img src="https://www.gravatar.com/avatar" class="nes-avatar is-medium is-rounded">
         <img src="https://www.gravatar.com/avatar" class="nes-avatar is-large is-rounded">
       </div>
+      <button type="button" class="nes-btn is-error show-code" id="show-avatars-code">&lt;&gt;</button>
+      <span class="nes-balloon from-right copied" id="copied-avatars">Copied!</span>
+    </section>
+    <section class="nes-container code" id="code-avatars">
+      <pre class="sample-code"><code class="html">&lt;img src=&quot;https://www.gravatar.com/avatar&quot; class=&quot;nes-avatar is-small&quot;&gt;
+&lt;img src=&quot;https://www.gravatar.com/avatar&quot; class=&quot;nes-avatar&quot;&gt;
+&lt;img src=&quot;https://www.gravatar.com/avatar&quot; class=&quot;nes-avatar is-medium&quot;&gt;
+&lt;img src=&quot;https://www.gravatar.com/avatar&quot; class=&quot;nes-avatar is-large&quot;&gt;
+&lt;img src=&quot;https://www.gravatar.com/avatar&quot; class=&quot;nes-avatar is-rounded&quot;&gt;
+&lt;img src=&quot;https://www.gravatar.com/avatar&quot; class=&quot;nes-avatar is-small is-rounded&quot;&gt;
+&lt;img src=&quot;https://www.gravatar.com/avatar&quot; class=&quot;nes-avatar is-medium is-rounded&quot;&gt;
+&lt;img src=&quot;https://www.gravatar.com/avatar&quot; class=&quot;nes-avatar is-large is-rounded&quot;&gt;</code></pre>
+      <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('avatars')">Copy</button>
     </section>
 
     <section class="form nes-container with-title">
       <h2 class="title">Form</h2>
-      <div class="nes-field">
-        <label for="name_field">Your name</label>
-        <input type="text" id="name_field" class="nes-input">
-      </div>
-      <div class="nes-field is-inline">
-        <label for="inline_field">.input.is-success</label>
-        <input type="text" id="inline_field" class="nes-input is-success" placeholder="NES.css">
-      </div>
-      <div class="nes-field is-inline">
-        <label for="warning_field">.input.is-warning</label>
-        <input type="text" id="warning_field" class="nes-input is-warning" placeholder="8bit.css">
-      </div>
-      <div class="nes-field is-inline">
-        <label for="error_field">.input.is-error</label>
-        <input type="text" id="error_field" class="nes-input is-error" placeholder="awesome.css">
-      </div>
-      <div class="field">
-        <label for="textarea_field">Textarea</label>
-        <textarea id="textarea_field" class="nes-textarea"></textarea>
-      </div>
-      <div class="field">
-        <label for="selects">Select</label>
-        <div id="selects" class="selects">
-          <div class="nes-select">
-            <select required>
-              <option value="" disabled selected hidden>Select...</option>
-              <option value="0">To be</option>
-              <option value="1">Not to be</option>
-            </select>
-          </div>
-          <div class="nes-select is-success">
-            <select required>
-              <option value="" disabled selected hidden>Select...</option>
-              <option value="0">To be</option>
-              <option value="1">Not to be</option>
-            </select>
-          </div>
-          <div class="nes-select is-warning">
-            <select required>
-              <option value="" disabled selected hidden>Select...</option>
-              <option value="0">To be</option>
-              <option value="1">Not to be</option>
-            </select>
-          </div>
-          <div class="nes-select is-error">
-            <select required>
-              <option value="" disabled selected hidden>Select...</option>
-              <option value="0">To be</option>
-              <option value="1">Not to be</option>
-            </select>
+      <div id="form">
+        <div class="nes-field">
+          <label for="name_field">Your name</label>
+          <input type="text" id="name_field" class="nes-input">
+        </div>
+        <div class="nes-field is-inline">
+          <label for="inline_field">.input.is-success</label>
+          <input type="text" id="inline_field" class="nes-input is-success" placeholder="NES.css">
+        </div>
+        <div class="nes-field is-inline">
+          <label for="warning_field">.input.is-warning</label>
+          <input type="text" id="warning_field" class="nes-input is-warning" placeholder="8bit.css">
+        </div>
+        <div class="nes-field is-inline">
+          <label for="error_field">.input.is-error</label>
+          <input type="text" id="error_field" class="nes-input is-error" placeholder="awesome.css">
+        </div>
+        <div class="field">
+          <label for="textarea_field">Textarea</label>
+          <textarea id="textarea_field" class="nes-textarea"></textarea>
+        </div>
+        <div class="field">
+          <label for="selects">Select</label>
+          <div id="selects" class="selects">
+            <div class="nes-select">
+              <select required>
+                <option value="" disabled selected hidden>Select...</option>
+                <option value="0">To be</option>
+                <option value="1">Not to be</option>
+              </select>
+            </div>
+            <div class="nes-select is-success">
+              <select required>
+                <option value="" disabled selected hidden>Select...</option>
+                <option value="0">To be</option>
+                <option value="1">Not to be</option>
+              </select>
+            </div>
+            <div class="nes-select is-warning">
+              <select required>
+                <option value="" disabled selected hidden>Select...</option>
+                <option value="0">To be</option>
+                <option value="1">Not to be</option>
+              </select>
+            </div>
+            <div class="nes-select is-error">
+              <select required>
+                <option value="" disabled selected hidden>Select...</option>
+                <option value="0">To be</option>
+                <option value="1">Not to be</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
+      <button type="button" class="nes-btn is-error show-code" id="show-form-code">&lt;&gt;</button>
+      <span class="nes-balloon from-right copied" id="copied-form">Copied!</span>
+    </section>
+    <section class="nes-container code" id="code-form">
+      <pre class="sample-code"><code class="html">&lt;div class=&quot;nes-field&quot;&gt;
+  &lt;label for=&quot;name_field&quot;&gt;Your name&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;name_field&quot; class=&quot;nes-input&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;nes-field is-inline&quot;&gt;
+  &lt;label for=&quot;inline_field&quot;&gt;.input.is-success&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;inline_field&quot; class=&quot;nes-input is-success&quot; placeholder=&quot;NES.css&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;nes-field is-inline&quot;&gt;
+  &lt;label for=&quot;warning_field&quot;&gt;.input.is-warning&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;warning_field&quot; class=&quot;nes-input is-warning&quot; placeholder=&quot;8bit.css&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;nes-field is-inline&quot;&gt;
+  &lt;label for=&quot;error_field&quot;&gt;.input.is-error&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;error_field&quot; class=&quot;nes-input is-error&quot; placeholder=&quot;awesome.css&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;field&quot;&gt;
+  &lt;label for=&quot;textarea_field&quot;&gt;Textarea&lt;/label&gt;
+  &lt;textarea id=&quot;textarea_field&quot; class=&quot;nes-textarea&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;selects&quot; class=&quot;selects&quot;&gt;
+  &lt;div class=&quot;nes-select&quot;&gt;
+    &lt;select required&gt;
+      &lt;option value=&quot;&quot; disabled selected hidden&gt;Select...&lt;/option&gt;
+      &lt;option value=&quot;0&quot;&gt;To be&lt;/option&gt;
+      &lt;option value=&quot;1&quot;&gt;Not to be&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;nes-select is-success&quot;&gt;
+    &lt;select required&gt;
+      &lt;option value=&quot;&quot; disabled selected hidden&gt;Select...&lt;/option&gt;
+      &lt;option value=&quot;0&quot;&gt;To be&lt;/option&gt;
+      &lt;option value=&quot;1&quot;&gt;Not to be&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;nes-select is-warning&quot;&gt;
+    &lt;select required&gt;
+      &lt;option value=&quot;&quot; disabled selected hidden&gt;Select...&lt;/option&gt;
+      &lt;option value=&quot;0&quot;&gt;To be&lt;/option&gt;
+      &lt;option value=&quot;1&quot;&gt;Not to be&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;nes-select is-error&quot;&gt;
+    &lt;select required&gt;
+      &lt;option value=&quot;&quot; disabled selected hidden&gt;Select...&lt;/option&gt;
+      &lt;option value=&quot;0&quot;&gt;To be&lt;/option&gt;
+      &lt;option value=&quot;1&quot;&gt;Not to be&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('form')">Copy</button>
     </section>
 
     <section class="balloon nes-container with-title">
       <h2 class="title">Balloons</h2>
-      <div class="messages">
+      <div class="messages" id="balloons">
         <div class="message -left">
           <i class="nes-bcrikko"></i>
           <div class="nes-balloon from-left">
@@ -183,32 +318,73 @@
           <i class="nes-bcrikko"></i>
         </div>
       </div>
+      <button type="button" class="nes-btn is-error show-code" id="show-balloons-code">&lt;&gt;</button>
+      <span class="nes-balloon from-right copied" id="copied-balloons">Copied!</span>
+    </section>
+    <section class="nes-container code" id="code-balloons">
+      <pre class="sample-code"><code class="html">&lt;div class=&quot;message -left&quot;&gt;
+  &lt;i class=&quot;nes-bcrikko&quot;&gt;&lt;/i&gt;
+  &lt;div class=&quot;nes-balloon from-left&quot;&gt;
+    &lt;p&gt;Hello NES.css&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;message -right&quot;&gt;
+  &lt;div class=&quot;nes-balloon from-right&quot;&gt;
+    &lt;p&gt;Good morning. Thou hast had a good night's sleep, I hope.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;i class=&quot;nes-bcrikko&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;</code></pre>
+      <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('balloons')">Copy</button>
     </section>
 
     <section class="nes-container with-title">
       <h2 class="title">Lists</h2>
-      <div class="lists">
-        <ul class="nes-list is-disc">
-          <li>Good morning.</li>
-          <li>Thou hast had a good night's sleep, I hope.</li>
-          <li>Thou hast had a good afternoon</li>
-          <li>Good night.</li>
-        </ul>
-      </div>
+      <div id="lists">
+        <div class="lists">
+          <ul class="nes-list is-disc">
+            <li>Good morning.</li>
+            <li>Thou hast had a good night's sleep, I hope.</li>
+            <li>Thou hast had a good afternoon</li>
+            <li>Good night.</li>
+          </ul>
+        </div>
 
-      <div class="lists">
-        <ul class="nes-list is-circle">
-          <li>Good morning.</li>
-          <li>Thou hast had a good night's sleep, I hope.</li>
-          <li>Thou hast had a good afternoon</li>
-          <li>Good night.</li>
-        </ul>
+        <div class="lists">
+          <ul class="nes-list is-circle">
+            <li>Good morning.</li>
+            <li>Thou hast had a good night's sleep, I hope.</li>
+            <li>Thou hast had a good afternoon</li>
+            <li>Good night.</li>
+          </ul>
+        </div>
       </div>
+      <button type="button" class="nes-btn is-error show-code" id="show-lists-code">&lt;&gt;</button>
+      <span class="nes-balloon from-right copied" id="copied-lists">Copied!</span>
+    </section>
+    <section class="nes-container code" id="code-lists">
+      <pre class="sample-code"><code class="html">&lt;div class=&quot;lists&quot;&gt;
+  &lt;ul class=&quot;nes-list is-disc&quot;&gt;
+    &lt;li&gt;Good morning.&lt;/li&gt;
+    &lt;li&gt;Thou hast had a good night's sleep, I hope.&lt;/li&gt;
+    &lt;li&gt;Thou hast had a good afternoon&lt;/li&gt;
+    &lt;li&gt;Good night.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lists&quot;&gt;
+  &lt;ul class=&quot;nes-list is-circle&quot;&gt;
+    &lt;li&gt;Good morning.&lt;/li&gt;
+    &lt;li&gt;Thou hast had a good night's sleep, I hope.&lt;/li&gt;
+    &lt;li&gt;Thou hast had a good afternoon&lt;/li&gt;
+    &lt;li&gt;Good night.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+      <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('lists')">Copy</button>
     </section>
 
     <section class="nes-container with-title">
       <h2 class="title">Table</h2>
-      <div class="nes-table-responsive">
+      <div class="nes-table-responsive" id="table">
         <table class="nes-table is-bordered is-centered">
           <thead>
             <tr>
@@ -260,60 +436,170 @@
           </tbody>
         </table>
       </div>
+      <button type="button" class="nes-btn is-error show-code" id="show-table-code">&lt;&gt;</button>
+      <span class="nes-balloon from-right copied" id="copied-table">Copied!</span>
+    </section>
+    <section class="nes-container code" id="code-table">
+      <pre class="sample-code"><code class="html">&lt;div class=&quot;nes-table-responsive&quot;&gt;
+  &lt;table class=&quot;nes-table is-bordered is-centered&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Table.is-bordered&lt;/th&gt;
+        &lt;th&gt;Table.is-centered&lt;/th&gt;
+        &lt;th&gt;Table.is-centered&lt;/th&gt;
+        &lt;th&gt;Table.is-centered&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Thou hast had a good morning&lt;/td&gt;
+        &lt;td&gt;Thou hast had a good afternoon&lt;/td&gt;
+        &lt;td&gt;Thou hast had a good evening&lt;/td&gt;
+        &lt;td&gt;Thou hast had a good night&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Thou hast had a good morning&lt;/td&gt;
+        &lt;td&gt;Thou hast had a good afternoon&lt;/td&gt;
+        &lt;td&gt;Thou hast had a good evening&lt;/td&gt;
+        &lt;td&gt;Thou hast had a good night&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&quot;nes-table-responsive&quot;&gt;
+  &lt;table class=&quot;nes-table is-bordered is-dark&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Table.is-dark&lt;/th&gt;
+        &lt;th&gt;Table.is-bordered&lt;/th&gt;
+        &lt;th&gt;Table.is-bordered&lt;/th&gt;
+        &lt;th&gt;Table.is-bordered&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Thou hast had a good morning&lt;/td&gt;
+        &lt;td&gt;Thou hast had a good afternon&lt;/td&gt;
+        &lt;td&gt;Thou hast had a good evening&lt;/td&gt;
+        &lt;td&gt;Thou hast had a good night&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Thou hast had a good morning&lt;/td&gt;
+        &lt;td&gt;Thou hast had a good afternoon&lt;/td&gt;
+        &lt;td&gt;Thou hast had a good afternoon&lt;/td&gt;
+        &lt;td&gt;Thou hast had a good afternoon&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+      <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('table')">Copy</button>
     </section>
 
     <section class="nes-container with-title">
       <h2 class="title">Progress</h2>
-      <progress class="nes-progress" value="90" max="100"></progress>
-      <progress class="nes-progress is-primary" value="80" max="100"></progress>
-      <progress class="nes-progress is-success" value="50" max="100"></progress>
-      <progress class="nes-progress is-warning" value="30" max="100"></progress>
-      <progress class="nes-progress is-error" value="10" max="100"></progress>
-      <progress class="nes-progress is-pattern" value="50" max="100"></progress>
+      <div id="progress">
+        <progress class="nes-progress" value="90" max="100"></progress>
+        <progress class="nes-progress is-primary" value="80" max="100"></progress>
+        <progress class="nes-progress is-success" value="50" max="100"></progress>
+        <progress class="nes-progress is-warning" value="30" max="100"></progress>
+        <progress class="nes-progress is-error" value="10" max="100"></progress>
+        <progress class="nes-progress is-pattern" value="50" max="100"></progress>
+      </div>
+      <button type="button" class="nes-btn is-error show-code" id="show-progress-code">&lt;&gt;</button>
+      <span class="nes-balloon from-right copied" id="copied-progress">Copied!</span>
+    </section>
+    <section class="nes-container code" id="code-progress">
+      <pre class="sample-code"><code class="html">&lt;progress class=&quot;nes-progress&quot; value=&quot;90&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;nes-progress is-primary&quot; value=&quot;80&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;nes-progress is-success&quot; value=&quot;50&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;nes-progress is-warning&quot; value=&quot;30&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;nes-progress is-error&quot; value=&quot;10&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;nes-progress is-pattern&quot; value=&quot;50&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</code></pre>
+      <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('progress')">Copy</button>
     </section>
 
-    <section class="nes-container with-title">
+    <section class="nes-container with-title" class="badges">
       <h2 class="title">Badges</h2>
-      <a href="#" class="nes-badge">
+      <div id="badges">
+        <a href="#" class="nes-badge">
           <span class="is-dark">NES.css</span>
-      </a>
-      <a href="#" class="nes-badge">
+        </a>
+        <a href="#" class="nes-badge">
           <span class="is-primary">is</span>
-      </a>
-      <a href="#" class="nes-badge">
+        </a>
+        <a href="#" class="nes-badge">
           <span class="is-success">a</span>
-      </a>
-      <a href="#" class="nes-badge">
+        </a>
+        <a href="#" class="nes-badge">
           <span class="is-warning">great</span>
-      </a>
-      <a href="#" class="nes-badge">
+        </a>
+        <a href="#" class="nes-badge">
           <span class="is-error">framework!</span>
-      </a>
-      <a href="#" class="nes-badge is-splited">
+        </a>
+        <a href="#" class="nes-badge is-splited">
           <span class="is-dark">npm</span>
           <span class="is-primary">1.1.0</span>
-      </a>
-      <a href="#" class="nes-badge is-splited">
+        </a>
+        <a href="#" class="nes-badge is-splited">
           <span class="is-dark">test</span>
           <span class="is-success">100%</span>
-      </a>
-      <a href="#" class="nes-badge is-icon">
+        </a>
+        <a href="#" class="nes-badge is-icon">
           <span class="is-warning">
-              <i class="nes-icon star is-small"></i>
+            <i class="nes-icon star is-small"></i>
           </span>
           <span class="is-primary">Icons</span>
-      </a>
-      <a href="#" class="nes-badge is-icon">
+        </a>
+        <a href="#" class="nes-badge is-icon">
           <span class="is-dark">hi</span>
           <span class="is-warning">Text</span>
-      </a>
+        </a>
+      </div>
+      <button type="button" class="nes-btn is-error show-code" id="show-badges-code">&lt;&gt;</button>
+      <span class="nes-balloon from-right copied" id="copied-badges">Copied!</span>
+    </section>
+    <section class="nes-container code" id="code-badges">
+      <pre class="sample-code"><code class="html">&lt;a href=&quot;#&quot; class=&quot;nes-badge&quot;&gt;
+  &lt;span class=&quot;is-dark&quot;&gt;NES.css&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;nes-badge&quot;&gt;
+  &lt;span class=&quot;is-primary&quot;&gt;is&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;nes-badge&quot;&gt;
+  &lt;span class=&quot;is-success&quot;&gt;a&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;nes-badge&quot;&gt;
+  &lt;span class=&quot;is-warning&quot;&gt;great&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;nes-badge&quot;&gt;
+  &lt;span class=&quot;is-error&quot;&gt;framework!&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;nes-badge is-splited&quot;&gt;
+  &lt;span class=&quot;is-dark&quot;&gt;npm&lt;/span&gt;
+  &lt;span class=&quot;is-primary&quot;&gt;1.1.0&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;nes-badge is-splited&quot;&gt;
+  &lt;span class=&quot;is-dark&quot;&gt;test&lt;/span&gt;
+  &lt;span class=&quot;is-success&quot;&gt;100%&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;nes-badge is-icon&quot;&gt;
+  &lt;span class=&quot;is-warning&quot;&gt;
+      &lt;i class=&quot;nes-icon star is-small&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  &lt;span class=&quot;is-primary&quot;&gt;Icons&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;nes-badge is-icon&quot;&gt;
+  &lt;span class=&quot;is-dark&quot;&gt;hi&lt;/span&gt;
+  &lt;span class=&quot;is-warning&quot;&gt;Text&lt;/span&gt;
+&lt;/a&gt;</code></pre>
+      <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('badges')">Copy</button>
     </section>
 
     <section class="nes-container with-title">
       <h2 class="title">Icons</h2>
       <section class="nes-container with-title">
         <h3 class="title">Reaction</h3>
-        <div>
+        <div id="reaction">
           <i class="nes-icon heart is-small"></i>
           <i class="nes-icon heart"></i>
           <i class="nes-icon heart is-medium"></i>
@@ -343,10 +629,44 @@
           <i class="nes-icon like is-large"></i>
           <i class="nes-icon like is-empty"></i>
         </div>
+        <button type="button" class="nes-btn is-error show-code" id="show-reaction-code">&lt;&gt;</button>
+        <span class="nes-balloon from-right copied" id="copied-reaction">Copied!</span>
       </section>
+      <section class="nes-container code" id="code-reaction">
+        <pre class="sample-code"><code class="html">&lt;i class=&quot;nes-icon heart is-small&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon heart&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon heart is-medium&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon heart is-large&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon heart is-empty&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;nes-icon star is-small&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon star&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon star is-medium&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon star is-large&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;nes-icon star is-half is-small&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon star is-half&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon star is-half is-medium&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon star is-half is-large&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;nes-icon star is-transparent is-small&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon star is-transparent&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon star is-transparent is-medium&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon star is-transparent is-large&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;nes-icon star is-empty&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;nes-icon like is-small&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon like&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon like is-medium&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon like is-large&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon like is-empty&quot;&gt;&lt;/i&gt;</code></pre>
+        <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('reaction')">Copy</button>
+      </section>
+
       <section class="nes-container with-title">
         <h3 class="title">SNS</h3>
-        <div>
+        <div id="sns">
           <i class="nes-icon twitter is-small"></i>
           <i class="nes-icon twitter"></i>
           <i class="nes-icon twitter is-medium"></i>
@@ -402,11 +722,70 @@
           <i class="nes-icon linkedin is-medium"></i>
           <i class="nes-icon linkedin is-large"></i>
         </div>
+        <button type="button" class="nes-btn is-error show-code" id="show-sns-code">&lt;&gt;</button>
+        <span class="nes-balloon from-right copied" id="copied-sns">Copied!</span>
+      </section>
+      <section class="nes-container code" id="code-sns">
+        <pre class="sample-code"><code class="html">&lt;i class=&quot;nes-icon twitter is-small&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon twitter&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon twitter is-medium&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon twitter is-large&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;nes-icon facebook is-small&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon facebook&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon facebook is-medium&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon facebook is-large&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;nes-icon github is-small&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon github&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon github is-medium&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon github is-large&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;nes-icon youtube is-small&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon youtube&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon youtube is-medium&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon youtube is-large&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;nes-icon google is-small&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon google&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon google is-medium&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon google is-large&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;nes-icon medium is-small&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon medium&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon medium is-medium&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon medium is-large&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;nes-icon twitch is-small&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon twitch&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon twitch is-medium&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon twitch is-large&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;nes-icon reddit is-small&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon reddit&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon reddit is-medium&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon reddit is-large&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;nes-icon whatsapp is-small&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon whatsapp&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon whatsapp is-medium&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon whatsapp is-large&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;nes-icon gmail is-small&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon gmail&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon gmail is-medium&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon gmail is-large&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;nes-icon linkedin is-small&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon linkedin&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon linkedin is-medium&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon linkedin is-large&quot;&gt;&lt;/i&gt;</code></pre>
+        <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('sns')">Copy</button>
       </section>
 
       <section class="nes-container with-title">
         <h3 class="title">Others</h3>
-        <div>
+        <div id="others">
           <i class="nes-icon close is-small"></i>
           <i class="nes-icon close"></i>
           <i class="nes-icon close is-medium"></i>
@@ -431,20 +810,56 @@
           <i class="nes-phone"></i>
           <i class="nes-kirby"></i>
         </div>
+        <button type="button" class="nes-btn is-error show-code" id="show-others-code">&lt;&gt;</button>
+        <span class="nes-balloon from-right copied" id="copied-others">Copied!</span>
+      </section>
+      <section class="nes-container code" id="code-others">
+        <pre class="sample-code"><code class="html">&lt;i class=&quot;nes-icon close is-small&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon close&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon close is-medium&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon close is-large&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;nes-octocat animate&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;nes-icon trophy is-small&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon trophy&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon trophy is-medium&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon trophy is-large&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;nes-mario&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-ash&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-pokeball&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;nes-bulbasaur&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-charmander&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-squirtle&quot;&gt;&lt;/i&gt;
+
+&lt;i class=&quot;nes-smartphone&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-phone&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-kirby&quot;&gt;&lt;/i&gt;</code></pre>
+        <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('others')">Copy</button>
       </section>
 
       <section class="nes-container with-title">
         <h3 class="title">Controllers</h3>
-        <div>
+        <div id="controllers">
           <i class="nes-logo"></i>
           <i class="nes-jp-logo"></i>
           <i class="snes-logo"></i>
           <i class="snes-jp-logo"></i>
           <i class="nes-psone"></i>
         </div>
+        <button type="button" class="nes-btn is-error show-code" id="show-controllers-code">&lt;&gt;</button>
+        <span class="nes-balloon from-right copied" id="copied-controllers">Copied!</span>
+      </section>
+      <section class="nes-container code" id="code-controllers">
+        <pre class="sample-code"><code class="html">&lt;i class=&quot;nes-logo&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-jp-logo&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;snes-logo&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;snes-jp-logo&quot;&gt;&lt;/i&gt;</code></pre>
+        <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('controllers')">Copy</button>
       </section>
     </section>
-
 
     <footer class="footer">
       <p>
@@ -455,13 +870,43 @@
     </footer>
   </body>
   <script>
-    var link = document.querySelector("a.github-link");
-    var octocat = document.querySelector("a.github-link > i.nes-octocat");
-    link.addEventListener("mouseover", function() {
-      octocat.classList.add("animate");
-    });
-    link.addEventListener("mouseout", function() {
-      octocat.classList.remove("animate");
-    });
+    function copyToClipboard(element) {
+      var divToClipboard = document.querySelector('#' + element);
+      var el = document.createElement('textarea');
+      el.value = divToClipboard.innerHTML;
+      el.setAttribute('readonly', '');
+      el.style.position = 'absolute';
+      el.style.left = '-9999px';
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+      let copiedEl = document.querySelector("#copied-" + element);
+      copiedEl.style.display = 'block'
+      setTimeout(function() {
+        copiedEl.style.display = 'none'
+      }, 2000);
+    }
+
+    window.onload = function() {
+      var link = document.querySelector("a.github-link");
+      var octocat = document.querySelector("a.github-link > i.nes-octocat");
+      link.addEventListener("mouseover", function() {
+        octocat.classList.add("animate");
+      });
+      link.addEventListener("mouseout", function() {
+        octocat.classList.remove("animate");
+      });
+
+      var elements = ['buttons', 'containers', 'radios', 'checkboxes', 'avatars', 'form',
+        'balloons', 'lists', 'table', 'progress', 'badges', 'reaction', 'sns', 'others', 'controllers'];
+      for (var i = 0; i < elements.length; i++) {
+        let showEl = document.querySelector("#show-" + elements[i] + "-code");
+        let codeEl = document.querySelector("#code-" + elements[i]);
+        showEl.addEventListener("click", function() {
+          codeEl.style.display = codeEl.style.display === 'block' ? 'none' : 'block';
+        }, false);
+      }
+    }
   </script>
 </html>
