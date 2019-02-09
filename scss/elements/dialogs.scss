@@ -22,7 +22,7 @@
     background-color: $base-color;
     border-color: $background-color;
 
-    &::after {
+    &:not(.is-rounded)::after {
       position: absolute;
       top: -$border-size * 1.8;
       right: -$border-size * 1.8;
