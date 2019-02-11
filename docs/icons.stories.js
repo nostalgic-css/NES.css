@@ -17,6 +17,7 @@ stories.add('icon', () => {
     'nes-icon gmail': 'nes-icon gmail',
     'nes-icon linkedin': 'nes-icon linkedin',
     'nes-icon close': 'nes-icon close',
+    'nes-icon coin': 'nes-icon coin',
     'nes-pokeball': 'nes-pokeball',
     'nes-bulbasaur': 'nes-bulbasaur',
     'nes-charmander': 'nes-charmander',
