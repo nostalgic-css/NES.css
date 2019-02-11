@@ -151,6 +151,11 @@ div.containers > .nes-container {
   margin-top: 1.5rem;
 }
 
+#dialogs .dialog-menu {
+  padding: 0;
+  text-align: center;
+}
+
 #texts {
   display: inline-block;
 }
