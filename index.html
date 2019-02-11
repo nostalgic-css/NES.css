@@ -109,44 +109,121 @@
 
     <section class="nes-container with-title">
       <h2 class="title">Dialogs</h2>
-      <div id="dialogs">
-        <dialog class="nes-dialog" open>
-          <p class="title">Dialog</p>
-          <p>Alert: this is a dialog.</p>
-        </dialog>
-        <dialog class="nes-dialog is-dark" open>
-          <p class="title">Dialog</p>
-          <p>Alert: this is a dialog.</p>
-        </dialog>
-        <dialog class="nes-dialog is-rounded" open>
-          <p class="title">Dialog</p>
-          <p>Alert: this is a dialog.</p>
-        </dialog>
-        <dialog class="nes-dialog is-rounded is-dark" open>
-          <p class="title">Dialog</p>
-          <p>Alert: this is a dialog.</p>
-        </dialog>
-      </div>
+
+      <section id="dialogs">
+        <section>
+          <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-default').showModal();">Open dialog</button>
+          <dialog class="nes-dialog" id="dialog-default">
+            <form method="dialog">
+              <p class="title">Dialog</p>
+              <p>Alert: this is a dialog.</p>
+              <menu class="dialog-menu">
+                <button class="nes-btn">Cancel</button>
+                <button class="nes-btn is-primary">Confirm</button>
+              </menu>
+            </form>
+          </dialog>
+        </section>
+        <section>
+          <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-dark').showModal();">Open dark dialog</button>
+          <dialog class="nes-dialog is-dark" id="dialog-dark">
+            <form method="dialog">
+              <p class="title">Dark dialog</p>
+              <p>Alert: this is a dialog.</p>
+              <menu class="dialog-menu">
+                <button class="nes-btn">Cancel</button>
+                <button class="nes-btn is-primary">Confirm</button>
+              </menu>
+            </form>
+          </dialog>
+        </section>
+        <section>
+          <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-rounded').showModal();">Open rounded dialog</button>
+          <dialog class="nes-dialog is-rounded" id="dialog-rounded">
+            <form method="dialog">
+              <p class="title">Rounded dialog</p>
+              <p>Alert: this is a dialog.</p>
+              <menu class="dialog-menu">
+                <button class="nes-btn">Cancel</button>
+                <button class="nes-btn is-primary">Confirm</button>
+              </menu>
+            </form>
+          </dialog>
+        </section>
+        <section>
+          <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-dark-rounded').showModal();">Open dark and rounded dialog</button>
+          <dialog class="nes-dialog is-dark is-rounded" id="dialog-dark-rounded">
+            <form method="dialog">
+              <p class="title">Dark and Rounded dialog</p>
+              <p>Alert: this is a dialog.</p>
+              <menu class="dialog-menu">
+                <button class="nes-btn">Cancel</button>
+                <button class="nes-btn is-primary">Confirm</button>
+              </menu>
+            </form>
+          </dialog>
+        </section>
+      </section>
       <button type="button" class="nes-btn is-error show-code" id="show-dialogs-code">&lt;&gt;</button>
       <span class="nes-balloon from-right copied" id="copied-dialogs">Copied!</span>
     </section>
+
     <section class="nes-container code" id="code-dialogs">
-      <pre class="sample-code"><code class="html">&lt;dialog class=&quot;nes-dialog&quot; open&gt;
-  &lt;p class=&quot;title&quot;&gt;Dialog&lt;/p&gt;
-  &lt;p&gt;Alert: this is a dialog.&lt;/p&gt;
-&lt;/dialog&gt;
-&lt;dialog class=&quot;nes-dialog is-dark&quot; open&gt;
-  &lt;p class=&quot;title&quot;&gt;Dialog&lt;/p&gt;
-  &lt;p&gt;Alert: this is a dialog.&lt;/p&gt;
-&lt;/dialog&gt;
-&lt;dialog class=&quot;nes-dialog is-rounded&quot; open&gt;
-  &lt;p class=&quot;title&quot;&gt;Dialog&lt;/p&gt;
-  &lt;p&gt;Alert: this is a dialog.&lt;/p&gt;
-&lt;/dialog&gt;
-&lt;dialog class=&quot;nes-dialog is-rounded is-dark&quot; open&gt;
-  &lt;p class=&quot;title&quot;&gt;Dialog&lt;/p&gt;
-  &lt;p&gt;Alert: this is a dialog.&lt;/p&gt;
-&lt;/dialog&gt;</code></pre>
+      <pre class="sample-code"><code class="html">&lt;section&gt;
+  &lt;button type=&quot;button&quot; class=&quot;nes-btn is-primary&quot; onclick=&quot;document.getElementById(&#039;dialog-default&#039;).showModal();&quot;&gt;Open dialog&lt;/button&gt;
+  &lt;dialog class=&quot;nes-dialog&quot; id=&quot;dialog-default&quot;&gt;
+    &lt;form method=&quot;dialog&quot;&gt;
+      &lt;p class=&quot;title&quot;&gt;Dialog&lt;/p&gt;
+      &lt;p&gt;Alert: this is a dialog.&lt;/p&gt;
+      &lt;menu class=&quot;dialog-menu&quot;&gt;
+        &lt;button class=&quot;nes-btn&quot;&gt;Cancel&lt;/button&gt;
+        &lt;button class=&quot;nes-btn is-primary&quot;&gt;Confirm&lt;/button&gt;
+      &lt;/menu&gt;
+    &lt;/form&gt;
+  &lt;/dialog&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;button type=&quot;button&quot; class=&quot;nes-btn is-primary&quot; onclick=&quot;document.getElementById(&#039;dialog-dark&#039;).showModal();&quot;&gt;Open dark dialog&lt;/button&gt;
+  &lt;dialog class=&quot;nes-dialog is-dark&quot; id=&quot;dialog-dark&quot;&gt;
+    &lt;form method=&quot;dialog&quot;&gt;
+      &lt;p class=&quot;title&quot;&gt;Dark dialog&lt;/p&gt;
+      &lt;p&gt;Alert: this is a dialog.&lt;/p&gt;
+      &lt;menu class=&quot;dialog-menu&quot;&gt;
+        &lt;button class=&quot;nes-btn&quot;&gt;Cancel&lt;/button&gt;
+        &lt;button class=&quot;nes-btn is-primary&quot;&gt;Confirm&lt;/button&gt;
+      &lt;/menu&gt;
+    &lt;/form&gt;
+  &lt;/dialog&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;button type=&quot;button&quot; class=&quot;nes-btn is-primary&quot; onclick=&quot;document.getElementById(&#039;dialog-rounded&#039;).showModal();&quot;&gt;Open rounded dialog&lt;/button&gt;
+  &lt;dialog class=&quot;nes-dialog is-rounded&quot; id=&quot;dialog-rounded&quot;&gt;
+    &lt;form method=&quot;dialog&quot;&gt;
+      &lt;p class=&quot;title&quot;&gt;Rounded dialog&lt;/p&gt;
+      &lt;p&gt;Alert: this is a dialog.&lt;/p&gt;
+      &lt;menu class=&quot;dialog-menu&quot;&gt;
+        &lt;button class=&quot;nes-btn&quot;&gt;Cancel&lt;/button&gt;
+        &lt;button class=&quot;nes-btn is-primary&quot;&gt;Confirm&lt;/button&gt;
+      &lt;/menu&gt;
+    &lt;/form&gt;
+  &lt;/dialog&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;button type=&quot;button&quot; class=&quot;nes-btn is-primary&quot; onclick=&quot;document.getElementById(&#039;dialog-dark-rounded&#039;).showModal();&quot;&gt;Open dark and rounded dialog&lt;/button&gt;
+  &lt;dialog class=&quot;nes-dialog is-dark is-rounded&quot; id=&quot;dialog-dark-rounded&quot;&gt;
+    &lt;form method=&quot;dialog&quot;&gt;
+      &lt;p class=&quot;title&quot;&gt;Dark and Rounded dialog&lt;/p&gt;
+      &lt;p&gt;Alert: this is a dialog.&lt;/p&gt;
+      &lt;menu class=&quot;dialog-menu&quot;&gt;
+        &lt;button class=&quot;nes-btn&quot;&gt;Cancel&lt;/button&gt;
+        &lt;button class=&quot;nes-btn is-primary&quot;&gt;Confirm&lt;/button&gt;
+      &lt;/menu&gt;
+    &lt;/form&gt;
+  &lt;/dialog&gt;
+&lt;/section&gt;</code></pre>
       <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('dialogs')">Copy</button>
     </section>
 

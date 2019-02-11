@@ -147,17 +147,8 @@ div.containers > .nes-container {
   bottom: -4px;
 }
 
-#dialogs {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: baseline;
-}
-
-.nes-dialog {
-  z-index: 1;
-  flex: 1;
-  position: relative;
-  margin: 0em 2em 1em 0;
+#dialogs > section + section {
+  margin-top: 1.5rem;
 }
 
 #texts {
