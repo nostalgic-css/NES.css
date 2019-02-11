@@ -16,6 +16,8 @@
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" />
     <link href="./demo/style.css" rel="stylesheet" />
+    <script async src="./demo/lib/dialog-polyfill.js"></script>
+    <link async rel="stylesheet" type="text/css" href="dialog-polyfill.css" />
     <script async src="./demo/lib/highlight.js"></script>
     <link async href="./demo/lib/highlight-theme.css" rel="stylesheet" />
     <script>hljs.initHighlightingOnLoad();</script>
@@ -109,7 +111,6 @@
 
     <section class="nes-container with-title">
       <h2 class="title">Dialogs</h2>
-
       <section id="dialogs">
         <section>
           <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-default').showModal();">Open dialog</button>
@@ -164,6 +165,9 @@
           </dialog>
         </section>
       </section>
+
+      <p class="nes-text is-error" style="margin-top: 2rem;">NES.css does not include any JavaScript. If you want to use dialog element other than Chrome, you need polyfill.</p>
+
       <button type="button" class="nes-btn is-error show-code" id="show-dialogs-code">&lt;&gt;</button>
       <span class="nes-balloon from-right copied" id="copied-dialogs">Copied!</span>
     </section>
@@ -1042,6 +1046,9 @@
     }
 
     window.onload = function() {
+      // dialog polyfill
+      [].forEach.call(document.querySelectorAll('dialog'), function (a) { dialogPolyfill.registerDialog(a); })
+
       var link = document.querySelector("a.github-link");
       var octocat = document.querySelector("a.github-link > i.nes-octocat");
       link.addEventListener("mouseover", function() {
