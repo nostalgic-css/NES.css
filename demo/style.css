@@ -147,8 +147,8 @@ div.containers > .nes-container {
   bottom: -4px;
 }
 
-#dialogs > section + section {
-  margin-top: 1.5rem;
+#dialogs > section {
+  display: inline-block;
 }
 
 #dialogs .dialog-menu {

@@ -1,5 +1,6 @@
 .nes-dialog {
   padding: 1.5rem 2rem;
+  border-width: $border-size;
 
   > .backdrop,
   &::backdrop {
@@ -18,19 +19,20 @@
     }
   }
   &.is-dark {
+    position: relative;
     color: $background-color;
     background-color: $base-color;
     border-color: $background-color;
 
-    &:not(.is-rounded)::after {
+    &:not(.is-rounded)::before {
       position: absolute;
-      top: -$border-size * 1.8;
-      right: -$border-size * 1.8;
-      bottom: -$border-size * 1.8;
-      left: -$border-size * 1.8;
+      top: -$border-size * 2;
+      right: -$border-size * 2;
+      bottom: -$border-size * 2;
+      left: -$border-size * 2;
       z-index: -1;
       content: "";
-      background-color: $base-color;
+      border: $border-size solid $base-color;
     }
   }
 }
