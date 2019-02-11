@@ -16,6 +16,8 @@
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" />
     <link href="./demo/style.css" rel="stylesheet" />
+    <script async src="./demo/lib/dialog-polyfill.js"></script>
+    <link async rel="stylesheet" type="text/css" href="dialog-polyfill.css" />
     <script async src="./demo/lib/highlight.js"></script>
     <link async href="./demo/lib/highlight-theme.css" rel="stylesheet" />
     <script>hljs.initHighlightingOnLoad();</script>
@@ -106,6 +108,129 @@
 &lt;/div&gt;</code></pre>
       <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('containers')">Copy</button>
     </section>
+
+    <section class="nes-container with-title">
+      <h2 class="title">Dialogs</h2>
+      <section id="dialogs">
+        <section>
+          <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-default').showModal();">Open dialog</button>
+          <dialog class="nes-dialog" id="dialog-default">
+            <form method="dialog">
+              <p class="title">Dialog</p>
+              <p>Alert: this is a dialog.</p>
+              <menu class="dialog-menu">
+                <button class="nes-btn">Cancel</button>
+                <button class="nes-btn is-primary">Confirm</button>
+              </menu>
+            </form>
+          </dialog>
+        </section>
+        <section>
+          <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-dark').showModal();">Open dark dialog</button>
+          <dialog class="nes-dialog is-dark" id="dialog-dark">
+            <form method="dialog">
+              <p class="title">Dark dialog</p>
+              <p>Alert: this is a dialog.</p>
+              <menu class="dialog-menu">
+                <button class="nes-btn">Cancel</button>
+                <button class="nes-btn is-primary">Confirm</button>
+              </menu>
+            </form>
+          </dialog>
+        </section>
+        <section>
+          <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-rounded').showModal();">Open rounded dialog</button>
+          <dialog class="nes-dialog is-rounded" id="dialog-rounded">
+            <form method="dialog">
+              <p class="title">Rounded dialog</p>
+              <p>Alert: this is a dialog.</p>
+              <menu class="dialog-menu">
+                <button class="nes-btn">Cancel</button>
+                <button class="nes-btn is-primary">Confirm</button>
+              </menu>
+            </form>
+          </dialog>
+        </section>
+        <section>
+          <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-dark-rounded').showModal();">Open dark and rounded dialog</button>
+          <dialog class="nes-dialog is-dark is-rounded" id="dialog-dark-rounded">
+            <form method="dialog">
+              <p class="title">Dark and Rounded dialog</p>
+              <p>Alert: this is a dialog.</p>
+              <menu class="dialog-menu">
+                <button class="nes-btn">Cancel</button>
+                <button class="nes-btn is-primary">Confirm</button>
+              </menu>
+            </form>
+          </dialog>
+        </section>
+      </section>
+
+      <p class="nes-text is-error" style="margin-top: 2rem;">NES.css does not include any JavaScript. If you want to use dialog element other than Chrome, you need polyfill.</p>
+
+      <button type="button" class="nes-btn is-error show-code" id="show-dialogs-code">&lt;&gt;</button>
+      <span class="nes-balloon from-right copied" id="copied-dialogs">Copied!</span>
+    </section>
+
+    <section class="nes-container code" id="code-dialogs">
+      <pre class="sample-code"><code class="html">&lt;section&gt;
+  &lt;button type=&quot;button&quot; class=&quot;nes-btn is-primary&quot; onclick=&quot;document.getElementById(&#039;dialog-default&#039;).showModal();&quot;&gt;Open dialog&lt;/button&gt;
+  &lt;dialog class=&quot;nes-dialog&quot; id=&quot;dialog-default&quot;&gt;
+    &lt;form method=&quot;dialog&quot;&gt;
+      &lt;p class=&quot;title&quot;&gt;Dialog&lt;/p&gt;
+      &lt;p&gt;Alert: this is a dialog.&lt;/p&gt;
+      &lt;menu class=&quot;dialog-menu&quot;&gt;
+        &lt;button class=&quot;nes-btn&quot;&gt;Cancel&lt;/button&gt;
+        &lt;button class=&quot;nes-btn is-primary&quot;&gt;Confirm&lt;/button&gt;
+      &lt;/menu&gt;
+    &lt;/form&gt;
+  &lt;/dialog&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;button type=&quot;button&quot; class=&quot;nes-btn is-primary&quot; onclick=&quot;document.getElementById(&#039;dialog-dark&#039;).showModal();&quot;&gt;Open dark dialog&lt;/button&gt;
+  &lt;dialog class=&quot;nes-dialog is-dark&quot; id=&quot;dialog-dark&quot;&gt;
+    &lt;form method=&quot;dialog&quot;&gt;
+      &lt;p class=&quot;title&quot;&gt;Dark dialog&lt;/p&gt;
+      &lt;p&gt;Alert: this is a dialog.&lt;/p&gt;
+      &lt;menu class=&quot;dialog-menu&quot;&gt;
+        &lt;button class=&quot;nes-btn&quot;&gt;Cancel&lt;/button&gt;
+        &lt;button class=&quot;nes-btn is-primary&quot;&gt;Confirm&lt;/button&gt;
+      &lt;/menu&gt;
+    &lt;/form&gt;
+  &lt;/dialog&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;button type=&quot;button&quot; class=&quot;nes-btn is-primary&quot; onclick=&quot;document.getElementById(&#039;dialog-rounded&#039;).showModal();&quot;&gt;Open rounded dialog&lt;/button&gt;
+  &lt;dialog class=&quot;nes-dialog is-rounded&quot; id=&quot;dialog-rounded&quot;&gt;
+    &lt;form method=&quot;dialog&quot;&gt;
+      &lt;p class=&quot;title&quot;&gt;Rounded dialog&lt;/p&gt;
+      &lt;p&gt;Alert: this is a dialog.&lt;/p&gt;
+      &lt;menu class=&quot;dialog-menu&quot;&gt;
+        &lt;button class=&quot;nes-btn&quot;&gt;Cancel&lt;/button&gt;
+        &lt;button class=&quot;nes-btn is-primary&quot;&gt;Confirm&lt;/button&gt;
+      &lt;/menu&gt;
+    &lt;/form&gt;
+  &lt;/dialog&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;button type=&quot;button&quot; class=&quot;nes-btn is-primary&quot; onclick=&quot;document.getElementById(&#039;dialog-dark-rounded&#039;).showModal();&quot;&gt;Open dark and rounded dialog&lt;/button&gt;
+  &lt;dialog class=&quot;nes-dialog is-dark is-rounded&quot; id=&quot;dialog-dark-rounded&quot;&gt;
+    &lt;form method=&quot;dialog&quot;&gt;
+      &lt;p class=&quot;title&quot;&gt;Dark and Rounded dialog&lt;/p&gt;
+      &lt;p&gt;Alert: this is a dialog.&lt;/p&gt;
+      &lt;menu class=&quot;dialog-menu&quot;&gt;
+        &lt;button class=&quot;nes-btn&quot;&gt;Cancel&lt;/button&gt;
+        &lt;button class=&quot;nes-btn is-primary&quot;&gt;Confirm&lt;/button&gt;
+      &lt;/menu&gt;
+    &lt;/form&gt;
+  &lt;/dialog&gt;
+&lt;/section&gt;</code></pre>
+      <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('dialogs')">Copy</button>
+    </section>
+
     <section class="nes-container with-title">
       <h2 class="title">Radios</h2>
       <div id="radios">
@@ -383,8 +508,31 @@
     </section>
 
     <section class="nes-container with-title">
-      <h2 class="title">Table</h2>
-      <div class="nes-table-responsive" id="table">
+      <h2 class="title">Texts</h2>
+      <div id="texts">
+        <span class="nes-text">Normal</span>
+        <span class="nes-text is-primary">Primary</span>
+        <span class="nes-text is-success">Success</span>
+        <span class="nes-text is-warning">Warning</span>
+        <span class="nes-text is-error">Error</span>
+        <span class="nes-text is-disabled">Disabled</span>
+      </div>
+      <button type="button" class="nes-btn is-error show-code" id="show-texts-code">&lt;&gt;</button>
+      <span class="nes-balloon from-right copied" id="copied-texts">Copied!</span>
+    </section>
+    <section class="nes-container code" id="code-texts">
+      <pre class="sample-code"><code class="html">&lt;span class=&quot;nes-text&quot;&gt;Normal&lt;/span&gt;
+&lt;span class=&quot;nes-text is-primary&quot;&gt;Primary&lt;/span&gt;
+&lt;span class=&quot;nes-text is-success&quot;&gt;Success&lt;/span&gt;
+&lt;span class=&quot;nes-text is-warning&quot;&gt;Warning&lt;/span&gt;
+&lt;span class=&quot;nes-text is-error&quot;&gt;Error&lt;/span&gt;
+&lt;span class=&quot;nes-text is-disabled&quot;&gt;Disabled&lt;/span&gt;</code></pre>
+      <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('texts')">Copy</button>
+    </section>
+
+    <section class="nes-container with-title">
+      <h2 class="title">Tables</h2>
+      <div class="nes-table-responsive" id="tables">
         <table class="nes-table is-bordered is-centered">
           <thead>
             <tr>
@@ -436,10 +584,10 @@
           </tbody>
         </table>
       </div>
-      <button type="button" class="nes-btn is-error show-code" id="show-table-code">&lt;&gt;</button>
-      <span class="nes-balloon from-right copied" id="copied-table">Copied!</span>
+      <button type="button" class="nes-btn is-error show-code" id="show-tables-code">&lt;&gt;</button>
+      <span class="nes-balloon from-right copied" id="copied-tables">Copied!</span>
     </section>
-    <section class="nes-container code" id="code-table">
+    <section class="nes-container code" id="code-tables">
       <pre class="sample-code"><code class="html">&lt;div class=&quot;nes-table-responsive&quot;&gt;
   &lt;table class=&quot;nes-table is-bordered is-centered&quot;&gt;
     &lt;thead&gt;
@@ -492,7 +640,7 @@
     &lt;/tbody&gt;
   &lt;/table&gt;
 &lt;/div&gt;</code></pre>
-      <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('table')">Copy</button>
+      <button type="button" class="nes-btn show-code copy" onClick="copyToClipboard('tables')">Copy</button>
     </section>
 
     <section class="nes-container with-title">
@@ -831,6 +979,11 @@
 &lt;i class=&quot;nes-icon trophy is-medium&quot;&gt;&lt;/i&gt;
 &lt;i class=&quot;nes-icon trophy is-large&quot;&gt;&lt;/i&gt;
 
+&lt;i class=&quot;nes-icon coin is-small&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon coin&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon coin is-medium&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;nes-icon coin is-large&quot;&gt;&lt;/i&gt;
+
 &lt;i class=&quot;nes-mario&quot;&gt;&lt;/i&gt;
 &lt;i class=&quot;nes-ash&quot;&gt;&lt;/i&gt;
 &lt;i class=&quot;nes-pokeball&quot;&gt;&lt;/i&gt;
@@ -893,6 +1046,9 @@
     }
 
     window.onload = function() {
+      // dialog polyfill
+      [].forEach.call(document.querySelectorAll('dialog'), function (a) { dialogPolyfill.registerDialog(a); })
+
       var link = document.querySelector("a.github-link");
       var octocat = document.querySelector("a.github-link > i.nes-octocat");
       link.addEventListener("mouseover", function() {
@@ -903,7 +1059,8 @@
       });
 
       var elements = ['buttons', 'containers', 'radios', 'checkboxes', 'avatars', 'form',
-        'balloons', 'lists', 'table', 'progress', 'badges', 'reaction', 'sns', 'others', 'controllers'];
+        'balloons', 'lists', 'tables', 'progress', 'badges', 'reaction', 'sns', 'others',
+        'controllers', 'dialogs', 'texts'];
       for (var i = 0; i < elements.length; i++) {
         let showEl = document.querySelector("#show-" + elements[i] + "-code");
         let codeEl = document.querySelector("#code-" + elements[i]);

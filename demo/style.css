@@ -56,7 +56,7 @@ div.containers > .nes-container {
   margin-bottom: 1rem;
 }
 
-#table {
+#tables {
   margin: 35px auto;
 }
 
@@ -145,6 +145,23 @@ div.containers > .nes-container {
 .balloon .copied {
   right: 10px;
   bottom: -4px;
+}
+
+#dialogs > section {
+  display: inline-block;
+}
+
+#dialogs .dialog-menu {
+  padding: 0;
+  text-align: center;
+}
+
+#texts {
+  display: inline-block;
+}
+
+.nes-text {
+  margin-right: 2em;
 }
 
 @media screen and (max-width: 1280px) {
