@@ -59,7 +59,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .nes-field.is-inline {
+  .field.is-inline {
     display: block;
 
     > label {
@@ -67,7 +67,7 @@
       text-align: left;
     }
 
-    .nes-input {
+    .input {
       max-width: 100%;
     }
   }
