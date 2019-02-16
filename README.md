@@ -32,9 +32,9 @@ Import the CSS via a `<link />` element:
 
 ```html
 <!-- minify -->
-<link href="https://unpkg.com/nes.css@1.0.0/css/nes.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/nes.css@2.0.0/css/nes.min.css" rel="stylesheet" />
 <!-- latest -->
-<link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
 <!-- core style only -->
 <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
 ```
