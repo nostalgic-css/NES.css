@@ -1,5 +1,4 @@
 .nes-logo {
-  $px: 3px;
   $logo-colors: (#3e3634, #c3c3c3, #787973, #bf1710);
 
   // prettier-ignore
@@ -15,19 +14,20 @@
     (2,1,1,1,1,1,1,1,1,1,1,1,1,1,2),
     (2,2,2,2,2,2,2,2,2,2,2,2,2,2,2)
   );
+  $size: 4px;
 
   position: relative;
   display: inline-block;
-  width: $px * 16;
-  height: $px * 11;
+  width: $size * length(nth($logo, 1));
+  height: $size * length($logo);
 
   &::before {
     position: absolute;
-    top: $px * -1;
-    left: $px * -1;
+    top: -$size;
+    left: -$size;
     content: "";
     background: transparent;
 
-    @include pixelize($logo, $logo-colors, $px);
+    @include pixelize($size, $logo, $logo-colors);
   }
 }

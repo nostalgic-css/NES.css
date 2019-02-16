@@ -1,7 +1,7 @@
 # Código de Conduta para Colaboradores
 
 Veja este documento em outro idioma:
-[English](CONTRIBUTING.md) / [日本語](.github/CONTRIBUTING-jp.md) / [Español](.github/CONTRIBUTING-es.md)
+[English](CONTRIBUTING.md) / [日本語](.github/CONTRIBUTING-jp.md) / [简体中文](.github/CONTRIBUTING-zh-CN.md) / [Español](.github/CONTRIBUTING-es.md)
 
 ## Nossa promessa
 

@@ -1,8 +1,5 @@
 .nes-mario {
-  $px: 6px;
-  // prettier-ignore
-  $mario-colors: (#f81c2f, #65352b, #ffbb8e, #000,
-    #1560ad, #aeaeac, #fef102);
+  $mario-colors: (#f81c2f, #65352b, #ffbb8e, #000, #1560ad, #aeaeac, #fef102);
   // prettier-ignore
   $mario: (
     (0,0,0,0,1,1,1,1,1,0,0,0,0,0),
@@ -22,19 +19,20 @@
     (0,0,2,2,2,0,0,0,0,2,2,2,0,0),
     (0,2,2,2,2,0,0,0,0,2,2,2,2,0)
   );
+  $size: 6px;
 
   position: relative;
   display: inline-block;
-  width: $px * 14;
-  height: $px * 16;
+  width: $size * length(nth($mario, 1));
+  height: $size * length($mario);
 
   &::before {
     position: absolute;
-    top: $px * -1;
-    left: $px * -1;
+    top: -$size;
+    left: -$size;
     content: "";
     background: transparent;
 
-    @include pixelize($mario, $mario-colors, $px);
+    @include pixelize($size, $mario, $mario-colors);
   }
 }

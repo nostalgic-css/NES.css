@@ -1,11 +1,12 @@
 @charset "utf-8";
 
+@import "avatar.scss";
+@import "badges.scss";
+@import "balloons.scss";
 @import "buttons.scss";
 @import "containers.scss";
-@import "radios.scss";
-@import "checkboxes.scss";
+@import "dialogs.scss";
 @import "lists.scss";
-@import "balloons.scss";
-@import "tables.scss";
 @import "progress.scss";
-@import "avatar.scss";
+@import "tables.scss";
+@import "text.scss";

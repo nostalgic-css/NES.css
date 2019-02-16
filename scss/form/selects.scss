@@ -1,0 +1,64 @@
+.nes-select {
+  // prettier-ignore
+  $dropdown: (
+    (1,1,1,1,1,1,1),
+    (1,1,1,1,1,1,1),
+    (0,1,1,1,1,1,0),
+    (0,1,1,1,1,1,0),
+    (0,0,1,1,1,0,0),
+    (0,0,0,1,0,0,0),
+  );
+  $colors: ($base-color, map-get($default-colors, "shadow"));
+
+  position: relative;
+  width: 100%;
+  margin: 4px;
+
+  select {
+    @include compact-rounded-corners();
+
+    width: 100%;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    cursor: $cursor-click-url, pointer;
+    border-radius: 0;
+    outline-color: map-get($default-colors, "hover");
+    -webkit-appearance: none;
+    appearance: none;
+
+    &:invalid {
+      color: map-get($disabled-colors, shadow);
+    }
+  }
+
+  &::after {
+    @include pixelize(3px, $dropdown, $colors);
+
+    position: absolute;
+    top: calc(50% - 11px);
+    right: 36px;
+    pointer-events: none;
+    content: "";
+  }
+
+  // prettier-ignore
+  $types:
+    "success" map-get($success-colors, "normal") map-get($success-colors, "hover"),
+    "warning" map-get($warning-colors, "normal") map-get($warning-colors, "hover"),
+    "error" map-get($error-colors, "normal") map-get($error-colors, "hover");
+
+  @each $type in $types {
+    &.is-#{nth($type, 1)} {
+      $color: nth($type, 2);
+
+      &::after {
+        color: $color;
+      }
+
+      select {
+        @include compact-border-image($color);
+
+        outline-color: nth($type, 3);
+      }
+    }
+  }
+}

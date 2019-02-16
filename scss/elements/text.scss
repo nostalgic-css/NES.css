@@ -1,0 +1,21 @@
+.nes-text {
+  &.is-primary {
+    color: map-get($primary-colors, "normal");
+  }
+
+  &.is-success {
+    color: map-get($success-colors, "normal");
+  }
+
+  &.is-warning {
+    color: map-get($warning-colors, "normal");
+  }
+
+  &.is-error {
+    color: map_get($error-colors, "normal");
+  }
+
+  &.is-disabled {
+    color: map_get($disabled-colors, "normal");
+  }
+}

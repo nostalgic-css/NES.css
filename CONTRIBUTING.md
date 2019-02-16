@@ -1,7 +1,7 @@
 # Contributing
 
 View this document in another language:
-[日本語](.github/CONTRIBUTING-jp.md) / [Español](.github/CONTRIBUTING-es.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
+[简体中文](.github/CONTRIBUTING-zh-CN.md) / [日本語](.github/CONTRIBUTING-jp.md) / [Español](.github/CONTRIBUTING-es.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
 
 You want to contribute to the project? Awesome!
 
@@ -53,6 +53,7 @@ We're really happy you want to contribute to the project! ❤️ The following s
     │   ├── generic.scss: Generic style and reboot.css
     │   └── variables.scss: Common variables
     ├── elements
+    ├── components
     ├── form
     ├── icons: 16x16 icons
     ├── pixel-arts: For icons other than 16x16.
@@ -96,7 +97,7 @@ We use [Commitizen][commitizen] and [`commitlint`][commitlint] to make sure all 
 [commitizen]: https://github.com/commitizen/cz-cli
 [commitlint]: [https://github.com/marionebl/commitlint]
 [egghead]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
-[new-issue]: https://github.com/nostalgic-css/NES.css/issues/new
+[new-issue]: https://github.com/nostalgic-css/NES.css/issues/new/choose
 [new-pr]: https://github.com/nostalgic-css/NES.css/compare/develop...develop
 [semantic-release]: https://github.com/semantic-release/semantic-release
 [sentimental-versioning]: http://sentimentalversioning.org/

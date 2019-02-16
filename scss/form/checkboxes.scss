@@ -46,6 +46,7 @@
     (2,2,2,2,2,2,2,2,0,0)
   );
   $colors: ($base-color, map-get($default-colors, "shadow"));
+  $colors-checkbox-dark: ($color-white, map-get($default-colors, "shadow"));
 
   margin-left: 28px;
   -webkit-appearance: none;
@@ -67,17 +68,37 @@
 
   // prettier-ignore
   & + span::before { /* stylelint-disable-line no-descending-specificity */
-    @include pixelize($checkbox, $colors, 2px);
+    @include pixelize(2px, $checkbox, $colors);
   }
   // prettier-ignore
   &:focus + span::before { /* stylelint-disable-line no-descending-specificity */
-    @include pixelize($checkbox-focus, $colors, 2px);
+    @include pixelize(2px, $checkbox-focus, $colors);
   }
 
   &:checked + span::before {
-    @include pixelize($checkbox-checked, $colors, 2px);
+    @include pixelize(2px, $checkbox-checked, $colors);
   }
   &:checked:focus + span::before {
-    @include pixelize($checkbox-checked-focus, $colors, 2px);
+    @include pixelize(2px, $checkbox-checked-focus, $colors);
+  }
+  &.is-dark {
+    + span {
+      color: $color-white;
+    }
+    // prettier-ignore
+    + span::before { /* stylelint-disable-line no-descending-specificity */
+      color: $color-white;
+    }
+
+    &:checked + span::before {
+      @include pixelize(2px, $checkbox-checked-focus, $colors-checkbox-dark);
+
+      color: $color-white;
+    }
+    &:checked:focus + span::before {
+      @include pixelize(2px, $checkbox-checked-focus, $colors-checkbox-dark);
+
+      color: $color-white;
+    }
   }
 }

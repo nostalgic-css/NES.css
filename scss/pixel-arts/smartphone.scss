@@ -1,9 +1,8 @@
 .nes-smartphone {
-  $px: 6px;
   $smartphone-colors: (#fff, #060606);
   // prettier-ignore
   $smartphone: (
-    (0,2,2,2,2,2,2,2,2,2,2,2,2,2),
+    (0,2,2,2,2,2,2,2,2,2,2,2,2,2,0),
     (2,2,1,1,1,1,1,1,1,1,1,1,1,2,2),
     (2,1,1,1,2,2,2,2,2,2,2,1,1,1,2),
     (2,1,1,1,1,1,1,1,1,1,1,1,1,1,2),
@@ -29,21 +28,22 @@
     (2,1,1,1,1,1,1,2,2,1,1,1,1,1,2),
     (2,1,1,1,1,1,1,2,2,1,1,1,1,1,2),
     (2,2,1,1,1,1,1,1,1,1,1,1,1,2,2),
-    (0,2,2,2,2,2,2,2,2,2,2,2,2,2)
+    (0,2,2,2,2,2,2,2,2,2,2,2,2,2,0)
   );
+  $size: 6px;
 
   position: relative;
   display: inline-block;
-  width: $px * 16;
-  height: $px * 27;
+  width: $size * length(nth($smartphone, 1));
+  height: $size * length($smartphone);
 
   &::before {
     position: absolute;
-    top: $px * -1;
-    left: $px * -1;
+    top: -$size;
+    left: -$size;
     content: "";
     background: transparent;
 
-    @include pixelize($smartphone, $smartphone-colors, $px);
+    @include pixelize($size, $smartphone, $smartphone-colors);
   }
 }

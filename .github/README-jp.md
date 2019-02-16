@@ -1,7 +1,7 @@
 <div align="center">
   <a href="https://nostalgic-css.github.io/NES.css/" target="_blank"><img src="https://user-images.githubusercontent.com/5305599/49061716-da649680-f254-11e8-9a89-d95a7407ec6a.png" alt="NES.css: NES-style  CSS framework" style="max-width: 100%;" width="600" height="315"></a>
 
-  <a href="README.md">English</a> / <a href="README-es.md">Español</a> / <a href="README-pt-BR.md">Português</a>
+  <a href="README.md">English</a> / <a href="README-zh-CN.md">简体中文</a> / <a href="README-es.md">Español</a> / <a href="README-pt-BR.md">Português</a>
 </div>
 
 NES.cssは **ファミコン風(8bit ライク)** なCSSフレームワークです。
@@ -31,10 +31,12 @@ yarn add nes.css
 `<link />`要素を使ってCSSをインポートする:
 
 ```html
-<!-- minify -->
-<link href="https://unpkg.com/nes.css@0.0.2/css/nes.min.css" rel="stylesheet" />
-<!-- latest -->
+<!-- 圧縮版 -->
+<link href="https://unpkg.com/nes.css@1.0.0/css/nes.min.css" rel="stylesheet" />
+<!-- 最新版 -->
 <link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" />
+<!-- コアスタイルのみ -->
+<link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
 ```
 
 ### フォント
@@ -45,7 +47,7 @@ NES.cssはいかなるフォントも提供していませんが、ライブラ�
 |-----------|--------------------------------------------------------------------|
 | (デフォルト) | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) |
 | 英語      | [Kongtext](https://www.dafont.com/kongtext.font)                   |
-| 日本語    | [美咲フォント](http://www.geocities.jp/littlimi/misaki.htm)          |
+| 日本語    | [美咲フォント](http://littlelimit.net/misaki.htm)          |
 | 日本語    | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                  |
 | 韓国語    | [둥근모꼴](http://cactus.tistory.com/193)                            |
 
@@ -97,7 +99,7 @@ NES.cssは次のブラウザの最新バージョンと互換性があります�
 
 [commitizen]: http://commitizen.github.io/cz-cli/
 [commitizen-badge]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
-[contributing-document]: CONTRIBUTING.md
+[contributing-document]: ./CONTRIBUTING-jp.md
 [gitter]: https://gitter.im/nostalgic-css/Lobby
 [gitter-badge]: https://img.shields.io/gitter/room/nostalgic-css/Lobby.svg
 [google-fonts-guide]: https://developers.google.com/fonts/docs/getting_started

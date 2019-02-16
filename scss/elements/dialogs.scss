@@ -1,8 +1,6 @@
 .nes-dialog {
   padding: 1.5rem 2rem;
-  color: $base-color;
-  border: none;
-  box-shadow: 4px 0, -4px 0, 0 4px, 0 -4px;
+  border-width: $border-size;
 
   > .backdrop,
   &::backdrop {
@@ -11,5 +9,29 @@
 
   > :last-child {
     margin-bottom: 0;
+  }
+
+  &.is-rounded {
+    @include rounded-corners();
+
+    &.is-dark {
+      @include rounded-corners(true);
+    }
+  }
+  &.is-dark {
+    color: $background-color;
+    background-color: $base-color;
+    border-color: $background-color;
+
+    &:not(.is-rounded)::before {
+      position: absolute;
+      top: -$border-size * 2;
+      right: -$border-size * 2;
+      bottom: -$border-size * 2;
+      left: -$border-size * 2;
+      z-index: -1;
+      content: "";
+      border: $border-size solid $base-color;
+    }
   }
 }

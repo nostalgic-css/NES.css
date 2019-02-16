@@ -3,13 +3,24 @@
   "description": "NES.css is NES-style CSS Framework.",
   "scripts": {
     "watch": "npm run build:sass -- --watch",
-    "build": "npm run build:clean && npm run build:stylelint && npm run build:sass && npm run build:autoprefix && npm run build:cleancss && npm run build:storybook",
-    "stylelint": "stylelint scss/**/*.scss",
-    "build:stylelint": "npm run stylelint -- --fix",
-    "build:clean": "rimraf css",
+    "//": "Build task",
+    "build": "run-p build:core build:main",
+    "build:core": "npm run build:sass-core && npm run build:autoprefix-core && npm run build:cleancss-core",
+    "build:main": "npm run build:sass && npm run build:autoprefix && npm run build:cleancss",
+    "prebuild": "run-p prebuild:*",
+    "prebuild:stylelint": "npm run stylelint -- --fix",
+    "prebuild:clean": "rimraf css",
+    "postbuild": "npm run build:storybook",
+    "//": "For nes.css",
     "build:sass": "node-sass --output-style expanded --source-map true --functions scripts/scssFunctions.js scss/nes.scss css/nes.css",
     "build:autoprefix": "postcss --use autoprefixer --map false --output css/nes.css css/nes.css",
     "build:cleancss": "cleancss -o css/nes.min.css css/nes.css",
+    "//": "For nes-core.css",
+    "build:sass-core": "node-sass --output-style expanded --source-map true --functions scripts/scssFunctions.js scss/nes-core.scss css/nes-core.css",
+    "build:autoprefix-core": "postcss --use autoprefixer --map false --output css/nes-core.css css/nes-core.css",
+    "build:cleancss-core": "cleancss -o css/nes-core.min.css css/nes-core.css",
+    "//": "Misc",
+    "stylelint": "stylelint scss/**/*.scss",
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook",
     "deploy": "npm run build",
@@ -38,6 +49,7 @@
     "@commitlint/cli": "^7.2.1",
     "@commitlint/config-conventional": "^7.1.2",
     "@semantic-release/exec": "^3.3.0",
+    "@storybook/addon-backgrounds": "^4.1.3",
     "@storybook/addon-knobs": "^4.0.11",
     "@storybook/html": "^4.0.11",
     "autoprefixer": "^9.1.5",
@@ -49,11 +61,11 @@
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
-    "file-loader": "^2.0.0",
     "git-rev-sync": "^1.12.0",
     "husky": "^1.0.0",
     "lint-staged": "^7.3.0",
     "node-sass": "^4.9.3",
+    "npm-run-all": "^4.1.5",
     "postcss-cli": "^6.0.0",
     "prettier": "^1.15.2",
     "rimraf": "^2.6.2",
@@ -65,7 +77,8 @@
     "stylelint-config-recess-order": "^2.0.0",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-prettier": "^1.0.5",
-    "stylelint-scss": "^3.3.1"
+    "stylelint-scss": "^3.3.1",
+    "url-loader": "^1.1.2"
   },
   "browserslist": [
     "> 1%"
@@ -95,12 +108,10 @@
   },
   "lint-staged": {
     "scss/**/*.scss": [
-      "npm run build",
-      "git add"
+      "npm run postbuild"
     ],
     "*.js": [
-      "eslint '.storybook/**/*.js' 'docs/**/*.js'",
-      "git add"
+      "eslint '.storybook/**/*.js' 'docs/**/*.js'"
     ]
   },
   "prettier": {
@@ -112,9 +123,12 @@
       "@semantic-release/release-notes-generator",
       "@semantic-release/npm",
       "@semantic-release/github",
-      ["@semantic-release/exec", {
-        "prepareCmd": "./scripts/updatePackageHeader.js ${nextRelease.version}"
-      }]
+      [
+        "@semantic-release/exec",
+        {
+          "prepareCmd": "./scripts/updatePackageHeader.js ${nextRelease.version}"
+        }
+      ]
     ]
   },
   "stylelint": {
@@ -132,11 +146,17 @@
       "string-quotes": "double",
       "at-rule-no-unknown": null,
       "scss/at-rule-no-unknown": true
-    }
+    },
+    "ignoreFiles": [
+      "demo/lib/*"
+    ]
   },
   "eslintConfig": {
     "extends": "airbnb-base"
   },
+  "eslintIgnore": [
+    "demo/lib/*"
+  ],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"

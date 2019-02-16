@@ -1,5 +1,4 @@
 .nes-pokeball {
-  $px: 6px;
   $pokeball-colors: (#060606, #ff001d, #fff, #9fa1a1);
   // prettier-ignore
   $pokeball: (
@@ -17,22 +16,21 @@
     (0,0,1,4,4,3,3,3,3,3,3,1,0,0),
     (0,0,0,1,1,4,4,4,4,1,1,0,0,0),
     (0,0,0,0,0,1,1,1,1,0,0,0,0,0),
-    (0,0,0,0,0,0,0,0,0,0,0,0,0,0),
-    (0,0,0,0,0,0,0,0,0,0,0,0,0,0),
   );
+  $size: 6px;
 
   position: relative;
   display: inline-block;
-  width: $px * 14;
-  height: $px * 14;
+  width: $size * length(nth($pokeball, 1));
+  height: $size * length($pokeball);
 
   &::before {
     position: absolute;
-    top: $px * -1;
-    left: $px * -1;
+    top: -$size;
+    left: -$size;
     content: "";
     background: transparent;
 
-    @include pixelize($pokeball, $pokeball-colors, $px);
+    @include pixelize($size, $pokeball, $pokeball-colors);
   }
 }

@@ -1,4 +1,4 @@
-@mixin pixelize($matrix, $colors, $size, $default-color: null) {
+@mixin pixelize($size, $matrix, $colors, $default-color: null) {
   $ret: "";
   $moz: "";
   @if ($default-color == null) {
@@ -38,10 +38,10 @@
         $color: nth($colors, $dot);
         @if $color == $default-color {
           $ret: $ret + ($j * $size) + " " + ($i * $size);
-          $moz: $moz + ($j * $size) + " " + ($i * $size) + " 0 0.020em";
+          $moz: $moz + ($j * $size) + " " + ($i * $size) + "0 0.020px";
         } @else {
-          $ret: $ret + ($j * $size) + " " + ($i * $size) + " " + $color;
-          $moz: $moz + ($j * $size) + " " + ($i * $size) + " 0 0.020em " + $color;
+          $ret: $ret + ($j * $size) + " " + ($i * $size) + "" + $color;
+          $moz: $moz + ($j * $size) + " " + ($i * $size) + "0 0.020px " + $color;
         }
       }
     }

@@ -1,7 +1,7 @@
 # コントリビューター行動規範
 
 このドキュメントを別の言語で表示する：
-[English](CONTRIBUTING.md) / [Español](.github/CONTRIBUTING-es.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
+[English](CONTRIBUTING.md) / [简体中文](.github/CONTRIBUTING-zh-CN.md) / [Español](.github/CONTRIBUTING-es.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
 
 ## 私たちの約束
 

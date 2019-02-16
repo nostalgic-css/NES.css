@@ -1,7 +1,7 @@
 # Contribuindo
 
 Veja este documento em outro idioma:
-[English](CONTRIBUTING.md) / [日本語](.github/CONTRIBUTING-jp.md) / [Español](.github/CONTRIBUTING-es.md)
+[English](CONTRIBUTING.md) / [日本語](.github/CONTRIBUTING-jp.md) / [简体中文](CONTRIBUTING-zh-CN.md) / [Español](.github/CONTRIBUTING-es.md)
 
 Quer contribuir para este projeto? Legal!
 
@@ -53,6 +53,7 @@ Nós estamos muito felizes de você querer contribuir para o projeto! Os próxim
     │   ├── generic.scss: Estilização genérica e reboot.css
     │   └── variables.scss: Variáveis em comum
     ├── elements
+    ├── components
     ├── form
     ├── icons: 16x16 icons
     ├── pixel-arts: Para ícones que não são 16x16.
@@ -96,7 +97,7 @@ Nós usamos [Commitizen][commitizen] e [`commitlint`][commitlint] a fim de asseg
 [commitizen]: https://github.com/commitizen/cz-cli
 [commitlint]: [https://github.com/marionebl/commitlint]
 [egghead]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
-[new-issue]: https://github.com/nostalgic-css/NES.css/issues/new
+[new-issue]: https://github.com/nostalgic-css/NES.css/issues/new/choose
 [new-pr]: https://github.com/nostalgic-css/NES.css/compare/develop...develop
 [semantic-release]: https://github.com/semantic-release/semantic-release
 [sentimental-versioning]: http://sentimentalversioning.org/
