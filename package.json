@@ -23,6 +23,11 @@
     "stylelint": "stylelint scss/**/*.scss",
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook",
+    "kill-server": "kill $(lsof -t -i:6007) || true",
+    "pretest": "npm run kill-server && npm run build; http-server storybook-static -s -p 6007 &",
+    "test": "./node_modules/.bin/backstop test --config=backstop.js",
+    "posttest": "npm run kill-server",
+    "test:approve": "./node_modules/.bin/backstop approve --config=backstop.js",
     "deploy": "npm run build",
     "semantic-release": "semantic-release",
     "commit": "git-cz",
@@ -54,6 +59,7 @@
     "@storybook/html": "^4.0.11",
     "autoprefixer": "^9.1.5",
     "babel-loader": "^8.0.4",
+    "backstopjs": "^3.8.5",
     "clean-css-cli": "^4.2.1",
     "commitizen": "^3.0.5",
     "css-loader": "^2.0.0",
@@ -111,7 +117,7 @@
       "npm run postbuild"
     ],
     "*.js": [
-      "eslint '.storybook/**/*.js' 'docs/**/*.js'"
+      "eslint '.storybook/**/*.js' 'docs/**/*.js' 'tests/**/*.js'"
     ]
   },
   "prettier": {
@@ -161,5 +167,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "dependencies": {}
 }

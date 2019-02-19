@@ -2,3 +2,5 @@ node_modules
 .vscode
 css
 storybook-static
+**/backstop_data/bitmaps_test/
+**/backstop_data/html_report/
