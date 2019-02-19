@@ -74,3 +74,15 @@
     }
   }
 }
+
+.nes-btn-group {
+  .nes-btn:first-child {
+    z-index: 1;
+  }
+}
+
+@for $i from 0 to 5 {
+  .nes-btn-group .nes-btn:nth-child(#{$i + 1}) {
+    left: -($i * 24px);
+  }
+}

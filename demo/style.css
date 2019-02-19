@@ -194,3 +194,7 @@ div.containers > .nes-container {
     text-overflow: ellipsis;
   }
 }
+
+#buttons .nes-btn-group {
+  margin-top: 20px;
+}
