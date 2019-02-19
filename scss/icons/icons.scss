@@ -15,6 +15,7 @@
 @import "whatsapp.scss";
 @import "gmail.scss";
 @import "linkedin.scss";
+@import "instagram.scss";
 
 // others
 @import "close.scss";
@@ -146,6 +147,10 @@
 
   &.linkedin::before {
     @include pixelize($default-size, $icon-linkedin, $icon-linkedin-colors);
+  }
+
+  &.instagram::before {
+    @include pixelize($default-size, $icon-instagram, $icon-instagram-colors);
   }
 
   &.coin::before {

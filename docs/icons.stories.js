@@ -16,6 +16,7 @@ stories.add('icon', () => {
     'nes-icon whatsapp': 'nes-icon whatsapp',
     'nes-icon gmail': 'nes-icon gmail',
     'nes-icon linkedin': 'nes-icon linkedin',
+    'nes-icon instagram': 'nes-icon instagram',
     'nes-icon close': 'nes-icon close',
     'nes-icon coin': 'nes-icon coin',
     'nes-pokeball': 'nes-pokeball',
