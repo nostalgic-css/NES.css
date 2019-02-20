@@ -1,0 +1,153 @@
+body {
+  padding: 0 2rem;
+  margin: 2rem;
+}
+
+.wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+header i.brand {
+  margin-right: 1rem;
+}
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+}
+footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+h2 > a {
+  margin-right: 1rem;
+}
+
+.topic {
+  margin-bottom: 3rem;
+}
+
+/* github link */
+.github-link {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+  display: flex;
+  height: 100px;
+  color: #333;
+  text-decoration: none;
+}
+.github-link:hover {
+  text-decoration: none;
+}
+.github-link > p.nes-balloon {
+  align-self: flex-start;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  color: #333;
+}
+.github-link > i.nes-octocat {
+  align-self: flex-end;
+}
+
+/* Showcase */
+section.showcase {
+  margin-bottom: 2.5rem;
+}
+section.showcase > section.nes-container {
+  padding-bottom: 2.5rem;
+}
+section.showcase > section.nes-container,
+section.showcase > section.samplecode {
+  position: relative;
+}
+.nes-btn.showcode {
+  position: absolute;
+  font-size: 12px;
+  bottom: 0px;
+  right: -4px;
+}
+.nes-btn.copycode {
+  position: absolute;
+  font-size: 12px;
+  top: 0;
+  right: 0px;
+}
+
+section.showcase > section.samplecode > pre code {
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+.item {
+  margin-bottom: -1rem;
+}
+.item > * {
+  margin-bottom: 1.5rem !important;
+}
+
+/* Containers */
+.item.containers > .nes-container {
+  display: inline-block;
+  max-width: 400px;
+}
+
+/* Topic */
+h3.topic-title {
+  display: flex;
+  align-items: center;
+}
+
+h3.topic-title > i {
+  margin-right: 1.5rem;
+}
+
+/* coreteam */
+.coreteam-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.nes-container.member-card {
+  display: flex;
+  padding: 1rem 1.5rem;
+  width: 470px;
+  margin-bottom: 2rem;
+}
+
+.member-card .avatar > img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.member-card > .profile {
+  margin-left: 1.5rem;
+}
+.member-card > .profile > .name {
+  font-size: 20px;
+}
+
+/* Contributors */
+.contributor {
+  display: inline-block;
+  margin: 1rem;
+  text-align: center;
+}
+.contributor > p {
+  margin: .5rem;
+  font-size: 12px;
+}
+.contributor img.nes-avatar {
+  transition: all .4s;
+}
+.contributor:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+/* Articles */
+
