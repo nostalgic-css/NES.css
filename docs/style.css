@@ -136,6 +136,7 @@ h3.topic-title > i {
   display: inline-block;
   margin: 1rem;
   text-align: center;
+  width: 160px;
 }
 .contributor > p {
   margin: .5rem;
