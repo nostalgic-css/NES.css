@@ -1,5 +1,14 @@
 const sampleCollection = [
   {
+    title: 'texts',
+    showCode: false,
+    code: `<span class="nes-text is-primary">Primary</span>
+<span class="nes-text is-success">Success</span>
+<span class="nes-text is-warning">Warning</span>
+<span class="nes-text is-error">Error</span>
+<span class="nes-text is-disabled">Disabled</span>`,
+  },
+  {
     title: 'buttons',
     showCode: false,
     code: `<a class="nes-btn">Normal</a>
