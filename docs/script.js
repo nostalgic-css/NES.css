@@ -206,6 +206,27 @@ const sampleCollection = [
 </section>`,
   },
   {
+    title: 'lists',
+    showCode: false,
+    code: `<div class="lists">
+  <ul class="nes-list is-disc">
+    <li>Good morning.</li>
+    <li>Thou hast had a good night's sleep, I hope.</li>
+    <li>Thou hast had a good afternoon</li>
+    <li>Good night.</li>
+  </ul>
+</div>
+
+<div class="lists">
+  <ul class="nes-list is-circle">
+    <li>Good morning.</li>
+    <li>Thou hast had a good night's sleep, I hope.</li>
+    <li>Thou hast had a good afternoon</li>
+    <li>Good night.</li>
+  </ul>
+</div>`,
+  },
+  {
     title: 'avatar',
     description: 'It is recommended to "image-rendering: pixelated".',
     showCode: false,
