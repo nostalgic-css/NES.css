@@ -39,7 +39,7 @@ const sampleCollection = [
 </div>`,
   },
   {
-    title: 'Inputs',
+    title: 'inputs',
     showCode: false,
     code: `<div class="nes-field">
   <label for="name_field">Your name</label>
@@ -62,13 +62,13 @@ const sampleCollection = [
 </div>`,
   },
   {
-    title: 'Textarea',
+    title: 'textarea',
     showCode: false,
     code: `<label for="textarea_field">Textarea</label>
 <textarea id="textarea_field" class="nes-textarea"></textarea>`,
   },
   {
-    title: 'Selects',
+    title: 'selects',
     showCode: false,
     code: `<div class="nes-select">
   <select required>
@@ -122,6 +122,79 @@ const sampleCollection = [
 <div class="nes-container is-rounded is-dark">
   <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
 </div>`,
+  },
+  {
+    title: 'dialogs',
+    note:
+      'NES.css does not include any JavaScript. If you want to use dialog element other than Chrome, you need polyfill.',
+    showCode: false,
+    code: `<!-- Dialog -->
+<section>
+  <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-default').showModal();">
+    Open dialog
+  </button>
+  <dialog class="nes-dialog" id="dialog-default">
+    <form method="dialog">
+      <p class="title">Dialog</p>
+      <p>Alert: this is a dialog.</p>
+      <menu class="dialog-menu">
+        <button class="nes-btn">Cancel</button>
+        <button class="nes-btn is-primary">Confirm</button>
+      </menu>
+    </form>
+  </dialog>
+</section>
+
+<!-- Dark dialog -->
+<section>
+  <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-dark').showModal();">
+    Open dark dialog
+  </button>
+  <dialog class="nes-dialog is-dark" id="dialog-dark">
+    <form method="dialog">
+      <p class="title">Dark dialog</p>
+      <p>Alert: this is a dialog.</p>
+      <menu class="dialog-menu">
+        <button class="nes-btn">Cancel</button>
+        <button class="nes-btn is-primary">Confirm</button>
+      </menu>
+    </form>
+  </dialog>
+</section>
+
+<!-- Rounded dialog -->
+<section>
+  <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-rounded').showModal();">
+    Open rounded dialog
+  </button>
+  <dialog class="nes-dialog is-rounded" id="dialog-rounded">
+    <form method="dialog">
+      <p class="title">Rounded dialog</p>
+      <p>Alert: this is a dialog.</p>
+      <menu class="dialog-menu">
+        <button class="nes-btn">Cancel</button>
+        <button class="nes-btn is-primary">Confirm</button>
+      </menu>
+    </form>
+  </dialog>
+</section>
+
+<!-- Dark and Rounded dialog -->
+<section>
+  <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-dark-rounded').showModal();">
+    Open dark and rounded dialog
+  </button>
+  <dialog class="nes-dialog is-dark is-rounded" id="dialog-dark-rounded">
+    <form method="dialog">
+      <p class="title">Dark and Rounded dialog</p>
+      <p>Alert: this is a dialog.</p>
+      <menu class="dialog-menu">
+        <button class="nes-btn">Cancel</button>
+        <button class="nes-btn is-primary">Confirm</button>
+      </menu>
+    </form>
+  </dialog>
+</section>`,
   },
 ];
 

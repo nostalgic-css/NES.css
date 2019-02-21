@@ -77,6 +77,10 @@ section.showcase > section.samplecode {
   right: 0px;
 }
 
+section.showcase > section.nes-container > p.note {
+  margin-top: 2.5rem;
+}
+
 section.showcase > section.samplecode > pre code {
   font-size: 13px;
   line-height: 1.5;

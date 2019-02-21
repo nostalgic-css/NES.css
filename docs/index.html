@@ -76,6 +76,7 @@
                 class="item"
                 v-html="sample.code">
               </div>
+              <p v-if="sample.note" class="note nes-text is-error">{{ sample.note }}</p>
               <button type="button" class="nes-btn is-primary showcode" @click="sample.showCode = !sample.showCode">&lt;&gt;</button>
             </section>
             <section class="samplecode" v-show="sample.showCode">
