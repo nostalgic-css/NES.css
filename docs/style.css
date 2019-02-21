@@ -80,7 +80,7 @@ section.showcase > section.samplecode {
 section.showcase > section.samplecode > pre code {
   font-size: 13px;
   line-height: 1.5;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .item {
@@ -94,6 +94,15 @@ section.showcase > section.samplecode > pre code {
 .item.containers > .nes-container {
   display: inline-block;
   max-width: 400px;
+}
+
+/* Copied balloon */
+.nes-balloon.copied-balloon {
+  position: absolute;
+  display: none;
+  padding: 1rem;
+  box-shadow: 0 5px 20px 5px rgba(0,0,0,.6);
+  z-index: 1;
 }
 
 /* Topic */

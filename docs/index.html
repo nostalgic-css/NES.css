@@ -38,12 +38,12 @@
   </head>
 
   <body>
-    <div class="wrapper">
+    <div id="nescss" class="wrapper">
       <header>
         <h1><i class="snes-jp-logo brand"></i>NES.css</h1>
         <p>NES-style CSS Framework.</p>
       </header>
-      <main id="nescss">
+      <main>
         <a class="github-link" href="https://github.com/nostalgic-css/NES.css" target="_blank" @mouseover="startAnimate" @mouseout="stopAnimate">
           <p class="nes-balloon from-right">Fork me<br />on GitHub</p>
           <i class="nes-octocat" :class="animateOctocat ? 'animate' : ''"></i>
@@ -79,12 +79,13 @@
               <button type="button" class="nes-btn is-primary showcode" @click="sample.showCode = !sample.showCode">&lt;&gt;</button>
             </section>
             <section class="samplecode" v-show="sample.showCode">
-              <button type="button" class="nes-btn copycode" @click="copy(sample.title)">copy</button>
+              <button type="button" class="nes-btn copycode" @click="copy($event, sample.title)">copy</button>
               <pre><code class="html">{{ sample.code }}</code></pre>
             </section>
           </section>
         </section>
 
+        <!-- Members -->
         <section class="topic">
           <h2 id="members"><a href="#members">#</a>Members</h2>
           <section class="coreteam">
@@ -142,6 +143,7 @@
           </section>
         </section>
 
+        <!-- Articles -->
         <section class="articles">
             <h2 id="articles"><a href="#articles">#</a>Articles</h2>
             <article v-for="article in articles">
@@ -158,6 +160,11 @@
           <a href="https://twitter.com/bc_rikko" target="_blank">@bc_rikko</a>
         </p>
       </footer>
+
+      <!-- Copied balloon -->
+      <div class="nes-balloon from-right copied-balloon" :style="copiedBalloon">
+        <p>copied!!</p>
+      </div>
     </div>
   </body>
   <script src="./script.js"></script>

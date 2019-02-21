@@ -208,6 +208,11 @@ new Vue({
       contributors,
       articles,
       animateOctocat: false,
+      copiedBalloon: {
+        display: 'none',
+        top: 0,
+        left: 0,
+      },
     };
   },
   filters: {
@@ -221,7 +226,9 @@ new Vue({
     hljs.initHighlightingOnLoad();
   },
   methods: {
-    copy(id) {
+    copy(event, id) {
+      this.showCopiedBalloon(event.pageY, event.pageX);
+
       const fake = document.createElement('textarea');
       fake.value = this.collection.find(a => a.title === id).code;
       fake.setAttribute('readonly', '');
@@ -239,6 +246,16 @@ new Vue({
     },
     stopAnimate() {
       this.animateOctocat = false;
+    },
+    showCopiedBalloon(top, left) {
+      this.copiedBalloon = {
+        display: 'block',
+        top: `${top - 100}px`,
+        left: `${left - 180}px`,
+      };
+      setTimeout(() => {
+        this.copiedBalloon.display = 'none';
+      }, 1000);
     },
   },
 });
