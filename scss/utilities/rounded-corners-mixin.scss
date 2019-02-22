@@ -16,7 +16,7 @@
 
   border-image-slice: 3;
   border-image-width: 3;
-  border-image-repeat: stretch;
+  border-image-repeat: space;
 
   @if $isDark {
     @include border-image($color-white);
