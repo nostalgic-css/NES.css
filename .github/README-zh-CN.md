@@ -44,7 +44,7 @@ yarn add nes.css
 
 NES.css 只提供组件. 你需要定义你自己的布局.
 
-默认字体[Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P?selection.family=Press+Start+2P) 只支持英文字符. 当你把这个框架与其他非英语的语言一起使用的时候, 请使用另外的字体. 请根据这个关于Google Fonts的 [说明](https://developers.google.com/fonts/docs/getting_started) 了解如何把它引入项目, 或者按照如下方式简单引人:
+默认字体[Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P?selection.family=Press+Start+2P) 只支持英文字符. 当你把这个框架与其他非英语的语言一起使用的时候, 请使用另外的字体. 请根据这个关于Google Fonts的 [说明](https://developers.google.com/fonts/docs/getting_started) 了解如何把它引入项目, 或者按照如下方式简单引入:
 
 ```html
 <head>
