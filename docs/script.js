@@ -278,6 +278,16 @@ const sampleCollection = [
 </div>`,
   },
   {
+    title: 'progress',
+    showCode: false,
+    code: `<progress class="nes-progress" value="90" max="100"></progress>
+<progress class="nes-progress is-primary" value="80" max="100"></progress>
+<progress class="nes-progress is-success" value="50" max="100"></progress>
+<progress class="nes-progress is-warning" value="30" max="100"></progress>
+<progress class="nes-progress is-error" value="10" max="100"></progress>
+<progress class="nes-progress is-pattern" value="50" max="100"></progress>`,
+  },
+  {
     title: 'avatars',
     description: 'It is recommended to "image-rendering: pixelated".',
     showCode: false,
@@ -397,8 +407,8 @@ const sampleCollection = [
   {
     title: 'pixel-arts',
     showCode: false,
-    description:
-      'Nintendo owns the copyright of some pixel arts.　Therefore, these may be deleted.',
+    note:
+      'Deprecated: Nintendo owns the copyright of some pixel arts.　Therefore, these will be deleted.',
     code: `<section class="icon-list">
   <!-- controllers -->
   <i class="nes-logo"></i>
