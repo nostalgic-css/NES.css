@@ -314,6 +314,117 @@ const sampleCollection = [
   <i class="nes-bcrikko"></i>
 </section>`,
   },
+  {
+    title: 'reaction-icons',
+    showCode: false,
+    description:
+      'If you wanto to change icon size, please use "is-small", "is-medium" and "is-large".',
+    code: `<section class="icon-list">
+  <!-- heart -->
+  <i class="nes-icon is-large heart"></i>
+  <i class="nes-icon is-large heart is-empty"></i>
+
+  <!-- star -->
+  <i class="nes-icon is-large star"></i>
+  <i class="nes-icon is-large star is-half"></i>
+  <i class="nes-icon is-large star is-transparent"></i>
+  <i class="nes-icon is-large star is-empty"></i>
+
+  <!-- like -->
+  <i class="nes-icon is-large like"></i>
+  <i class="nes-icon is-large like is-empty"></i>
+</section>`,
+  },
+  {
+    title: 'sns-icons',
+    showCode: false,
+    description:
+      'If you wanto to change icon size, please use "is-small", "is-medium" and "is-large".',
+    code: `<section class="icon-list">
+  <!-- twitter -->
+  <i class="nes-icon twitter is-large"></i>
+
+  <!-- facebook -->
+  <i class="nes-icon facebook is-large"></i>
+
+  <!-- instagram -->
+  <i class="nes-icon instagram is-large"></i>
+
+  <!-- github -->
+  <i class="nes-icon github is-large"></i>
+
+  <!-- google -->
+  <i class="nes-icon google is-large"></i>
+
+  <!-- gmail -->
+  <i class="nes-icon gmail is-large"></i>
+
+  <!-- medium -->
+  <i class="nes-icon medium is-large"></i>
+
+  <!-- linkedin -->
+  <i class="nes-icon linkedin is-large"></i>
+
+  <!-- twitch -->
+  <i class="nes-icon twitch is-large"></i>
+
+  <!-- youtube -->
+  <i class="nes-icon youtube is-large"></i>
+
+  <!-- reddit -->
+  <i class="nes-icon reddit is-large"></i>
+
+  <!-- whatsapp -->
+  <i class="nes-icon whatsapp is-large"></i>
+</section>`,
+  },
+  {
+    title: 'other-icons',
+    showCode: false,
+    description:
+      'If you wanto to change icon size, please use "is-small", "is-medium" and "is-large".',
+    code: `<section class="icon-list">
+<!-- close -->
+<i class="nes-icon close is-large"></i>
+
+<!-- trophy -->
+<i class="nes-icon trophy is-large"></i>
+
+<!-- coin -->
+<i class="nes-icon coin is-large"></i>
+</section>`,
+  },
+  {
+    title: 'pixel-arts',
+    showCode: false,
+    description:
+      'Nintendo owns the copyright of some pixel arts.　Therefore, these may be deleted.',
+    code: `<section class="icon-list">
+  <!-- controllers -->
+  <i class="nes-logo"></i>
+  <i class="nes-jp-logo"></i>
+  <i class="snes-logo"></i>
+  <i class="snes-jp-logo"></i>
+
+  <!-- octocat -->
+  <i class="nes-octocat animate"></i>
+
+  <!-- phone -->
+  <i class="nes-smartphone"></i>
+  <i class="nes-phone"></i>
+
+  <div class="blur-filter">
+    <!-- Copyright Nintendo -->
+    <i class="nes-mario"></i>
+    <i class="nes-ash"></i>
+    <i class="nes-pokeball"></i>
+    <i class="nes-bulbasaur"></i>
+    <i class="nes-charmander"></i>
+    <i class="nes-squirtle"></i>
+    <i class="nes-kirby"></i>
+  </div>
+</section>`,
+  },
 ];
 
 const coreteam = [
