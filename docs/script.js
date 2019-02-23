@@ -579,6 +579,8 @@ new Vue({
             return 'http://www.facebook.com/sharer.php?u=https://nostalgic-css.github.io/NES.css/&t=NES.css%EF%BD%9CNES-style%20CSS%20Framework';
           case 'linkedin':
             return 'https://www.linkedin.com/shareArticle?url=https%3A//nostalgic-css.github.io/NES.css/&title=NES.css%EF%BD%9CNES-style%20CSS%20Framework';
+          case 'github':
+            return 'https://github.com/nostalgic-css/NES.css';
         }
       })();
 

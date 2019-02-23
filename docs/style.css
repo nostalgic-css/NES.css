@@ -211,3 +211,18 @@ h3.topic-title > i {
 .article-link > .title span {
   margin-left: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: 2rem 0.5rem;
+    padding: 0;
+  }
+
+  .github-link {
+    display: none;
+  }
+
+  .message-list > .message > .nes-balloon {
+    max-width: 60%;
+  }
+}
