@@ -325,6 +325,49 @@ const sampleCollection = [
 </section>`,
   },
   {
+    title: 'badges',
+    showCode: false,
+    code: `<a href="#" class="nes-badge">
+  <span class="is-dark">NES.css</span>
+</a>
+
+<a href="#" class="nes-badge">
+  <span class="is-primary">is</span>
+</a>
+
+<a href="#" class="nes-badge">
+  <span class="is-success">a</span>
+</a>
+
+<a href="#" class="nes-badge">
+  <span class="is-warning">great</span>
+</a>
+
+<a href="#" class="nes-badge">
+  <span class="is-error">framework!</span>
+</a>
+
+<a href="#" class="nes-badge is-splited">
+  <span class="is-dark">npm</span>
+  <span class="is-primary">1.1.0</span>
+</a>
+
+<a href="#" class="nes-badge is-splited">
+  <span class="is-dark">test</span>
+  <span class="is-success">100%</span>
+</a>
+
+<a href="#" class="nes-badge is-icon">
+  <span class="is-warning"><i class="nes-icon star is-small"></i></span>
+  <span class="is-primary">Icons</span>
+</a>
+
+<a href="#" class="nes-badge is-icon">
+  <span class="is-dark">hi</span>
+  <span class="is-warning">Text</span>
+</a>`,
+  },
+  {
     title: 'reaction-icons',
     showCode: false,
     description:
@@ -394,14 +437,14 @@ const sampleCollection = [
     description:
       'If you wanto to change icon size, please use "is-small", "is-medium" and "is-large".',
     code: `<section class="icon-list">
-<!-- close -->
-<i class="nes-icon close is-large"></i>
+  <!-- close -->
+  <i class="nes-icon close is-large"></i>
 
-<!-- trophy -->
-<i class="nes-icon trophy is-large"></i>
+  <!-- trophy -->
+  <i class="nes-icon trophy is-large"></i>
 
-<!-- coin -->
-<i class="nes-icon coin is-large"></i>
+  <!-- coin -->
+  <i class="nes-icon coin is-large"></i>
 </section>`,
   },
   {
