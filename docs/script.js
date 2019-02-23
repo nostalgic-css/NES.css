@@ -294,6 +294,26 @@ const sampleCollection = [
 <img class="nes-avatar is-rounded is-medium" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15" style="image-rendering: pixelated;">
 <img class="nes-avatar is-rounded is-large" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15" style="image-rendering: pixelated;">`,
   },
+  {
+    title: 'balloons',
+    showCode: false,
+    code: `<section class="message-list">
+    <section class="message -left">
+  <i class="nes-bcrikko"></i>
+  <!-- Balloon -->
+  <div class="nes-balloon from-left">
+    <p>Hello NES.css</p>
+  </div>
+</section>
+
+<section class="message -right">
+  <!-- Balloon -->
+  <div class="nes-balloon from-right">
+    <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+  </div>
+  <i class="nes-bcrikko"></i>
+</section>`,
+  },
 ];
 
 const coreteam = [
