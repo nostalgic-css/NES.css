@@ -8,8 +8,20 @@ body {
   margin: 0 auto;
 }
 
-header i.brand {
+header {
+  display: flex;
+  align-items: baseline;
+  border-bottom: 4px solid #D3D3D3;
+}
+header > .brand i.brand-logo {
   margin-right: 1rem;
+}
+
+header > .social-buttons {
+  margin-left: 2rem;
+}
+header > .social-buttons > p {
+  margin-bottom: 0;
 }
 
 footer {
@@ -26,7 +38,7 @@ h2 > a {
 }
 
 .topic {
-  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 
 /* github link */
@@ -192,4 +204,3 @@ h3.topic-title > i {
 }
 
 /* Articles */
-

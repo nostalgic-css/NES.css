@@ -40,9 +40,21 @@
   <body>
     <div id="nescss" class="wrapper">
       <header>
-        <h1><i class="snes-jp-logo brand"></i>NES.css</h1>
-        <p>NES-style CSS Framework.</p>
+        <div class="brand">
+          <h1><i class="snes-jp-logo brand-logo"></i>NES.css</h1>
+          <p>NES-style CSS Framework.</p>
+        </div>
+
+        <div class="social-buttons">
+          <p>Share on SNS</p>
+          <div class="share">
+            <a @click="share('twitter')"><i class="nes-icon twitter"></i></a>
+            <a @click="share('facebook')"><i class="nes-icon facebook"></i></a>
+            <a @click="share('linkedin')"><i class="nes-icon linkedin"></i></a>
+          </div>
+        </div>
       </header>
+
       <main>
         <a class="github-link" href="https://github.com/nostalgic-css/NES.css" target="_blank" @mouseover="startAnimate" @mouseout="stopAnimate">
           <p class="nes-balloon from-right">Fork me<br />on GitHub</p>
@@ -146,7 +158,7 @@
         </section>
 
         <!-- Articles -->
-        <section class="articles">
+        <section class="topic">
             <h2 id="articles"><a href="#articles">#</a>Articles</h2>
             <article v-for="article in articles">
               <h3><a :href="article.url" target="_blank"><i class="nes-icon" :class="article.icon"></i>{{ article.title }}</a></h3>
@@ -157,7 +169,7 @@
 
       <footer>
         <p>
-          <a href="https://kuroeveryday.blogspot.com/" target="_blank">Black Everyday Company</a>
+          <a href="https://kuroeveryday.blogspot.com/" target="_blank">&copy;2018 Black Everyday Company</a>
           <span>-</span>
           <a href="https://twitter.com/bc_rikko" target="_blank">@bc_rikko</a>
         </p>
