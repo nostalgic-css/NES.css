@@ -227,7 +227,58 @@ const sampleCollection = [
 </div>`,
   },
   {
-    title: 'avatar',
+    title: 'tables',
+    showCode: false,
+    code: `<div class="nes-table-responsive">
+  <table class="nes-table is-bordered is-centered">
+    <thead>
+      <tr>
+        <th>Table.is-bordered</th>
+        <th>Table.is-centered</th>
+        <th>Table.is-centered</th>
+        <th>Table.is-centered</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Thou hast had a good morning</td>
+        <td>Thou hast had a good afternoon</td>
+        <td>Thou hast had a good evening</td>
+        <td>Thou hast had a good night</td>
+      </tr>
+      <tr>
+        <td>Thou hast had a good morning</td>
+        <td>Thou hast had a good afternoon</td>
+        <td>Thou hast had a good evening</td>
+        <td>Thou hast had a good night</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="nes-table-responsive">
+  <table class="nes-table is-bordered is-dark">
+    <thead>
+      <tr>
+        <th>Table.is-dark</th>
+        <th>Table.is-bordered</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Thou hast had a good morning</td>
+        <td>Thou hast had a good afternon</td>
+      </tr>
+      <tr>
+        <td>Thou hast had a good morning</td>
+        <td>Thou hast had a good afternoon</td>
+      </tr>
+    </tbody>
+  </table>
+</div>`,
+  },
+  {
+    title: 'avatars',
     description: 'It is recommended to "image-rendering: pixelated".',
     showCode: false,
     code: `<img class="nes-avatar" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15" style="image-rendering: pixelated;">
@@ -344,6 +395,9 @@ new Vue({
   },
   mounted() {
     hljs.initHighlightingOnLoad();
+    [].forEach.call(document.querySelectorAll('dialog'), (a) => {
+      dialogPolyfill.registerDialog(a);
+    });
   },
   methods: {
     copy(event, id) {
