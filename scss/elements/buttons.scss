@@ -57,7 +57,7 @@
     cursor: not-allowed;
     background-color: map-get($disabled-colors, "normal");
     box-shadow: inset -4px -4px map-get($disabled-colors, "shadow");
-    opacity: 0.6;
+    opacity: $btn-disabled-opacity;
   }
 
   // Other styles
@@ -87,6 +87,13 @@
 
       &:not(:last-child):not(:first-child)::after {
         box-shadow: inset -8px -4px map-get($default-colors, "shadow");
+      }
+
+      &.is-disabled {
+        color: rgba($base-color, $btn-disabled-opacity);
+        background-color: rgba(map-get($disabled-colors, "normal"), $btn-disabled-opacity);
+        box-shadow: none;
+        opacity: 1;
       }
 
       // prettier-ignore
