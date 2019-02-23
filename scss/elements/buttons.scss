@@ -75,14 +75,32 @@
   }
 }
 
+// Button groups
 .nes-btn-group {
   .nes-btn:first-child {
     z-index: 1;
   }
-}
 
-@for $i from 0 to 5 {
-  .nes-btn-group .nes-btn:nth-child(#{$i + 1}) {
-    left: -($i * 24px);
+  @for $i from 0 to $max-btn-group-items {
+    .nes-btn:nth-child(#{$i + 1}) {
+      left: -($i * 24px);
+
+      &:not(:last-child):not(:first-child)::after {
+        box-shadow: inset -8px -4px map-get($default-colors, "shadow");
+      }
+
+      // prettier-ignore
+      $types:
+      "primary" map-get($primary-colors, "shadow"),
+      "success" map-get($success-colors, "shadow"),
+      "warning" map-get($warning-colors, "shadow"),
+      "error" map-get($error-colors, "shadow");
+
+      @each $type in $types {
+        &.is-#{nth($type, 1)}:not(:last-child):not(:first-child)::after {
+          box-shadow: inset -8px -4px nth($type, 2);
+        }
+      }
+    }
   }
 }
