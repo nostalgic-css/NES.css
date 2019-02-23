@@ -18,7 +18,7 @@
     <link href="./style.css" rel="stylesheet" />
     <script src="./lib/vue.min.js"></script>
 
-    <script async src="./lib/dialog-polyfill.js"></script>
+    <script src="./lib/dialog-polyfill.js"></script>
     <link rel="stylesheet" type="text/css" href="./lib/dialog-polyfill.css" />
     <script src="./lib/highlight.js"></script>
     <link href="./lib/highlight-theme.css" rel="stylesheet" />
@@ -35,6 +35,11 @@
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41640153-4"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "UA-41640153-4");</script>
+    <script>
+      if (window.navigator.userAgent.toLocaleLowerCase().indexOf('trident') !== -1) {
+        window.alert('IE is not supported on this page.')
+      }
+    </script>
   </head>
 
   <body>
@@ -73,7 +78,7 @@
         <section class="topic">
           <h2 id="installation"><a href="#installation">#</a>Installation</h2>
           <p>NES.css is available via either npm or Yarn, or a CDN.</p>
-          <p>Please read <a href="https://github.com/nostalgic-css/NES.css">README.md</a>.</p>
+          <p>Please read <a href="https://github.com/nostalgic-css/NES.css" target="_blank">README.md</a>.</p>
         </section>
 
         <!-- Usage -->
@@ -177,7 +182,8 @@
 
       <footer>
         <p>
-          <a href="https://kuroeveryday.blogspot.com/" target="_blank">&copy;2018 Black Everyday Company</a>
+          <span>&copy;2018</span>
+          <a href="https://kuroeveryday.blogspot.com/" target="_blank">Black Everyday Company</a>
           <span>-</span>
           <a href="https://twitter.com/bc_rikko" target="_blank">@bc_rikko</a>
         </p>
