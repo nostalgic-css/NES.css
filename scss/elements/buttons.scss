@@ -81,20 +81,22 @@
     z-index: 1;
   }
 
+  .nes-btn{
+    &.is-disabled {
+      color: rgba($base-color, $btn-disabled-opacity);
+      background-color: rgba(map-get($disabled-colors, "normal"), $btn-disabled-opacity);
+      box-shadow: none;
+      opacity: 1;
+    }
+
+    &:not(:last-child):not(:first-child)::after {
+      box-shadow: inset -8px -4px map-get($default-colors, "shadow");
+    }
+  }
+
   @for $i from 0 to $max-btn-group-items {
     .nes-btn:nth-child(#{$i + 1}) {
       left: -($i * 24px);
-
-      &:not(:last-child):not(:first-child)::after {
-        box-shadow: inset -8px -4px map-get($default-colors, "shadow");
-      }
-
-      &.is-disabled {
-        color: rgba($base-color, $btn-disabled-opacity);
-        background-color: rgba(map-get($disabled-colors, "normal"), $btn-disabled-opacity);
-        box-shadow: none;
-        opacity: 1;
-      }
 
       // prettier-ignore
       $types:
@@ -110,4 +112,5 @@
       }
     }
   }
+  
 }
