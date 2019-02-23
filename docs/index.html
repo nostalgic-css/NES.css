@@ -160,8 +160,15 @@
         <!-- Articles -->
         <section class="topic">
             <h2 id="articles"><a href="#articles">#</a>Articles</h2>
-            <article v-for="article in articles">
-              <h3><a :href="article.url" target="_blank"><i class="nes-icon" :class="article.icon"></i>{{ article.title }}</a></h3>
+            <article class="article-link">
+              <h3 class="title">
+                <a href="https://medium.com/@bc_rikko/why-i-created-and-released-nes-css-ee8966bacd09" target="_blank"><i class="nes-icon medium"></i><span>Why I created and released NES.css</span></a>
+              </h3>
+            </article>
+            <article class="article-link">
+              <h3 class="title">
+                <a href="https://github.blog/2019-01-20-release-radar-december-2018/#nes-css-1-0" target="_blank"><i class="nes-icon github"></i><span>Release Radar·December 2018|The GitHub Blog</span></a>
+              </h3>
             </article>
         </section>
 

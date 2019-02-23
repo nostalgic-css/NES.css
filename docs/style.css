@@ -153,6 +153,7 @@ section.message-list {
 h3.topic-title {
   display: flex;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 h3.topic-title > i {
@@ -204,3 +205,9 @@ h3.topic-title > i {
 }
 
 /* Articles */
+.article-link > .title a {
+  color: #333;
+}
+.article-link > .title span {
+  margin-left: 1rem;
+}

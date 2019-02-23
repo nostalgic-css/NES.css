@@ -497,19 +497,6 @@ const contributors = [
   'JamesIves',
 ];
 
-const articles = [
-  {
-    icon: 'medium',
-    title: 'Why I created and released NES.css',
-    url: 'https://medium.com/@bc_rikko/why-i-created-and-released-nes-css-ee8966bacd09',
-  },
-  {
-    icon: 'github',
-    title: 'Release Radar · December 2018 | The GitHub Blog',
-    url: 'https://github.blog/2019-01-20-release-radar-december-2018/#nes-css-1-0',
-  },
-];
-
 new Vue({
   el: '#nescss',
   data() {
@@ -518,7 +505,6 @@ new Vue({
       coreteam,
       emeriti,
       contributors,
-      articles,
       animateOctocat: false,
       copiedBalloon: {
         display: 'none',
