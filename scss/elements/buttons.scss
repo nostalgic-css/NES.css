@@ -106,11 +106,16 @@
       "error" map-get($error-colors, "shadow");
 
       @each $type in $types {
-        &.is-#{nth($type, 1)}:not(:last-child):not(:first-child)::after {
-          box-shadow: inset -8px -4px nth($type, 2);
+        &.is-#{nth($type, 1)}:not(:last-child):not(:first-child) {
+          &:hover::after,
+          &:focus::after {
+            box-shadow: inset -10px -6px nth($type, 2);
+          }
+          &::after {
+            box-shadow: inset -8px -4px nth($type, 2);
+          }
         }
       }
     }
   }
-  
 }
