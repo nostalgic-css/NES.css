@@ -450,8 +450,6 @@ const sampleCollection = [
   {
     title: 'pixel-arts',
     showCode: false,
-    note:
-      'Deprecated: Nintendo owns the copyright of some pixel arts.　Therefore, these will be deleted.',
     code: `<section class="icon-list">
   <!-- controllers -->
   <i class="nes-logo"></i>
@@ -465,17 +463,22 @@ const sampleCollection = [
   <!-- phone -->
   <i class="nes-smartphone"></i>
   <i class="nes-phone"></i>
-
-  <div class="blur-filter">
-    <!-- Copyright Nintendo -->
-    <i class="nes-mario"></i>
-    <i class="nes-ash"></i>
-    <i class="nes-pokeball"></i>
-    <i class="nes-bulbasaur"></i>
-    <i class="nes-charmander"></i>
-    <i class="nes-squirtle"></i>
-    <i class="nes-kirby"></i>
-  </div>
+</section>`,
+  },
+  {
+    title: 'Nintendo-characters',
+    showCode: false,
+    note:
+      'Nintendo owns the copyright of these characters. Please comply with the Nintendo guidelines and laws of the applicable jurisdiction.',
+    code: `<section class="icon-list">
+  <!-- Copyright Nintendo -->
+  <i class="nes-mario"></i>
+  <i class="nes-ash"></i>
+  <i class="nes-pokeball"></i>
+  <i class="nes-bulbasaur"></i>
+  <i class="nes-charmander"></i>
+  <i class="nes-squirtle"></i>
+  <i class="nes-kirby"></i>
 </section>`,
   },
 ];
