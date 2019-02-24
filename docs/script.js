@@ -492,7 +492,7 @@ const coreteam = [
   },
   {
     name: 'Igor Guastalla',
-    feat: 'Create icons',
+    feat: 'Development support',
     github: 'guastallaigor',
     twitter: 'guastallaigor',
   },
