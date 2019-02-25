@@ -160,7 +160,7 @@
               <h3 class="topic-title"><i class="nes-icon heart"></i>Contributors</h3>
               <template v-for="user in contributors">
                 <a class="contributor" :href="'https://github.com/' + user" target="_black">
-                  <img class="nes-avatar is-large is-rounded lazy" :data-src="'https://github.com/' + user + '.png?size=64'" src="https://www.gravatar.com/avatar?s=15" :alt="'Contributor ' + user">
+                  <img class="nes-avatar is-large is-rounded lazy" :data-src="'https://github.com/' + user + '.png?size=64'" :alt="'Contributor ' + user">
                   <p>{{ user }}</p>
                 </a>
               </template>

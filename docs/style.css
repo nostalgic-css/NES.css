@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Press Start 2P";
-  src: url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+  src: local("Press Start 2P"), url(https://fonts.googleapis.com/css?family=Press+Start+2P), cursive;
   font-style: normal;
   font-display: swap;
 }
@@ -251,6 +251,7 @@ h3.topic-title > i {
 }
 .contributor img.nes-avatar {
   transition: all .4s;
+  display: inline-block;
 }
 .contributor:hover {
   text-decoration: none;
