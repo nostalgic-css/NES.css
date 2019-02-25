@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Press Start 2P";
+  src: url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   padding: 0 2rem;
   margin: 0 2rem;
@@ -219,6 +226,7 @@ h3.topic-title > i {
 }
 
 .member-card .avatar > img {
+  display: block;
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -267,6 +275,10 @@ h3.topic-title > i {
 .scroll-btn > span {
   display: block;
   transform: rotateZ(90deg);
+}
+
+.lazy {
+  background-color: #006bb3;
 }
 
 @media screen and (max-width: calc(980px - 4rem)) {

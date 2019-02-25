@@ -79,32 +79,36 @@ const sampleCollection = [
   {
     title: 'selects',
     showCode: false,
-    code: `<div class="nes-select">
-  <select required>
+    code: `<label for="default_select">Default select</label>
+<div class="nes-select">
+  <select required id="default_select">
     <option value="" disabled selected hidden>Select...</option>
     <option value="0">To be</option>
     <option value="1">Not to be</option>
   </select>
 </div>
 
+<label for="success_select">nes-select.is-success</label>
 <div class="nes-select is-success">
-  <select required>
+  <select required id="success_select">
     <option value="" disabled selected hidden>Select...</option>
     <option value="0">To be</option>
     <option value="1">Not to be</option>
   </select>
 </div>
 
+<label for="warning_select">nes-select.is-warning</label>
 <div class="nes-select is-warning">
-  <select required>
+  <select required id="warning_select">
     <option value="" disabled selected hidden>Select...</option>
     <option value="0">To be</option>
     <option value="1">Not to be</option>
   </select>
 </div>
 
+<label for="error_select">nes-select.is-error</label>
 <div class="nes-select is-error">
-  <select required>
+  <select required id="error_select">
     <option value="" disabled selected hidden>Select...</option>
     <option value="0">To be</option>
     <option value="1">Not to be</option>
@@ -575,15 +579,22 @@ new Vue({
     [].forEach.call(document.querySelectorAll('dialog'), (a) => {
       dialogPolyfill.registerDialog(a);
     });
+
+    setTimeout(() => {
+      Array.from(document.querySelectorAll('img.lazy')).forEach((img) => {
+        img.src = img.dataset.src;
+        img.classList.remove('lazy');
+      });
+    }, 500);
   },
   methods: {
     share(media) {
       const url = (() => {
         switch (media) {
           case 'twitter':
-            return 'http://twitter.com/share?text=NES.css%EF%BD%9CNES-style%20CSS%20Framework%20%40bc_rikko&url=https://nostalgic-css.github.io/NES.css/';
+            return 'https://twitter.com/share?text=NES.css%EF%BD%9CNES-style%20CSS%20Framework%20%40bc_rikko&url=https://nostalgic-css.github.io/NES.css/';
           case 'facebook':
-            return 'http://www.facebook.com/sharer.php?u=https://nostalgic-css.github.io/NES.css/&t=NES.css%EF%BD%9CNES-style%20CSS%20Framework';
+            return 'https://www.facebook.com/sharer.php?u=https://nostalgic-css.github.io/NES.css/&t=NES.css%EF%BD%9CNES-style%20CSS%20Framework';
           case 'linkedin':
             return 'https://www.linkedin.com/shareArticle?url=https%3A//nostalgic-css.github.io/NES.css/&title=NES.css%EF%BD%9CNES-style%20CSS%20Framework';
           case 'github':

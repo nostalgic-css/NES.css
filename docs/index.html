@@ -7,21 +7,19 @@
     <meta name="description" content="NES.css is a NES-style CSS Framework." />
     <meta name="keywords" content="html5,css,framework,sass,NES,8bit" />
     <meta name="author" content="© 2018 B.C.Rikko" />
+    <meta name="theme-color" content="#212529"/>
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <link rel="shortcut icon" sizes="196x196" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
 
     <title>NES.css - NES-style CSS Framework</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
     <script src="./lib/vue.min.js"></script>
 
     <script src="./lib/dialog-polyfill.js"></script>
-    <link rel="stylesheet" type="text/css" href="./lib/dialog-polyfill.css" />
     <script src="./lib/highlight.js"></script>
-    <link href="./lib/highlight-theme.css" rel="stylesheet" />
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="NES.css" />
@@ -39,6 +37,7 @@
       if (window.navigator.userAgent.toLocaleLowerCase().indexOf('trident') !== -1) {
         window.alert('IE is not supported on this page.')
       }
+
     </script>
   </head>
 
@@ -67,7 +66,7 @@
 
       <div class="container">
         <main class="main-content">
-          <a class="github-link" href="https://github.com/nostalgic-css/NES.css" target="_blank" @mouseover="startAnimate" @mouseout="stopAnimate">
+          <a class="github-link" href="https://github.com/nostalgic-css/NES.css" target="_blank" rel="noopener" @mouseover="startAnimate" @mouseout="stopAnimate">
             <p class="nes-balloon from-right">Fork me<br />on GitHub</p>
             <i class="nes-octocat" :class="animateOctocat ? 'animate' : ''"></i>
           </a>
@@ -83,7 +82,7 @@
           <section class="topic">
             <h2 id="installation"><a href="#installation">#</a>Installation</h2>
             <p>NES.css is available via either npm or Yarn, or a CDN.</p>
-            <p>Please read <a href="https://github.com/nostalgic-css/NES.css" target="_blank">README.md</a>.</p>
+            <p>Please read <a href="https://github.com/nostalgic-css/NES.css" target="_blank" rel="noopener">README.md</a>.</p>
           </section>
 
           <!-- Usage -->
@@ -121,14 +120,14 @@
                 <template v-for="member in coreteam">
                   <section class="nes-container is-dark member-card">
                     <div class="avatar">
-                      <img :src="'https://github.com/' + member.github + '.png?size=80'">
+                      <img class="lazy" :data-src="'https://github.com/' + member.github + '.png?size=80'" :alt="'Core Member ' + member.name">
                     </div>
                     <div class="profile">
                       <h4 class="name">{{ member.name }}</h4>
                       <p>{{ member.feat }}</p>
                       <div>
-                        <a :href="'https://github.com/' + member.github" target="_blank"><i class="nes-icon github"></i></a>
-                        <a :href="'https://twitter.com/' + member.twitter" target="_blank"><i class="nes-icon twitter"></i></a>
+                        <a :href="'https://github.com/' + member.github" target="_blank" rel="noopener" aria-label="github"><i class="nes-icon github"></i></a>
+                        <a :href="'https://twitter.com/' + member.twitter" target="_blank" rel="noopener" aria-label="twitter"><i class="nes-icon twitter"></i></a>
                       </div>
                     </div>
                   </section>
@@ -143,14 +142,14 @@
                 <template v-for="member in emeriti">
                   <section class="nes-container is-dark member-card">
                     <div class="avatar">
-                      <img :src="'https://github.com/' + member.github + '.png?size=80'">
+                      <img class="lazy" :data-src="'https://github.com/' + member.github + '.png?size=80'" :alt="'Emeriti ' + member.name">
                     </div>
                     <div class="profile">
                       <h4 class="name">{{ member.name }}</h4>
                       <p>{{ member.feat }}</p>
                       <div>
-                        <a :href="'https://github.com/' + member.github" target="_blank"><i class="nes-icon github"></i></a>
-                        <a :href="'https://twitter.com/' + member.twitter" target="_blank"><i class="nes-icon twitter"></i></a>
+                        <a :href="'https://github.com/' + member.github" target="_blank" rel="noopener" aria-label="github"><i class="nes-icon github"></i></a>
+                        <a :href="'https://twitter.com/' + member.twitter" target="_blank" rel="noopener" aria-label="twitter"><i class="nes-icon twitter"></i></a>
                       </div>
                     </div>
                   </section>
@@ -161,7 +160,7 @@
               <h3 class="topic-title"><i class="nes-icon heart"></i>Contributors</h3>
               <template v-for="user in contributors">
                 <a class="contributor" :href="'https://github.com/' + user" target="_black">
-                  <img class="nes-avatar is-large is-rounded" :src="'https://github.com/' + user + '.png?size=64'">
+                  <img class="nes-avatar is-large is-rounded lazy" :data-src="'https://github.com/' + user + '.png?size=64'" src="https://www.gravatar.com/avatar?s=15" :alt="'Contributor ' + user">
                   <p>{{ user }}</p>
                 </a>
               </template>
@@ -173,12 +172,12 @@
               <h2 id="articles"><a href="#articles">#</a>Articles</h2>
               <article class="article-link">
                 <h3 class="title">
-                  <a href="https://medium.com/@bc_rikko/why-i-created-and-released-nes-css-ee8966bacd09" target="_blank"><i class="nes-icon medium"></i><span>Why I created and released NES.css</span></a>
+                  <a href="https://medium.com/@bc_rikko/why-i-created-and-released-nes-css-ee8966bacd09" target="_blank" rel="noopener"><i class="nes-icon medium"></i><span>Why I created and released NES.css</span></a>
                 </h3>
               </article>
               <article class="article-link">
                 <h3 class="title">
-                  <a href="https://github.blog/2019-01-20-release-radar-december-2018/#nes-css-1-0" target="_blank"><i class="nes-icon github"></i><span>Release Radar·December 2018|The GitHub Blog</span></a>
+                  <a href="https://github.blog/2019-01-20-release-radar-december-2018/#nes-css-1-0" target="_blank" rel="noopener"><i class="nes-icon github"></i><span>Release Radar·December 2018|The GitHub Blog</span></a>
                 </h3>
               </article>
           </section>
@@ -188,9 +187,9 @@
         <footer>
           <p>
             <span>&copy;2018</span>
-            <a href="https://kuroeveryday.blogspot.com/" target="_blank">Black Everyday Company</a>
+            <a href="https://kuroeveryday.blogspot.com/" target="_blank" rel="noopener">Black Everyday Company</a>
             <span>-</span>
-            <a href="https://twitter.com/bc_rikko" target="_blank">@bc_rikko</a>
+            <a href="https://twitter.com/bc_rikko" target="_blank" rel="noopener">@bc_rikko</a>
           </p>
         </footer>
 
@@ -205,4 +204,13 @@
     </div>
   </body>
   <script src="./script.js"></script>
+  <script>
+    const h = document.querySelector('head');
+    ['./lib/dialog-polyfill.css', './lib/highlight-theme.css'].forEach(a => {
+      const l = document.createElement('link');
+      l.href = a;
+      l.rel = 'stylesheet';
+      h.appendChild(l);
+    })
+  </script>
 </html>
