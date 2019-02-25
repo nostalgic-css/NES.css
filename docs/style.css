@@ -1,32 +1,77 @@
 body {
   padding: 0 2rem;
-  margin: 2rem;
+  margin: 0 2rem;
 }
 
-.wrapper {
+#nescss > .container {
   max-width: 980px;
   margin: 0 auto;
+  margin-top: 150px;
 }
 
+/* Header */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  border-bottom: 4px solid #D3D3D3;
+  background-color: white;
+}
+
+header > .container {
   display: flex;
   align-items: baseline;
-  border-bottom: 4px solid #D3D3D3;
-}
-header > .brand i.brand-logo {
-  margin-right: 1rem;
+  max-width: 980px;
+  margin: 0 auto;
+  padding-top: 1rem;
+  transition: all 0.2s ease;
 }
 
-header > .social-buttons {
-  margin-left: 2rem;
+header > .container > .nav-brand {
+  margin-right: auto;
 }
-header > .social-buttons > p {
+header > .container > .social-button {
+  margin-left: auto;
+}
+
+.nav-brand .brand-logo {
+  margin-right: 1rem;
+}
+.nav-brand > a {
+  color: #212529;
+  text-decoration: none;
+}
+
+.social-buttons p {
   margin-bottom: 0;
 }
 
+/* Header-sticky */
+header.sticky > .container {
+  font-size: 0.8rem;
+  padding: 0;
+  align-items: center;
+}
+header.sticky .nav-brand h1 {
+  margin: 0;
+}
+header.sticky .nav-brand p {
+  display: none;
+  margin-bottom: 0;
+  font-size: 0.6rem;
+}
+
+/* Main */
+.main-content {
+  margin-bottom: 4rem;
+}
+
+/* Footer */
 footer {
-  margin-top: 3rem;
   text-align: center;
+  margin-bottom: 2rem;
 }
 footer a {
   color: #333;
@@ -38,7 +83,7 @@ h2 > a {
 }
 
 .topic {
-  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 /* github link */
@@ -212,10 +257,32 @@ h3.topic-title > i {
   margin-left: 1rem;
 }
 
+/* Scroll back to top */
+.scroll-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,.6);
+}
+.scroll-btn > span {
+  display: block;
+  transform: rotateZ(90deg);
+}
+
+@media screen and (max-width: calc(980px - 4rem)) {
+  header > .container {
+    margin: 0 4rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   body {
     margin: 2rem 0.5rem;
     padding: 0;
+  }
+
+  header > .container {
+    margin: 0 0.5rem;
   }
 
   .github-link {
@@ -224,5 +291,11 @@ h3.topic-title > i {
 
   .message-list > .message > .nes-balloon {
     max-width: 60%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  #nescss > .container {
+    margin-top: 190px;
   }
 }

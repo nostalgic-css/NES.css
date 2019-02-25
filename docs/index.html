@@ -43,155 +43,164 @@
   </head>
 
   <body>
-    <div id="nescss" class="wrapper">
-      <header>
-        <div class="brand">
-          <h1><i class="snes-jp-logo brand-logo"></i>NES.css</h1>
-          <p>NES-style CSS Framework.</p>
-        </div>
+    <div id="nescss">
+      <header :class="{ sticky: scrollPos > 50 }">
+        <div class="container">
+          <div class="nav-brand">
+            <a href="https://nostalgic-css.github.io/NES.css/">
+              <h1><i class="snes-jp-logo brand-logo"></i>NES.css</h1>
+            </a>
+            <p>NES-style CSS Framework.</p>
+          </div>
 
-        <div class="social-buttons">
-          <p>Share on SNS</p>
-          <div class="share">
-            <a @click="share('twitter')"><i class="nes-icon twitter"></i></a>
-            <a @click="share('facebook')"><i class="nes-icon facebook"></i></a>
-            <a @click="share('linkedin')"><i class="nes-icon linkedin"></i></a>
-            <a @click="share('github')"><i class="nes-icon github"></i></a>
+          <div class="social-buttons">
+            <p>Share on SNS</p>
+            <div class="share">
+              <a @click="share('twitter')"><i class="nes-icon twitter"></i></a>
+              <a @click="share('facebook')"><i class="nes-icon facebook"></i></a>
+              <a @click="share('linkedin')"><i class="nes-icon linkedin"></i></a>
+              <a @click="share('github')"><i class="nes-icon github"></i></a>
+            </div>
           </div>
         </div>
       </header>
 
-      <main>
-        <a class="github-link" href="https://github.com/nostalgic-css/NES.css" target="_blank" @mouseover="startAnimate" @mouseout="stopAnimate">
-          <p class="nes-balloon from-right">Fork me<br />on GitHub</p>
-          <i class="nes-octocat" :class="animateOctocat ? 'animate' : ''"></i>
-        </a>
+      <div class="container">
+        <main class="main-content">
+          <a class="github-link" href="https://github.com/nostalgic-css/NES.css" target="_blank" @mouseover="startAnimate" @mouseout="stopAnimate">
+            <p class="nes-balloon from-right">Fork me<br />on GitHub</p>
+            <i class="nes-octocat" :class="animateOctocat ? 'animate' : ''"></i>
+          </a>
 
-        <!-- About -->
-        <section class="topic">
-          <h2 id="about"><a href="#about">#</a>About</h2>
-          <p>NES.css is NES-style (8bit-like) CSS Framework.</p>
-        </section>
+          <!-- About -->
+          <section class="topic">
+            <h2 id="about"><a href="#about">#</a>About</h2>
+            <p>NES.css is NES-style (8bit-like) CSS Framework.</p>
+          </section>
 
 
-        <!-- Installation -->
-        <section class="topic">
-          <h2 id="installation"><a href="#installation">#</a>Installation</h2>
-          <p>NES.css is available via either npm or Yarn, or a CDN.</p>
-          <p>Please read <a href="https://github.com/nostalgic-css/NES.css" target="_blank">README.md</a>.</p>
-        </section>
+          <!-- Installation -->
+          <section class="topic">
+            <h2 id="installation"><a href="#installation">#</a>Installation</h2>
+            <p>NES.css is available via either npm or Yarn, or a CDN.</p>
+            <p>Please read <a href="https://github.com/nostalgic-css/NES.css" target="_blank">README.md</a>.</p>
+          </section>
 
-        <!-- Usage -->
-        <section class="topic">
-          <h2 id="usage"><a href="#usage">#</a>Usage</h2>
-          <p>NES.css only provides components. You will need to define your own layout.</p>
+          <!-- Usage -->
+          <section class="topic">
+            <h2 id="usage"><a href="#usage">#</a>Usage</h2>
+            <p>NES.css only provides components. You will need to define your own layout.</p>
 
-          <section class="showcase" v-for="sample in collection" :key="sample">
-            <section class="nes-container with-title">
-              <h3 class="title">{{ sample.title | capitalize }}</h3>
-              <div
-                :id="sample.title"
-                class="item"
-                v-html="sample.code">
+            <section class="showcase" v-for="sample in collection" :key="sample">
+              <section class="nes-container with-title">
+                <h3 class="title">{{ sample.title | capitalize }}</h3>
+                <div
+                  :id="sample.title"
+                  class="item"
+                  v-html="sample.code">
+                </div>
+                <p v-if="sample.description" class="description nes-text">{{ sample.description }}</p>
+                <p v-if="sample.note" class="note nes-text is-error">{{ sample.note }}</p>
+                <button type="button" class="nes-btn is-primary showcode" @click="sample.showCode = !sample.showCode">&lt;&gt;</button>
+              </section>
+              <section class="samplecode" v-show="sample.showCode">
+                <button type="button" class="nes-btn copycode" @click="copy($event, sample.title)">copy</button>
+                <pre><code class="html">{{ sample.code }}</code></pre>
+              </section>
+            </section>
+          </section>
+
+          <!-- Members -->
+          <section class="topic">
+            <h2 id="members"><a href="#members">#</a>Members</h2>
+            <section class="coreteam">
+              <h3 class="topic-title"><i class="nes-icon star"></i>Core Team Members</h3>
+              <p>Here is core team members developing NES.css.</p>
+
+              <div class="coreteam-members">
+                <template v-for="member in coreteam">
+                  <section class="nes-container is-dark member-card">
+                    <div class="avatar">
+                      <img :src="'https://github.com/' + member.github + '.png?size=80'">
+                    </div>
+                    <div class="profile">
+                      <h4 class="name">{{ member.name }}</h4>
+                      <p>{{ member.feat }}</p>
+                      <div>
+                        <a :href="'https://github.com/' + member.github" target="_blank"><i class="nes-icon github"></i></a>
+                        <a :href="'https://twitter.com/' + member.twitter" target="_blank"><i class="nes-icon twitter"></i></a>
+                      </div>
+                    </div>
+                  </section>
+                </template>
               </div>
-              <p v-if="sample.description" class="description nes-text">{{ sample.description }}</p>
-              <p v-if="sample.note" class="note nes-text is-error">{{ sample.note }}</p>
-              <button type="button" class="nes-btn is-primary showcode" @click="sample.showCode = !sample.showCode">&lt;&gt;</button>
             </section>
-            <section class="samplecode" v-show="sample.showCode">
-              <button type="button" class="nes-btn copycode" @click="copy($event, sample.title)">copy</button>
-              <pre><code class="html">{{ sample.code }}</code></pre>
+            <section class="coreteam-emeriti" v-if="emeriti.length > 0">
+              <h3 class="topic-title"><i class="nes-icon trophy"></i>Core Team Emeriti</h3>
+              <p>Here we honor some no-longer-active core team members.</p>
+
+              <div class="coreteam-members">
+                <template v-for="member in emeriti">
+                  <section class="nes-container is-dark member-card">
+                    <div class="avatar">
+                      <img :src="'https://github.com/' + member.github + '.png?size=80'">
+                    </div>
+                    <div class="profile">
+                      <h4 class="name">{{ member.name }}</h4>
+                      <p>{{ member.feat }}</p>
+                      <div>
+                        <a :href="'https://github.com/' + member.github" target="_blank"><i class="nes-icon github"></i></a>
+                        <a :href="'https://twitter.com/' + member.twitter" target="_blank"><i class="nes-icon twitter"></i></a>
+                      </div>
+                    </div>
+                  </section>
+                </template>
+              </div>
+            </section>
+            <section class="contributors">
+              <h3 class="topic-title"><i class="nes-icon heart"></i>Contributors</h3>
+              <template v-for="user in contributors">
+                <a class="contributor" :href="'https://github.com/' + user" target="_black">
+                  <img class="nes-avatar is-large is-rounded" :src="'https://github.com/' + user + '.png?size=64'">
+                  <p>{{ user }}</p>
+                </a>
+              </template>
             </section>
           </section>
-        </section>
 
-        <!-- Members -->
-        <section class="topic">
-          <h2 id="members"><a href="#members">#</a>Members</h2>
-          <section class="coreteam">
-            <h3 class="topic-title"><i class="nes-icon star"></i>Core Team Members</h3>
-            <p>Here is core team members developing NES.css.</p>
-
-            <div class="coreteam-members">
-              <template v-for="member in coreteam">
-                <section class="nes-container is-dark member-card">
-                  <div class="avatar">
-                    <img :src="'https://github.com/' + member.github + '.png?size=80'">
-                  </div>
-                  <div class="profile">
-                    <h4 class="name">{{ member.name }}</h4>
-                    <p>{{ member.feat }}</p>
-                    <div>
-                      <a :href="'https://github.com/' + member.github" target="_blank"><i class="nes-icon github"></i></a>
-                      <a :href="'https://twitter.com/' + member.twitter" target="_blank"><i class="nes-icon twitter"></i></a>
-                    </div>
-                  </div>
-                </section>
-              </template>
-            </div>
+          <!-- Articles -->
+          <section class="topic">
+              <h2 id="articles"><a href="#articles">#</a>Articles</h2>
+              <article class="article-link">
+                <h3 class="title">
+                  <a href="https://medium.com/@bc_rikko/why-i-created-and-released-nes-css-ee8966bacd09" target="_blank"><i class="nes-icon medium"></i><span>Why I created and released NES.css</span></a>
+                </h3>
+              </article>
+              <article class="article-link">
+                <h3 class="title">
+                  <a href="https://github.blog/2019-01-20-release-radar-december-2018/#nes-css-1-0" target="_blank"><i class="nes-icon github"></i><span>Release Radar·December 2018|The GitHub Blog</span></a>
+                </h3>
+              </article>
           </section>
-          <section class="coreteam-emeriti" v-if="emeriti.length > 0">
-            <h3 class="topic-title"><i class="nes-icon trophy"></i>Core Team Emeriti</h3>
-            <p>Here we honor some no-longer-active core team members.</p>
 
-            <div class="coreteam-members">
-              <template v-for="member in emeriti">
-                <section class="nes-container is-dark member-card">
-                  <div class="avatar">
-                    <img :src="'https://github.com/' + member.github + '.png?size=80'">
-                  </div>
-                  <div class="profile">
-                    <h4 class="name">{{ member.name }}</h4>
-                    <p>{{ member.feat }}</p>
-                    <div>
-                      <a :href="'https://github.com/' + member.github" target="_blank"><i class="nes-icon github"></i></a>
-                      <a :href="'https://twitter.com/' + member.twitter" target="_blank"><i class="nes-icon twitter"></i></a>
-                    </div>
-                  </div>
-                </section>
-              </template>
-            </div>
-          </section>
-          <section class="contributors">
-            <h3 class="topic-title"><i class="nes-icon heart"></i>Contributors</h3>
-            <template v-for="user in contributors">
-              <a class="contributor" :href="'https://github.com/' + user" target="_black">
-                <img class="nes-avatar is-large is-rounded" :src="'https://github.com/' + user + '.png?size=64'">
-                <p>{{ user }}</p>
-              </a>
-            </template>
-          </section>
-        </section>
+        </main>
 
-        <!-- Articles -->
-        <section class="topic">
-            <h2 id="articles"><a href="#articles">#</a>Articles</h2>
-            <article class="article-link">
-              <h3 class="title">
-                <a href="https://medium.com/@bc_rikko/why-i-created-and-released-nes-css-ee8966bacd09" target="_blank"><i class="nes-icon medium"></i><span>Why I created and released NES.css</span></a>
-              </h3>
-            </article>
-            <article class="article-link">
-              <h3 class="title">
-                <a href="https://github.blog/2019-01-20-release-radar-december-2018/#nes-css-1-0" target="_blank"><i class="nes-icon github"></i><span>Release Radar·December 2018|The GitHub Blog</span></a>
-              </h3>
-            </article>
-        </section>
+        <footer>
+          <p>
+            <span>&copy;2018</span>
+            <a href="https://kuroeveryday.blogspot.com/" target="_blank">Black Everyday Company</a>
+            <span>-</span>
+            <a href="https://twitter.com/bc_rikko" target="_blank">@bc_rikko</a>
+          </p>
+        </footer>
 
-      </main>
+        <!-- Copied balloon -->
+        <div class="nes-balloon from-right copied-balloon" :style="copiedBalloon">
+          <p>copied!!</p>
+        </div>
 
-      <footer>
-        <p>
-          <span>&copy;2018</span>
-          <a href="https://kuroeveryday.blogspot.com/" target="_blank">Black Everyday Company</a>
-          <span>-</span>
-          <a href="https://twitter.com/bc_rikko" target="_blank">@bc_rikko</a>
-        </p>
-      </footer>
-
-      <!-- Copied balloon -->
-      <div class="nes-balloon from-right copied-balloon" :style="copiedBalloon">
-        <p>copied!!</p>
+        <!-- FAB Button -->
+        <button type="button" class="nes-btn is-error scroll-btn" v-show="scrollPos > 500" @click="toTop"><span>&lt;</span></button>
       </div>
     </div>
   </body>

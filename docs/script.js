@@ -557,6 +557,7 @@ new Vue({
         top: 0,
         left: 0,
       },
+      scrollPos: 0,
     };
   },
   filters: {
@@ -567,6 +568,9 @@ new Vue({
     },
   },
   mounted() {
+    document.addEventListener('scroll', () => {
+      this.scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+    });
     hljs.initHighlightingOnLoad();
     [].forEach.call(document.querySelectorAll('dialog'), (a) => {
       dialogPolyfill.registerDialog(a);
@@ -619,6 +623,15 @@ new Vue({
       setTimeout(() => {
         this.copiedBalloon.display = 'none';
       }, 1000);
+    },
+    toTop() {
+      const scrolling = setInterval(() => {
+        if (window.scrollY > 0) {
+          window.scrollBy(0, -window.scrollY / 10);
+        } else {
+          clearInterval(scrolling);
+        }
+      }, 10);
     },
   },
 });
