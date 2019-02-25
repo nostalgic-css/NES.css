@@ -12,7 +12,7 @@ NES.css is a **NES-style(8bit-like)** CSS Framework.
 
 ### Styles
 
-NES.css is available via either npm (preferred) or Yarn, or a CDN.
+NES.css is available via either npm (preferred), Yarn, or a CDN.
 
 #### via package manager
 
@@ -76,7 +76,7 @@ NES.css only requires CSS and doesn't depend on any JavaScript.
 
 ## Browser Support
 
-NES.css is compatible with the newest version of the following browsers.
+NES.css is compatible with the newest version of the following browsers:
 * Chrome
 * Firefox
 * Safari
