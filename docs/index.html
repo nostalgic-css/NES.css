@@ -66,7 +66,7 @@
 
       <div class="container">
         <main class="main-content">
-          <a class="github-link" href="https://github.com/nostalgic-css/NES.css" target="_blank" rel="noopener" @mouseover="startAnimate" @mouseout="stopAnimate">
+          <a class="github-link" :class="{ active:  scrollPos < 200 }" href="https://github.com/nostalgic-css/NES.css" target="_blank" rel="noopener" @mouseover="startAnimate" @mouseout="stopAnimate">
             <p class="nes-balloon from-right">Fork me<br />on GitHub</p>
             <i class="nes-octocat" :class="animateOctocat ? 'animate' : ''"></i>
           </a>
@@ -199,7 +199,7 @@
         </div>
 
         <!-- FAB Button -->
-        <button type="button" class="nes-btn is-error scroll-btn" v-show="scrollPos > 500" @click="toTop"><span>&lt;</span></button>
+        <button type="button" class="nes-btn is-error scroll-btn" :class="{ active: scrollPos > 500 }" @click="toTop"><span>&lt;</span></button>
       </div>
     </div>
   </body>

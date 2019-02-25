@@ -96,13 +96,17 @@ h2 > a {
 /* github link */
 .github-link {
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 100px;
+  right: -240px;
   z-index: 999;
   display: flex;
   height: 100px;
   color: #333;
   text-decoration: none;
+  transition: all 0.3s ease;
+}
+.github-link.active {
+  right: 10px;
 }
 .github-link:hover {
   text-decoration: none;
@@ -269,9 +273,13 @@ h3.topic-title > i {
 /* Scroll back to top */
 .scroll-btn {
   position: fixed;
-  bottom: 2rem;
+  bottom: -60px;
   right: 2rem;
   box-shadow: 0 5px 20px rgba(0,0,0,.6);
+  transition: all 0.3s ease;
+}
+.scroll-btn.active {
+  bottom: 25px;
 }
 .scroll-btn > span {
   display: block;
