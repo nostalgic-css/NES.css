@@ -77,11 +77,7 @@
 
 // Button groups
 .nes-btn-group {
-  .nes-btn:first-child {
-    z-index: 1;
-  }
-
-  .nes-btn{
+  .nes-btn {
     &.is-disabled {
       color: rgba($base-color, $btn-disabled-opacity);
       background-color: rgba(map-get($disabled-colors, "normal"), $btn-disabled-opacity);
@@ -92,6 +88,10 @@
     &:not(:last-child):not(:first-child)::after {
       box-shadow: inset -8px -4px map-get($default-colors, "shadow");
     }
+  }
+
+  .nes-btn:first-child {
+    z-index: 1;
   }
 
   @for $i from 0 to $max-btn-group-items {
