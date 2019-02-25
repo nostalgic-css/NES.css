@@ -14,7 +14,13 @@
     <title>NES.css - NES-style CSS Framework</title>
 
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+    <!-- Use this for official demo -->
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+
+    <!-- Use this one for local development -->
+    <!-- <link href="./css/nes.css" rel="stylesheet" /> -->
+
     <link href="./demo/style.css" rel="stylesheet" />
     <script async src="./demo/lib/dialog-polyfill.js"></script>
     <link async rel="stylesheet" type="text/css" href="dialog-polyfill.css" />
@@ -56,6 +62,14 @@
         <button type="button" class="nes-btn is-warning">Warning</button>
         <button type="button" class="nes-btn is-error">Error</button>
         <button type="button" class="nes-btn is-disabled">Disabled</button>
+        <div class="nes-btn-group">
+          <button type="button" class="nes-btn">this</button>
+          <button type="button" class="nes-btn is-disabled">...</button>
+          <button type="button" class="nes-btn is-primary">is</button>
+          <button type="button" class="nes-btn is-success">a</button>
+          <button type="button" class="nes-btn is-warning">button</button>
+          <button type="button" class="nes-btn is-error">group</button>
+        </div>
       </div>
       <button type="button" class="nes-btn is-error show-code" id="show-buttons-code">&lt;&gt;</button>
       <span class="nes-balloon from-right copied" id="copied-buttons">Copied!</span>
@@ -869,7 +883,7 @@
           <i class="nes-icon linkedin"></i>
           <i class="nes-icon linkedin is-medium"></i>
           <i class="nes-icon linkedin is-large"></i>
-          
+
           <i class="nes-icon instagram is-small"></i>
           <i class="nes-icon instagram"></i>
           <i class="nes-icon instagram is-medium"></i>
