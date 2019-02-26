@@ -282,8 +282,8 @@ h3.topic-title > i {
   transform: rotateZ(90deg);
 }
 
-.lazy {
-  background-color: #006bb3;
+img.lazy {
+  background-color: #D3D3D3;
 }
 
 @media screen and (max-width: calc(980px - 4rem)) {
