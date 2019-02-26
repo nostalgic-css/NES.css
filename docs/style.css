@@ -1,13 +1,5 @@
-@font-face {
-  font-family: "Press Start 2P";
-  src: local("Press Start 2P"), url(https://fonts.googleapis.com/css?family=Press+Start+2P), sans-serif;
-  font-style: normal;
-  font-display: swap;
-}
-
-html, body, pre, code, kbd, samp {
-  font-family: "Press Start 2P", sans-serif;
-}
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 
 body {
   padding: 0 2rem;
