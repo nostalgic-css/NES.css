@@ -636,14 +636,5 @@ new Vue({
         this.copiedBalloon.display = 'none';
       }, 1000);
     },
-    toTop() {
-      const scrolling = setInterval(() => {
-        if (window.scrollY > 0) {
-          window.scrollBy(0, -window.scrollY / 10);
-        } else {
-          clearInterval(scrolling);
-        }
-      }, 10);
-    },
   },
 });
