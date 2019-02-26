@@ -1,28 +1,30 @@
 import { storiesOf } from '@storybook/html'; // eslint-disable-line import/no-extraneous-dependencies
 import { // eslint-disable-line import/no-extraneous-dependencies
-  withKnobs, radios,
+  withKnobs, radios, boolean,
 } from '@storybook/addon-knobs';
 
 const stories = storiesOf('Inputs', module);
 stories.addDecorator(withKnobs);
 
-stories.add('input.radio', () => `
-      <label>
-        <input type="radio" class="nes-radio" name="answer" checked />
-        <span>Yes</span>
-      </label> <label>
-        <input type="radio" class="nes-radio" name="answer" />
-        <span>No</span>
-      </label>`)
+stories.add('input.radio', () => {
+  const isDark = boolean('is-dark', false) ? 'is-dark' : '';
+
+  return (`
+    <label>
+      <input type="radio" class="nes-radio ${isDark}" name="answer" checked />
+      <span>Yes</span>
+    </label> <label>
+      <input type="radio" class="nes-radio ${isDark}" name="answer" />
+      <span>No</span>
+    </label>`
+  );
+})
   .add('input.checkbox', () => {
-    const selectedClass = radios('class', {
-      default: '',
-      'is-dark': 'is-dark',
-    }, '');
+    const isDark = boolean('is-dark', false) ? 'is-dark' : '';
 
     return (
       `<label>
-        <input type="checkbox" class="nes-checkbox ${selectedClass}" checked />
+        <input type="checkbox" class="nes-checkbox ${isDark}" checked />
         <span>Enable</span>
       </label>`
     );
