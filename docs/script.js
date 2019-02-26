@@ -32,7 +32,7 @@ const sampleCollection = [
   <span>No</span>
 </label>
 
-<div style="background-color:#212529; padding: 1rem;">
+<div style="background-color:#212529; padding: 1rem 0;">
   <label>
     <input type="radio" class="nes-radio is-dark" name="answer-dark" checked />
     <span>Yes</span>
@@ -52,7 +52,7 @@ const sampleCollection = [
   <span>Enable</span>
 </label>
 
-<div style="background-color:#212529; padding: 1rem;">
+<div style="background-color:#212529; padding: 1rem 0;">
   <label>
     <input type="checkbox" class="nes-checkbox is-dark" checked />
     <span>Dark</span>
