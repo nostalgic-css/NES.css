@@ -9,11 +9,12 @@ stories.addDecorator(withKnobs);
 stories.add('input.radio', () => {
   const isDark = boolean('is-dark', false) ? 'is-dark' : '';
 
-  return (`
-    <label>
+  return (
+    `<label>
       <input type="radio" class="nes-radio ${isDark}" name="answer" checked />
       <span>Yes</span>
-    </label> <label>
+    </label>
+    <label>
       <input type="radio" class="nes-radio ${isDark}" name="answer" />
       <span>No</span>
     </label>`
