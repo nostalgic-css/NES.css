@@ -313,7 +313,7 @@ const sampleCollection = [
     showCode: false,
     code: `<section class="message-list">
   <section class="message -left">
-  <i class="nes-bcrikko"></i>
+    <i class="nes-bcrikko"></i>
     <!-- Balloon -->
     <div class="nes-balloon from-left">
       <p>Hello NES.css</p>
