@@ -530,6 +530,46 @@ const emeriti = [
   },
 ];
 
+// https://api.github.com/repos/nostalgic-css/NES.css/contributors?per_page=100 | jq . '.[].login'
+const contributors = [
+  '4k1k0',
+  'sombreroEnPuntas',
+  'Divoolej',
+  'soph-iest',
+  'KeevanDance',
+  'montezume',
+  'sazzadsazib',
+  'jjspace',
+  'ohlookitsderpy',
+  'jdvivar',
+  'Ilyeo',
+  'youngkaneda',
+  'kenshinji',
+  'Kartones',
+  'IngwiePhoenix',
+  'Takumi0901',
+  'Baldomo',
+  'ernestomancebo',
+  'stewartrule',
+  'DanSnow',
+  'rrj-dev',
+  'vicainelli',
+  'sinofp',
+  'tnantoka',
+  'LukBukkit',
+  'd0p1s4m4',
+  'musavvirahmed',
+  'KOREAN139',
+  'loo41',
+  'otaviopace',
+  'alexgleason',
+  'fleeting',
+  'scottaohara',
+  'JamesIves',
+  'agarzola',
+  'jsoref',
+];
+
 new Vue({
   el: '#nescss',
   data() {
@@ -537,7 +577,7 @@ new Vue({
       collection: sampleCollection,
       coreteam,
       emeriti,
-      contributors: [],
+      contributors,
       animateOctocat: false,
       copiedBalloon: {
         display: 'none',
@@ -554,9 +594,6 @@ new Vue({
       return val.charAt(0).toUpperCase() + val.slice(1);
     },
   },
-  created() {
-    this.fetchContributors();
-  },
   mounted() {
     document.addEventListener('scroll', () => {
       this.scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
@@ -565,6 +602,7 @@ new Vue({
     [].forEach.call(document.querySelectorAll('dialog'), (a) => {
       dialogPolyfill.registerDialog(a);
     });
+    this.replaceImages();
   },
   methods: {
     share(media) {
@@ -613,21 +651,6 @@ new Vue({
       setTimeout(() => {
         this.copiedBalloon.display = 'none';
       }, 1000);
-    },
-    async fetchContributors() {
-      try {
-        const res = await fetch('https://api.github.com/repos/nostalgic-css/NES.css/contributors');
-        const json = await res.json();
-
-        const coreMembers = [...this.coreteam, ...this.emeriti].map(a => a.github);
-        this.contributors = json.filter(a => !coreMembers.includes(a.login)).map(a => a.login);
-      } catch (e) {
-        console.error(e);
-        return;
-      }
-
-      await this.$nextTick();
-      this.replaceImages();
     },
     replaceImages() {
       Array.from(document.querySelectorAll('img.lazy')).forEach((img) => {
