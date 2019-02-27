@@ -16,7 +16,7 @@
 
   border-image-slice: 3;
   border-image-width: 3;
-  border-image-repeat: space;
+  border-image-repeat: stretch;
 
   @if $isDark {
     @include border-image($color-white);
@@ -34,7 +34,7 @@
 
   border-image-slice: 2;
   border-image-width: 2;
-  border-image-repeat: space;
+  border-image-repeat: stretch;
 
   @if $isDark {
     @include compact-border-image($color-white);
