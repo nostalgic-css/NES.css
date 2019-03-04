@@ -12,13 +12,13 @@
 }
 
 @mixin border-image-chrome() {
-  @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
+  @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
     border-image-repeat: space;
   }
 }
 
 @mixin border-image-ff() {
-  @-moz-document url-prefix() {
+  @supports (-moz-appearance: meterbar) {
     border-image-repeat: stretch;
   }
 }
