@@ -3,7 +3,6 @@ import {
   addParameters,
   configure,
 } from '@storybook/html';
-import { withBackgrounds } from '@storybook/addon-backgrounds';
 /* eslint-enable */
 
 import '../scss/nes.scss'; // eslint-disable-line import/no-unresolved
