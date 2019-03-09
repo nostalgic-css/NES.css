@@ -30,7 +30,6 @@
 
   border-image-slice: 3;
   border-image-width: 3;
-  border-image-repeat: stretch;
 
   @include border-image-repeat();
 
@@ -50,7 +49,6 @@
 
   border-image-slice: 2;
   border-image-width: 2;
-  border-image-repeat: stretch;
 
   @include border-image-repeat();
 
