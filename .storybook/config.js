@@ -1,9 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import {
-  addDecorator,
+  addParameters,
   configure,
 } from '@storybook/html';
-import { withBackgrounds } from '@storybook/addon-backgrounds';
 /* eslint-enable */
 
 import '../scss/nes.scss'; // eslint-disable-line import/no-unresolved
@@ -14,7 +13,7 @@ function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
 
-addDecorator(withBackgrounds([
+const options = [
   { name: 'Blue', value: 'blue' },
   { name: 'Green', value: 'green' },
   { name: 'Yellow', value: 'yellow' },
@@ -23,6 +22,8 @@ addDecorator(withBackgrounds([
   { name: 'Purple', value: 'purple' },
   { name: 'Black', value: 'black' },
   { name: 'White', value: 'white', default: true },
-]));
+];
+
+addParameters({ backgrounds: options });
 
 configure(loadStories, module);
