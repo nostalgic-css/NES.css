@@ -12,7 +12,7 @@ NES.css é um Framework CSS, no **estilo NES(8bit)**.
 
 ### Estilos
 
-NES.css está disponível seja através do npm (preferível) ou Yarn, ou pelo CDN.
+NES.css está disponível seja através do npm (preferível) ou do Yarn, ou pelo CDN.
 
 #### via gerenciador de pacotes
 
@@ -22,8 +22,8 @@ npm install nes.css
 yarn add nes.css
 ```
 
-Nosso `package.json` contém alguns metadata adicionais, sob as seguintes chaves:
-* `sass` - caminho para nosso arquivo fronte Sass principal
+Nosso `package.json` contém alguns metadatas adicionais, sob as seguintes chaves:
+* `sass` - caminho para nosso arquivo fonte Sass principal
 * `style` - caminho para nosso CSS não-minificado
 
 ### via CDN
@@ -90,7 +90,7 @@ Código e documentação copyright 2018 [B.C.Rikko](https://github.com/BcRikko).
 
 ## Desenvolvimento
 
-Se você quiser nos ajudar com o projeto, nós agradecemos contribuições de todos os tipos! Verifique nosso [`CONTRIBUTING-pt-BR.md`][contributing-document] para mais detalhes em como você pode ajudar a tornar o NES.css incrível!
+Se você quiser nos ajudar com o projeto, nós agradecemos as contribuições de todos os tipos! Verifique nosso [`CONTRIBUTING-pt-BR.md`][contributing-document] para mais detalhes como você pode ajudar a tornar o NES.css incrível!
 
 
 
