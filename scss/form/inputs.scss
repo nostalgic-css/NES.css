@@ -11,6 +11,7 @@
   width: 100%;
   padding: 0.5rem 1rem;
   margin: 4px;
+  background-clip: padding-box;
 
   &.is-dark {
     @include border-style(map-get($default-colors, "normal"), map-get($default-colors, "hover"));
