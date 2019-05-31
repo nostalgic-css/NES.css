@@ -56,7 +56,7 @@
   &.is-disabled:hover,
   &.is-disabled:focus {
     color: $base-color;
-    cursor: not-allowed;
+    cursor: $cursor-disable-url, pointer;
     background-color: map-get($disabled-colors, "normal");
     box-shadow: inset -4px -4px map-get($disabled-colors, "shadow");
     opacity: 0.6;
