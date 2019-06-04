@@ -80,6 +80,11 @@ const sampleCollection = [
 <div class="nes-field is-inline">
   <label for="error_field">.input.is-error</label>
   <input type="text" id="error_field" class="nes-input is-error" placeholder="awesome.css">
+</div>
+
+<div style="background-color:#212529; padding: 1rem;" class="nes-field is-inline">
+  <label for="dark_field" style="color:#fff;">.input.is-dark</label>
+  <input type="text" id="dark_field" class="nes-input is-dark" placeholder="dark.css">
 </div>`,
   },
   {
@@ -125,6 +130,17 @@ const sampleCollection = [
     <option value="0">To be</option>
     <option value="1">Not to be</option>
   </select>
+</div>
+
+<div style="background-color:#212529; padding: 1rem 1.2rem 1rem 1rem;width:calc(100% + 8px)">
+  <label for="dark_select" style="color:#fff">nes-select.is-dark</label>
+  <div class="nes-select is-dark">
+    <select required id="dark_select">
+      <option value="" disabled selected hidden>Select...</option>
+      <option value="0">To be</option>
+      <option value="1">Not to be</option>
+    </select>
+  </div>
 </div>`,
   },
   {
