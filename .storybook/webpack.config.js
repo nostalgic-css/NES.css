@@ -1,11 +1,21 @@
 const path = require('path');
+const scssFunctions = require('../scripts/scssFunctions');
 
 module.exports = {
   module: {
     rules: [
       {
         test: /\.scss$/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          {
+            loader: 'sass-loader',
+            options: {
+              functions: scssFunctions,
+            },
+          },
+        ],
         include: path.resolve(__dirname, '../'),
       },
       {
