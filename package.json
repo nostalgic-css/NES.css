@@ -71,7 +71,7 @@
     "prettier": "^1.15.2",
     "rimraf": "^2.6.2",
     "sass-loader": "^7.1.0",
-    "semantic-release": "^15.13.13",
+    "semantic-release": "^15.13.14",
     "style-loader": "^0.23.1",
     "stylelint": "^9.5.0",
     "stylelint-config-prettier": "^4.0.0",
