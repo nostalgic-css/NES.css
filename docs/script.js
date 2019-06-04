@@ -132,7 +132,7 @@ const sampleCollection = [
   </select>
 </div>
 
-<div style="background-color:#212529; padding: 1rem 1.2rem 1rem 1rem;width:calc(100% + 7px)">
+<div style="background-color:#212529; padding: 1rem 1.2rem 1rem 1rem;width:calc(100% + 8px)">
   <label for="dark_select" style="color:#fff">nes-select.is-dark</label>
   <div class="nes-select is-dark">
     <select required id="dark_select">
