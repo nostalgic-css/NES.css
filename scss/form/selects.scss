@@ -30,6 +30,11 @@
     }
   }
 
+  &.is-dark select {
+    color: $background-color;
+    background-color: $base-color;
+  }
+
   &::after {
     @include pixelize(3px, $dropdown, $colors);
 
@@ -44,7 +49,8 @@
   $types:
     "success" map-get($success-colors, "normal") map-get($success-colors, "hover"),
     "warning" map-get($warning-colors, "normal") map-get($warning-colors, "hover"),
-    "error" map-get($error-colors, "normal") map-get($error-colors, "hover");
+    "error" map-get($error-colors, "normal") map-get($error-colors, "hover"),
+    "dark" map-get($default-colors, "normal") map-get($default-colors, "hover");
 
   @each $type in $types {
     &.is-#{nth($type, 1)} {

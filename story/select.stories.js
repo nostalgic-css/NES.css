@@ -12,6 +12,7 @@ stories.add('select', () => {
     'is-success': 'is-success',
     'is-warning': 'is-warning',
     'is-error': 'is-error',
+    'is-dark': 'is-dark',
   }, '');
 
   return `
