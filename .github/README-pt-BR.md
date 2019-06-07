@@ -32,7 +32,7 @@ Importe o CSS através de um elemento `<link />`:
 
 ```html
 <!-- minify -->
-<link href="https://unpkg.com/nes.css@2.1.0/css/nes.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
 <!-- latest -->
 <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
 <!-- core style only -->
@@ -43,13 +43,13 @@ Importe o CSS através de um elemento `<link />`:
 
 NES.css não fornece nenhuma fonte, mas nós mantemos uma lista de fontes recomendadas por nós para a utilização em conjunto com a biblioteca.
 
-| Idioma  | Fonte                                                               |
-|-----------|--------------------------------------------------------------------|
+| Idioma   | Fonte                                                              |
+| -------- | ------------------------------------------------------------------ |
 | (Padrão) | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) |
 | Inglês   | [Kongtext](https://www.dafont.com/kongtext.font)                   |
-| Japonês  | [美咲フォント](http://littlelimit.net/misaki.htm)          |
-| Japonês  | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                  |
-| Coreano  | [둥근모꼴](http://cactus.tistory.com/193)                            |
+| Japonês  | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
+| Japonês  | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
+| Coreano  | [둥근모꼴](http://cactus.tistory.com/193)                              |
 
 ## Utilização
 
