@@ -32,7 +32,7 @@ yarn add nes.css
 
 ```html
 <!-- 圧縮版 -->
-<link href="https://unpkg.com/nes.css@2.1.0/css/nes.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
 <!-- 最新版 -->
 <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
 <!-- コアスタイルのみ -->
@@ -43,13 +43,13 @@ yarn add nes.css
 
 NES.cssはいかなるフォントも提供していませんが、ライブラリと一緒に使用をお勧めするフォントリストを整備しています。
 
-| 言語       | フォント                                                               |
-|-----------|--------------------------------------------------------------------|
+| 言語         | フォント                                                           |
+| ------------ | ------------------------------------------------------------------ |
 | (デフォルト) | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) |
-| 英語      | [Kongtext](https://www.dafont.com/kongtext.font)                   |
-| 日本語    | [美咲フォント](http://littlelimit.net/misaki.htm)          |
-| 日本語    | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                  |
-| 韓国語    | [둥근모꼴](http://cactus.tistory.com/193)                            |
+| 英語         | [Kongtext](https://www.dafont.com/kongtext.font)                   |
+| 日本語       | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
+| 日本語       | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
+| 韓国語       | [둥근모꼴](http://cactus.tistory.com/193)                              |
 
 ## 使い方
 

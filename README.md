@@ -32,7 +32,7 @@ Import the CSS via a `<link />` element:
 
 ```html
 <!-- minify -->
-<link href="https://unpkg.com/nes.css@2.1.0/css/nes.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
 <!-- latest -->
 <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
 <!-- core style only -->
@@ -44,12 +44,12 @@ Import the CSS via a `<link />` element:
 NES.css doesn't provide any fonts, but we do maintain the following list of fonts that we recommend for usage alongside the library.
 
 | Language  | Font                                                               |
-|-----------|--------------------------------------------------------------------|
+| --------- | ------------------------------------------------------------------ |
 | (Default) | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) |
 | English   | [Kongtext](https://www.dafont.com/kongtext.font)                   |
-| Japanese  | [美咲フォント](http://littlelimit.net/misaki.htm)          |
-| Japanese  | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                  |
-| Korean    | [둥근모꼴](http://cactus.tistory.com/193)                            |
+| Japanese  | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
+| Japanese  | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
+| Korean    | [둥근모꼴](http://cactus.tistory.com/193)                              |
 
 ## Usage
 
