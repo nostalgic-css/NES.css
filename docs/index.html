@@ -14,7 +14,7 @@
 
     <title>NES.css - NES-style CSS Framework</title>
 
-    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
     <script src="./lib/vue.min.js"></script>
 
@@ -55,10 +55,10 @@
           <div class="social-buttons">
             <p>Share on SNS</p>
             <div class="share">
-              <a @click="share('twitter')"><i class="nes-icon twitter"></i></a>
-              <a @click="share('facebook')"><i class="nes-icon facebook"></i></a>
-              <a @click="share('linkedin')"><i class="nes-icon linkedin"></i></a>
-              <a @click="share('github')"><i class="nes-icon github"></i></a>
+              <a href="https://twitter.com/share?text=NES.css%EF%BD%9CNES-style%20CSS%20Framework%20%40bc_rikko&url=https://nostalgic-css.github.io/NES.css/" target="_blank"><i class="nes-icon twitter"></i></a>
+              <a href="https://www.facebook.com/sharer.php?u=https://nostalgic-css.github.io/NES.css/&t=NES.css%EF%BD%9CNES-style%20CSS%20Framework" target="_blank"><i class="nes-icon facebook"></i></a>
+              <a href="https://www.linkedin.com/shareArticle?url=https%3A//nostalgic-css.github.io/NES.css/&title=NES.css%EF%BD%9CNES-style%20CSS%20Framework" target="_blank"><i class="nes-icon linkedin"></i></a>
+              <a href="https://github.com/nostalgic-css/NES.css" target="_blank"><i class="nes-icon github"></i></a>
             </div>
           </div>
         </div>
@@ -127,7 +127,7 @@
                       <p>{{ member.feat }}</p>
                       <div>
                         <a :href="'https://github.com/' + member.github" target="_blank" rel="noopener" aria-label="github"><i class="nes-icon github"></i></a>
-                        <a :href="'https://twitter.com/' + member.twitter" target="_blank" rel="noopener" aria-label="twitter"><i class="nes-icon twitter"></i></a>
+                        <a v-if="member.twitter" :href="'https://twitter.com/' + member.twitter" target="_blank" rel="noopener" aria-label="twitter"><i class="nes-icon twitter"></i></a>
                       </div>
                     </div>
                   </section>
@@ -149,7 +149,7 @@
                       <p>{{ member.feat }}</p>
                       <div>
                         <a :href="'https://github.com/' + member.github" target="_blank" rel="noopener" aria-label="github"><i class="nes-icon github"></i></a>
-                        <a :href="'https://twitter.com/' + member.twitter" target="_blank" rel="noopener" aria-label="twitter"><i class="nes-icon twitter"></i></a>
+                        <a v-if="member.twitter" :href="'https://twitter.com/' + member.twitter" target="_blank" rel="noopener" aria-label="twitter"><i class="nes-icon twitter"></i></a>
                       </div>
                     </div>
                   </section>

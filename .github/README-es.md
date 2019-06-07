@@ -32,7 +32,7 @@ Importa el CSS utiliando un elemento `<link />`:
 
 ```html
 <!-- minificado -->
-<link href="https://unpkg.com/nes.css@2.1.0/css/nes.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
 <!-- último -->
 <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
 <!-- solo estilo del núcleo -->
@@ -43,13 +43,13 @@ Importa el CSS utiliando un elemento `<link />`:
 
 NES.css no contiene ninguna tipografía, pero recomendamos la siguiente lista de tipografías para utilizar junto a la biblioteca.
 
-| Idioma  | Tipografía                                                               |
-|-----------|--------------------------------------------------------------------|
+| Idioma    | Tipografía                                                         |
+| --------- | ------------------------------------------------------------------ |
 | (Default) | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) |
-| Inglés   | [Kongtext](https://www.dafont.com/kongtext.font)                   |
-| Japonés  | [美咲フォント](http://littlelimit.net/misaki.htm)          |
-| Japonés  | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                  |
-| Coreano  | [둥근모꼴](http://cactus.tistory.com/193)                            |
+| Inglés    | [Kongtext](https://www.dafont.com/kongtext.font)                   |
+| Japonés   | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
+| Japonés   | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
+| Coreano   | [둥근모꼴](http://cactus.tistory.com/193)                              |
 
 ## Uso
 
