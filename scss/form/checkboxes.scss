@@ -52,6 +52,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  visibility: hidden;
 
   & + span {
     position: relative;
