@@ -52,8 +52,11 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  visibility: hidden;
 
+  background: $color-white;
+  width: 1px;
+  height: 1px;
+  border: 0;
   & + span {
     position: relative;
     cursor: $cursor-click-url, pointer;
@@ -83,6 +86,7 @@
     @include pixelize(2px, $checkbox-checked-focus, $colors);
   }
   &.is-dark {
+    background: $base-color;
     + span {
       color: $color-white;
     }
