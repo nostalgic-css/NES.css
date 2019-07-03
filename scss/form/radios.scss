@@ -27,10 +27,7 @@
   -moz-appearance: none;
   appearance: none;
 
-  background: $color-white;
-  width: 1px;
-  height: 1px;
-  border: 0;
+  @include visually-hidden();
 
   & + span {
     position: relative;
@@ -57,7 +54,6 @@
     @include pixelize(2px, $radio-checked-focus, $colors);
   }
   &.is-dark {
-    background: $base-color;
     + span {
       color: $color-white;
     }
