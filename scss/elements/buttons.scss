@@ -12,8 +12,7 @@
     box-shadow: inset -4px -4px $shadow;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: inherit;
     text-decoration: none;
     background-color: $hover-background;
@@ -21,6 +20,10 @@
     &::after {
       box-shadow: inset -6px -6px $shadow;
     }
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 6px rgba($shadow, 0.3);
   }
 
   &:active:not(.is-disabled)::after {
