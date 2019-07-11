@@ -11,7 +11,7 @@ const sampleCollection = [
   {
     title: 'buttons',
     showCode: false,
-    code: `<a class="nes-btn">Normal</a>
+    code: `<a class="nes-btn" href="#">Normal</a>
 
 <button type="button" class="nes-btn is-primary">Primary</button>
 <button type="button" class="nes-btn is-success">Success</button>
