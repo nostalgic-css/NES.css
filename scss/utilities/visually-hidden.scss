@@ -1,0 +1,13 @@
+/* https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939 */
+@mixin visually-hidden() {
+  // position: absolute;
+  // margin: -1px;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+  clip-path: inset(50%);
+}
