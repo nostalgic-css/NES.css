@@ -23,7 +23,7 @@ yarn add nes.css
 ```
 
 Nosso `package.json` contém alguns metadata adicionais, sob as seguintes chaves:
-* `sass` - caminho para nosso arquivo fronte Sass principal
+* `sass` - caminho para nosso arquivo de código fonte principal Sass
 * `style` - caminho para nosso CSS não-minificado
 
 ### via CDN
