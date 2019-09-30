@@ -32,7 +32,7 @@ yarn add nes.css
 
 ```html
 <!-- Миницифированные -->
-<link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/nes.css@2.2.1/css/nes.min.css" rel="stylesheet" />
 <!-- Последние -->
 <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
 <!-- Только основные стили -->
@@ -44,12 +44,12 @@ yarn add nes.css
 NES.css не предоставляет никаких шрифтов, но мы поддерживаем следующие шрифты, которые рекомендуются к использованию с этой билиотекой
 
 | Язык         | Шрифт                                                              |
-|--------------|--------------------------------------------------------------------|
+| ------------ | ------------------------------------------------------------------ |
 | По умолчанию | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) |
 | Английский   | [Kongtext](https://www.dafont.com/kongtext.font)                   |
 | Японский     | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
 | Японский     | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
-| Корейский    | [둥근모꼴](http://cactus.tistory.com/193)                          |
+| Корейский    | [둥근모꼴](http://cactus.tistory.com/193)                              |
 
 ## Использование
 
