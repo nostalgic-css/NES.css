@@ -53,6 +53,8 @@
   -moz-appearance: none;
   appearance: none;
 
+  @include visually-hidden();
+
   & + span {
     position: relative;
     cursor: $cursor-click-url, pointer;
