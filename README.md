@@ -4,7 +4,7 @@
   <a href=".github/README-jp.md">日本語</a> / <a href=".github/README-zh-CN.md">简体中文</a> / <a href=".github/README-es.md">Español</a> / <a href=".github/README-pt-BR.md">Português</a> / <a href=".github/README-ru.md">Русский</a>
 </div>
 
-NES.css is a **NES-style(8bit-like)** CSS Framework.
+NES.css is a **NES-style(8bit-like)** CSS Framework. [Official Site](https://nostalgic-css.github.io/NES.css/) / [DEMO](https://bschulte.github.io/nes-react/)
 
 [![Gitter][gitter-badge]][gitter] [![Commitizen friendly][commitizen-badge]][commitizen]
 
@@ -92,7 +92,18 @@ Code and documentation copyright 2018 [B.C.Rikko](https://github.com/BcRikko). C
 
 If you'd like to help us out with the project, we welcome contributions of all types! Check out our [`CONTRIBUTING.md`][contributing-document] for more details on how you can help make NES.css amazing!
 
+## Examples
+See projects that using NES.css
+* https://croak.io/
+* https://joshuatwomey.herokuapp.com/
+* https://codesandbox.io/embed/vue-todo-with-vuex-urglz
 
+
+## Resources
+A list of videos and tutorials that help you learn NES.css
+* [NES.css Tutorial - Cool Retro Design CSS Framework](https://redstapler.co/nes-css-tutorial/)
+* https://kopiding.in/framework-css-kok-8-bit-kenalan-yuk-sama-nes-css/
+* https://www.youtube.com/watch?time_continue=300&v=DfEFv8pmfiQ
 
 
 
