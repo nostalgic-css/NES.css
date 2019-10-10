@@ -8,7 +8,7 @@
 
   @include compact-rounded-corners();
 
-  width: 100%;
+  width: calc(100% -  #{2*$border-size});
   padding: 0.5rem 1rem;
   margin: 4px;
   background-clip: padding-box;
