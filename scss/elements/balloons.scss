@@ -1,3 +1,27 @@
+@mixin box-shadow($color, $fromLeft: true) {
+  @if $fromLeft {
+    // prettier-ignore
+    box-shadow:
+      -4px 0,
+      4px 0,
+      -4px 4px $color,
+      0 4px,
+      -8px 4px,
+      -4px 8px,
+      -8px 8px;
+  } @else {
+    // prettier-ignore
+    box-shadow:
+      -4px 0,
+      4px 0,
+      4px 4px $color,
+      0 4px,
+      8px 4px,
+      4px 8px,
+      8px 8px;
+  }
+}
+
 .nes-balloon {
   @include rounded-corners();
 
@@ -16,6 +40,45 @@
   &::after {
     position: absolute;
     content: "";
+  }
+
+  &.is-dark {
+    @include rounded-corners(true);
+    background: $base-color;
+    color: $background-color;
+    border-image-outset: 2;
+    box-shadow: 0px 0px 0 8px $base-color;
+
+    &.from-left,
+    &.from-right {
+      &::before {
+        background-color: $base-color;
+        border-color: $background-color;
+      }
+
+      &::after {
+        color: $background-color;
+        background-color: $base-color;
+      }
+    }
+
+    &.from-left {
+      &::before {
+        box-shadow: -5px 10px 0 6px $base-color;
+      }
+      &::after {
+        @include box-shadow($base-color);
+      }
+    }
+
+    &.from-right {
+      &::before {
+        box-shadow: 5px 10px 0 6px $base-color;
+      }
+      &::after {
+        @include box-shadow($base-color, false);
+      }
+    }
   }
 
   &.from-left {
@@ -40,15 +103,7 @@
       margin-right: 8px;
       color: $base-color;
       background-color: $background-color;
-      // prettier-ignore
-      box-shadow:
-        -4px 0,
-        4px 0,
-        -4px 4px $background-color,
-        0 4px,
-        -8px 4px,
-        -4px 8px,
-        -8px 8px;
+      @include box-shadow($background-color);
     }
   }
 
@@ -73,15 +128,7 @@
       height: 4px;
       margin-left: 8px;
       background-color: $background-color;
-      // prettier-ignore
-      box-shadow:
-        -4px 0,
-        4px 0,
-        4px 4px $background-color,
-        0 4px,
-        8px 4px,
-        4px 8px,
-        8px 8px;
+      @include box-shadow($background-color, false);
     }
   }
 }
