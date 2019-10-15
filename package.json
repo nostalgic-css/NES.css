@@ -39,6 +39,9 @@
     "nes",
     "framework"
   ],
+  "engines": {
+    "node": "10.x"
+  },
   "author": "BcRikko (https://github.com/Bcrikko)",
   "license": "MIT",
   "bugs": {
