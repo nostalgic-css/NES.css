@@ -107,7 +107,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm run prebuild:stylelint && lint-staged"
     }
   },
   "lint-staged": {
