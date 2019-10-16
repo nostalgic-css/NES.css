@@ -35,7 +35,8 @@ We're really happy you want to contribute to the project! ❤️ The following s
     ```sh
     $ npm install
     ```
-3. Start up the dev server:
+3. Start up the dev server:  
+    To view all available components in an interactive interface, use storybook.
     ```sh
     $ npm run storybook
     ```
