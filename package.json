@@ -112,7 +112,9 @@
   },
   "lint-staged": {
     "scss/**/*.scss": [
-      "npm run postbuild"
+      "npm run prebuild:stylelint",
+      "npm run postbuild",
+      "git add"
     ],
     "*.js": [
       "eslint '.storybook/**/*.js' 'story/**/*.js'"
