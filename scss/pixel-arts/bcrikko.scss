@@ -35,5 +35,6 @@
     background: transparent;
 
     @include pixelize($size, $bcrikko, $bcrikko-colors);
+    @include fill-gaps();
   }
 }

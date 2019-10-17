@@ -45,5 +45,6 @@
     background: transparent;
 
     @include pixelize($size, $smartphone, $smartphone-colors);
+    @include fill-gaps();
   }
 }

@@ -33,5 +33,6 @@
     background: transparent;
 
     @include pixelize($size, $ash, $ash-colors);
+    @include fill-gaps();
   }
 }

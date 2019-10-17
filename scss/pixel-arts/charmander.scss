@@ -36,5 +36,6 @@
     background: transparent;
 
     @include pixelize($size, $charmander, $charmander-colors);
+    @include fill-gaps();
   }
 }

@@ -35,5 +35,6 @@
     background: transparent;
 
     @include pixelize($size, $squirtle, $squirtle-colors);
+    @include fill-gaps();
   }
 }
