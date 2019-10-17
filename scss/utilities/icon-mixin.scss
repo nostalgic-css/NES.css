@@ -51,6 +51,7 @@
   height: $size;
   color: $default-color;
   box-shadow: unquote($ret);
+  transform: rotate(0.0001deg);
 
   // firefox only style
   @supports (-moz-appearance: meterbar) {
