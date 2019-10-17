@@ -17,7 +17,12 @@ const sampleCollection = [
 <button type="button" class="nes-btn is-success">Success</button>
 <button type="button" class="nes-btn is-warning">Warning</button>
 <button type="button" class="nes-btn is-error">Error</button>
-<button type="button" class="nes-btn is-disabled">Disabled</button>`,
+<button type="button" class="nes-btn is-disabled">Disabled</button>
+
+<label class="nes-btn">
+  <span>Select your file</span>
+  <input type="file">
+</label>`,
   },
   {
     title: 'radios',
@@ -362,7 +367,7 @@ const sampleCollection = [
     showCode: false,
     code: `<p class="nes-balloon from-left nes-pointer">
   This is not a clickable element, but it's an area of the pointer.
-</p>`
+</p>`,
   },
   {
     title: 'badges',
