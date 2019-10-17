@@ -35,7 +35,8 @@ Este proyecto se apega al Código de Conducta convenido para Contribuyentes. Al 
     ```sh
     $ npm install
     ```
-3. Ejecuta el servidor de desarrollo:
+3. Ejecuta el servidor de desarrollo:  
+    To view all available components in an interactive interface, use storybook.
     ```sh
     $ npm run storybook
     ```

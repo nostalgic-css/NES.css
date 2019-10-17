@@ -35,7 +35,8 @@
     ```sh
     $ npm install
     ```
-3. 启动开发服务器:
+3. 启动开发服务器:  
+    To view all available components in an interactive interface, use storybook.
     ```sh
     $ npm run storybook
     ```
