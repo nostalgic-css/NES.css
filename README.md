@@ -84,6 +84,20 @@ NES.css is compatible with the newest version of the following browsers:
 Untested
 * IE/Edge
 
+## Storybook
+
+To view all available components in an interactive interface, use storybook.
+
+```bash
+git clone https://github.com/nostalgic-css/NES.css
+cd NES.css
+npm install
+npm run storybook
+```
+
+![Storybook Demo](assets/storybook-demo.gif "Storybook Demo")
+
+
 ## Copyright and license
 
 Code and documentation copyright 2018 [B.C.Rikko](https://github.com/BcRikko). Code released under the MIT License. Docs released under Creative Commons.
