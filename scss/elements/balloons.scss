@@ -44,10 +44,11 @@
 
   &.is-dark {
     @include rounded-corners(true);
-    background: $base-color;
+
     color: $background-color;
+    background: $base-color;
     border-image-outset: 2;
-    box-shadow: 0px 0px 0 8px $base-color;
+    box-shadow: 0 0 0 8px $base-color;
 
     &.from-left,
     &.from-right {

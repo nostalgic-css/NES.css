@@ -11,7 +11,7 @@
   $colors: ($base-color, map-get($default-colors, "shadow"));
 
   position: relative;
-  width: calc(100% -  #{2*$border-size});
+  width: calc(100% - #{2 * $border-size});
   margin: 4px;
 
   select {

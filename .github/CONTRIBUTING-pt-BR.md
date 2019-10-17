@@ -35,7 +35,8 @@ Nós estamos muito felizes de você querer contribuir para o projeto! Os próxim
     ```sh
     $ npm install
     ```
-3. Inicie o servidor de desenvolvimento:
+3. Inicie o servidor de desenvolvimento:  
+    To view all available components in an interactive interface, use storybook.
     ```sh
     $ npm run storybook
     ```

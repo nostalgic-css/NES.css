@@ -35,7 +35,8 @@
     ```sh
     $ npm install
     ```
-3. Запустите сервер:
+3. Запустите сервер:  
+    To view all available components in an interactive interface, use storybook.
     ```sh
     $ npm run storybook
     ```
