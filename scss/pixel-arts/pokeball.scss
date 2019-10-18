@@ -32,5 +32,6 @@
     background: transparent;
 
     @include pixelize($size, $pokeball, $pokeball-colors);
+    @include fill-gaps();
   }
 }

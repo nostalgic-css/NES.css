@@ -35,5 +35,6 @@
     background: transparent;
 
     @include pixelize($size, $bulbasaur, $bulbasaur-colors);
+    @include fill-gaps();
   }
 }
