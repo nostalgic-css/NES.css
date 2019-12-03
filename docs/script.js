@@ -344,21 +344,45 @@ const sampleCollection = [
   {
     title: 'balloons',
     showCode: false,
-    code: `<section class="message-list">
-  <section class="message -left">
-    <i class="nes-bcrikko"></i>
-    <!-- Balloon -->
-    <div class="nes-balloon from-left">
-      <p>Hello NES.css</p>
-    </div>
-  </section>
+    code: `<section class="nes-container">
+  <section class="message-list">
+    <section class="message -left">
+      <i class="nes-bcrikko"></i>
+      <!-- Balloon -->
+      <div class="nes-balloon from-left">
+        <p>Hello NES.css</p>
+      </div>
+    </section>
 
-  <section class="message -right">
-    <!-- Balloon -->
-    <div class="nes-balloon from-right">
-      <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-    </div>
-    <i class="nes-bcrikko"></i>
+    <section class="message -right">
+      <!-- Balloon -->
+      <div class="nes-balloon from-right">
+        <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+      </div>
+      <i class="nes-bcrikko"></i>
+    </section>
+  </section>
+</section>
+
+<!-- Balloon 'is-dark'  -->
+<section class="nes-container is-dark">
+  <section class="message-list">
+      <section class="message -left">
+        <i class="nes-bcrikko"></i>
+        <!-- Balloon -->
+        <div class="nes-balloon from-left is-dark">
+          <p>Hello NES.css</p>
+        </div>
+      </section>
+
+      <section class="message -right">
+        <!-- Balloon -->
+        <div class="nes-balloon from-right is-dark">
+          <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+        </div>
+        <i class="nes-bcrikko"></i>
+      </section>
+    </section>
   </section>
 </section>`,
   },
