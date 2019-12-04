@@ -609,11 +609,15 @@ const contributors = [
   'alexd99',
   'alexgleason',
   'agarzola',
+  'AlphaWong',
+  'brendansparrow',
   'Ermakoy',
   'fleeting',
   'JamesIves',
   'jsoref',
   'KOREAN139',
+  'KalobTaulien',
+  'HiKaylum',
   'LukBukkit',
   'otaviopace',
   'Pedro-Souza',
@@ -623,6 +627,7 @@ const contributors = [
   'lucasjs',
   'musavvirahmed',
   'sinofp',
+  'thisisabhinay',
   'tnantoka',
 ];
 
