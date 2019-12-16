@@ -30,6 +30,12 @@ export const Sprites = {
   'snes-jp-logo': 'snes-jp-logo',
 };
 
+export const Reactions = {
+  heart: 'heart',
+  star: 'star',
+  like: 'like',
+};
+
 export const Size = {
   default: '',
   'is-small': 'is-small',
