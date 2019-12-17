@@ -51,6 +51,7 @@
     background: transparent;
 
     @include pixelize($size, $octocat-1, $octocat-colors);
+    @include fill-gaps();
   }
 
   &.animate::before {

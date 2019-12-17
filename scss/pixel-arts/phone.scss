@@ -39,5 +39,6 @@
     background: transparent;
 
     @include pixelize($size, $phone, $phone-colors);
+    @include fill-gaps();
   }
 }

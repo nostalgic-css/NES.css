@@ -17,7 +17,12 @@ const sampleCollection = [
 <button type="button" class="nes-btn is-success">Success</button>
 <button type="button" class="nes-btn is-warning">Warning</button>
 <button type="button" class="nes-btn is-error">Error</button>
-<button type="button" class="nes-btn is-disabled">Disabled</button>`,
+<button type="button" class="nes-btn is-disabled">Disabled</button>
+
+<label class="nes-btn">
+  <span>Select your file</span>
+  <input type="file">
+</label>`,
   },
   {
     title: 'radios',
@@ -339,21 +344,45 @@ const sampleCollection = [
   {
     title: 'balloons',
     showCode: false,
-    code: `<section class="message-list">
-  <section class="message -left">
-    <i class="nes-bcrikko"></i>
-    <!-- Balloon -->
-    <div class="nes-balloon from-left">
-      <p>Hello NES.css</p>
-    </div>
-  </section>
+    code: `<section class="nes-container">
+  <section class="message-list">
+    <section class="message -left">
+      <i class="nes-bcrikko"></i>
+      <!-- Balloon -->
+      <div class="nes-balloon from-left">
+        <p>Hello NES.css</p>
+      </div>
+    </section>
 
-  <section class="message -right">
-    <!-- Balloon -->
-    <div class="nes-balloon from-right">
-      <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-    </div>
-    <i class="nes-bcrikko"></i>
+    <section class="message -right">
+      <!-- Balloon -->
+      <div class="nes-balloon from-right">
+        <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+      </div>
+      <i class="nes-bcrikko"></i>
+    </section>
+  </section>
+</section>
+
+<!-- Balloon 'is-dark'  -->
+<section class="nes-container is-dark">
+  <section class="message-list">
+      <section class="message -left">
+        <i class="nes-bcrikko"></i>
+        <!-- Balloon -->
+        <div class="nes-balloon from-left is-dark">
+          <p>Hello NES.css</p>
+        </div>
+      </section>
+
+      <section class="message -right">
+        <!-- Balloon -->
+        <div class="nes-balloon from-right is-dark">
+          <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+        </div>
+        <i class="nes-bcrikko"></i>
+      </section>
+    </section>
   </section>
 </section>`,
   },
@@ -362,7 +391,7 @@ const sampleCollection = [
     showCode: false,
     code: `<p class="nes-balloon from-left nes-pointer">
   This is not a clickable element, but it's an area of the pointer.
-</p>`
+</p>`,
   },
   {
     title: 'badges',
@@ -415,6 +444,8 @@ const sampleCollection = [
     code: `<section class="icon-list">
   <!-- heart -->
   <i class="nes-icon is-large heart"></i>
+  <i class="nes-icon is-large is-half heart"></i>
+  <i class="nes-icon is-large is-transparent heart"></i>
   <i class="nes-icon is-large heart is-empty"></i>
 
   <!-- star -->
@@ -580,11 +611,15 @@ const contributors = [
   'alexd99',
   'alexgleason',
   'agarzola',
+  'AlphaWong',
+  'brendansparrow',
   'Ermakoy',
   'fleeting',
   'JamesIves',
   'jsoref',
   'KOREAN139',
+  'KalobTaulien',
+  'HiKaylum',
   'LukBukkit',
   'otaviopace',
   'Pedro-Souza',
@@ -594,6 +629,7 @@ const contributors = [
   'lucasjs',
   'musavvirahmed',
   'sinofp',
+  'thisisabhinay',
   'tnantoka',
 ];
 

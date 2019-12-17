@@ -34,5 +34,6 @@
     background: transparent;
 
     @include pixelize($size, $mario, $mario-colors);
+    @include fill-gaps();
   }
 }

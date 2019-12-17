@@ -39,6 +39,9 @@
     "nes",
     "framework"
   ],
+  "engines": {
+    "node": "10.x"
+  },
   "author": "BcRikko (https://github.com/Bcrikko)",
   "license": "MIT",
   "bugs": {
@@ -54,6 +57,7 @@
     "@storybook/html": "^5.0.0",
     "autoprefixer": "^9.1.5",
     "babel-loader": "^8.0.4",
+    "classnames": "^2.2.6",
     "clean-css-cli": "^4.2.1",
     "commitizen": "^3.1.1",
     "css-loader": "^2.0.0",
@@ -109,7 +113,9 @@
   },
   "lint-staged": {
     "scss/**/*.scss": [
-      "npm run postbuild"
+      "npm run prebuild:stylelint",
+      "npm run postbuild",
+      "git add"
     ],
     "*.js": [
       "eslint '.storybook/**/*.js' 'story/**/*.js'"
@@ -153,7 +159,18 @@
     ]
   },
   "eslintConfig": {
-    "extends": "airbnb-base"
+    "extends": "airbnb-base",
+    "rules": {
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": [
+            "**/*.stories.js",
+            "**/*.template.js"
+          ]
+        }
+      ]
+    }
   },
   "eslintIgnore": [
     "docs/*"

@@ -78,4 +78,10 @@
       @include btn-style(nth($type, 2), nth($type, 3), nth($type, 4), nth($type, 5));
     }
   }
+
+  input[type="file"] {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+  }
 }

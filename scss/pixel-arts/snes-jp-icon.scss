@@ -30,5 +30,6 @@
     background: transparent;
 
     @include pixelize($size, $logo, $logo-colors);
+    @include fill-gaps();
   }
 }

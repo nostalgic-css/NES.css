@@ -1,0 +1,5 @@
+// Fill gaps in pixel art dots
+// `transform` property conflict when used for nes-icon
+@mixin fill-gaps() {
+  transform: rotate(0);
+}
