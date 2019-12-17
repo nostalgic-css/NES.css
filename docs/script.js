@@ -444,6 +444,8 @@ const sampleCollection = [
     code: `<section class="icon-list">
   <!-- heart -->
   <i class="nes-icon is-large heart"></i>
+  <i class="nes-icon is-large is-half heart"></i>
+  <i class="nes-icon is-large is-transparent heart"></i>
   <i class="nes-icon is-large heart is-empty"></i>
 
   <!-- star -->
