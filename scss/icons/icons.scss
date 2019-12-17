@@ -70,6 +70,12 @@
   &.heart::before {
     @include pixelize($default-size, $icon-heart, $icon-heart-colors);
   }
+  &.heart.is-half::before {
+    @include pixelize($default-size, $icon-heart-half, $icon-heart-colors);
+  }
+  &.heart.is-transparent::before {
+    @include pixelize($default-size, $icon-heart-transparent, $icon-heart-colors);
+  }
   &.heart.is-empty::before {
     @include pixelize($default-size, $icon-heart-empty, $icon-heart-empty-colors);
   }
