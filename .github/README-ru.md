@@ -32,7 +32,7 @@ yarn add nes.css
 
 ```html
 <!-- Миницифированные -->
-<link href="https://unpkg.com/nes.css@2.2.1/css/nes.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
 <!-- Последние -->
 <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
 <!-- Только основные стили -->
