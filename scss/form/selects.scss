@@ -47,11 +47,10 @@
 
   // prettier-ignore
   $types:
+    "dark" map-get($default-colors, "normal") map-get($default-colors, "hover"),
     "success" map-get($success-colors, "normal") map-get($success-colors, "hover"),
     "warning" map-get($warning-colors, "normal") map-get($warning-colors, "hover"),
-    "error" map-get($error-colors, "normal") map-get($error-colors, "hover"),
-    "dark" map-get($default-colors, "normal") map-get($default-colors, "hover");
-
+    "error" map-get($error-colors, "normal") map-get($error-colors, "hover");
   @each $type in $types {
     &.is-#{nth($type, 1)} {
       $color: nth($type, 2);
