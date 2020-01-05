@@ -4,7 +4,7 @@
   <a href="README.md">English</a> / <a href=".github/README-jp.md">日本語</a> / <a href="README-zh-CN.md">简体中文</a> / <a href=".github/README-pt-BR.md">Português</a>
 </div>
 
-NES.css is a **NES-style(8bit-like)** CSS Framework.
+NES.css es un **NES-style(8bit-like)** CSS Framework.
 
 [![Gitter][gitter-badge]][gitter] [![Commitizen friendly][commitizen-badge]][commitizen]
 
@@ -23,8 +23,8 @@ yarn add nes.css
 ```
 
 Nuestro `package.json` contiene metadata adicional bajo las siguientes keys:
-* `sass` - path to our main Sass source file
-* `style` - path to our non-minified CSS
+* `sass` - Ruta a nuestro archivo fuente principal de Sass
+* `style` - Ruta a nuestro CSS no minificado
 
 #### Vía CDN
 
@@ -64,7 +64,7 @@ La tipografía recomendada para utilizar junto a NES.css es [Press Start 2P][pre
 
     <style>
       html, body, pre, code, kbd, samp {
-          font-family: "font-family you want to use";
+          font-family: "font-family que quieres usar";
       }
     </style>
 </head>
