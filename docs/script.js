@@ -261,7 +261,27 @@ const sampleCollection = [
     <li>Thou hast had a good afternoon</li>
     <li>Good night.</li>
   </ul>
-</div>`,
+</div>
+
+<section class="nes-container is-dark">
+  <div class="lists">
+    <ul class="nes-list is-disc is-dark">
+      <li>Good morning.</li>
+      <li>Thou hast had a good night's sleep, I hope.</li>
+      <li>Thou hast had a good afternoon</li>
+      <li>Good night.</li>
+    </ul>
+  </div>
+
+  <div class="lists">
+    <ul class="nes-list is-circle is-dark">
+      <li>Good morning.</li>
+      <li>Thou hast had a good night's sleep, I hope.</li>
+      <li>Thou hast had a good afternoon</li>
+      <li>Good night.</li>
+    </ul>
+  </div>
+</section>`,
   },
   {
     title: 'tables',
