@@ -1,3 +1,18 @@
+@mixin list-before(
+  $class,
+  $disc-or-circle,
+  $colors: ($base-color, map-get($default-colors, "shadow"))
+) {
+  &.is-#{$class} li::before {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: -22px;
+    content: "";
+
+    @include pixelize(2px, $disc-or-circle, $colors);
+  }
+}
+
 .nes-list {
   // prettier-ignore
   $disc: (
@@ -18,7 +33,6 @@
     (0,0,1,1,1,1,0,0),
     (0,0,0,1,1,0,0,0)
   );
-  $colors: ($base-color, map-get($default-colors, "shadow"));
 
   list-style-type: none;
 
@@ -26,21 +40,16 @@
     position: relative;
   }
 
-  &.is-disc li::before {
-    position: absolute;
-    top: calc(50% - 8px);
-    left: -22px;
-    content: "";
+  @include list-before("disc", $disc);
+  @include list-before("circle", $circle);
 
-    @include pixelize(2px, $disc, $colors);
-  }
+  &.is-dark {
+    $dark-colors: ($background-color, $base-color);
+    @include list-before("disc", $disc, $dark-colors);
+    @include list-before("circle", $circle, $dark-colors);
 
-  &.is-circle li::before {
-    position: absolute;
-    top: calc(50% - 8px);
-    left: -22px;
-    content: "";
-
-    @include pixelize(2px, $circle, $colors);
+    li {
+      color: $color-white;
+    }
   }
 }
