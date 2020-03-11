@@ -1,7 +1,8 @@
-import { radios } from '@storybook/addon-knobs';
+import { radios, boolean } from '@storybook/addon-knobs';
 import classNames from 'classnames';
 
 export default () => {
+  const isDark = boolean('is-dark', false);
   const listOptions = radios('List Type', {
     'is-disc': 'is-disc',
     'is-circle': 'is-circle',
@@ -9,6 +10,9 @@ export default () => {
 
   const listClasses = classNames(
     'nes-list',
+    {
+      'is-dark': isDark,
+    },
     listOptions,
   );
 
