@@ -47,9 +47,10 @@ NES.css doesn't provide any fonts, but we do maintain the following list of font
 | --------- | ------------------------------------------------------------------ |
 | (Default) | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) |
 | English   | [Kongtext](https://www.dafont.com/kongtext.font)                   |
+| Chinese   | [Zpix (最像素)](https://github.com/SolidZORO/zpix-pixel-font)      |
 | Japanese  | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
 | Japanese  | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
-| Korean    | [둥근모꼴](http://cactus.tistory.com/193)                              |
+| Korean    | [둥근모꼴](http://cactus.tistory.com/193)                           |
 
 ## Usage
 

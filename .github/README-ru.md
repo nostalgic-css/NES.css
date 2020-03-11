@@ -1,7 +1,7 @@
 <div align="center">
   <a href="https://nostalgic-css.github.io/NES.css/" target="_blank"><img src="https://user-images.githubusercontent.com/5305599/49061716-da649680-f254-11e8-9a89-d95a7407ec6a.png" alt="NES.css: NES-style  CSS framework" style="max-width: 100%;" width="600" height="315"></a>
 
-  <a href="README.md">English</a> / <a href=".github/README-jp.md">日本語</a> / <a href="README-zh-CN.md">简体中文</a> / <a href=".github/README-pt-BR.md">Português</a>
+  <a href="README.md">English</a> / <a href=".github/README-jp.md">日本語</a> / <a href="README-zh-CN.md">简体中文</a> / <a href="README-es.md">Español</a> / <a href=".github/README-pt-BR.md">Português</a>
 </div>
 
 NES.css - это CSS фреймворк в стиле **NES(8bit)**
@@ -46,10 +46,11 @@ NES.css не предоставляет никаких шрифтов, но мы
 | Язык         | Шрифт                                                              |
 | ------------ | ------------------------------------------------------------------ |
 | По умолчанию | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) |
+| Китайский    | [Zpix (最像素)](https://github.com/SolidZORO/zpix-pixel-font)      |
 | Английский   | [Kongtext](https://www.dafont.com/kongtext.font)                   |
 | Японский     | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
 | Японский     | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
-| Корейский    | [둥근모꼴](http://cactus.tistory.com/193)                              |
+| Корейский    | [둥근모꼴](http://cactus.tistory.com/193)                           |
 
 ## Использование
 
