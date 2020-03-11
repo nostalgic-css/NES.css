@@ -31,13 +31,14 @@ yarn add nes.css
 
 ### 推荐字体
 
-| Language  | Font                                                               |
+| 语言      | 字体                                                               |
 | --------- | ------------------------------------------------------------------ |
-| (Default) | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) |
-| English   | [Kongtext](https://www.dafont.com/kongtext.font)                   |
-| Japanese  | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
-| Japanese  | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
-| Korean    | [둥근모꼴](http://cactus.tistory.com/193)                              |
+| (默认)    | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) |
+| 英语      | [Kongtext](https://www.dafont.com/kongtext.font)                   |
+| 中文      | [Zpix (最像素)](https://github.com/SolidZORO/zpix-pixel-font)      |
+| 日语      | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
+| 日语      | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
+| 韩语      | [둥근모꼴](http://cactus.tistory.com/193)                           |
 
 
 ## 使用

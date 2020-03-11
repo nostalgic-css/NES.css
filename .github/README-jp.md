@@ -47,9 +47,10 @@ NES.cssはいかなるフォントも提供していませんが、ライブラ�
 | ------------ | ------------------------------------------------------------------ |
 | (デフォルト) | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) |
 | 英語         | [Kongtext](https://www.dafont.com/kongtext.font)                   |
+| 中国語       | [Zpix (最像素)](https://github.com/SolidZORO/zpix-pixel-font)      |
 | 日本語       | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
 | 日本語       | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
-| 韓国語       | [둥근모꼴](http://cactus.tistory.com/193)                              |
+| 韓国語       | [둥근모꼴](http://cactus.tistory.com/193)                           |
 
 ## 使い方
 
