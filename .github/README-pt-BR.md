@@ -47,7 +47,7 @@ NES.css não fornece nenhuma fonte, mas nós mantemos uma lista de fontes recome
 | -------- | ------------------------------------------------------------------ |
 | (Padrão) | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) |
 | Inglês   | [Kongtext](https://www.dafont.com/kongtext.font)                   |
-| Chinoés  | [Zpix (最像素)](https://github.com/SolidZORO/zpix-pixel-font)      |
+| Chinês   | [Zpix (最像素)](https://github.com/SolidZORO/zpix-pixel-font)      |
 | Japonês  | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
 | Japonês  | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
 | Coreano  | [둥근모꼴](http://cactus.tistory.com/193)                           |
