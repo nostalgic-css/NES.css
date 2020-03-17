@@ -18,6 +18,32 @@ npm install nes.css
 yarn add nes.css
 ```
 
+##### AltCSS(sass, scss...)
+
+```scss
+// style.scss
+@import "./node_modules/nes.css/css/nes.css"
+```
+
+##### JavaScript
+
+```js
+// script.js
+import "nes.css/css/nes.min.css";
+```
+您需要安装css加载程序.
+
+##### HTML
+```html
+<!-- index.html -->
+<html>
+  <head>
+    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+  </head>
+  <body></body>
+</html>
+```
+
 ### via CDN
 
 ```html
@@ -31,14 +57,14 @@ yarn add nes.css
 
 ### 推荐字体
 
-| 语言      | 字体                                                               |
-| --------- | ------------------------------------------------------------------ |
-| (默认)    | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) |
-| 英语      | [Kongtext](https://www.dafont.com/kongtext.font)                   |
-| 中文      | [Zpix (最像素)](https://github.com/SolidZORO/zpix-pixel-font)      |
-| 日语      | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
-| 日语      | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
-| 韩语      | [둥근모꼴](http://cactus.tistory.com/193)                           |
+| 语言   | 字体                                                               |
+| ------ | ------------------------------------------------------------------ |
+| (默认) | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) |
+| 英语   | [Kongtext](https://www.dafont.com/kongtext.font)                   |
+| 日语   | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
+| 日语   | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
+| 韩语   | [둥근모꼴](http://cactus.tistory.com/193)                              |
+| 中文   | [Zpix (最像素)](https://github.com/SolidZORO/zpix-pixel-font)      |
 
 
 ## 使用

@@ -26,6 +26,33 @@ yarn add nes.css
 * `sass` - メインのSassソースファイルへのパス
 * `style` - 非圧縮のCSSへのパス
 
+##### AltCSS(sass, scss...)
+
+```scss
+// style.scss
+@import "./node_modules/nes.css/css/nes.css"
+```
+
+##### JavaScript
+
+```js
+// script.js
+import "nes.css/css/nes.min.css";
+```
+css-loaderが必要です。
+
+##### HTML
+```html
+<!-- index.html -->
+<html>
+  <head>
+    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+  </head>
+  <body></body>
+</html>
+```
+
+
 #### CDNを使う場合
 
 `<link />`要素を使ってCSSをインポートする:
@@ -46,11 +73,11 @@ NES.cssはいかなるフォントも提供していませんが、ライブラ�
 | 言語         | フォント                                                           |
 | ------------ | ------------------------------------------------------------------ |
 | (デフォルト) | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) |
-| 中国語       | [Zpix (最像素)](https://github.com/SolidZORO/zpix-pixel-font)      |
 | 英語         | [Kongtext](https://www.dafont.com/kongtext.font)                   |
 | 日本語       | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
 | 日本語       | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
-| 韓国語       | [둥근모꼴](http://cactus.tistory.com/193)                           |
+| 韓国語       | [둥근모꼴](http://cactus.tistory.com/193)                              |
+| 中国語       | [Zpix (最像素)](https://github.com/SolidZORO/zpix-pixel-font)      |
 
 ## 使い方
 

@@ -26,6 +26,32 @@ Nosso `package.json` contém alguns metadata adicionais, sob as seguintes chaves
 * `sass` - caminho para nosso arquivo de código fonte principal Sass
 * `style` - caminho para nosso CSS não-minificado
 
+##### AltCSS(sass, scss...)
+
+```scss
+// style.scss
+@import "./node_modules/nes.css/css/nes.css"
+```
+
+##### JavaScript
+
+```js
+// script.js
+import "nes.css/css/nes.min.css";
+```
+Você precisa instalar o css-loader.
+
+##### HTML
+```html
+<!-- index.html -->
+<html>
+  <head>
+    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+  </head>
+  <body></body>
+</html>
+```
+
 ### via CDN
 
 Importe o CSS através de um elemento `<link />`:
@@ -47,10 +73,10 @@ NES.css não fornece nenhuma fonte, mas nós mantemos uma lista de fontes recome
 | -------- | ------------------------------------------------------------------ |
 | (Padrão) | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) |
 | Inglês   | [Kongtext](https://www.dafont.com/kongtext.font)                   |
-| Chinês   | [Zpix (最像素)](https://github.com/SolidZORO/zpix-pixel-font)      |
 | Japonês  | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
 | Japonês  | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
-| Coreano  | [둥근모꼴](http://cactus.tistory.com/193)                           |
+| Coreano  | [둥근모꼴](http://cactus.tistory.com/193)                              |
+| Chinês   | [Zpix (最像素)](https://github.com/SolidZORO/zpix-pixel-font)      |
 
 ## Utilização
 

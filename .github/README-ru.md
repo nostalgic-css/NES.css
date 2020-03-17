@@ -26,6 +26,32 @@ yarn add nes.css
 * `sass` - Путь до главного Sass файла
 * `style` - Путь до неминифицированного CSS
 
+##### AltCSS(sass, scss...)
+
+```scss
+// style.scss
+@import "./node_modules/nes.css/css/nes.css"
+```
+
+##### JavaScript
+
+```js
+// script.js
+import "nes.css/css/nes.min.css";
+```
+Вам необходимо установить css-загрузчик.
+
+##### HTML
+```html
+<!-- index.html -->
+<html>
+  <head>
+    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+  </head>
+  <body></body>
+</html>
+```
+
 #### Через CDN
 
 Использования через тэг `<link />`:
@@ -47,10 +73,10 @@ NES.css не предоставляет никаких шрифтов, но мы
 | ------------ | ------------------------------------------------------------------ |
 | По умолчанию | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) |
 | Английский   | [Kongtext](https://www.dafont.com/kongtext.font)                   |
-| китайский    | [Zpix (最像素)](https://github.com/SolidZORO/zpix-pixel-font)      |
 | Японский     | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
 | Японский     | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
-| Корейский    | [둥근모꼴](http://cactus.tistory.com/193)                           |
+| Корейский    | [둥근모꼴](http://cactus.tistory.com/193)                              |
+| китайский    | [Zpix (最像素)](https://github.com/SolidZORO/zpix-pixel-font)      |
 
 ## Использование
 
