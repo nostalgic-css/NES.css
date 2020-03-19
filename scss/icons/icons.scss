@@ -16,8 +16,10 @@
 @import "gmail.scss";
 @import "linkedin.scss";
 @import "instagram.scss";
+@import "wechat.scss";
 
 // others
+@import "alipay.scss";
 @import "close.scss";
 @import "trophy.scss";
 @import "coin.scss";
@@ -159,7 +161,15 @@
     @include pixelize($default-size, $icon-instagram, $icon-instagram-colors);
   }
 
+  &.wechat::before {
+    @include pixelize($default-size, $icon-wechat, $icon-wechat-colors);
+  }
+
   &.coin::before {
     @include pixelize($default-size, $icon-coin, $icon-coin-colors);
+  }
+  
+  &.alipay::before {
+    @include pixelize($default-size, $icon-alipay, $icon-alipay-colors);
   }
 }
