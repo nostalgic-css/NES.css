@@ -40,7 +40,7 @@
     "framework"
   ],
   "engines": {
-    "node": ">=10.0.0 <13.0.0"
+    "node": ">=10.0.0"
   },
   "author": "BcRikko (https://github.com/Bcrikko)",
   "license": "MIT",
