@@ -11,6 +11,11 @@ defaults: &defaults
 
 
 jobs:
+  fetch:
+    - run:
+      name: Fetch
+      command: git remote set-branches origin master && git fetch
+
   commitlint:
     docker:
       - image: williamlauze/circleci-commitlint:latest
