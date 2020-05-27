@@ -178,7 +178,9 @@ workflows:
   main:
     jobs:
       - checkout
-      - fetch-git
+      - fetch-git:
+          requires:
+            - checkout
       - commitlint:
           filters:
             branches:
