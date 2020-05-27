@@ -12,9 +12,12 @@ defaults: &defaults
 
 jobs:
   fetch-git:
-    - run:
-      name: Fetch
-      command: git remote set-branches origin master && git fetch
+    <<: *defaults
+
+    steps:
+      - run:
+        name: Fetch
+        command: git remote set-branches origin master && git fetch
 
   commitlint:
     docker:
