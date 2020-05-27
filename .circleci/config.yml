@@ -8,17 +8,10 @@ defaults: &defaults
 
 
 
-
+orbs:
+  git-shallow-clone: guitarrapc/git-shallow-clone@2.0.3
 
 jobs:
-  fetch-git:
-    <<: *defaults
-
-    steps:
-      - run:
-          name: Fetch
-          command: git remote set-branches origin master && git fetch
-
   commitlint:
     docker:
       - image: williamlauze/circleci-commitlint:latest
@@ -178,7 +171,7 @@ workflows:
   main:
     jobs:
       - checkout
-      - fetch-git:
+      - git-shallow-clone/checkout:
           requires:
             - checkout
       - commitlint:
