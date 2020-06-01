@@ -6,16 +6,13 @@ defaults: &defaults
 
   working_directory: ~/app
 
-
-
-
-
 jobs:
   commitlint:
     docker:
-      - image: williamlauze/circleci-commitlint:latest
+      - image: secretbase/circleci-commitlint:1.0.2
     working_directory: ~/app
-
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
     steps:
       - checkout
       - run:
@@ -159,10 +156,6 @@ jobs:
       - run:
           name: Release
           command: npx semantic-release
-
-
-
-
 
 workflows:
   version: 2
