@@ -67,15 +67,6 @@
     color: $background-color;
     background-color: $base-color;
 
-    &::before {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      content: "";
-    }
-
     &.is-bordered {
       @include compact-rounded-corners(true);
     }
