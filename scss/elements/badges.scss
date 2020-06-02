@@ -85,6 +85,7 @@
     "error" $background-color map-get($error-colors, "normal");
 
   @each $type in $types {
+    &.is-splited, // deprecated. Please use .is-split
     &.is-split {
       & span.is-#{nth($type, 1)} {
         @include badge-style(nth($type, 2), nth($type, 3), is-split);
