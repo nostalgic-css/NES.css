@@ -1,20 +1,23 @@
+orbs:
+  node: circleci/node@2.1.0
 version: 2.1
 
 defaults: &defaults
-  docker:
-    - image: circleci/node
 
   working_directory: ~/app
 
-
+supported-node-versions: &supported-node-versions
+  node-version: ["10.20.1", "12.16.3", "13.14.0", "14.2.0"]
 
 
 
 jobs:
   commitlint:
     docker:
-      - image: williamlauze/circleci-commitlint:latest
+      - image: secretbase/circleci-commitlint:1.0.2
     working_directory: ~/app
+    environment:
+      CIRCLE_COMPARE_URL: << pipeline.project.git_url >>/compare/<< pipeline.git.base_revision >>..<<pipeline.git.revision>>
 
     steps:
       - checkout
@@ -24,6 +27,9 @@ jobs:
 
   checkout:
     <<: *defaults
+
+    docker:
+    - image: circleci/node:lts
 
     steps:
       - restore_cache:
@@ -50,37 +56,72 @@ jobs:
   install-dependencies:
     <<: *defaults
 
+    parameters:
+      node-version:
+        type: string
+
+    docker:
+        - image: "circleci/node:<< parameters.node-version >>"
+
     steps:
+
       - attach_workspace:
           at: .
 
       - restore_cache:
           name: Restore npm Package Cache
           keys:
-            - npm-{{ checksum "package-lock.json" }}
-            - npm-
+            - "npm-<< parameters.node-version >>-{{ checksum \"package-lock.json\" }}"
+
+      - run:
+          name: Move node_modules to correct location for install
+          command: "[ ! -d \"node_modules_<< parameters.node-version >>\" ] || mv \"node_modules_<< parameters.node-version >>\" node_modules"
 
       - run:
           name: Install Dependencies
           command: npm install
+            
+      - run:
+          name: Move node_modules to correct location for cache
+          command: mv node_modules "node_modules_<< parameters.node-version >>" 
 
       - save_cache:
           name: Save npm Package Cache
-          key: npm-{{ checksum "package-lock.json" }}
+          key: "npm-<< parameters.node-version >>-{{ checksum \"package-lock.json\" }}"
           paths:
-            - node_modules
+            - "node_modules_<< parameters.node-version >>"
 
       - persist_to_workspace:
           root: .
           paths:
-            - node_modules
+            - "node_modules_<< parameters.node-version >>"
 
   build:
     <<: *defaults
 
+    docker:
+      - image: "circleci/node:lts"
+
+    steps:
+      - checkout
+
+  build-in-all-supported-versions-of-node:
+    <<: *defaults
+
+    parameters:
+      node-version:
+        type: string
+
+    docker:
+        - image: "circleci/node:<< parameters.node-version >>"
+
     steps:
       - attach_workspace:
           at: .
+
+      - run:
+          name: Move node_modules to correct location for build
+          command: "[ ! -d \"node_modules_<< parameters.node-version >>\" ] || mv \"node_modules_<< parameters.node-version >>\" node_modules"
 
       - restore_cache:
           name: Restore Build Cache
@@ -108,13 +149,18 @@ jobs:
   lint:
     <<: *defaults
 
+    docker:
+      - image: "circleci/node:lts"
+
     steps:
       - attach_workspace:
           at: .
 
       - run:
+          command: npm i -D  stylelint-config-prettier stylelint-config-recess-order stylelint-config-standard stylelint-prettier stylelint-scss
+      - run:
           name: Lint styles
-          command: npx stylelint -- --fix
+          command: npx stylelint scss/**/*.scss "--fix"
 
   # test:
   #   <<: *defaults
@@ -149,6 +195,9 @@ jobs:
   release:
     <<: *defaults
 
+    docker:
+        - image: circleci/node:lts
+
     steps:
       - attach_workspace:
           at: .
@@ -159,10 +208,6 @@ jobs:
       - run:
           name: Release
           command: npx semantic-release
-
-
-
-
 
 workflows:
   version: 2
@@ -177,6 +222,9 @@ workflows:
       - install-dependencies:
           requires:
             - checkout
+          matrix:
+            parameters:
+              <<: *supported-node-versions
       # - test:
       #     requires:
       #       - install-dependencies
@@ -185,14 +233,19 @@ workflows:
       #       - install-dependencies
       - lint:
           requires:
-            - install-dependencies
-      - build:
+            - checkout
+      - build
+      - build-in-all-supported-versions-of-node:
           requires:
             - install-dependencies
+          matrix:
+            parameters:
+              <<: *supported-node-versions
+
       - release:
           requires:
             - commitlint
-            - build
+            - build-in-all-supported-versions-of-node
             - lint
             # - test
           filters:
