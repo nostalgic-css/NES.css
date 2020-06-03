@@ -135,6 +135,9 @@ jobs:
           paths:
             - css
 
+      - store_artifacts:
+          path: css
+
   build-in-all-supported-versions-of-node:
     <<: *defaults
 
@@ -156,6 +159,9 @@ jobs:
       - run:
           name: Build the Framework
           command: npm run build
+
+      - store_artifacts:
+          path: css
 
   lint:
     <<: *defaults
