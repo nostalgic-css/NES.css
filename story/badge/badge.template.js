@@ -12,9 +12,9 @@ export default () => {
 
   const iconStyle = select('Badge Display', {
     default: '',
-    'is-splited': 'is-splited',
+    'is-split': 'is-split',
     'is-icon': 'is-icon',
-  }, 'is-splited');
+  }, 'is-split');
 
   const leftOptions = select('Left Style', {
     ...sharedComponentOptions,

@@ -27,7 +27,7 @@
 @mixin badge-style($color, $background, $option: is-default) {
   $box-shadow-first-two: 0 0.5em $background, 0 -0.5em $background;
 
-  @if $option == is-splited {
+  @if $option == is-split {
     &:first-child {
       @include span-style($color, $background, left);
 
@@ -85,9 +85,10 @@
     "error" $background-color map-get($error-colors, "normal");
 
   @each $type in $types {
-    &.is-splited {
+    &.is-splited, // deprecated. Please use .is-split
+    &.is-split {
       & span.is-#{nth($type, 1)} {
-        @include badge-style(nth($type, 2), nth($type, 3), is-splited);
+        @include badge-style(nth($type, 2), nth($type, 3), is-split);
       }
     }
 
