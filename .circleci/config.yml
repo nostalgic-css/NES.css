@@ -7,7 +7,7 @@ defaults: &defaults
   working_directory: ~/app
 
 supported-node-versions: &supported-node-versions
-  node-version: ["10.20.1", "12.16.3", "13.14.0", "14.2.0"]
+  node-version: ["10.21.0", "12.18.0", "13.14.0", "14.4.0"]
 
 
 
@@ -29,7 +29,7 @@ jobs:
     <<: *defaults
 
     docker:
-    - image: circleci/node:lts
+    - image: cimg/node:lts
 
     steps:
       - restore_cache:
@@ -61,7 +61,7 @@ jobs:
         type: string
 
     docker:
-        - image: "circleci/node:<< parameters.node-version >>"
+        - image: "cimg/node:<< parameters.node-version >>"
 
     steps:
 
@@ -100,36 +100,19 @@ jobs:
     <<: *defaults
 
     docker:
-      - image: "circleci/node:lts"
+      - image: "cimg/node:lts"
 
     steps:
       - checkout
 
-  build-in-all-supported-versions-of-node:
-    <<: *defaults
-
-    parameters:
-      node-version:
-        type: string
-
-    docker:
-        - image: "circleci/node:<< parameters.node-version >>"
-
-    steps:
-      - attach_workspace:
-          at: .
+      - restore_cache:
+          name: Restore npm Package Cache
+          keys:
+            - "npm-{{ checksum \"package-lock.json\" }}"
 
       - run:
-          name: Move node_modules to correct location for build
-          command: "[ ! -d \"node_modules_<< parameters.node-version >>\" ] || mv \"node_modules_<< parameters.node-version >>\" node_modules"
-
-      - restore_cache:
-          name: Restore Build Cache
-          keys:
-            - build-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
-            - build-{{ .Branch }}
-            - build-master
-            - build-
+          name: Install Dependencies
+          command: npm install
 
       - run:
           name: Build the Framework
@@ -140,17 +123,45 @@ jobs:
           key: build-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
           paths:
             - css
+      
+      - save_cache:
+          name: Save npm Package Cache
+          key: "npm-{{ checksum \"package-lock.json\" }}"
+          paths:
+            - "node_modules"
 
       - persist_to_workspace:
           root: .
           paths:
             - css
 
+  build-in-all-supported-versions-of-node:
+    <<: *defaults
+
+    parameters:
+      node-version:
+        type: string
+
+    docker:
+        - image: "cimg/node:<< parameters.node-version >>"
+
+    steps:
+      - attach_workspace:
+          at: .
+
+      - run:
+          name: Move node_modules to correct location for build
+          command: "[ ! -d \"node_modules_<< parameters.node-version >>\" ] || mv \"node_modules_<< parameters.node-version >>\" node_modules"
+
+      - run:
+          name: Build the Framework
+          command: npm run build
+
   lint:
     <<: *defaults
 
     docker:
-      - image: "circleci/node:lts"
+      - image: "cimg/node:lts"
 
     steps:
       - attach_workspace:
@@ -196,7 +207,7 @@ jobs:
     <<: *defaults
 
     docker:
-        - image: circleci/node:lts
+        - image: cimg/node:lts
 
     steps:
       - attach_workspace:
@@ -245,6 +256,7 @@ workflows:
       - release:
           requires:
             - commitlint
+            - build
             - build-in-all-supported-versions-of-node
             - lint
             # - test
