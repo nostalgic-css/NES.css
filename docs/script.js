@@ -436,12 +436,12 @@ const sampleCollection = [
   <span class="is-error">framework!</span>
 </a>
 
-<a href="#" class="nes-badge is-splited">
+<a href="#" class="nes-badge is-split">
   <span class="is-dark">npm</span>
   <span class="is-primary">1.1.0</span>
 </a>
 
-<a href="#" class="nes-badge is-splited">
+<a href="#" class="nes-badge is-split">
   <span class="is-dark">test</span>
   <span class="is-success">100%</span>
 </a>
