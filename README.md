@@ -26,6 +26,32 @@ Our `package.json` contains some additional metadata under the following keys:
 * `sass` - path to our main Sass source file
 * `style` - path to our non-minified CSS
 
+##### AltCSS(sass, scss...)
+
+```scss
+// style.scss
+@import "./node_modules/nes.css/css/nes.css"
+```
+
+##### JavaScript
+
+```js
+// script.js
+import "nes.css/css/nes.min.css";
+```
+You need to install css-loader.
+
+##### HTML
+```html
+<!-- index.html -->
+<html>
+  <head>
+    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+  </head>
+  <body></body>
+</html>
+```
+
 #### via CDN
 
 Import the CSS via a `<link />` element:
@@ -50,6 +76,7 @@ NES.css doesn't provide any fonts, but we do maintain the following list of font
 | Japanese  | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
 | Japanese  | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
 | Korean    | [둥근모꼴](http://cactus.tistory.com/193)                              |
+| Chinese   | [Zpix (最像素)](https://github.com/SolidZORO/zpix-pixel-font)      |
 
 ## Usage
 

@@ -1,7 +1,7 @@
 <div align="center">
   <a href="https://nostalgic-css.github.io/NES.css/" target="_blank"><img src="https://user-images.githubusercontent.com/5305599/49061716-da649680-f254-11e8-9a89-d95a7407ec6a.png" alt="NES.css: NES-style  CSS framework" style="max-width:100%;" width="600" height="315"></a>
 
-  <a href="README.md">English</a> / <a href="README-jp.md">日本語</a> / <a href="README-es.md">Español</a> / <a href="README-pt-BR.md">Português</a>
+  <a href="README.md">English</a> / <a href="README-jp.md">日本語</a> / <a href="README-es.md">Español</a> / <a href="README-pt-BR.md">Português</a>　/ <a href=".github/README-ru.md">Русский</a>
 </div>
 
 NES.css 是一款 **NES-风格(8位机)** 的CSS 框架.
@@ -18,6 +18,32 @@ npm install nes.css
 yarn add nes.css
 ```
 
+##### AltCSS(sass, scss...)
+
+```scss
+// style.scss
+@import "./node_modules/nes.css/css/nes.css"
+```
+
+##### JavaScript
+
+```js
+// script.js
+import "nes.css/css/nes.min.css";
+```
+您需要安装css加载程序.
+
+##### HTML
+```html
+<!-- index.html -->
+<html>
+  <head>
+    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+  </head>
+  <body></body>
+</html>
+```
+
 ### via CDN
 
 ```html
@@ -31,13 +57,14 @@ yarn add nes.css
 
 ### 推荐字体
 
-| Language  | Font                                                               |
-| --------- | ------------------------------------------------------------------ |
-| (Default) | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) |
-| English   | [Kongtext](https://www.dafont.com/kongtext.font)                   |
-| Japanese  | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
-| Japanese  | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
-| Korean    | [둥근모꼴](http://cactus.tistory.com/193)                              |
+| 语言   | 字体                                                               |
+| ------ | ------------------------------------------------------------------ |
+| (默认) | [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) |
+| 英语   | [Kongtext](https://www.dafont.com/kongtext.font)                   |
+| 日语   | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
+| 日语   | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
+| 韩语   | [둥근모꼴](http://cactus.tistory.com/193)                              |
+| 中文   | [Zpix (最像素)](https://github.com/SolidZORO/zpix-pixel-font)      |
 
 
 ## 使用

@@ -1,7 +1,7 @@
 <div align="center">
   <a href="https://nostalgic-css.github.io/NES.css/" target="_blank"><img src="https://user-images.githubusercontent.com/5305599/49061716-da649680-f254-11e8-9a89-d95a7407ec6a.png" alt="NES.css: NES-style  CSS framework" style="max-width: 100%;" width="600" height="315"></a>
 
-  <a href="README.md">English</a> / <a href=".github/README-jp.md">日本語</a> / <a href="README-zh-CN.md">简体中文</a> / <a href=".github/README-es.md">Español</a>
+  <a href="README.md">English</a> / <a href=".github/README-jp.md">日本語</a> / <a href="README-zh-CN.md">简体中文</a> / <a href=".github/README-es.md">Español</a>　/ <a href=".github/README-ru.md">Русский</a>
 </div>
 
 NES.css é um Framework CSS, no **estilo NES(8bit)**.
@@ -25,6 +25,32 @@ yarn add nes.css
 Nosso `package.json` contém alguns metadata adicionais, sob as seguintes chaves:
 * `sass` - caminho para nosso arquivo de código fonte principal Sass
 * `style` - caminho para nosso CSS não-minificado
+
+##### AltCSS(sass, scss...)
+
+```scss
+// style.scss
+@import "./node_modules/nes.css/css/nes.css"
+```
+
+##### JavaScript
+
+```js
+// script.js
+import "nes.css/css/nes.min.css";
+```
+Você precisa instalar o css-loader.
+
+##### HTML
+```html
+<!-- index.html -->
+<html>
+  <head>
+    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+  </head>
+  <body></body>
+</html>
+```
 
 ### via CDN
 
@@ -50,6 +76,7 @@ NES.css não fornece nenhuma fonte, mas nós mantemos uma lista de fontes recome
 | Japonês  | [美咲フォント](http://littlelimit.net/misaki.htm)                  |
 | Japonês  | [Nu もち](http://kokagem.sakura.ne.jp/font/mochi/)                 |
 | Coreano  | [둥근모꼴](http://cactus.tistory.com/193)                              |
+| Chinês   | [Zpix (最像素)](https://github.com/SolidZORO/zpix-pixel-font)      |
 
 ## Utilização
 
