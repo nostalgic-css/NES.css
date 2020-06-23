@@ -11,6 +11,7 @@ export const Icons = {
   close: 'close',
   coin: 'coin',
   trophy: 'trophy',
+  soundcloud: 'soundcloud',
 };
 
 export const Sprites = {
