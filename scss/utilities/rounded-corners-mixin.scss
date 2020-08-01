@@ -16,7 +16,7 @@
 
   // for chrome
   @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
-    border-image-repeat: space;
+    border-image-repeat: stretch;
   }
 
   // for firefox
