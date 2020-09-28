@@ -14,11 +14,6 @@
 @mixin border-image-repeat() {
   border-image-repeat: stretch;
 
-  // for chrome
-  @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
-    border-image-repeat: space;
-  }
-
   // for firefox
   @supports (-moz-appearance: meterbar) {
     border-image-repeat: stretch;
