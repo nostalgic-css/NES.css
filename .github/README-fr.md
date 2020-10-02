@@ -4,7 +4,7 @@
   <a href=".github/README-jp.md">日本語</a> / <a href=".github/README-zh-CN.md">简体中文</a> / <a href=".github/README-es.md">Español</a> / <a href=".github/README-pt-BR.md">Português</a> / <a href=".github/README-ru.md">Русский</a> / <a href=".github/README-fr.md">Français</a>
 </div>
 
-NES.css is a **NES-style(8bit-like)** CSS Framework.
+NES.css est un framework CSS **NES-style(8bit-like)**.
 
 [![Gitter][gitter-badge]][gitter] [![Commitizen friendly][commitizen-badge]][commitizen]
 
@@ -12,9 +12,9 @@ NES.css is a **NES-style(8bit-like)** CSS Framework.
 
 ### Styles
 
-NES.css is available via either npm (preferred), Yarn, or a CDN.
+NES.css est disponible via npm (recommandé), Yarn, ou par CDN.
 
-#### via package manager
+#### Par package manager
 
 ```shell
 npm install nes.css
@@ -22,9 +22,9 @@ npm install nes.css
 yarn add nes.css
 ```
 
-Our `package.json` contains some additional metadata under the following keys:
-* `sass` - path to our main Sass source file
-* `style` - path to our non-minified CSS
+Notre `package.json` contient quelques metadata additionnelles au travers des clefs suivantes:
+* `sass` - Chemin vers le fichier source Sass principal
+* `style` - Chemin vers le CSS non minifié
 
 ##### AltCSS(sass, scss...)
 
@@ -39,7 +39,7 @@ Our `package.json` contains some additional metadata under the following keys:
 // script.js
 import "nes.css/css/nes.min.css";
 ```
-You need to install css-loader.
+Vous devez installer css-loader.
 
 ##### HTML
 ```html
@@ -52,9 +52,9 @@ You need to install css-loader.
 </html>
 ```
 
-#### via CDN
+#### Par CDN
 
-Import the CSS via a `<link />` element:
+Importer le fichier CSS via la balise `<link />`:
 
 ```html
 <!-- minify -->
@@ -65,9 +65,9 @@ Import the CSS via a `<link />` element:
 <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
 ```
 
-### Fonts
+### Polices
 
-NES.css doesn't provide any fonts, but we do maintain the following list of fonts that we recommend for usage alongside the library.
+NES.css ne fournit aucune police, nous maintenons cependant la liste des polices que nous recommandons dans le cadre de l'utilisation de notre librairie.
 
 | Language  | Font                                                               |
 | --------- | ------------------------------------------------------------------ |
@@ -78,11 +78,11 @@ NES.css doesn't provide any fonts, but we do maintain the following list of font
 | Korean    | [둥근모꼴](http://cactus.tistory.com/193)                              |
 | Chinese   | [Zpix (最像素)](https://github.com/SolidZORO/zpix-pixel-font)      |
 
-## Usage
+## Utilisation
 
-NES.css only provides components. You will need to define your own layout.
+NES.css fournit seulement des composants, vous devez définir votre layout/structure de page
 
-The recommended font for NES.css is [Press Start 2P][press-start-2p-font]. However, [Press Start 2P][press-start-2p-font] only supports English characters. When you're using this framework with any language other than English, please use another font. Follow the Google Fonts [instructions][google-fonts-guide] about how to include them, or simply include it as below:
+La police recommandée pour l'utilisation de NES.css est [Press Start 2P][press-start-2p-font]. Toutefois, [Press Start 2P][press-start-2p-font] ne prend en charge que les caractères anglosaxons. Lorsque vous utilisez ce framework avec ds langues autre que l'anglais, nous vous recommandons d'utiliser une autre police. Suivez les [instructions][google-fonts-guide] fournis par Google Font pour les inclure, ou utilisez la méthode ci dessous :
 
 ```html
 <head>
@@ -97,27 +97,28 @@ The recommended font for NES.css is [Press Start 2P][press-start-2p-font]. Howev
 </head>
 ```
 
-## CSS Only
+## CSS seulement
 
-NES.css only requires CSS and doesn't depend on any JavaScript.
+NES.css est constitué seulement de CSS et n'inclut ou demande aucunement du JavaScript.
 
-## Browser Support
+## Support des différents navigateurs
 
-NES.css is compatible with the newest version of the following browsers:
+NES.css est compatible avec la dernière version des navigateurs suivants:
 * Chrome
 * Firefox
 * Safari
 
-Untested
+Non testé:
 * IE/Edge
 
 ## Copyright and license
 
 Code and documentation copyright 2018 [B.C.Rikko](https://github.com/BcRikko). Code released under the MIT License. Docs released under Creative Commons.
 
-## Development
+## Developpement
 
-If you'd like to help us out with the project, we welcome contributions of all types! Check out our [`CONTRIBUTING.md`][contributing-document] for more details on how you can help make NES.css amazing!
+Si vous êtes intéressé dans la participation à ce projet, nous accueillons les contributions de chacun et êtes les bienvenus !
+Lisez le fichier [`CONTRIBUTING.md`][contributing-document] pour plus de détails et d'informations sur la manière de participer et nous aider à rendre NES.css encore plus incroyable !
 
 
 
