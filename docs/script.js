@@ -460,7 +460,7 @@ const sampleCollection = [
     title: 'reaction-icons',
     showCode: false,
     description:
-      'If you wanto to change icon size, please use "is-small", "is-medium" and "is-large".',
+      'If you want to change icon size, please use "is-small", "is-medium" and "is-large".',
     code: `<section class="icon-list">
   <!-- heart -->
   <i class="nes-icon is-large heart"></i>
@@ -483,7 +483,7 @@ const sampleCollection = [
     title: 'sns-icons',
     showCode: false,
     description:
-      'If you wanto to change icon size, please use "is-small", "is-medium" and "is-large".',
+      'If you want to change icon size, please use "is-small", "is-medium" and "is-large".',
     code: `<section class="icon-list">
   <!-- twitter -->
   <i class="nes-icon twitter is-large"></i>
@@ -526,7 +526,7 @@ const sampleCollection = [
     title: 'other-icons',
     showCode: false,
     description:
-      'If you wanto to change icon size, please use "is-small", "is-medium" and "is-large".',
+      'If you want to change icon size, please use "is-small", "is-medium" and "is-large".',
     code: `<section class="icon-list">
   <!-- close -->
   <i class="nes-icon close is-large"></i>
