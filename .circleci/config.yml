@@ -7,7 +7,7 @@ defaults: &defaults
   working_directory: ~/app
 
 supported-node-versions: &supported-node-versions
-  node-version: ["10.22.1", "12.18.4", "13.14.0", "14.13.0"]
+  node-version: ["10.22.1", "12.18.4", "14.13.0"]
 
 
 
