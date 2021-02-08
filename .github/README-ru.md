@@ -5,7 +5,8 @@
 </div>
 
 NES.css &mdash; это CSS-фреймворк в стиле **NES(8bit)**
-<div><sub>На территории бывшего СССР восьмибитные игровые приставки <b>N</b>intendo <b>E</b>ntertaiment <b>S</b>ystem более известны по названию неофициального клона <a href="https://ru.wikipedia.org/wiki/Dendy">Dendy</a></sub></div>
+<div><sup>На территории бывшего СССР восьмибитные игровые приставки <b>N</b>intendo <b>E</b>ntertainment <b>S</b>ystem более известны по названию неофициального клона <a href="https://ru.wikipedia.org/wiki/Dendy">Dendy</a></sup></div><div>&nbsp;</div>
+
 
 [![Gitter][gitter-badge]][gitter] [![Commitizen friendly][commitizen-badge]][commitizen]
 
