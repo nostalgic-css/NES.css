@@ -346,20 +346,20 @@ const sampleCollection = [
   },
   {
     title: 'avatars',
-    description: 'It is recommended to "image-rendering: pixelated".',
+    description: 'It is recommended to use the class "is-pixelated".',
     showCode: false,
-    code: `<img class="nes-avatar" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15" style="image-rendering: pixelated;">
+    code: `<img class="nes-avatar is-pixelated" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15">
 
-<img class="nes-avatar is-small" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15" style="image-rendering: pixelated;">
-<img class="nes-avatar is-medium" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15" style="image-rendering: pixelated;">
-<img class="nes-avatar is-large" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15" style="image-rendering: pixelated;">
+<img class="nes-avatar is-small is-pixelated" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15">
+<img class="nes-avatar is-medium is-pixelated" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15">
+<img class="nes-avatar is-large is-pixelated" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15">
 
 
-<img class="nes-avatar is-rounded" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15" style="image-rendering: pixelated;">
+<img class="nes-avatar is-rounded is-pixelated" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15">
 
-<img class="nes-avatar is-rounded is-small" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15" style="image-rendering: pixelated;">
-<img class="nes-avatar is-rounded is-medium" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15" style="image-rendering: pixelated;">
-<img class="nes-avatar is-rounded is-large" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15" style="image-rendering: pixelated;">`,
+<img class="nes-avatar is-rounded is-small is-pixelated" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15">
+<img class="nes-avatar is-rounded is-medium is-pixelated" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15">
+<img class="nes-avatar is-rounded is-large is-pixelated" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15">`,
   },
   {
     title: 'balloons',
