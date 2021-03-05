@@ -65,6 +65,10 @@
     opacity: 0.6;
   }
 
+  &.is-disabled:hover::after {
+    box-shadow: inset -4px -4px map-get($disabled-colors, "shadow");
+  }
+
   // Other styles
   // prettier-ignore
   $types:
