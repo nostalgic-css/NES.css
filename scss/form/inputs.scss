@@ -28,6 +28,12 @@
   &.is-error {
     @include border-style(map-get($error-colors, "normal"), map-get($error-colors, "hover"));
   }
+  &.is-disabled {
+    @include border-style(map-get($disabled-colors, "normal"), map-get($disabled-colors, "shadow"));
+
+    color: map-get($disabled-colors, "normal");
+    cursor: not-allowed;
+  }
 }
 
 .nes-field {
