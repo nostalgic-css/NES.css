@@ -4,9 +4,11 @@ import classNames from 'classnames';
 import sharedOptions from '../_helpers/shared';
 
 export default () => {
+  const disabled = 'is-disabled';
   const inputOptions = select('Input Classes', {
     default: '',
     ...sharedOptions,
+    [disabled]: disabled,
   }, '');
 
   const inputClasses = classNames(
@@ -15,6 +17,12 @@ export default () => {
   );
 
   return `
-    <input type="text" id="name_field" class="${inputClasses}" placeholder="NES.css">
+    <input 
+      type="text" 
+      id="name_field" 
+      ${inputOptions.includes(disabled) && 'disabled'}  
+      class="${inputClasses}" 
+      placeholder="NES.css"
+    />
   `;
 };

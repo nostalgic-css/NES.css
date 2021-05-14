@@ -103,4 +103,32 @@
       color: $color-white;
     }
   }
+  &.is-disabled {
+    $color: map-get($disabled-colors, "normal");
+    $colors-radio-disabled: ($color, map-get($disabled-colors, "shadow"));
+
+    + span {
+      color: $color;
+      cursor: not-allowed;
+    }
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    + span::before {
+      color: $color;
+      cursor: not-allowed;
+    }
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    &:checked + span::before {
+      @include pixelize(2px, $checkbox-checked-focus, $colors-radio-disabled);
+
+      color: $color;
+    }
+
+    &:checked:focus + span::before {
+      @include pixelize(2px, $checkbox-checked-focus, $colors-radio-disabled);
+
+      color: $color;
+    }
+  }
 }
