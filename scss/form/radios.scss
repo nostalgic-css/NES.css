@@ -31,13 +31,15 @@
 
   & + span {
     position: relative;
+    display: inline-flex;
+    align-items: center;
     cursor: $cursor-click-url, pointer;
   }
 
   &:checked + span::before {
     position: absolute;
-    top: -2px;
     left: -20px;
+    margin-top: -15px;
     content: "";
 
     @include pixelize(2px, $radio, $colors);
