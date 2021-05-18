@@ -2,6 +2,7 @@ export const Icons = {
   twitter: 'twitter',
   facebook: 'facebook',
   github: 'github',
+  discord: 'discord',
   google: 'google',
   youtube: 'youtube',
   whatsapp: 'whatsapp',

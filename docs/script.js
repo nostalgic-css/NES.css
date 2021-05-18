@@ -497,6 +497,9 @@ const sampleCollection = [
   <!-- github -->
   <i class="nes-icon github is-large"></i>
 
+  <!-- discord -->
+  <i class="nes-icon discord is-large"></i>
+
   <!-- google -->
   <i class="nes-icon google is-large"></i>
 
