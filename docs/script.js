@@ -520,6 +520,10 @@ const sampleCollection = [
 
   <!-- whatsapp -->
   <i class="nes-icon whatsapp is-large"></i>
+  
+  <!-- aboutme -->
+  <i class="nes-icon aboutme is-large"></i>
+
 </section>`,
   },
   {

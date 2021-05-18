@@ -16,6 +16,7 @@
 @import "gmail.scss";
 @import "linkedin.scss";
 @import "instagram.scss";
+@import "aboutme.scss";
 
 // others
 @import "close.scss";
@@ -161,5 +162,9 @@
 
   &.coin::before {
     @include pixelize($default-size, $icon-coin, $icon-coin-colors);
+  }
+
+  &.aboutme::before {
+    @include pixelize($default-size, $icon-aboutme, $icon-aboutme-colors);
   }
 }
