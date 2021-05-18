@@ -506,6 +506,9 @@ const sampleCollection = [
   <!-- medium -->
   <i class="nes-icon medium is-large"></i>
 
+  <!-- soundcloud -->
+  <i class="nes-icon soundcloud is-large"></i>
+
   <!-- linkedin -->
   <i class="nes-icon linkedin is-large"></i>
 
