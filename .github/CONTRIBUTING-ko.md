@@ -88,8 +88,8 @@
 
 ### 커밋 양식
 
-우리는 프로젝트의 커밋이 최대한 읽기 쉽도록 [Commitizen][commitizen] 와 [`commitlint`][commitlint]를 사용하고, [`semantic-release`][semantic-release]를 통해 출시가 자동화되어서, [감성적이지 않으려고 노력합니다.][sentimental-versioning].
- => 개발자 임의대로 출시 버젼을 지정하지 않도록 한다는 의미입니다.
+우리는 프로젝트의 커밋이 최대한 읽기 쉽도록 [Commitizen][commitizen] 와 [`commitlint`][commitlint]를 사용하고, [`semantic-release`][semantic-release]를 통해 출시가 자동화되어서, [감성적이지 않으려고 노력합니다][sentimental-versioning].
+=> 개발자 임의대로 출시 버전을 지정하지 않도록 한다는 의미입니다.
 
 
 
