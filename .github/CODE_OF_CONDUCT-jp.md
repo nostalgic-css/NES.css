@@ -1,7 +1,7 @@
 # コントリビューター行動規範
 
 このドキュメントを別の言語で表示する：
-[English](/CODE_OF_CONDUCT.md) / [简体中文](.github/CODE_OF_CONDUCT-zh-CN.md) / [Español](.github/CODE_OF_CONDUCT-es.md) / [Português](.github/CODE_OF_CONDUCT-pt-BR.md)
+[English](/CODE_OF_CONDUCT.md) / [简体中文](CODE_OF_CONDUCT-zh-CN.md) / [Español](CODE_OF_CONDUCT-es.md) / [Português](CODE_OF_CONDUCT-pt-BR.md)
 
 ## 私たちの約束
 
