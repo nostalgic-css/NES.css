@@ -126,7 +126,7 @@ Código y documentación copyright 2018 [B.C.Rikko](https://github.com/BcRikko).
 
 [commitizen]: http://commitizen.github.io/cz-cli/
 [commitizen-badge]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
-[contributing-document]: ./CONTRIBUTING-es.md
+[contributing-document]: ./CONTRUBUTING-ru.md
 [gitter]: https://gitter.im/nostalgic-css/Lobby
 [gitter-badge]: https://img.shields.io/gitter/room/nostalgic-css/Lobby.svg
 [google-fonts-guide]: https://developers.google.com/fonts/docs/getting_started
