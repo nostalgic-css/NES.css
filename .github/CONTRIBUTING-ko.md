@@ -1,7 +1,7 @@
 # Contributing(기여하기)
 
 다른 언어로 보기: 
-[English](CONTRIBUTING.md) / [简体中文](.github/CONTRIBUTING-zh-CN.md) / [日本語](.github/CONTRIBUTING-jp.md) / [Español](.github/CONTRIBUTING-es.md) / [Português](.github/CONTRIBUTING-pt-BR.md) / [Русский](.github/CONTRIBUTING-ru.md)
+[English](/CONTRIBUTING.md) / [简体中文](CONTRIBUTING-zh-CN.md) / [日本語](CONTRIBUTING-jp.md) / [Español](CONTRIBUTING-es.md) / [Português](CONTRIBUTING-pt-BR.md) / [Русский](CONTRIBUTING-ru.md)
 
 이 프로젝트에 도움을 주고 싶나요? 대단합니다!
 
