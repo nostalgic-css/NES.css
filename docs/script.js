@@ -520,6 +520,9 @@ const sampleCollection = [
 
   <!-- whatsapp -->
   <i class="nes-icon whatsapp is-large"></i>
+
+  <!-- opensea -->
+  <i class="nes-icon opensea is-large"></i>
 </section>`,
   },
   {
