@@ -50,7 +50,8 @@
     "dark" map-get($default-colors, "normal") map-get($default-colors, "hover"),
     "success" map-get($success-colors, "normal") map-get($success-colors, "hover"),
     "warning" map-get($warning-colors, "normal") map-get($warning-colors, "hover"),
-    "error" map-get($error-colors, "normal") map-get($error-colors, "hover");
+    "error" map-get($error-colors, "normal") map-get($error-colors, "hover"),
+    "disable" map-get($disabled-colors, "normal") map-get($disabled-colors, "shadow");
   @each $type in $types {
     &.is-#{nth($type, 1)} {
       $color: nth($type, 2);
@@ -64,6 +65,13 @@
 
         outline-color: nth($type, 3);
       }
+    }
+  }
+  &.is-disabled {
+    @extend .is-disable;
+    select {
+      color: map-get($disabled-colors, "normal");
+      cursor: not-allowed;
     }
   }
 }

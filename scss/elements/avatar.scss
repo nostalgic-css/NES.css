@@ -7,6 +7,13 @@
   &.is-rounded {
     border-radius: 50px;
   }
+
+  &.is-pixelated {
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: pixelated;
+  }
 }
 .nes-avatar {
   @include img-style(2px);

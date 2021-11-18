@@ -1,7 +1,7 @@
 # Código de Conducta convenido para Contribuyentes
 
 Ver este documento en otro idioma:
-[English](CONTRIBUTING.md) / [日本語](.github/CONTRIBUTING-jp.md) / [简体中文](.github/CONTRIBUTING-zh-CN.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
+[English](/CODE_OF_CONDUCT.md) / [日本語](CODE_OF_CONDUCT-jp.md) / [简体中文](CODE_OF_CONDUCT-zh-CN.md) / [Português](CODE_OF_CONDUCT-pt-BR.md)
 
 ## Nuestro compromiso
 

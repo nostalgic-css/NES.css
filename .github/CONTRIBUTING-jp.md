@@ -1,7 +1,7 @@
 # 貢献する
 
 このドキュメントを別の言語で表示する：
-[English](CONTRIBUTING.md) / [简体中文](CONTRIBUTING-zh-CN.md) / [Español](.github/CONTRIBUTING-es.md) / [Português](.github/CONTRIBUTING-pt-BR.md)
+[English](/CONTRIBUTING.md) / [简体中文](CONTRIBUTING-zh-CN.md) / [Español](CONTRIBUTING-es.md) / [Português](CONTRIBUTING-pt-BR.md) / [한국어](CONTRIBUTING-ko.md)
 
 このプロジェクトに貢献したいですか?素晴らしい!
 

@@ -31,13 +31,15 @@
 
   & + span {
     position: relative;
+    display: inline-flex;
+    align-items: center;
     cursor: $cursor-click-url, pointer;
   }
 
   &:checked + span::before {
     position: absolute;
-    top: -2px;
     left: -20px;
+    margin-top: -15px;
     content: "";
 
     @include pixelize(2px, $radio, $colors);
@@ -71,6 +73,41 @@
       @include pixelize(2px, $radio-checked-focus, $colors-radio-dark);
 
       color: $color-white;
+    }
+  }
+  &.is-disabled {
+    $color: map-get($disabled-colors, "normal");
+    $colors-radio-disabled: ($color, map-get($disabled-colors, "shadow"));
+
+    + span {
+      color: $color;
+      cursor: not-allowed;
+    }
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    + span::before {
+      color: $color;
+      cursor: not-allowed;
+    }
+
+    &:checked:hover,
+    &:checked:focus {
+      & + span::before {
+        animation: unset;
+      }
+    }
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    &:checked + span::before {
+      @include pixelize(2px, $radio-checked-focus, $colors-radio-disabled);
+
+      color: $color;
+    }
+
+    &:checked:focus + span::before {
+      @include pixelize(2px, $radio-checked-focus, $colors-radio-disabled);
+
+      color: $color;
     }
   }
 }

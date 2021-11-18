@@ -1,7 +1,7 @@
 # Вклад
 
 Посмотри документы на другом языке:
-[简体中文](.github/CONTRIBUTING-zh-CN.md) / [日本語](.github/CONTRIBUTING-jp.md) / [Español](.github/CONTRIBUTING-es.md) / [Português](.github/CONTRIBUTING-pt-BR.md)/ [English](../CONTRIBUTING.md)
+[简体中文](CONTRIBUTING-zh-CN.md) / [日本語](CONTRIBUTING-jp.md) / [Español](CONTRIBUTING-es.md) / [Português](CONTRIBUTING-pt-BR.md)/ [English](../CONTRIBUTING.md) / [한국어](CONTRIBUTING-ko.md)
 
 Хочешь внести свой вклад в проект? Отлично!
 

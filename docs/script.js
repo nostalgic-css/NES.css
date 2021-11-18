@@ -346,20 +346,20 @@ const sampleCollection = [
   },
   {
     title: 'avatars',
-    description: 'It is recommended to "image-rendering: pixelated".',
+    description: 'It is recommended to use the class "is-pixelated".',
     showCode: false,
-    code: `<img class="nes-avatar" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15" style="image-rendering: pixelated;">
+    code: `<img class="nes-avatar is-pixelated" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15">
 
-<img class="nes-avatar is-small" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15" style="image-rendering: pixelated;">
-<img class="nes-avatar is-medium" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15" style="image-rendering: pixelated;">
-<img class="nes-avatar is-large" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15" style="image-rendering: pixelated;">
+<img class="nes-avatar is-small is-pixelated" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15">
+<img class="nes-avatar is-medium is-pixelated" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15">
+<img class="nes-avatar is-large is-pixelated" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15">
 
 
-<img class="nes-avatar is-rounded" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15" style="image-rendering: pixelated;">
+<img class="nes-avatar is-rounded is-pixelated" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15">
 
-<img class="nes-avatar is-rounded is-small" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15" style="image-rendering: pixelated;">
-<img class="nes-avatar is-rounded is-medium" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15" style="image-rendering: pixelated;">
-<img class="nes-avatar is-rounded is-large" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15" style="image-rendering: pixelated;">`,
+<img class="nes-avatar is-rounded is-small is-pixelated" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15">
+<img class="nes-avatar is-rounded is-medium is-pixelated" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15">
+<img class="nes-avatar is-rounded is-large is-pixelated" alt="Gravatar image example" src="https://www.gravatar.com/avatar?s=15">`,
   },
   {
     title: 'balloons',
@@ -460,7 +460,7 @@ const sampleCollection = [
     title: 'reaction-icons',
     showCode: false,
     description:
-      'If you wanto to change icon size, please use "is-small", "is-medium" and "is-large".',
+      'If you want to change icon size, please use "is-small", "is-medium" and "is-large".',
     code: `<section class="icon-list">
   <!-- heart -->
   <i class="nes-icon is-large heart"></i>
@@ -483,7 +483,7 @@ const sampleCollection = [
     title: 'sns-icons',
     showCode: false,
     description:
-      'If you wanto to change icon size, please use "is-small", "is-medium" and "is-large".',
+      'If you want to change icon size, please use "is-small", "is-medium" and "is-large".',
     code: `<section class="icon-list">
   <!-- twitter -->
   <i class="nes-icon twitter is-large"></i>
@@ -529,7 +529,7 @@ const sampleCollection = [
     title: 'other-icons',
     showCode: false,
     description:
-      'If you wanto to change icon size, please use "is-small", "is-medium" and "is-large".',
+      'If you want to change icon size, please use "is-small", "is-medium" and "is-large".',
     code: `<section class="icon-list">
   <!-- close -->
   <i class="nes-icon close is-large"></i>
