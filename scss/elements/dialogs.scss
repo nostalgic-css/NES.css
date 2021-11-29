@@ -24,12 +24,6 @@
     border-color: $background-color;
 
     &:not(.is-rounded)::before {
-      position: absolute;
-      top: -$border-size * 2;
-      right: -$border-size * 2;
-      bottom: -$border-size * 2;
-      left: -$border-size * 2;
-      z-index: -1;
       content: "";
       border: $border-size solid $base-color;
     }
