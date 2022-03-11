@@ -1,7 +1,7 @@
 <div align="center">
   <a href="https://nostalgic-css.github.io/NES.css/" target="_blank"><img src="https://user-images.githubusercontent.com/5305599/49061716-da649680-f254-11e8-9a89-d95a7407ec6a.png" alt="NES.css: NES-style  CSS framework" style="max-width: 100%;" width="600" height="315"></a>
 
-  <a href="/README.md">English</a> / <a href="README-zh-CN.md">简体中文</a> / <a href="README-es.md">Español</a> / <a href="README-pt-BR.md">Português</a>　/ <a href="README-ru.md">Русский</a>
+  <a href="/README.md">English</a> / <a href="README-zh-CN.md">简体中文</a> / <a href="README-es.md">Español</a> / <a href="README-pt-BR.md">Português</a> / <a href="README-ru.md">Русский</a> / <a href="/README-kr.md">한국어</a>
 </div>
 
 NES.cssは **ファミコン風(8bit ライク)** なCSSフレームワークです。
@@ -83,7 +83,7 @@ NES.cssはいかなるフォントも提供していませんが、ライブラ�
 
 NES.cssはコンポーネントのスタイルのみを提供しています。レイアウトはみなさんが好きなように定義してください。
 
-NES.cssの推奨フォントは[Press Start 2P][press-start-2p-font]です。ただし、[Press Start 2P][press-start-2p-font]は英語の文字のみをサポートしています。英語以外の言語でこのフレームワークを使用する場合は、別のフォントを使用してください。それらを読み込む方法は方法はGoogle Fontsの[指示][google-fonts-guide]に従うか、以下のように読み込んでください。
+NES.cssの推奨フォントは[Press Start 2P][press-start-2p-font]です。ただし、[Press Start 2P][press-start-2p-font]は英語の文字のみをサポートしています。英語以外の言語でこのフレームワークを使用する場合は、別のフォントを使用してください。それらを読み込む方法はGoogle Fontsの[指示][google-fonts-guide]に従うか、以下のように読み込んでください。
 
 ```html
 <head>
