@@ -94,7 +94,7 @@ NES.css 仅仅需要 CSS 而不依赖其他任何 JavaScript.
 
 NES.css 与如下浏览器的最新版本兼容.
 * Chrome
-* Firefox
+* Firefox (火狐浏览)
 * Safari
 
 未经测试
