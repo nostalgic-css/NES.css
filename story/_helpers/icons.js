@@ -8,6 +8,7 @@ export const Icons = {
   gmail: 'gmail',
   linkedin: 'linkedin',
   instagram: 'instagram',
+  discord: 'discord',
   close: 'close',
   coin: 'coin',
   trophy: 'trophy',
