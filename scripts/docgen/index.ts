@@ -1,7 +1,7 @@
 import path from 'path'
 import fs from 'fs'
-import { findMatchingFiles, Config as FindMatchingFilesConfig } from './lib/findMatchingFiles'
-import { extractProperties } from './lib/extractProperties'
+import { findMatchingFiles, type Config as FindMatchingFilesConfig } from './lib/findMatchingFiles'
+import { extractProperties, type Doc } from './lib/extractProperties'
 import { config }from './config'
 
 export type Config =
@@ -9,6 +9,8 @@ export type Config =
   & {
     filename: string
   }
+
+export type GeneratedDocument = Doc[]
 
 console.time('[docgen]')
 
