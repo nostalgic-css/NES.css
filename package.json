@@ -2,6 +2,8 @@
   "name": "nes.css",
   "description": "NES.css is NES-style CSS Framework.",
   "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "repository": {
     "type": "git",
@@ -14,5 +16,18 @@
     "framework"
   ],
   "author": "BcRikko (https://github.com/Bcrikko)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.0",
+    "@storybook/addon-interactions": "^7.0.0",
+    "@storybook/addon-links": "^7.0.0",
+    "@storybook/blocks": "^7.0.0",
+    "@storybook/html": "^7.0.0",
+    "@storybook/html-vite": "^7.0.0",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.0"
+  },
+  "peerDependencies": {}
 }

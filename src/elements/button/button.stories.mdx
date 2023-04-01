@@ -1,0 +1,55 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import "./button.css";
+
+<Meta title="MDX/Elements/Button" />
+
+# Elements/Button
+
+This is button.
+
+<Canvas>
+  <Story name="Button">
+    {() => `
+      <button class="nes-btn">
+        Click me!
+      </button>
+    `}
+  </Story>
+</Canvas>
+
+## CSS Variables
+
+<table>
+  <thead>
+    <tr>
+      <th>@property</th>
+      <th>syntax</th>
+      <th>inherits</th>
+      <th>initial-value</th>
+      <th>comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`--nes-btn-border-width`</td>
+      <td>`<line-width>`</td>
+      <td>`false`</td>
+      <td>`4px`</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>`--nes-btn-border-color`</td>
+      <td>`<color>`</td>
+      <td>`false`</td>
+      <td>`black`</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>`--nes-btn-border-inset-color`</td>
+      <td>`<color>`</td>
+      <td>`false`</td>
+      <td>`gray`</td>
+      <td>...</td>
+    </tr>
+  </tbody>
+</table>
