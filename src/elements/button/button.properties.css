@@ -1,0 +1,41 @@
+@property --nes-btn-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: var(--nes-color-dark);
+
+}
+@property --nes-btn-bg-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: var(--nes-color-default);
+}
+
+@property --nes-btn-border-color {
+  /* border color */
+  syntax: '<color>';
+  inherits: true;
+  initial-value: var(--nes-color-dark);
+}
+
+@property --nes-btn-border-color-inner {
+  /* inset border color */
+  syntax: '<color>';
+  inherits: true;
+  initial-value: var(--nes-color-default-shade);
+}
+
+@property --nes-btn-border-width {
+  /* border width */
+  syntax: '<line-width>';
+  inherits: true;
+  initial-value: 4px;
+}
+
+@property --nes-btn-border-width-inner {
+  /* border width */
+  syntax: '<line-width>';
+  inherits: true;
+  initial-value: 4px;
+}
+
+

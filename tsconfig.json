@@ -8,6 +8,7 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
+    "jsx": "react-jsx",
     "isolatedModules": true,
 
     /** Interop Constraints */

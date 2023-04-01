@@ -6,9 +6,6 @@ import { config }from './config'
 
 export type Config =
   & FindMatchingFilesConfig
-  & {
-    filename: string
-  }
 
 export type GeneratedDocument = Doc[]
 
@@ -17,7 +14,7 @@ console.time('[docgen]')
 const files = findMatchingFiles(config.include, config.exclude)
 
 const writers = files.map(async file => {
-  const filename = path.parse(file).name + config.filename
+  const filename = path.parse(file).name + '.json'
   const exportPath = path.join(path.dirname(file), filename)
 
   const css = await fs.promises.readFile(file, 'utf8')

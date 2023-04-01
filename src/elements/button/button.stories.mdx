@@ -1,5 +1,8 @@
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import "./button.css";
+import "./index.css";
+
+import { PropsDocs } from '../../../scripts/docgen/PropsDocs'
+import json from './button.properties.json'
 
 <Meta title="MDX/Elements/Button" />
 
@@ -10,46 +13,27 @@ This is button.
 <Canvas>
   <Story name="Button">
     {() => `
-      <button class="nes-btn">
-        Click me!
-      </button>
+      <div class="stack">
+        <button class="nes-btn">
+          Default
+        </button>
+        <button class="nes-btn isPrimary">
+          Primary
+        </button>
+        <button class="nes-btn isSecondary">
+          Secondary
+        </button>
+        <button class="nes-btn isWarning">
+          Warning
+        </button>
+        <button class="nes-btn isDanger">
+          Danger
+        </button>
+      </div>
     `}
   </Story>
 </Canvas>
 
 ## CSS Variables
 
-<table>
-  <thead>
-    <tr>
-      <th>@property</th>
-      <th>syntax</th>
-      <th>inherits</th>
-      <th>initial-value</th>
-      <th>comments</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>`--nes-btn-border-width`</td>
-      <td>`<line-width>`</td>
-      <td>`false`</td>
-      <td>`4px`</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <td>`--nes-btn-border-color`</td>
-      <td>`<color>`</td>
-      <td>`false`</td>
-      <td>`black`</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <td>`--nes-btn-border-inset-color`</td>
-      <td>`<color>`</td>
-      <td>`false`</td>
-      <td>`gray`</td>
-      <td>...</td>
-    </tr>
-  </tbody>
-</table>
+<PropsDocs json={json}></PropsDocs>

@@ -2,8 +2,7 @@ import type { Config } from ".";
 
 export const config: Config = {
   include: [
-    '../../src/**/*.css'
+    '../../src/**/*.properties.css'
   ],
-  exclude: [],
-  filename: '.properties.json'
+  exclude: []
 }

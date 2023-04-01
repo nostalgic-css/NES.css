@@ -13,16 +13,23 @@ export function extractProperties(css: string): Doc[] {
 
   const root = postcss.parse(css)
   root.walkAtRules('property', rule => {
-    const doc: Record<string, unknown> = {}
+    const doc = {} as Record<keyof Doc, unknown>
+    doc.property = rule.params
 
-    rule.walkComments(comment => { doc['comments'] = comment.text })
+    rule.walkComments(comment => { doc.comments = comment.text })
 
     rule.walkDecls(/(syntax|inherits|initial-value)/, decl => {
-      doc[decl.prop] = decl.value
+      if (isDecls(decl.prop)) {
+        doc[decl.prop] = decl.value
+      }
     })
 
     docs.push(doc as Doc)
   })
 
   return docs
+}
+
+function isDecls(key: any): key is keyof Doc {
+  return Array<keyof Doc>('comments', 'property', 'syntax', 'inherits', 'initial-value').includes(key)
 }

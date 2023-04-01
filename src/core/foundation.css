@@ -12,3 +12,7 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
+
+:focus {
+  outline-offset: 2px;
+}

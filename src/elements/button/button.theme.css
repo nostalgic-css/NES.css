@@ -1,0 +1,68 @@
+/**
+ * Global CSS Variables
+ *
+ * There are  variables that you can change.
+ */
+ :root .nes-btn {
+  /* Color theme */
+  --nes-btn-color: var(--nes-color-dark);
+  --nes-btn-bg-color: var(--nes-color-default);
+  --nes-btn-border-color: var(--nes-color-dark);
+  --nes-btn-border-color-inner: var(--nes-color-default-shade);
+
+  /* Appearance */
+  --nes-btn-border-width: 4px;
+  --nes-btn-border-width-inner: 4px;
+}
+:root .nes-btn:hover {
+  --nes-btn-border-width-inner: 6px;
+  --nes-btn-bg-color: var(--nes-color-default-tint);
+}
+
+/**
+ * Primary theme
+ */
+:root .nes-btn.isPrimary {
+  --nes-btn-color: var(--nes-color-light);
+  --nes-btn-bg-color: var(--nes-color-primary);
+  --nes-btn-border-color-inner: var(--nes-color-primary-shade);
+}
+:root .nes-btn.isPrimary:hover {
+  --nes-btn-bg-color: var(--nes-color-primary-tint);
+}
+
+/**
+ * Secondary theme
+ */
+:root .nes-btn.isSecondary {
+  --nes-btn-color: var(--nes-color-light);
+  --nes-btn-bg-color: var(--nes-color-secondary);
+  --nes-btn-border-color-inner: var(--nes-color-secondary-shade);
+}
+:root .nes-btn.isSecondary:hover {
+  --nes-btn-bg-color: var(--nes-color-secondary-tint);
+}
+
+/**
+ * Warning theme
+ */
+:root .nes-btn.isWarning {
+  --nes-btn-color: var(--nes-color-dark);
+  --nes-btn-bg-color: var(--nes-color-warning);
+  --nes-btn-border-color-inner: var(--nes-color-warning-shade);
+}
+:root .nes-btn.isWarning:hover {
+  --nes-btn-bg-color: var(--nes-color-warning-tint);
+}
+
+/**
+ * Danger theme
+ */
+:root .nes-btn.isDanger {
+  --nes-btn-color: var(--nes-color-light);
+  --nes-btn-bg-color: var(--nes-color-danger);
+  --nes-btn-border-color-inner: var(--nes-color-danger-shade);
+}
+:root .nes-btn.isDanger:hover {
+  --nes-btn-bg-color: var(--nes-color-danger-tint);
+}
