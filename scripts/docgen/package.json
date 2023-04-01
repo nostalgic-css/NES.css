@@ -1,0 +1,16 @@
+{
+  "name": "docgen",
+  "version": "1.0.0",
+  "description": "Generate document for @Property.",
+  "main": "index.ts",
+  "author": "BcRikko",
+  "scripts": {
+    "docgen": "ts-node index.ts"
+  },
+  "type": "module",
+  "devDependencies": {
+    "glob": "^9.3.2",
+    "postcss": "^8.4.21",
+    "ts-node": "^10.9.1"
+  }
+}

@@ -1,16 +1,19 @@
 @property --nes-btn-border-width {
+  /* border width */
   syntax: '<line-width>';
   inherits: false;
   initial-value: 4px;
 }
 
 @property --nes-btn-border-color {
+  /* border color */
   syntax: '<color>';
   inherits: false;
   initial-value: black;
 }
 
 @property --nes-btn-border-inset-color {
+  /* inset border color */
   syntax: '<color>';
   inherits: false;
   initial-value: gray;
