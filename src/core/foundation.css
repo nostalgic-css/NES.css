@@ -13,6 +13,7 @@ textarea {
   line-height: inherit;
 }
 
-:focus {
+:focus-visible {
+  outline: 3px solid var(--nes-color-primary);
   outline-offset: 2px;
 }

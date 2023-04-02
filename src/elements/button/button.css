@@ -23,6 +23,7 @@
   color: var(--nes-btn-color);
   background-color: transparent;
   border: none;
+  border-radius: 0;
 }
 
 /**
