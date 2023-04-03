@@ -1,6 +1,10 @@
 /**
  * Override & Local CSS Variables
  */
+@property --nes_btn-inner {
+  syntax: '<shadow>';
+  inherits: false;
+}
 .nes-btn {
   --nes_btn-inner:
     inset 0 calc(var(--nes-btn-border-width-inner) * -1) var(--nes-btn-border-color-inner),

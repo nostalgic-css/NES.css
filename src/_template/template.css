@@ -1,6 +1,10 @@
 /**
  * Override & Local CSS Variables
  */
+@property --nes_tmp-val {
+  syntax: '<color>';
+  inherits: false;
+}
 .nes-tmp {
   --nes_tmp-val: black;
 }
