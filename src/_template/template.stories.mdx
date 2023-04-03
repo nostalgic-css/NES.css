@@ -1,0 +1,25 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import "./index.css";
+
+import { PropsDocs } from '../../../scripts/docgen/PropsDocs'
+import json from './template.properties.json'
+
+<Meta title="MDX/Category/Template" />
+
+# Category/Template
+
+This is template.
+
+<Canvas>
+  <Story name="Showcase">
+    {() => `
+      <div class="stack">
+        <div class="nes-tmp"></div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## CSS Variables
+
+<PropsDocs json={json}></PropsDocs>

@@ -1,0 +1,25 @@
+/* keep */
+:root {
+  --nes-color-dark: hsl(210, 10%, 15%);
+  --nes-color-light: hsl(0, 0%, 100%);
+
+  --nes-color-default: hsl(0, 0%, 100%);
+  --nes-color-default-tint: hsl(0, 0%, 90%);
+  --nes-color-default-shade: hsl(0, 0%, 70%);
+
+  --nes-color-primary: hsl(204, 86%, 50%);
+  --nes-color-primary-tint: hsl(204, 86%, 45%);
+  --nes-color-primary-shade: hsl(204, 86%, 40%);
+
+  --nes-color-secondary: hsl(85, 58%, 50%);
+  --nes-color-secondary-tint: hsl(85, 58%, 45%);
+  --nes-color-secondary-shade: hsl(85, 58%, 40%);
+
+  --nes-color-warning: hsl(51, 93%, 50%);
+  --nes-color-warning-tint: hsl(51, 93%, 45%);
+  --nes-color-warning-shade: hsl(51, 93%, 40%);
+
+  --nes-color-danger: hsl(10, 75%, 60%);
+  --nes-color-danger-tint: hsl(10, 75%, 50%);
+  --nes-color-danger-shade: hsl(10, 75%, 40%);
+}

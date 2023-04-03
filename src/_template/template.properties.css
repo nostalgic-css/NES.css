@@ -1,0 +1,11 @@
+@property --nes-btn-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: var(--nes-color-dark);
+
+}
+@property --nes-btn-bg-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: var(--nes-color-default);
+}

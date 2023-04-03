@@ -1,0 +1,42 @@
+[
+  {
+    "property": "--nes-btn-color",
+    "syntax": "'<color>'",
+    "inherits": "true",
+    "initial-value": "var(--nes-color-dark)"
+  },
+  {
+    "property": "--nes-btn-bg-color",
+    "syntax": "'<color>'",
+    "inherits": "true",
+    "initial-value": "var(--nes-color-default)"
+  },
+  {
+    "property": "--nes-btn-border-color",
+    "comments": "border color",
+    "syntax": "'<color>'",
+    "inherits": "true",
+    "initial-value": "var(--nes-color-dark)"
+  },
+  {
+    "property": "--nes-btn-border-color-inner",
+    "comments": "inset border color",
+    "syntax": "'<color>'",
+    "inherits": "true",
+    "initial-value": "var(--nes-color-default-shade)"
+  },
+  {
+    "property": "--nes-btn-border-width",
+    "comments": "border width",
+    "syntax": "'<line-width>'",
+    "inherits": "true",
+    "initial-value": "4px"
+  },
+  {
+    "property": "--nes-btn-border-width-inner",
+    "comments": "border width",
+    "syntax": "'<line-width>'",
+    "inherits": "true",
+    "initial-value": "4px"
+  }
+]

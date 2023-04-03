@@ -1,0 +1,58 @@
+/**
+ * Override & Local CSS Variables
+ */
+@property --nes_btn-inner {
+  syntax: '<shadow>';
+  inherits: false;
+}
+.nes-btn {
+  --nes_btn-inner:
+    inset 0 calc(var(--nes-btn-border-width-inner) * -1) var(--nes-btn-border-color-inner),
+    inset calc(var(--nes-btn-border-width-inner) * -1) 0 var(--nes-btn-border-color-inner);
+}
+
+.nes-btn:active {
+  --nes_btn-inner:
+    inset 0 var(--nes-btn-border-width-inner) var(--nes-btn-border-color-inner),
+    inset var(--nes-btn-border-width-inner) 0 var(--nes-btn-border-color-inner);
+}
+
+/**
+* Basic Style
+*/
+.nes-btn {
+  position: relative;
+  z-index: 0;
+  padding: 0.8em 1em;
+  color: var(--nes-btn-color);
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+/**
+ * Outside border & background-color style
+ */
+.nes-btn::before {
+  position: absolute;
+  inset: var(--nes-btn-border-width);
+  z-index: -1;
+  color: var(--nes-btn-border-color);
+  content: "";
+  background-color: var(--nes-btn-bg-color);
+  box-shadow:
+    0 var(--nes-btn-border-width),
+    var(--nes-btn-border-width) 0,
+    0 calc(var(--nes-btn-border-width) * -1),
+    calc(var(--nes-btn-border-width) * -1) 0;
+}
+
+/**
+ * Inside border style
+ */
+.nes-btn::after {
+  position: absolute;
+  inset: var(--nes-btn-border-width);
+  content: "";
+  box-shadow: var(--nes_btn-inner);
+}

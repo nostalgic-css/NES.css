@@ -1,0 +1,68 @@
+/**
+ * Global CSS Variables
+ *
+ * There are  variables that you can change.
+ */
+.nes-tmp {
+  /* Color theme */
+  --nes-tmp-color: var(--nes-color-dark);
+  --nes-tmp-bg-color: var(--nes-color-default);
+  --nes-tmp-border-color: var(--nes-color-dark);
+  --nes-tmp-border-color-inner: var(--nes-color-default-shade);
+
+  /* Appearance */
+  --nes-tmp-border-width: 4px;
+  --nes-tmp-border-width-inner: 4px;
+}
+.nes-tmp:hover {
+  --nes-tmp-border-width-inner: 6px;
+  --nes-tmp-bg-color: var(--nes-color-default-tint);
+}
+
+/**
+ * Primary theme
+ */
+.nes-tmp.isPrimary {
+  --nes-tmp-color: var(--nes-color-light);
+  --nes-tmp-bg-color: var(--nes-color-primary);
+  --nes-tmp-border-color-inner: var(--nes-color-primary-shade);
+}
+.nes-tmp.isPrimary:hover {
+  --nes-tmp-bg-color: var(--nes-color-primary-tint);
+}
+
+/**
+ * Secondary theme
+ */
+.nes-tmp.isSecondary {
+  --nes-tmp-color: var(--nes-color-light);
+  --nes-tmp-bg-color: var(--nes-color-secondary);
+  --nes-tmp-border-color-inner: var(--nes-color-secondary-shade);
+}
+.nes-tmp.isSecondary:hover {
+  --nes-tmp-bg-color: var(--nes-color-secondary-tint);
+}
+
+/**
+ * Warning theme
+ */
+.nes-tmp.isWarning {
+  --nes-tmp-color: var(--nes-color-dark);
+  --nes-tmp-bg-color: var(--nes-color-warning);
+  --nes-tmp-border-color-inner: var(--nes-color-warning-shade);
+}
+.nes-tmp.isWarning:hover {
+  --nes-tmp-bg-color: var(--nes-color-warning-tint);
+}
+
+/**
+ * Danger theme
+ */
+.nes-tmp.isDanger {
+  --nes-tmp-color: var(--nes-color-light);
+  --nes-tmp-bg-color: var(--nes-color-danger);
+  --nes-tmp-border-color-inner: var(--nes-color-danger-shade);
+}
+.nes-tmp.isDanger:hover {
+  --nes-tmp-bg-color: var(--nes-color-danger-tint);
+}

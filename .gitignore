@@ -1,10 +1,7 @@
 node_modules
-.vscode
-.idea
-css
-storybook-static
 .DS_Store
 
-# Ignoring built up css and map files
-scss/*.css
-scss/*.css.map
+dist/*
+!dist/.gitkeep
+
+*.properties.json

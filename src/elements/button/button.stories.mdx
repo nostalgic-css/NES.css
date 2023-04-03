@@ -1,0 +1,39 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import "./index.css";
+
+import { PropsDocs } from '../../../scripts/docgen/PropsDocs'
+import json from './button.properties.json'
+
+<Meta title="MDX/Elements/Button" />
+
+# Elements/Button
+
+This is button.
+
+<Canvas>
+  <Story name="Showcase">
+    {() => `
+      <div class="stack">
+        <button class="nes-btn">
+          Default
+        </button>
+        <button class="nes-btn isPrimary">
+          Primary
+        </button>
+        <button class="nes-btn isSecondary">
+          Secondary
+        </button>
+        <button class="nes-btn isWarning">
+          Warning
+        </button>
+        <button class="nes-btn isDanger">
+          Danger
+        </button>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## CSS Variables
+
+<PropsDocs json={json}></PropsDocs>
