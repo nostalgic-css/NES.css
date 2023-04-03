@@ -6,7 +6,9 @@
     "lint:es": "eslint .",
     "lint:css": "stylelint **/*.css",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build:docgen": "ts-node ./scripts/docgen/index.ts",
+    "build:css": "ts-node ./scripts/build/index.ts"
   },
   "repository": {
     "type": "git",
@@ -28,16 +30,21 @@
     "@storybook/html": "^7.0.0",
     "@storybook/html-vite": "^7.0.0",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "@types/postcss-import": "^14.0.0",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
     "@typescript-eslint/parser": "^5.57.0",
     "eslint": "^8.37.0",
+    "glob": "^8.1.0",
     "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.21",
+    "postcss-import": "^15.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.0.0",
     "stylelint": "^15.3.0",
     "stylelint-config-recess-order": "^4.0.0",
     "stylelint-config-recommended": "^11.0.0",
+    "ts-node": "^10.9.1",
     "typescript": "^5.0.3"
   }
 }

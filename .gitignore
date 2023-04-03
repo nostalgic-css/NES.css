@@ -1,4 +1,7 @@
 node_modules
 .DS_Store
 
+dist/*
+!dist/.gitkeep
+
 *.properties.json

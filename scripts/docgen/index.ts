@@ -1,6 +1,6 @@
 import path from 'path'
 import fs from 'fs'
-import { findMatchingFiles, type Config as FindMatchingFilesConfig } from './lib/findMatchingFiles'
+import { findMatchingFiles, type Config as FindMatchingFilesConfig } from '../lib/findMatchingFiles'
 import { extractProperties, type Doc } from './lib/extractProperties'
 import { config }from './config'
 
