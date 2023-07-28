@@ -6,6 +6,7 @@ export const Icons = {
   youtube: 'youtube',
   whatsapp: 'whatsapp',
   gmail: 'gmail',
+  discord: 'discord',
   linkedin: 'linkedin',
   instagram: 'instagram',
   close: 'close',
